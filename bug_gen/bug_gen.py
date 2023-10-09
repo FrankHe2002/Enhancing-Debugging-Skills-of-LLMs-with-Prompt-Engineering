@@ -5,9 +5,9 @@ import bugs, test, random
 
 def main():
     # Composite bugs
-    for e in range(1000):
+    for e in range(10):
         applied = []
-        for i in range(10):
+        for i in range(5):
             bt = random.randint(0, 5)
             if bt == 0:
                 applied.append(bugs.MissingCharacterBug())
@@ -20,10 +20,11 @@ def main():
             elif bt == 4:
                 applied.append(bugs.IncorrectConditionBug())
         
-        code = test.CODE_2
+        code = test.CODE_1
         for bug in applied:
             code = bug.effect(code)
-            print(bug.name, bug.valid)
+            if (not bug.valid):
+                print(bug.name)
         
         print(code)
 
