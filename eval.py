@@ -2,11 +2,10 @@ import subprocess
 import sys
 
 def calculate_codebleu(ref_dir, hyp_dir):
-    evaluator_path = "CodeXGLUE/Code-Code/code-to-code-trans/evaluator/evaluator.py"
+    evaluator_path = "evaluator/evaluator.py"
     command = f"python {evaluator_path} -ref {ref_dir} -pre {hyp_dir}"
     process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
     out, err = process.communicate()
-    
     print(out.decode("utf-8"))
 
 if __name__ == "__main__":
