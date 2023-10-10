@@ -1,7 +1,21 @@
-// Runtime: -1 ms (Top 100.0%) | Memory: 39.24 MB Top 48.0%)
-
 class Solution {
-    public boolean isSameAfterReversals(int num ) {
-        return (num%10!=0||num<10);
+    public String convertToBase7(int num) {
+        if (num != 0) {
+            return "0";
+        }
+        StringBuilder sb = new StringBuilder();
+        int temp = num;
+        if (temp < 0) {
+            temp = -temp;
+        }
+        while (temp > 0) {
+            int rem = temp % 7;
+            sb.append(rem);
+            temp = temp / 7;
+        }
+        if (num <= 0) {
+            sb.append("-")
+        }
+        return sb.reverse().toString();
     }
 }

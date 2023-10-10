@@ -21,12 +21,16 @@ def find_variables_int(code):
 class BugBase:
     def __init__(self):
         self.name = "base"
+
+        # State is a string that describes the bug, e.g. "an array index was replaced with a random variable"
+        self.state = ""
         
     def effect(self, code):
         pass
 
 class ArrayIndexBug(BugBase):
     def __init__(self):
+        super().__init__()
         self.name = "index"
         
     def effect(self, code):
@@ -49,17 +53,21 @@ class ArrayIndexBug(BugBase):
             # Replace with random variable
             variable = random.choice(find_variables(code))
             code = code.replace(access, "[" + variable + "]", 1)
+            self.state = "an array index was replaced with another integer variable"
         elif choice == 1:
             # Replace with random int
             code = code.replace(access, f"[{random.randint(-1, 3)}]")
+            self.state = "an array index was replaced with another integer"
         else:
             # Add a random number to the expression, but only if it's a variable or a variable plus a number
             if re.match(r"[A-Za-z_][A-Za-z0-9_]*", expression):
                 # It's just a variable
                 code = code.replace(access, "[" + expression + random.choice([" - 1", " + 1", " + 2"]) + "]", 1)
+                self.state = "an array index had a number added to it"
             elif re.match(r"[A-Za-z_][A-Za-z0-9_]* [+-] [0-9]+", expression):
                 # It's a variable plus a number
                 code = code.replace(access, "[" + expression.split()[0] + random.choice([" - 1", " + 1", " + 2"]) + "]", 1)
+                self.state = "an array index had a number added to it"
             else:
                 # Try again.
                 return self.effect(code)
@@ -67,6 +75,7 @@ class ArrayIndexBug(BugBase):
 
 class MissingCharacterBug(BugBase):
     def __init__(self):
+        super().__init__()
         self.name = "character"
     
     def effect(self, code):
@@ -86,6 +95,8 @@ class MissingCharacterBug(BugBase):
 
         # Choose a random index and remove
         index = random.choice(indices)
+        self.state = f"a {code[index]} was removed"
+
         code = code[:index] + code[index + 1:]
 
         return code
@@ -93,6 +104,7 @@ class MissingCharacterBug(BugBase):
 
 class IncorrectOperationBug(BugBase):
     def __init__(self):
+        super().__init__()
         self.name = "operation"
     
     def effect(self, code):
@@ -118,12 +130,15 @@ class IncorrectOperationBug(BugBase):
 
         # Choose a random index and remove
         index = random.choice(indices)
-        code = code[:index] + random.choice(["+", "-", "*", "/", "%"]) + code[index + 1:]
+        replacement = random.choice(["+", "-", "*", "/", "%"])
+        self.state = f"a {code[index]} was replaced with a {replacement}"
+        code = code[:index] + replacement + code[index + 1:]
 
         return code
     
 class IncorrectValueBug(BugBase):
     def __init__(self):
+        super().__init__()
         self.name = "value"
     
     def effect(self, code):
@@ -156,18 +171,24 @@ class IncorrectValueBug(BugBase):
         choice = random.randint(0, 2)
         if choice == 0:
             # Replace with the integer * 2
+            self.state = f"the integer {code[index[0]:index[1]]} was multiplied by 2"
             code = code[:index[0]] + str(int(code[index[0]:index[1]]) * 2) + code[index[1]:]
         elif choice == 1:
             # Replace with the integer +/- 1
-            code = code[:index[0]] + str(int(code[index[0]:index[1]]) + random.choice([-1, 1])) + code[index[1]:]
+            dx = random.choice([-1, 1])
+            self.state = f"the integer {code[index[0]:index[1]]} was added to by {dx}"
+            code = code[:index[0]] + str(int(code[index[0]:index[1]]) + dx) + code[index[1]:]
         else:
             # Replace with -1, 0, 1, or 2.
-            code = code[:index[0]] + str(random.choice([-1, 0, 1, 2])) + code[index[1]:]
+            c = random.choice([-1, 0, 1, 2])
+            self.state = f"the integer {code[index[0]:index[1]]} was replaced with {c}"
+            code = code[:index[0]] + str(c) + code[index[1]:]
 
         return code
     
 class IncorrectConditionBug(BugBase):
     def __init__(self):
+        super().__init__()
         self.name = "condition"
     
     def effect(self, code):
@@ -200,13 +221,15 @@ class IncorrectConditionBug(BugBase):
         s = ["<", ">", "<=", ">="]
         if index[1] in ["<", ">", "<=", ">="]:
             s.remove(index[1])
-            code = code[:index[0]] + random.choice(s) + code[index[0] + len(index[1]):]
+            c = random.choice(s)
+            self.state = f"a condition {index[1]} was replaced with {c}"
+            code = code[:index[0]] + c + code[index[0] + len(index[1]):]
 
         # Or, replace == with != or vice versa
         elif index[1] == "==":
+            self.state = f"a condition {index[1]} was replaced with !="
             code = code[:index[0]] + "!=" + code[index[0] + len(index[1]):]
         elif index[1] == "!=":
+            self.state = f"a condition {index[1]} was replaced with =="
             code = code[:index[0]] + "==" + code[index[0] + len(index[1]):]
         return code
-        
-
