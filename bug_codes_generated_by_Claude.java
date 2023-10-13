@@ -68,7 +68,7 @@ public class ArrayIndexError {
   }
 }
 
-  // Race condition with non-atomic operations
+// Race condition with non-atomic operations
 class BankAccount {
   private int balance;
 
