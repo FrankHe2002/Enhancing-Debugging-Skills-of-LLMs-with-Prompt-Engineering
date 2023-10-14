@@ -56,7 +56,7 @@ class ArrayIndexBug(BugBase):
             self.state = "an array index was replaced with another integer variable"
         elif choice == 1:
             # Replace with random int
-            code = code.replace(access, f"[{random.randint(-1, 3)}]")
+            code = code.replace(access, f"[{random.randint(-1, 3)}]", 1)
             self.state = "an array index was replaced with another integer"
         else:
             # Add a random number to the expression, but only if it's a variable or a variable plus a number
