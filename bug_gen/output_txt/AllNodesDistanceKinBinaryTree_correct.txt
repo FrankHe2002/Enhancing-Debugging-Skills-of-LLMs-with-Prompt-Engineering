@@ -30,8 +30,7 @@ class Solution {
                 {
                     q.add(map.get(current));
                     visited.add(map.get(current));
-                }
-                
+                }       
             }
         }
         List<Integer> ans=new ArrayList<>();
