@@ -117,6 +117,14 @@ class IncorrectOperationBug(BugBase):
                 # Check if it's ++ or --
                 if code[i + 1] == code[i] or code[i - 1] == code[i]:
                     continue
+                # Check if it's a comment
+                if code[i - 1:i + 1] == "//" or code[i:i + 2] == "//":
+                    continue
+                if code[i - 1:i + 1] == "/*" or code[i - 1:i + 1] == "*/":
+                    continue
+                if code[i:i + 2] == "/*" or code[i:i + 2] == "*/":
+                    continue
+
                 # Also make sure it's not a negative number
                 if code[i] == "-" and code[i + 1] in "0123456789":
                     continue
@@ -233,3 +241,6 @@ class IncorrectConditionBug(BugBase):
             self.state = f"a condition {index[1]} was replaced with =="
             code = code[:index[0]] + "==" + code[index[0] + len(index[1]):]
         return code
+
+
+# Capitalize keyword?
