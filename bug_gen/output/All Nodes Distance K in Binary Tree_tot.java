@@ -13,7 +13,7 @@ class Solution {
                 break;
             distance++;
             int size=q.size();
-            for(int i=0;i<size;i++)
+            for(int i=0i<size;i++)
             {
                 TreeNode current=q.poll();
                 if(current.left!=null && !visited.contains(current.left))
@@ -30,7 +30,7 @@ class Solution {
                 {
                     q.add(map.get(current));
                     visited.add(map.get(current));
-                }       
+                }
             }
         }
         List<Integer> ans=new ArrayList<>();
