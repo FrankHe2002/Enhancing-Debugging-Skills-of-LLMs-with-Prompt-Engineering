@@ -14,8 +14,7 @@ import sys
 from fractions import Fraction
 import warnings
 from collections import Counter
-
-from utils import ngrams
+from nltk.util import ngrams
 import pdb
 
 
