@@ -20,8 +20,16 @@ dfg_function={
 def calc_syntax_match(references, candidate, lang):
     return corpus_syntax_match([references], [candidate], lang)
 
-def corpus_syntax_match(references, candidates, lang):   
-    JAVA_LANGUAGE = Language('parser/my-languages.so', lang)
+def corpus_syntax_match(references, candidates, lang):
+    """ UNCOMMENT TO BUILD
+    Language.build_library(
+        # Store the library in the `build` directory
+        "CodeBLEU/parser2/my-languages.so",
+        # Include one or more languages
+        ["vendor/tree-sitter-java"],
+    )
+    """
+    JAVA_LANGUAGE = Language('CodeBLEU/parser2/my-languages.so', lang)
     parser = Parser()
     parser.set_language(JAVA_LANGUAGE)
     match_count = 0
