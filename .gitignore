@@ -13,3 +13,6 @@ build/
 
 # Virtual environment
 venv/
+
+# Tree sitter libs
+evaluator/vendor/
