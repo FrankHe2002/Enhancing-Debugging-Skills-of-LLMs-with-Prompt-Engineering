@@ -2,7 +2,7 @@ import subprocess
 import sys
 
 def calculate_codebleu(ref_dir, hyp_dir):
-    evaluator_path = "evaluator/evaluator.py"
+    evaluator_path = "evaluator/bleu_evaluator.py"
     command = f"python {evaluator_path} -ref {ref_dir} -pre {hyp_dir}"
     process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
     out, err = process.communicate()
