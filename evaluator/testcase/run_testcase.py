@@ -1,6 +1,14 @@
 import subprocess
 import threading
 
+# To compile:
+# 1. Remove the class declaration temporarily
+# 2. Locate the solution method by looking for a function that isn't ever called (assuming no recursion)
+# 3. Make a copy of the solution and create a bugged version of it
+# 4. Debug, and insert the fixed back in with a specific name
+# 5. Insert a main method, and include the test case(s) in the main method and code that checks the output
+# 6. Compile and run the code
+
 def run_java_code(java_code, input_str=None):
     # Compile the java code
     compile_process = subprocess.Popen(['javac', '-'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
