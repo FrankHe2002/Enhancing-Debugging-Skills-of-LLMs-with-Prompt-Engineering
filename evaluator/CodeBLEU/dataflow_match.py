@@ -23,7 +23,7 @@ def calc_dataflow_match(references, candidate, lang):
     return corpus_dataflow_match([references], [candidate], lang)
 
 def corpus_dataflow_match(references, candidates, lang):   
-    LANGUAGE = Language('parser/my-languages.so', lang)
+    LANGUAGE = Language('CodeBLEU/parser2/my-languages.so', lang)
     parser = Parser()
     parser.set_language(LANGUAGE)
     parser = [parser,dfg_function[lang]]

@@ -34,7 +34,6 @@ def corpus_syntax_match(references, candidates, lang):
     parser.set_language(JAVA_LANGUAGE)
     match_count = 0
     total_count = 0
-
     for i in range(len(candidates)):
         references_sample = references[i]
         candidate = candidates[i] 
