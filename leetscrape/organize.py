@@ -21,8 +21,14 @@ def is_valid_expression(exp):
         return False
     
     return True
-    
 
+def get_valid_expression(exp):
+    # Assume exp is a valid expression. Return the right side if there's an equals sign,
+    #   otherwise return the whole expression.
+    exp = exp.replace("true", "True").replace("false", "False")
+    if exp.count("=") == 1:
+        return eval(exp.split("=")[1].strip())
+    return eval(exp.strip())
 
 # Replace "filename.pickle" with the actual filename of your .pickle file
 with open("data/questionBody.pickle", "rb") as f:
@@ -32,7 +38,7 @@ valid, invalid = 0, 0
 ex = []
 
 for d in data:
-    ex.append([])
+    ex.append([[], d])
     question_body = d.Body
     # Examples are always wrapped in <strong class=\"example\">...</strong> tags.
     #   We can use BS4 to extract the example data.
@@ -121,28 +127,32 @@ for d in data:
             """
             break
 
-        # Save into ex
-        ex[-1].append((input_data, output_data))
+        # Save into ex, calling get_valid_expression on each with list comprehension
+        if len(input_data) != 1 or len(output_data) != 1:
+            print("Multiple inputs or outputs found:", input_data, output_data)
+            input_data = "".join(input_data)
+            output_data = "".join(output_data)
+        else:
+            input_data = input_data[0]
+            output_data = output_data[0]
+        ex[-1][0].append((get_valid_expression(input_data), get_valid_expression(output_data)))
     
     if ex_are_valid:
         valid += 1
     else:
         invalid += 1
-    
 
-
+ex_cnt = 0
 for question in ex:
-    for example in question:
-        # Count number of = in input
-        input_equals = 0
-        for line in example[0]:
-            input_equals += line.count("=")
-        
-        if input_equals == 1:
-            print("Input:", example[0])
-            print("Output:", example[1])
+    for example in question[0]:
+        print("Input:", example[0])
+        print("Output:", example[1])
+        ex_cnt += 1
+    
+    print("\n")
 
 
 print("Valid:", valid)
 print("Invalid:", invalid)
 print(len(ex), len(data), valid + invalid)
+print("Examples found:", ex_cnt)
