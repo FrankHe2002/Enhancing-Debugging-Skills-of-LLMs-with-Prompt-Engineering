@@ -23,4 +23,4 @@ questions_body = pd.DataFrame(
     questions_body_list
 ).drop(columns=["titleSlug"])
 questions_body["QID"] = questions_body["QID"].astype(int)
-print(questions_body)
+questions_body.to_csv("./data/questionBody.csv", index=False)
