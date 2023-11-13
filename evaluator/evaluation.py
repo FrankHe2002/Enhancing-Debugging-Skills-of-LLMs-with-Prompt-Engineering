@@ -6,14 +6,20 @@ import CodeBLEU.weighted_ngram_match as weighted_ngram_match
 import CodeBLEU.syntax_match as syntax_match
 import CodeBLEU.dataflow_match as dataflow_match
 
+def invert(a):
+    # a is a list of lists. Invert it.
+    return list(map(list, zip(*a)))
+
 def score(pred, actual, hyper=(0.25, 0.25, 0.25, 0.25)): # alpha, beta, gamma, theta
-    # pred/actual are lists of strings
+    # pred/actual are lists of strings (lines)
 
     # First, make sure x and y have the same length by padding
     if len(pred) < len(actual):
         pred += [''] * (len(actual) - len(pred))
+        print("[WARN] Padding prediction to match actual length.")
     elif len(pred) > len(actual):
         actual += [''] * (len(pred) - len(actual))
+        print("[WARN] Padding actual to match prediction length.")
 
     # calculate ngram match (BLEU).
     # We're supposed to pass in a list of (list of (list of token)) as
@@ -24,11 +30,7 @@ def score(pred, actual, hyper=(0.25, 0.25, 0.25, 0.25)): # alpha, beta, gamma, t
 
     tokenized_hyps = [x.split() for x in pred]
     tokenized_refs = [[x.split()] for x in actual]
-    print(tokenized_hyps)
-    print(tokenized_refs)
 
-    
-    print(len(tokenized_hyps), len(tokenized_refs))
     ngram_match_score = bleu.corpus_bleu(tokenized_refs,tokenized_hyps)
 
     # calculate weighted ngram match
@@ -39,10 +41,10 @@ def score(pred, actual, hyper=(0.25, 0.25, 0.25, 0.25)): # alpha, beta, gamma, t
     weighted_ngram_match_score = weighted_ngram_match.corpus_bleu(tokenized_refs_with_weights, tokenized_hyps)
 
     # calculate syntax match
-    syntax_match_score = syntax_match.corpus_syntax_match(actual, pred, "java")
+    syntax_match_score = syntax_match.corpus_syntax_match(invert([actual]), pred, "java")
 
     # calculate dataflow match
-    dataflow_match_score = dataflow_match.corpus_dataflow_match(actual, pred, "java")
+    dataflow_match_score = dataflow_match.corpus_dataflow_match(invert([actual]), pred, "java")
 
     code_bleu_score = hyper[0] * ngram_match_score\
                     + hyper[1] * weighted_ngram_match_score\
@@ -55,7 +57,7 @@ def score(pred, actual, hyper=(0.25, 0.25, 0.25, 0.25)): # alpha, beta, gamma, t
 
     return (ngram_match_score, weighted_ngram_match_score, syntax_match_score, dataflow_match_score), code_bleu_score
 
-
-print(score(['public static void main(String[] args) {', 'System.out.println("Hello");', 'return 0; }'], 
-            ['public static void main(String[] args) {', 'System.out.println("World!");', 'return 0; }']
-            , hyper=(0.25, 0.25, 0.25, 0.25)))
+a = ['public static void main ( String[] args ) {', 'int x = 5;', 'return y; }']
+b = ['public static void main ( String[] args ) {', 'int x = 3;', 'return x; }']
+c = ['public static void main ( String[] args ) { System.out.println( " Hello " ); return 0; }']
+print(score(a, c, hyper=(0.25, 0.25, 0.25, 0.25)))
