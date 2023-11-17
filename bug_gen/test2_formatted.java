@@ -1,9 +1,6 @@
-//This is also a comment need to be deleted.
-
-class Solution { //This is a comment, need to be deleted
+class Solution { 
     public int calPoints(String[] ops) {
         List<Integer> list = new ArrayList<Integer>();
-
         for (int i = 0; i < ops.length; i++) {
             switch (ops[i]) {
                 case "C":
@@ -18,14 +15,11 @@ class Solution { //This is a comment, need to be deleted
                 default:
                     list.add(Integer.valueOf(ops[i]));
                     break;
-            } //Comment
+            } 
         }
-// Comment
         int finalScore = 0;
         for (Integer score : list)
             finalScore += score;
-
         return finalScore;
     }
 }
-//This is a comment

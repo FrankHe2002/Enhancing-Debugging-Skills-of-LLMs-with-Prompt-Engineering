@@ -57,7 +57,24 @@ def score(pred, actual, hyper=(0.25, 0.25, 0.25, 0.25)): # alpha, beta, gamma, t
 
     return (ngram_match_score, weighted_ngram_match_score, syntax_match_score, dataflow_match_score), code_bleu_score
 
-a = ['public static void main ( String[] args ) {', 'int x = 5;', 'return y; }']
-b = ['public static void main ( String[] args ) {', 'int x = 3;', 'return x; }']
-c = ['public static void main ( String[] args ) { System.out.println( " Hello " ); return 0; }']
-print(score(a, c, hyper=(0.25, 0.25, 0.25, 0.25)))
+# a = ['public static void main ( String[] args ) {', 'int x = 5;', 'return y; }']
+# b = ['public static void main ( String[] args ) {', 'int x = 3;', 'return x; }']
+# c = ['public static void main ( String[] args ) { System.out.println( " Hello " ); return 0; }']
+# print(score(a, c, hyper=(0.25, 0.25, 0.25, 0.25)))
+
+# Read files
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--pred', type=str, required=True, help='path to prediction file')
+    parser.add_argument('--actual', type=str, required=True, help='path to actual file')
+    parser.add_argument('--hyper', type=str, default='0.25,0.25,0.25,0.25', help='hyperparameters for CodeBLEU')
+    args = parser.parse_args()
+
+    pred = open(args.pred, 'r', encoding='utf-8').readlines()
+    actual = open(args.actual, 'r', encoding='utf-8').readlines()
+    hyper = [float(x) for x in args.hyper.split(',')]
+
+    score(pred, actual, hyper)
+    
+if __name__ == '__main__':
+    main()
