@@ -1,24 +1,26 @@
 import os
 import subprocess
 
-def evaluate_folder(folder_path, evaluator_script, hyperparameters='0.25,0.25,0.25,0.25'):
-    for filename in os.listdir(folder_path):
-        if filename.endswith('_zeroshot.java'):
-            base_name = filename[:-len('_zeroshot.java')]
-            correct_file_name = base_name + '_correct.java'
-            correct_file_path = os.path.join(folder_path, correct_file_name)
+def evaluate_folders(folder1, folder2, suffix, evaluator_script, hyperparameters='0.25,0.25,0.25,0.25'):
+    for filename in os.listdir(folder1):
+        if filename.endswith('.java'):
+            base_name = os.path.splitext(filename)[0]
+            modified_file_name = f"{base_name}_{suffix}.java"
+            modified_file_path = os.path.join(folder2, modified_file_name)
 
-            if os.path.exists(correct_file_path):
-                zeroshot_file_path = os.path.join(folder_path, filename)
+            if os.path.exists(modified_file_path):
+                original_file_path = os.path.join(folder1, filename)
 
                 # Constructing the command to call the evaluator script
-                command = ['python', evaluator_script, '--pred', zeroshot_file_path, '--actual', correct_file_path, '--hyper', hyperparameters]
+                command = ['python', evaluator_script, '--pred', modified_file_path, '--actual', original_file_path, '--hyper', hyperparameters]
                 subprocess.run(command)
             else:
-                print(f"Matching correct file not found for {filename}")
+                print(f"Matching file for {filename} not found in {folder2}")
 
 if __name__ == '__main__':
     # Example usage
-    folder_path = '../bug_gen/output'  # Replace with the actual folder path
-    evaluator_script = '../evaluator/evaluation.py'  # Replace with the path to evaluator script
-    evaluate_folder(folder_path, evaluator_script)
+    folder1 = '../bug_gen/output'  # Path to the first folder (original files)
+    folder2 = '../bug_gen/bugged_output'  # Path to the second folder (modified files)
+    suffix = 'zeroshot'  # Suffix used in the modified files
+    evaluator_script = '../evaluator/evaluation.py'  # Path to evaluator script
+    evaluate_folders(folder1, folder2, suffix, evaluator_script)
