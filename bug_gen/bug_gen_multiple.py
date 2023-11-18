@@ -20,6 +20,6 @@ def generate_bugs_for_all_files(source_directory, target_directory, num_bugs=1):
 
 if __name__ == "__main__":
     source_dir = '../solutions_correct/algorithms'  # Source directory
-    target_dir = '../bug_gen/bug_codes'  # Target directory where bugged files will be saved
+    target_dir = '../bug_codes'  # Target directory where bugged files will be saved
 
     generate_bugs_for_all_files(source_dir, target_dir, num_bugs=1)

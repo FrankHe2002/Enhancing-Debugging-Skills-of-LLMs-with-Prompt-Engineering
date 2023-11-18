@@ -20,6 +20,6 @@ def copy_java_files(source_directory, target_directory):
 
 if __name__ == "__main__":
     source_dir = '../solutions_correct/algorithms'  # Replace with the actual source directory path
-    target_dir = '../bug_gen/correct_codes'  # Target directory where Java files will be copied
+    target_dir = '../correct_codes'  # Target directory where Java files will be copied
 
     copy_java_files(source_dir, target_dir)
