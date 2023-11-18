@@ -5,16 +5,19 @@ import bugs, random, os
 
 def add_bugs(file_data, num_bugs, log=False):
     bug_types = [bugs.ArrayIndexBug, bugs.IncorrectConditionBug, bugs.IncorrectOperationBug, bugs.IncorrectValueBug, bugs.MissingCharacterBug]
+    introduced_bugs = []
 
     for i in range(num_bugs):
         # Get a random bug
         bug = random.choice(bug_types)()
         # Create and apply bug
         file_data = bug.effect(file_data)
-        if log and bug.valid:
-            print(f"Bug {i+1}: {bug.name} ({bug.valid}): {bug.state}")
+        if bug.valid:
+            introduced_bugs.append(bug.name)
+            if log:
+                print(f"Bug {i+1}: {bug.name} ({bug.valid}): {bug.state}")
 
-    return file_data
+    return file_data, introduced_bugs
 
 
 def bug_gen(**kwargs):
@@ -56,8 +59,14 @@ def bug_gen(**kwargs):
         file_data = file.read()
     
     # Add bugs
-    file_data = add_bugs(file_data, num_bugs, log=log)
-    
+    file_data, bug_list = add_bugs(file_data, num_bugs, log=log)
+
+    # Generate the output file name
+    base_name = os.path.splitext(os.path.basename(file_path))[0]
+    bug_types_str = '_'.join(bug_list)
+    new_file_name = f"{base_name}_{bug_types_str}.java" if bug_types_str else f"{base_name}_no_bug.java"
+    output_path = os.path.join(os.path.dirname(output_path), new_file_name)
+
     # Write to output file
     with open(output_path, "w") as file:
         file.write(file_data)

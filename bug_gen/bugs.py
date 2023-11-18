@@ -215,6 +215,9 @@ class IncorrectConditionBug(BugBase):
                     indices.append((i - 1, code[i - 1]))
             last = code[i]
 
+        # Remove conditions that aren't surrounded by spaces
+        indices = [index for index in indices if index[0] > 0 and index[0] < len(code) - 2 and code[index[0] - 1] == " " and (code[index[0] + 2] == " " or code[index[0] + 1] == " ")]
+
         
         # If there are no conditions, return the code unchanged
         if len(indices) == 0:
