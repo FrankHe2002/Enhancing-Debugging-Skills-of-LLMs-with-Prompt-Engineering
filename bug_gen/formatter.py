@@ -64,7 +64,7 @@ def format_file(file_path, formatted_file_path):
     with open(formatted_file_path, 'w') as file:
         file.write(formatted_content)
 
-def main(folder_path):
+def main(folder_path, change_name=True):
     for filename in os.listdir(folder_path):
         if filename.endswith('.java') and not filename.endswith('_formatted.java'):
             file_path = os.path.join(folder_path, filename)
@@ -74,4 +74,4 @@ def main(folder_path):
 
 if __name__ == "__main__":
     folder_path = '.'  # Replace with the folder path
-    main(folder_path)
+    main(folder_path, change_name=False)
