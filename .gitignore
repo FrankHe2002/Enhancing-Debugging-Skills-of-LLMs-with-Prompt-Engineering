@@ -16,3 +16,6 @@ venv/
 
 # Tree sitter libs
 evaluator/vendor/
+
+# API_KEY
+API_KEY.txt
