@@ -1,10 +1,8 @@
-```java
 class Solution {
     public int minimumRefill(int[] plants, int capacityA, int capacityB) {
         int count=0;
         int c1=capacityA,c2=capacityB;
-        for(int start=0,end=plants.length-1;start<=plants.length/2&&end>=plants.length/2;start++,end--){
-            if(start==end||start>end)break;
+        for(int start=0,end=plants.length-1;start<end;start++,end--){
             if(c1>=plants[start]){
                 c1-=plants[start];
             }
@@ -31,4 +29,3 @@ class Solution {
         return count;
     }
 }
-```
