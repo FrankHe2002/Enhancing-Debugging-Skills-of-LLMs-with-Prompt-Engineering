@@ -10,7 +10,7 @@ def generate_bugs_for_all_files(source_directory, target_directory, num_bugs=1):
         os.makedirs(target_directory)
 
     # Iterate over all Java files in the source directory
-    for file_path in glob.glob(os.path.join(source_directory, '*', '*', '*.java')):
+    for file_path in glob.glob(os.path.join(source_directory, '*.java')):
         base_name = os.path.basename(file_path)
         output_path = os.path.join(target_directory, base_name)
 
@@ -19,7 +19,7 @@ def generate_bugs_for_all_files(source_directory, target_directory, num_bugs=1):
         bug_gen(**kwargs)
 
 if __name__ == "__main__":
-    source_dir = '../solutions_correct/algorithms'  # Source directory
-    target_dir = '../bug_codes'  # Target directory where bugged files will be saved
+    source_dir = '../data/formatted/correct_codes'  # Source directory
+    target_dir = '../data/formatted/buggy_codes'  # Target directory where bugged files will be saved
 
     generate_bugs_for_all_files(source_dir, target_dir, num_bugs=1)
