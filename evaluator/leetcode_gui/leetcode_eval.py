@@ -8,8 +8,9 @@ from bs4 import BeautifulSoup
 TEXT_INPUT = (1340, 680)
 CONSOLE = (2200, 1500)
 OUTPUT_COPY_LOCATION = (2200, 1430)
-OUTPUT_COPY_BUTTON = (OUTPUT_COPY_LOCATION[0] + 40, OUTPUT_COPY_LOCATION[1] - 145)
 URL_BAR = (860, 80)
+
+OUTPUT_COPY_BUTTON = (OUTPUT_COPY_LOCATION[0] + 40, OUTPUT_COPY_LOCATION[1] - 145)
 EXTRACTION_JS = """var tmp = {"contents": document.querySelector("#qd-content > div > div:nth-last-child(6)").innerHTML};tmp"""
 
 
