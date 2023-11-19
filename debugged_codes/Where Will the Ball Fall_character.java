@@ -1,0 +1,31 @@
+// Runtime: 0 ms (Top 100%) | Memory: 39.3 MB (Top 94.23%)
+class Solution {
+    public int dfs(int[][] grid, int i, int j) {
+        if (i == grid.length) {
+            return j;
+        }
+
+        if (j < 0 || j >= grid[0].length) {
+            return -1;
+        }
+
+        if (grid[i][j] == 1 && j + 1 < grid[0].length && grid[i][j + 1] == 1) {
+            return dfs(grid, i + 1, j + 1);
+        } else if (grid[i][j] == -1 && j - 1 >= 0 && grid[i][j - 1] == -1) {
+            return dfs(grid, i + 1, j - 1); // Fixed missing closing parenthesis
+        }
+
+        return -1;
+    }
+
+    public int[] findBall(int[][] grid) {
+        int m = grid[0].length;
+        int[] ar = new int[m];
+
+        for (int j = 0; j < m; j++) {
+            ar[j] = dfs(grid, 0, j);
+        }
+
+        return ar;
+    }
+}

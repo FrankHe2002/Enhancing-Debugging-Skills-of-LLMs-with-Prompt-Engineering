@@ -1,6 +1,8 @@
+import java.util.*;
+
 class Solution {
     class TrieNode {
-        Map<Character, TrieNode> children = new HashMap();
+        Map<Character, TrieNode> children = new HashMap<>();
         boolean word = false;
         public TrieNode() {}
     }
