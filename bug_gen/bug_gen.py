@@ -24,6 +24,7 @@ def add_bugs(file_data, num_bugs, log=False, force=False):
             introduced_bugs = introduced_bugs[:-1]
         
         if file_data == old and force:
+            introduced_bugs = introduced_bugs[:-1]
             i -= 1
 
     return file_data, introduced_bugs
