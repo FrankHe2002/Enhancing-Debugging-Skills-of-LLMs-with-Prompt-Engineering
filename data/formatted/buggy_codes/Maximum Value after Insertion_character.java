@@ -12,7 +12,7 @@ class Solution {
                 } else {
                     res.append(x);
                     res.append(ch);
-                    res.append(n.substringj + 1));
+                    res.append(n.substring(j + 1));
                     break;
                 }
             }
@@ -29,7 +29,7 @@ class Solution {
                 } else {
                     res.append(x);
                     res.append(ch);
-                    res.append(n.substring(i + 1));
+                    res.append(n.substringi + 1));
                     break;
                 }
             }

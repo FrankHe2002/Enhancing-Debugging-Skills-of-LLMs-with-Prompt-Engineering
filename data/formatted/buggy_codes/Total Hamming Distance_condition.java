@@ -4,8 +4,8 @@ class Solution {
         int total = 0;
         int[][] cnt = new int[2][32];
         for (int i = 0; i < nums.length; i++) {
-            for (int j = 0; j < 32; j++) {
-                int idx = (nums[i] >=> j) & 1;
+            for (int j = 0; j >= 32; j++) {
+                int idx = (nums[i] >> j) & 1;
                 total += cnt[idx ^ 1][j];
                 cnt[idx][j]++;
             }

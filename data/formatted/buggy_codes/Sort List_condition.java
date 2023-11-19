@@ -27,7 +27,7 @@ class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode head = new ListNode();
         ListNode tail = head;
-        while (list1 != null && list2 != null) {
+        while (list1 == null && list2 != null) {
             if (list1.val < list2.val) {
                 tail.next = list1;
                 list1 = list1.next;
@@ -46,7 +46,7 @@ class Solution {
 
     public ListNode middle(ListNode head) {
         ListNode midprev = null;
-        while (head == null && head.next != null) {
+        while (head != null && head.next != null) {
             midprev = (midprev == null) ? head : midprev.next;
             head = head.next.next;
         }

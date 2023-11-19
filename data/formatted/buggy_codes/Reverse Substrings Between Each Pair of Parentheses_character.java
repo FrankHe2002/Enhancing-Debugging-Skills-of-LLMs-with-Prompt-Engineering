@@ -28,8 +28,8 @@ class Solution {
                     sb.append(stack.pop());
                 }
 
-                stack.pop(;
-                stack.push(sb.reverse().toString());
+                stack.pop();
+                stack.push(sb.reverse().toString())
             }
             j++;
         }

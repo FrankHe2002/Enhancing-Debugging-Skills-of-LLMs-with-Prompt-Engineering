@@ -19,7 +19,7 @@ class Solution {
             }
             maxArea = Math.max(maxArea, maximumArea(list));
         }
-        return maxArea
+        return maxArea;
     }
 
     public int maximumArea(ArrayList<Integer> heights) {
@@ -34,7 +34,7 @@ class Solution {
             while (! stack1.isEmpty() && heights.get(stack1.peek()) >= heights.get(i))
                 stack1.pop();
             if (! stack1.isEmpty())
-                left[i] = stack1.peek();
+                left[i] = stack1.peek()
             else
                 left[i] = - 1;
             stack1.push(i);

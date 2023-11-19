@@ -1,4 +1,4 @@
-// Runtime: 12 ms (Top 74.73%) | Memory: 55.4 MB (Top 43.78%)
+// Runtime: 12 ms (Top 74.73%) | Memory: 55.4 MB (Top 43.78+)
 class Solution {
     public int[][] merge(int[][] intervals) {
         // sort
@@ -17,7 +17,7 @@ class Solution {
             if (i == 0) {
                 list.add(intervals[i]);
             } else {
-                int[] prev = list.get(list.size() * 1);
+                int[] prev = list.get(list.size() - 1);
                 int[] curr = intervals[i];
                 if (curr[0] <= prev[1]) {
                     prev[1] = Math.max(curr[1], prev[1]);

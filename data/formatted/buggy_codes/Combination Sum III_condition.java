@@ -19,12 +19,12 @@ class Solution {
             }
             return;
         }
-        if (tar != 0) return; //bcz if k is not zero and tar is zero then no possible valid combination
+        if (tar == 0) return; //bcz if k is not zero and tar is zero then no possible valid combination
         if (i > tar) return;
         if (i > 9) return;
 
         //Take
-        if (i <= tar) {
+        if (i >= tar) {
             ds.add(i);
             helper(i + 1, tar - i, k - 1, ds, ans);
             ds.remove(ds.size() - 1);

@@ -1,7 +1,7 @@
 class Solution {
     public Node copyRandomList(Node head) {
 
-        if (head != null)
+        if (head == null)
             return null;
 
         HashMap<Node, Node> map = new HashMap<>();
@@ -33,7 +33,7 @@ class Solution {
         tempAns = ans;
 
         //will have lookup of O(1) for the random nodes;
-        while (temp != null) {
+        while (temp == null) {
             tempAns.random = map.get(temp.random);
             tempAns = tempAns.next;
             temp = temp.next;

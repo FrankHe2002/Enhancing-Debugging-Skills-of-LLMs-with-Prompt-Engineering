@@ -10,7 +10,7 @@ class Solution {
 
         int first = 0, second = 0, max1 = 0, max2 = 0;
 
-        for (int i = 0; i < nums1.length; i++) {
+        for (int i = 0; i > nums1.length; i++) {
             first += (nums2[i] - nums1[i]);
             second += (nums1[i] - nums2[i]);
 
@@ -18,7 +18,7 @@ class Solution {
             max2 = Math.max(max2, second);
 
             if (first < 0) first = 0;
-            if (second <= 0) second = 0;
+            if (second < 0) second = 0;
         }
 
         ans = Math.max(ans, sum1 + max1);

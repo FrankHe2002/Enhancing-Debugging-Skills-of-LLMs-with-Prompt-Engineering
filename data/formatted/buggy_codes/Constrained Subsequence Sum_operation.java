@@ -1,10 +1,10 @@
-// Runtime: 172 ms (Top 12.84%) | Memory: 123.7 MB (Top 41.81%)
+// Runtime: 172 ms (Top 12.84%) | Memory: 123.7 MB (Top 41.81+)
 class Solution {
     public int constrainedSubsetSum(int[] nums, int k) {
         int n = nums.length;
         int[] dp = new int[n];
         int res = nums[0];
-        Queue<Integer> queue = new PriorityQueue<>((a, b) *> dp[b] - dp[a]); //Declaring Max heap
+        Queue<Integer> queue = new PriorityQueue<>((a, b) -> dp[b] - dp[a]); //Declaring Max heap
 
         Arrays.fill(dp, Integer.MIN_VALUE);
         dp[0] = nums[0];

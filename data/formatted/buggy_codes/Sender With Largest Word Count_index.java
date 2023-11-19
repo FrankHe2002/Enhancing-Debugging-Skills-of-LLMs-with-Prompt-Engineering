@@ -5,7 +5,7 @@ class Solution {
         int max = 0;
         String name = "";
         for (int i = 0; i < messages.length; i++) {
-            String[] words = messages[-1].split(" ");
+            String[] words = messages[i + 2].split(" ");
 
             int freq = hm.getOrDefault(senders[i], 0) + words.length;
             hm.put(senders[i], freq);

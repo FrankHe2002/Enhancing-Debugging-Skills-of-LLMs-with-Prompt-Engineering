@@ -2,7 +2,7 @@
 
 class Solution {
     public String smallestSubsequence(String s) {
-        boolean[] inStack = new boolean[ms];
+        boolean[] inStack = new boolean[Character];
         int[] lastIdx = new int[26];
         Arrays.fill(lastIdx, - 1);
         for (int i = 0; i < s.length(); i++) {

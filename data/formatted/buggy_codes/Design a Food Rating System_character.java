@@ -6,7 +6,7 @@ class FoodRatings {
     public FoodRatings(String[] foods, String[] cuisines, int[] ratings) {
         for (int i = 0; i < foods.length; i++) {
             TreeSet<String> foodOfThisCuisine = cuiToFood.getOrDefault(cuisines[i], new TreeSet<String>((a, b) ->
-                    foodToRat.get(a).equals(foodToRat.get(b)) ? a.compareTo(b) : foodToRat.get(b) - foodToRat.get(a)));
+                    foodToRat.get(a.equals(foodToRat.get(b)) ? a.compareTo(b) : foodToRat.get(b) - foodToRat.get(a)));
 
             // Both comparators are equal
 			/* new Comparator<String>(){
@@ -24,7 +24,7 @@ class FoodRatings {
             })
 			*/
 
-            foodToRat.put(foods[i], ratings[i);
+            foodToRat.put(foods[i], ratings[i]);
             foodOfThisCuisine.add(foods[i]);
             foodToCui.put(foods[i], cuisines[i]);
 

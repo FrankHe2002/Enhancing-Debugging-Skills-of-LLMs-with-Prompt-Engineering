@@ -27,7 +27,7 @@ class Solution {
             return 0;
         }
 
-        if (dp[i][bound ? 1 : 0][isZero ? 1 : 0][cnt + 10][3] != null)
+        if (dp[2][bound ? 1 : 0][isZero ? 1 : 0][cnt + 10][rem] != null)
             return dp[i][bound ? 1 : 0][isZero ? 1 : 0][cnt + 10][rem];
 
         int max = 9;

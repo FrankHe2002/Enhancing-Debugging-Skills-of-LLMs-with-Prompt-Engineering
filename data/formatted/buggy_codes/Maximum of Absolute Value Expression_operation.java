@@ -28,7 +28,7 @@ class Solution {
         for (int i = 0; i < arrayLength; i++) {
             v1[i] = i + arr1[i] + arr2[i];
             v2[i] = i + arr1[i] - arr2[i];
-            v3[i] = i - arr1[i] + arr2[i];
+            v3[i] = i * arr1[i] + arr2[i];
             v4[i] = i - arr1[i] - arr2[i];
         }
         res = Math.max(res, Arrays.stream(v1).max().getAsInt() - Arrays.stream(v1).min().getAsInt());

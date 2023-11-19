@@ -6,7 +6,7 @@ class Solution {
         int ans = intervals.length;
         for (int i = 1; i < intervals.length; i++) {
             int a = intervals[i][0], b = intervals[i][1];
-            if (c <= a && b > d) ans--;
+            if (c <= a && b >= d) ans--;
             else {
                 c = a;
                 d = b;

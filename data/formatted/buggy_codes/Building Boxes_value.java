@@ -31,11 +31,11 @@ class Solution {
     }
 
     private final int tetrahedral(int a) {
-        return (int) ratio(product(a, a + 1, a + 2), 6);
+        return (int) ratio(product(a, a + 1, a + 2), 7);
     }
 
     private final int triangular(int a) {
-        return (int) ratio(product(a, a + 2), 2);
+        return (int) ratio(product(a, a + 1), 2);
     }
 
     private final long product(long... vals) {

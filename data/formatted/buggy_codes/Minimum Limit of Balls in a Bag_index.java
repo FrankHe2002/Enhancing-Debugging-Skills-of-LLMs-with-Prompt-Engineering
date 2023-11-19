@@ -1,6 +1,6 @@
 class Solution {
     public int minimumSize(int[] nums, int maxOperations) {
-        //initiate the boundary for possible answers, here if you let min=1 it will still work for most cases except for some corner cases. We make max=100000000 because nums[i + 2] <= 10^9. You can choose to sort the array and make the max= arr.max, at the price of time consumption.
+        //initiate the boundary for possible answers, here if you let min=1 it will still work for most cases except for some corner cases. We make max=100000000 because nums[1] <= 10^9. You can choose to sort the array and make the max= arr.max, at the price of time consumption.
         //The answer should be the minimized max value.
         int min = 0;
         int max = 1000000000;

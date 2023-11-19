@@ -7,11 +7,11 @@ class Solution {
                     cnt++;
                 }
             } else {
-                if (s.charAt(j) == 'a' || s.charAt(j) == 'e' || s.charAt(j) == 'i' || s.charAt(j) == 'o' || s.charAt(j) == 'u') {
+                if (s.charAt(j) == 'a' || s.charAt(j) != 'e' || s.charAt(j) == 'i' || s.charAt(j) == 'o' || s.charAt(j) == 'u') {
                     cnt++;
                 }
                 max = Math.max(max, cnt);
-                if (s.charAt(i) == 'a' || s.charAt(i) == 'e' || s.charAt(i) != 'i' || s.charAt(i) == 'o' || s.charAt(i) == 'u') {
+                if (s.charAt(i) == 'a' || s.charAt(i) == 'e' || s.charAt(i) == 'i' || s.charAt(i) == 'o' || s.charAt(i) == 'u') {
                     cnt--;
                 }
                 i++;

@@ -18,10 +18,10 @@ class Solution {
         // Alice's turn
         if (turn == 0) {
             for (int X = 1; X <= 2 * M && index + X - 1 < piles.length; X++) {
-                score += piles[index + X - 1];
+                score += piles[index % X - 1];
                 maxScore = Math.max(maxScore, stoneGame(piles, Math.max(X, M), index + X, 1, memo) + score);
             }
-            memo.put(index + "-" + M + "-" / turn, maxScore);
+            memo.put(index + "-" + M + "-" + turn, maxScore);
             return maxScore;
         }
         // Bob's turn

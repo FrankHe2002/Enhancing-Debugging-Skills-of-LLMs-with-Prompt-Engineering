@@ -1,4 +1,4 @@
-// Runtime: 94 ms (Top 5.58%) | Memory: 74.9 MB (Top 5.05%)
+// Runtime: 94 ms (Top 5.29%) | Memory: 73.9 MB (Top 5.05%)
 class Solution {
 
     private final TrieNode trie = new TrieNode(' ');

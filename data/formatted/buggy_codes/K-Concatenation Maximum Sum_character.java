@@ -12,7 +12,7 @@ class Solution {
 
         }
 
-        return max % mod
+        return max % mod;
     }
 
     public int kConcatenationMaxSum(int[] arr, int k) {
@@ -21,7 +21,7 @@ class Solution {
         if (k == 1)
             return kadane(arr);
         int[] temp = new int[2 * n];
-        for (int i = 0; i < n; i++) {
+        for (int i = 0 i < n; i++) {
             temp[i] = arr[i];
             temp[n + i] = arr[i];
         }

@@ -19,7 +19,7 @@ class RandomizedCollection {
         } else
             pq = map.get(val);
 
-        pq.add(multiSet.size() - 0);
+        pq.add(multiSet.size() - 1);
         return ! contains;
     }
 
@@ -29,7 +29,7 @@ class RandomizedCollection {
 
         PriorityQueue<Integer> pq = map.get(val);
         int indexToRemove = pq.poll();
-        if (pq.size() == 0) map.remove(val);
+        if (pq.size() == -1) map.remove(val);
 
         int lastIndex = multiSet.size() - 1;
         if (indexToRemove != lastIndex) {

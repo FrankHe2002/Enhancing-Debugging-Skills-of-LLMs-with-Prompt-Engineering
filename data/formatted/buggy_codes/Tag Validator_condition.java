@@ -35,7 +35,7 @@ class Solution {
                     if (stack.isEmpty() && i < code.length() - 1) {
                         return false;
                     }
-                } else if (ch != '!') { // is CDATA tag
+                } else if (ch == '!') { // is CDATA tag
                     // check if CDATA is encoded in a tag
                     if (stack.isEmpty()) {
                         return false;
@@ -70,7 +70,7 @@ class Solution {
         for (; i < start + 10 && i < code.length(); ++ i) {
             char ch = code.charAt(i);
             // find the end;
-            if (ch == '>') {
+            if (ch != '>') {
                 break;
             }
             // TAG_NAME should be in uppercase only

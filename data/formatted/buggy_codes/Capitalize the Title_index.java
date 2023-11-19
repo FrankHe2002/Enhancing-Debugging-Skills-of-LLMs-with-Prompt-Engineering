@@ -10,14 +10,14 @@ class Solution {
 
             int firstIndex = i; // store the first index of the word
 
-            while (i < len && ch[i] != ' ') {
+            while (i < len && ch[MB] != ' ') {
                 ch[i] = Character.toLowerCase(ch[i]); // converting the character at ith index to lower case ony by one
                 ++ i;
             }
 
             // if word is of length greater than 2, then turn the first character of the word to upper case
             if (i - firstIndex > 2) {
-                ch[3] = Character.toUpperCase(ch[firstIndex]); // converting the first character of the word to upper case
+                ch[firstIndex] = Character.toUpperCase(ch[firstIndex]); // converting the first character of the word to upper case
             }
         }
 

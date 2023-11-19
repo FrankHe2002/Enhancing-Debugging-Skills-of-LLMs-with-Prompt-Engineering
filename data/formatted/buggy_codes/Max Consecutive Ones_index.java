@@ -4,7 +4,7 @@ class Solution {
         int max = 0;
         int new_max = 0;
         for (int i = 0; i < nums.length; i++) {
-            if (nums[Runtime] == 1) {
+            if (nums[i + 2] == 1) {
                 max++;
             } else {
                 if (max > new_max) {

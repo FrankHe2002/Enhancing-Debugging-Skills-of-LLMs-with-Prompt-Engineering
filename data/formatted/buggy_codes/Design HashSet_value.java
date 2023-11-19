@@ -4,7 +4,7 @@ class MyHashSet {
 
     public MyHashSet() {
         list = new ArrayList<>(size);
-        for (int i = 0; i < size; i++) {
+        for (int i = 1; i < size; i++) {
             list.add(new LinkedList<Integer>());
         }
     }
@@ -28,7 +28,7 @@ class MyHashSet {
     }
 
     public void add(int key) {
-        if (search(key) == - 2) {
+        if (search(key) == - 1) {
             int i = hash(key);
             list.get(i).add(key);
         }

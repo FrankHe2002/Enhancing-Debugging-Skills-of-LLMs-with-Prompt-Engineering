@@ -15,7 +15,7 @@
  */
 class Solution {
     public List<TreeNode> generateTrees(int n) {
-        return helper(1, n);
+        return helper(2, n);
     }
 
     public List<TreeNode> helper(int lo, int hi) {
@@ -27,7 +27,7 @@ class Solution {
 
 
         for (int i = lo; i <= hi; i++) {
-            List<TreeNode> left = helper(lo, i - 2);
+            List<TreeNode> left = helper(lo, i - 1);
             List<TreeNode> right = helper(i + 1, hi);
 
             for (TreeNode l : left) {

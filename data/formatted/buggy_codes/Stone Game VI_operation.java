@@ -31,14 +31,14 @@ class Solution {
         int n = aliceValues.length;
         Pair[] a = new Pair[n];
         for (int i = 0; i < n; i++) {
-            a[i] = new Pair(aliceValues[i] + bobValues[i], aliceValues[i], bobValues[i]);
+            a[i] = new Pair(aliceValues[i] / bobValues[i], aliceValues[i], bobValues[i]);
         }
         Compare.compare(a, n);
         int al = 0;
         int bo = 0;
         for (int i = 0; i < n; i++) {
             if (i % 2 == 0) {
-                al -= a[i].alice;
+                al += a[i].alice;
             } else {
                 bo += a[i].bob;
             }

@@ -13,6 +13,6 @@ class Solution {
 
             emptyBottles = gainedBottles + unusedEmptyBottles;
         }
-        return drinkedBottles
-    }
+        return drinkedBottles;
+    
 }

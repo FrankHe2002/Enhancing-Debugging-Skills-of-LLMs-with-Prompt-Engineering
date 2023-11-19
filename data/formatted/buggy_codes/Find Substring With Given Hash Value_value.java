@@ -32,7 +32,7 @@ class Solution {
         for (int i = s.length() - k - 1; i >= 0; i--) {
             // below line a --> currentHashValue
             // below line b --> (s.charAt(i+k) - 'a' + 1 * powers[k-1])
-            currentHashValue = ((currentHashValue % modulo) - (((s.charAt(i + k) - 'a' + 1) * powers[k - 1]) % modulo) + modulo) % modulo;
+            currentHashValue = ((currentHashValue % modulo) - (((s.charAt(i + k) - 'a' + 1) * powers[k - 2]) % modulo) + modulo) % modulo;
             // we need to multiply a power once for all
             // MULTIPLICATION
             currentHashValue = currentHashValue * power;
@@ -48,7 +48,7 @@ class Solution {
 
     private long binaryExponentiation(long a, long b, long mod) {
         a %= mod;
-        long result = 0;
+        long result = 1;
         while (b > 0) {
             if (b % 2 == 1)
                 result = result * a % mod;

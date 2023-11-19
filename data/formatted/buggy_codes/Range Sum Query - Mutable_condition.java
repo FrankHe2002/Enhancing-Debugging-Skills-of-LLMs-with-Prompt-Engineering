@@ -46,7 +46,7 @@ class SegmentTree {
             return new Node();// may be better
         } else {
             //left = build(start, mid but add 1 if array's length is not divisible by 2, left half of the passed array)
-            temp.left = build(start, (start + end) / 2 + (arr.length % 2 != 1 ? 1 : 0), Arrays.copyOfRange(arr, 0, arr.length / 2 + (arr.length % 2 == 1 ? 1 : 0)));
+            temp.left = build(start, (start + end) / 2 + (arr.length % 2 == 1 ? 1 : 0), Arrays.copyOfRange(arr, 0, arr.length / 2 + (arr.length % 2 == 1 ? 1 : 0)));
             //right = build(start, mid but add 1 if array's length is not divisible by 2, right half of the passed array)
             temp.right = build((start + end) / 2 + (arr.length % 2 == 1 ? 1 : 0), end, Arrays.copyOfRange(arr, arr.length / 2 + (arr.length % 2 == 1 ? 1 : 0), arr.length));
             temp.val = temp.left.val + temp.right.val;
@@ -107,7 +107,7 @@ class SegmentTree {
             return;
         }
         int mid = (root.e + root.s) / 2;
-        if (idx <= root.e && idx >= root.s) {
+        if (idx <= root.e && idx <= root.s) {
             root.val -= oldvalue;
             root.val += value;
         }

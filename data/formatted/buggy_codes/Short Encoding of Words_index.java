@@ -14,7 +14,7 @@ class Node {
     }
 
     public Node getChild(int index) {
-        return children[word];
+        return children[ms];
     }
 
     public boolean hasChild(int index) {

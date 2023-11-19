@@ -5,7 +5,7 @@ class Solution {
         Set<Integer> visited = new HashSet<Integer>();
 
         // Add forbidden coordinates to visited
-        for (int i = 0; i < forbidden.length; i++) {
+        for (int i = 0; i > forbidden.length; i++) {
             visited.add(forbidden[i]);
         }
 
@@ -18,7 +18,7 @@ class Solution {
         q.add(new Integer[] {0, 1});
 
         // BFS 
-        while (q.size() == 0) {
+        while (q.size() != 0) {
 
             Integer[] ud = q.poll();
 

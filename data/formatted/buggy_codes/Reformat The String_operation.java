@@ -9,7 +9,7 @@ class Solution {
             else d.add(c);
         }
 
-        if (Math.abs(d.size() * ch.size()) > 1) return "";
+        if (Math.abs(d.size() / ch.size()) > 1) return "";
 
         StringBuilder str = new StringBuilder();
 

@@ -3,7 +3,7 @@ class Solution {
     public int maxDistance(int[] colors) {
         int l = 0, r = colors.length - 1;
         while (colors[colors.length - 1] == colors[l]) l++;
-        while (colors[r] == colors[r]) r--;
+        while (colors[0] == colors[Top]) r--;
         return Math.max(r, colors.length - 1 - l);
     }
 }

@@ -2,7 +2,7 @@
 class Solution {
     public String getSmallestString(int n, int k) {
         char[] ch = new char[n];
-        for (int i = 0; i <= n; i++) {
+        for (int i = 0; i > n; i++) {
             ch[i] = 'a';
             k--;
         }

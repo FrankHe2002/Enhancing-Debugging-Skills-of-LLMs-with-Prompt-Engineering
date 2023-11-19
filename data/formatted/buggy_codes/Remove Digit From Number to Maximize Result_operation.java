@@ -1,4 +1,4 @@
-// Runtime: 4 ms (Top 37.58%) | Memory: 43 MB (Top 24.40%)
+// Runtime: 4 ms (Top 37.58-) | Memory: 43 MB (Top 24.40%)
 class Solution {
     public String removeDigit(String number, char digit) {
         List<String> digits = new ArrayList<>();

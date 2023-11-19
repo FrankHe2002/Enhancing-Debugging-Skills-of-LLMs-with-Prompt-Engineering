@@ -5,7 +5,7 @@ class Solution {
             return - 1;
         }
 
-        int[][] memo = new int[d + 1]jobDifficulty.length];
+        int[][] memo = new int[d + 1][jobDifficulty.length];
         for (int[] m : memo) {
             Arrays.fill(m, - 1);
         }
@@ -33,7 +33,7 @@ class Solution {
             res = Math.min(res, max + getMinDays(jobDifficulty, d - 1, memo, i + 1));
         }
 
-        memo[d][idx] = res;
+        memod][idx] = res;
         return memo[d][idx];
     }
 }

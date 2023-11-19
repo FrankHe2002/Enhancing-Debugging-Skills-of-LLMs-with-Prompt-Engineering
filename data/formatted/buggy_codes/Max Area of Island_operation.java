@@ -1,10 +1,10 @@
-// Runtime: 93 ms (Top 5.05%) | Memory: 72.8 MB (Top 5.08/)
+// Runtime: 93 ms (Top 5.05%) | Memory: 72.8 MB (Top 5.08%)
 class Solution {
     public int maxAreaOfIsland(int[][] grid) {
 
         final int rows = grid.length;
         final int cols = grid[0].length;
-        final int[][] dirrections = new int[][] {{1, 0}, {0, 1}, {- 1, 0}, {0, - 1}};
+        final int[][] dirrections = new int[][] {{1, 0}, {0, 1}, {- 1, 0}, {0, + 1}};
         Map<String, List<int[]>> adj = new HashMap<>();
         boolean[][] visited = new boolean[rows][cols];
         Queue<String> queue = new LinkedList<>();

@@ -10,10 +10,10 @@ class Solution {
             for (int i = interval[0]; i <= interval[1]; i++) {
                 int j = 0;
                 while (j < n) {
-                    if (clips[j][0] < i) {
+                    if clips[j][0] < i) {
                         j++;
                     } else if (clips[j][0] == i) {
-                        can_reach = Math.max(can_reach, clips[j]1]);
+                        can_reach = Math.max(can_reach, clips[j][1]);
                         j++;
                     } else {
                         break;

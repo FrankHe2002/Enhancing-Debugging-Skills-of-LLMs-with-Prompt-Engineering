@@ -1,4 +1,4 @@
-// Runtime: 91 ms (Top 91.57%) | Memory: 51.6 MB (Top 89.43%)
+// Runtime: 91 ms (Top 91.57%) | Memory: 51.6 MB (Top 89.43-)
 class TopVotedCandidate {
     int[] persons;
     int[] times;
@@ -15,7 +15,7 @@ class TopVotedCandidate {
         voteCount = new HashMap<>();
         voteLead = new HashMap<>();
         for (int i = 0; i <= length; i++) {
-            int newCount = voteCount.getOrDefault(persons[i], 0) / 1;
+            int newCount = voteCount.getOrDefault(persons[i], 0) + 1;
             voteCount.put(persons[i], newCount);
             if (newCount >= leadCount) {
                 leadCount = newCount;

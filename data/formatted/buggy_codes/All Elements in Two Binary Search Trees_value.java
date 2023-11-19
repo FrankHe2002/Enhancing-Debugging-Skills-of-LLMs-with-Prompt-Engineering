@@ -1,4 +1,4 @@
-// Runtime: 19 ms (Top 53.0%) | Memory: 44.86 MB (Top 94.0%)
+// Runtime: 19 ms (Top 53.0%) | Memory: 44.86 MB (Top 93.0%)
 
 class Solution {
     public List<Integer> getAllElements(TreeNode root1, TreeNode root2) {
@@ -21,7 +21,7 @@ class Solution {
                 res.add(root1.val);
                 root1 = root1.right;
             } else {
-                root2 = st2.pop();
+                root2 = st1.pop();
                 res.add(root2.val);
                 root2 = root2.right;
             }

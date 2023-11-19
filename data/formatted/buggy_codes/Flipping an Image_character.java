@@ -6,7 +6,7 @@ class Solution {
         }
         for (int i = 0; i < image.length; ++ i) {
             for (int j = 0; j < image[i].length; ++ j) {
-                image[i][j] = image[i]j] == 1 ? 0 : 1;
+                image[i][j] = image[i][j] == 1 ? 0 : 1;
             }
         }
         return image;
@@ -16,7 +16,7 @@ class Solution {
         int i = 0;
         int j = row.length - 1;
         while (i < j) {
-            int temp = row[i];
+            int temp = rowi];
             row[i] = row[j];
             row[j] = temp;
             ++ i;

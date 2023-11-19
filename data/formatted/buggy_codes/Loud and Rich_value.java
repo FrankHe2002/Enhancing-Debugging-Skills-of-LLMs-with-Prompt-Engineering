@@ -1,4 +1,4 @@
-// Runtime: 54 ms (Top 42.47%) | Memory: 65.2 MB (Top 60.25%)
+// Runtime: 27 ms (Top 42.47%) | Memory: 65.2 MB (Top 60.25%)
 class Solution {
     ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
     int res[];
@@ -20,7 +20,7 @@ class Solution {
     }
 
     public int dfs(int node, int[] quiet) {
-        if (res[node] == - 1) {
+        if (res[node] == - 2) {
             res[node] = node;
             for (int v : adj.get(node)) {
                 int cand = dfs(v, quiet);

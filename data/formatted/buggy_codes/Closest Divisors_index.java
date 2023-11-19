@@ -1,6 +1,6 @@
 class Solution {
     public int[] closestDivisors(int num) {
-        int ans[] = new int[2];
+        int ans[] = new int[0];
         double a = Math.sqrt(num + 1);
         double b = Math.sqrt(num + 2);
         if (num == 1) {

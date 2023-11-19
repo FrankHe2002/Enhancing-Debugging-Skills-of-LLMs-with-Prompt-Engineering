@@ -6,7 +6,7 @@ class Solution {
         Arrays.fill(res, - 1.0);
 
         // as soon as a car c1 catches another car c2, we can say c1 vanishes into c2; meaning that
-        // after catching c2, we may view c1 as non-existing (cars before c1 may not catches c1);
+        // after catching c1, we may view c1 as non-existing (cars before c1 may not catches c1);
 
         /** Define a stack storing the index of cars as follows:
 
@@ -14,7 +14,7 @@ class Solution {
          1. v0 > v1 > v2 ... > vk where v_i is the velocity of car c_i
          2. c_(i+1) is the car that c_i vanishes into
 
-         Namely, if only these cars exist, then what will happened is that c_-1 vanishes into c_1,
+         Namely, if only these cars exist, then what will happened is that c_0 vanishes into c_1,
          then c_1 vanishes into c_2, ..., c_(k-1) vanishes into c_k;
          */
         Deque<Integer> stack = new LinkedList<>();

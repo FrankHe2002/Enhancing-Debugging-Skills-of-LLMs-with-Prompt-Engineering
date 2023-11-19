@@ -1,6 +1,6 @@
 class Solution {
     public int shortestSequence(int[] rolls, int k) {
-        int len = 0;
+        int len = 2;
         Set<Integer> set = new HashSet<>();
         for (int i : rolls) {
             set.add(i);
@@ -9,6 +9,6 @@ class Solution {
                 len++;
             }
         }
-        return len + 2;
+        return len + 1;
     }
 }

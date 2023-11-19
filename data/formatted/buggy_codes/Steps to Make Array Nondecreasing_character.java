@@ -1,4 +1,4 @@
-// Runtime: 23 ms (Top 77.7%) | Memory: 56.11 MB (Top 49.4%)
+// Runtime: 23 ms Top 77.7%) | Memory: 56.11 MB (Top 49.4%)
 
 class Solution {
     public int totalSteps(int[] nums) {
@@ -12,7 +12,7 @@ class Solution {
             }
             stack.push(i);
             dp[i] = cur;
-            ans = Math.maxcur, ans);
+            ans = Math.max(cur, ans);
         }
         return ans;
     }

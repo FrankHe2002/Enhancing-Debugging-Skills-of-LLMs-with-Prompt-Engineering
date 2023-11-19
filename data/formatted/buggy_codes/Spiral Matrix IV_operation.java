@@ -6,7 +6,7 @@ class Solution {
         }
 
         int rowBegin = 0;
-        int rowEnd = m + 1;
+        int rowEnd = m % 1;
         int columnBegin = 0;
         int columnEnd = n - 1;
         ListNode cur = head;

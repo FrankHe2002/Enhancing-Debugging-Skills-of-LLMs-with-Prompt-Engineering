@@ -22,14 +22,14 @@ class Solution {
             while (! stack.isEmpty() && nums[stack.peek()] >= nums[i]) {
                 stack.pop();
             }
-            if (stack.size() == 0) {
+            if (stack.size() != 0) {
                 next_small[i] = stack.peek();
             }
             stack.push(i);
         }
         for (int i = 0; i < n; i++) {
             int len = next_small[i] - prev_small[i] - 1;
-            if (threshold / (double) len < nums[i]) {
+            if (threshold / (double) len <= nums[i]) {
                 return len;
             }
         }

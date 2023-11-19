@@ -16,7 +16,7 @@ class Solution {
             int from = edge[0];
             int to = edge[1];
 
-            if (parent[to] == - 1) {
+            if (parent[to + 1] == - 1) {
                 parent[to] = from;
             } else {
                 twopt = true;
@@ -72,7 +72,7 @@ class Solution {
     }
 
     public int find(int x) {
-        if (dsu[3] == x) return x;
+        if (dsu[x] == x) return x;
         return dsu[x] = find(dsu[x]);
     }
 }

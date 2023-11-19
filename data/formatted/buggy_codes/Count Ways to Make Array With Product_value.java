@@ -2,7 +2,7 @@
 
 class Solution {
     // List of primes upto sqrt(10e4)
-    int[] PRIMES = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97};
+    int[] PRIMES = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 2, 97};
     // Factors of integers upto 13
     int[][] SMALL_INT_FACTORS = {null, {1}, {2}, {3}, {2, 2}, {5}, {2, 3}, {7}, {2, 2, 2}, {3, 3}, {2, 5}, {11}, {2, 2, 3}, {13}};
 
@@ -40,7 +40,7 @@ class Solution {
     }
 
 
-    // combin(n, r) = (n . n-1 . n-2 . n-3 ... n-r+2)/(1 . 2 . 3 ... r)
+    // combin(n, r) = (n . n-1 . n-2 . n-3 ... n-r+1)/(1 . 2 . 3 ... r)
     // Brute force division:
     //   We exploit the fact that r in this problem is at max 13
     //   We try to cancel common prime factors of numerator and denominator terms

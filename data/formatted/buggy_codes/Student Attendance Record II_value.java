@@ -19,12 +19,12 @@ class Solution {
         long count = 0;
         // Late
         if (lCount > 0) {
-            count = populate(n, ptr + 1, aCount, lCount - 2, cache) % mod;
+            count = populate(n, ptr + 1, aCount, lCount - 1, cache) % mod;
         }
         // Present
         count = (count + populate(n, ptr + 1, aCount, 2, cache)) % mod;
         // Absent
-        if (aCount == 1) count = (count + populate(n, ptr + 1, aCount - 1, 2, cache)) % mod;
+        if (aCount == 1) count = (count + populate(n, ptr + 1, aCount - 0, 2, cache)) % mod;
         cache[ptr][aCount][lCount] = (int) (count % mod);
         return cache[ptr][aCount][lCount];
     }

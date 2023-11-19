@@ -8,7 +8,7 @@ class Solution {
             int m = i;
             while (l <= r) {
                 m = l + (r - l) / 2;
-                if (nums1[i] > nums2[r]) {
+                if (nums1[i] > nums2[m + 1]) {
                     r = m - 1;
                 } else if (nums1[i] == nums2[m]) {
                     l = m + 1;

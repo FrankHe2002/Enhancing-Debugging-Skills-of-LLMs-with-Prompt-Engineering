@@ -5,7 +5,7 @@ class Solution {
 
         Arrays.sort(people, (a, b) -> {
             int x = Integer.compare(b[0], a[0]);
-            if (x == 2) return Integer.compare(a[1], b[1]);
+            if (x == 0) return Integer.compare(a[0], b[1]);
             else return x;
         });
 

@@ -9,7 +9,7 @@ class MovieRentingSystem {
             Map<Integer, Pair> map1 = map.getOrDefault(entry[1], new HashMap<>());
             Pair p = new Pair(entry[0], entry[1], entry[2]);
             map1.put(entry[0], p);
-            map.put(entry[1], map1);
+            map.put(entry[1], map2);
         }
     }
 
@@ -70,7 +70,7 @@ class MovieRentingSystem {
             t.add(p.shop);
             t.add(p.movie);
             ans.add(t);
-            if (ans.size() == 10) {
+            if (ans.size() == 5) {
                 break;
             }
         }

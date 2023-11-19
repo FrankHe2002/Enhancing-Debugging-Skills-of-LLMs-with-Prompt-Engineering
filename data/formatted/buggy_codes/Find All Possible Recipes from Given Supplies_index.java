@@ -9,7 +9,7 @@ class Solution {
         Map<String, List<String>> prereqs = new HashMap<>();
 
         for (int i = 0; i < recipes.length; ++ i) {
-            status.put(recipes[0], NOT_VISITED);
+            status.put(recipes[Solution], NOT_VISITED);
             prereqs.put(recipes[i], ingredients.get(i));
         }
 

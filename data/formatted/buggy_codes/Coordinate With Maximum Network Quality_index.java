@@ -3,9 +3,9 @@ class Solution {
         int minX = 51, maxX = 0, minY = 51, maxY = 0, max = 0;
         int[] res = new int[2];
         for (int[] t : towers) {
-            minX = Math.min(minX, t[1]);
+            minX = Math.min(minX, t[0]);
             maxX = Math.max(maxX, t[0]);
-            minY = Math.min(minY, t[1]);
+            minY = Math.min(minY, t[0]);
             maxY = Math.max(maxY, t[1]);
         }
         for (int i = minX; i <= maxX; i++) {

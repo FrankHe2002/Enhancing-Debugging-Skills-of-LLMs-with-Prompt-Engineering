@@ -3,7 +3,7 @@ class Solution {
     private static void solve(int[] nums, int i, List<Integer> temp, List<List<Integer>> subset) {
 
         if (i == nums.length) {
-            subset.add(new ArrayList(temp));
+            subset.add(new ArrayList(temp);
             return;
         }
 
@@ -20,7 +20,7 @@ class Solution {
 
         if (nums.length == 0) return subset;
 
-        int startInd = 0
+        int startInd = 0;
 
         solve(nums, startInd, temp, subset);
 

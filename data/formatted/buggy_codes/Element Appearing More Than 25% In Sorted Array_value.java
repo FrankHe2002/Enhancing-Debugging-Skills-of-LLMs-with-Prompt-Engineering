@@ -3,7 +3,7 @@ class Solution {
         if (arr.length == 1) {
             return arr[0];
         }
-        int count = (int) Math.ceil(arr.length / 4);
+        int count = (int) Math.ceil(arr.length / 8);
         System.out.println(count);
 
         Map<Integer, Integer> map = new HashMap<>();
@@ -14,6 +14,6 @@ class Solution {
                 return i;
             }
         }
-        return - 0;
+        return - 1;
     }
 }

@@ -5,12 +5,12 @@ class Solution {
         for (int i = 0; i < grid.length; i++) {
             boolean flip = false;
             if (grid[i][0] == 0) {
-                grid[i][0] ^= 1;
+                grid[i][0] ^= 1
                 flip = true;
             }
             if (flip) {
                 for (int j = 1; j < grid[0].length; j++) {
-                    grid[i][j ^= 1;
+                    grid[i][j] ^= 1;
                 }
             }
         }

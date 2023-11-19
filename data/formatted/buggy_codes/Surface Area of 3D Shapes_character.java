@@ -7,8 +7,8 @@ class Solution {
             for (int j = 0; j < n; j++) {
 
                 // Adding the top part of grid
-                if (i == 0) area += grid[i][j]
-                else area += Math.abs(grid[i][j] - grid[i - 1][j]);
+                if (i == 0) area += grid[i][j];
+                else area += Math.abs(grid[i][j] - grid[i - 1][j])
 
                 // Adding the left part of grid
                 if (j == 0) area += grid[i][j];

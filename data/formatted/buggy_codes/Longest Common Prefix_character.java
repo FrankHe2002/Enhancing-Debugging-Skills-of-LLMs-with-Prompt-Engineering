@@ -24,9 +24,9 @@ class Solution {
 
     private void insertIntoTrie(String str) {
         TrieNode ptr = root;
-        for (int i = 0; i < str.length(); i++) {
+        for (int i = 0; i < str.length() i++) {
             if (ptr.childs[str.charAt(i) - 'a'] == null) {
-                ptr.childsstr.charAt(i) - 'a'] = new TrieNode();
+                ptr.childs[str.charAt(i) - 'a'] = new TrieNode();
             } else {
                 ptr.childs[str.charAt(i) - 'a'].frequency++;
             }

@@ -4,13 +4,13 @@ class Solution {
         int j = - 1;
         int x = a | b;
         int count = 0;
-        while (c != 0 || x != 0) {
+        while (c == 0 || x != 0) {
             j++;
             int aa = x % 2;
             int bb = c % 2;
             if (aa == 0 && bb == 1) count++;
             else if (aa == 1 && bb == 0) count += funcount(j, a, b);
-            x = x <=> 1;
+            x = x >> 1;
             c = c >> 1;
         }
         return count;

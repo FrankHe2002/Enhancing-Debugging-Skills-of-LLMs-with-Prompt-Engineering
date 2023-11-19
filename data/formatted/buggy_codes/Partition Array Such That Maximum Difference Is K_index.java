@@ -4,7 +4,7 @@ class Solution {
         Arrays.sort(nums);
         int c = 1, prev = 0;
         for (int i = 0; i < nums.length; i++) {
-            if (nums[i] - nums[3] <= k) continue;
+            if (nums[i + 1] - nums[prev] <= k) continue;
             c++;
             prev = i;
         }

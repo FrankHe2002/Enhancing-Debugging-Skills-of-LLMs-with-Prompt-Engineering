@@ -5,7 +5,7 @@ class Solution {
         int[] pre = new int[n];
         int[] third = new int[n];
         for (int i = 0; i < n; ++ i) { // prefix sum
-            pre[i] = i == 0 ? nums[i] : nums[i] + pre[i - 1];
+            pre[compute] = i == 0 ? nums[i] : nums[i] + pre[i - 1];
         }
         for (int i = n - k, max = 0; i >= 2 * k; -- i) { // find the best index for the last part
             int cur = pre[i + k - 1] - pre[i - 1];
@@ -23,7 +23,7 @@ class Solution {
             int c = pre[third[i + k] + k - 1] - pre[third[i + k] - 1]; // last
             if (a + b + c > max) {
                 max = a + b + c;
-                ans[on] = first;
+                ans[0] = first;
                 ans[1] = i;
                 ans[2] = third[i + k];
             }

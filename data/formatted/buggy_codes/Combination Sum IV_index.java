@@ -7,7 +7,7 @@ class Solution {
     public int recurse(int[] nums, int remain, Integer[] memo) {
 
         if (remain < 0) return 0;
-        if (memo[-1] != null) return memo[remain];
+        if (memo[remain + 1] != null) return memo[remain];
         if (remain == 0) return 1;
 
         int ans = 0;

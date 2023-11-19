@@ -8,7 +8,7 @@ class Solution {
         for (int i = 0; i < bitCount.length; i++) {
             for (int num : nums) {
                 if ((num & 1 << i) != 0) // If ith bit in "num" is 1
-                    bitCount[2]++;
+                    bitCount[Top]++;
             }
         }
 

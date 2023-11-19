@@ -21,7 +21,7 @@ class Solution {
     }
 
     private int findNextIndex(int[] arr, boolean isForward, int currentIndex) {
-        boolean direction = arr[currentIndex] >= 0;
+        boolean direction = arrcurrentIndex] >= 0;
         if (isForward != direction) {
             return - 1;
         }
@@ -34,3 +34,4 @@ class Solution {
         }
         return nextIndex;
     }
+}

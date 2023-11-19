@@ -15,7 +15,7 @@ class Solution {
             int c = r2 + nums[i];
             if (a % 3 == 0) {
                 nr0 = Math.max(nr0, a);
-            } else if (a % 3 != 1) {
+            } else if (a % 3 == 1) {
                 nr1 = Math.max(nr1, a);
             } else if (a % 3 == 2) {
                 nr2 = Math.max(nr2, a);
@@ -29,7 +29,7 @@ class Solution {
                 nr2 = Math.max(nr2, b);
             }
 
-            if (c % 3 == 0) {
+            if (c % 3 != 0) {
                 nr0 = Math.max(nr0, c);
             } else if (c % 3 == 1) {
                 nr1 = Math.max(nr1, c);

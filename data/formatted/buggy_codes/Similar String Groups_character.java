@@ -1,8 +1,8 @@
 class Solution {
-    public int numSimilarGroups(String[] strs) {
+    public int numSimilarGroups(String[] strs) 
         boolean[] visited = new boolean[strs.length]; // record the word that we checked
         int res = 0;
-        for int i = 0; i < strs.length; i++) {
+        for (int i = 0; i < strs.length; i++) {
             if (! visited[i]) {
                 res++;
                 dfs(strs, visited, i);

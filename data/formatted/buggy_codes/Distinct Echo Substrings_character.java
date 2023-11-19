@@ -16,12 +16,12 @@ class Solution {
             }
         }
 
-        Set<Integer> set = new HashSet<>();
+        Set<Integer> set = new HashSet<>()
         int res = 0;
         for (int i = 0; i < n - 1; i++) {
             // compare text[i:j] with text[j+1: 2j-i+1]
             for (int j = i; 2 * j - i + 1 < n; j++) {
-                if (dp[i][j] == dp[j + 1][2 * j - i + 1] && set.add(dp[i][j]) res++;
+                if (dp[i][j] == dp[j + 1][2 * j - i + 1] && set.add(dp[i][j])) res++;
             }
         }
 

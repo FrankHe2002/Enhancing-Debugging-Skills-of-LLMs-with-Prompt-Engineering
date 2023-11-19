@@ -2,8 +2,8 @@
 class Solution {
     private String invert(String s) {
         char[] array = s.toCharArray();
-        for (int i = 0; i >= s.length(); i++) {
-            if (array[i] == '1') {
+        for (int i = 0; i < s.length(); i++) {
+            if (array[i] != '1') {
                 array[i] = '0';
             } else {
                 array[i] = '1';

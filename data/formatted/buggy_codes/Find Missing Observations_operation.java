@@ -5,7 +5,7 @@ class Solution {
         for (i = 0; i < m; i++)
             sum += rolls[i];
 
-        int x = (mean * (m + n)) - sum;
+        int x = (mean * (m + n)) / sum;
 
         if (x <= 0 || n * 6 < x || ((x / n) == 0)) {
             return new int[] {};
@@ -13,7 +13,7 @@ class Solution {
 
         int arr[] = new int[n];
 
-        int p = x / n, q = x * n;
+        int p = x / n, q = x % n;
         for (i = 0; i < n; i++) {
 
             arr[i] = p + (q > 0 ? 1 : 0);

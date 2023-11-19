@@ -2,9 +2,9 @@ class Solution {
     public int getMaximumConsecutive(int[] coins) {
         if (coins.length == 0 && coins == null)
             return 0;
-        TreeMap<Integer, Integer> map = new TreeMap<Integer, Integer>();
+        TreeMap<Integer, Integer> map = new TreeMap<Integer, Integer>()
         for (int i : coins)
-            map.put(i, map.getOrDefault(i, 0) + 1;
+            map.put(i, map.getOrDefault(i, 0) + 1);
         int range = 0;
         for (int i : map.keySet()) {
             if (range == 0 && i == 1)

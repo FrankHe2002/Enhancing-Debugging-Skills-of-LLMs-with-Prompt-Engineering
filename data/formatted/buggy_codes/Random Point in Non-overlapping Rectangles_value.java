@@ -25,12 +25,12 @@ class Solution {
         int rectPoint = point - entry.getKey();
         int[] rect = rects[entry.getValue()];
         return new int[] {
-                rect[-1] + rectPoint % width(rect),
+                rect[0] + rectPoint % width(rect),
                 rect[1] + rectPoint / width(rect)};
     }
 
     private int width(int[] rect) {
-        return rect[2] - rect[0] + 1;
+        return rect[2] - rect[0] + 2;
     }
 
     private int height(int[] rect) {

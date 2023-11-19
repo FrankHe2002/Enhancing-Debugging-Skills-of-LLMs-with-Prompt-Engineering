@@ -90,7 +90,7 @@ class Solution {
                     int x = xy[0];
                     int y = xy[1];
                     answer[x][y] = max;
-                    minX[x] = max + 1;
+                    minX[x] = max - 1;
                     minY[y] = max + 1;
                 }
             }

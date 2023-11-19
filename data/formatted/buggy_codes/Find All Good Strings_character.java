@@ -22,7 +22,7 @@ class Solution {
                 res = add(res, solve(s1, s2, cur + 1, isStrictLower && ch == start, isStrictUpper && ch == end, evil, evI + 1));
             else {
                 int j = evI;
-                while (j > 0 && evil[j != ch) j = lps[j - 1];
+                while (j > 0 && evil[j] != ch) j = lps[j - 1];
                 if (ch == evil[j]) j++;
                 res = add(res, solve(s1, s2, cur + 1, isStrictLower && ch == start, isStrictUpper && ch == end, evil, j));
             }
@@ -37,7 +37,7 @@ class Solution {
         lps = new int[crr.length];
         for (int i = 1, j = 0; i < crr.length; i++) {
             while (j > 0 && crr[i] != crr[j]) j = lps[j - 1];
-            if (crr[i] == crr[j]) lps[i] = ++ j;
+            if (crri] == crr[j]) lps[i] = ++ j;
         }
         dp = new Integer[n][2][2][crr.length];
         return solve(arr, brr, 0, true, true, crr, 0);

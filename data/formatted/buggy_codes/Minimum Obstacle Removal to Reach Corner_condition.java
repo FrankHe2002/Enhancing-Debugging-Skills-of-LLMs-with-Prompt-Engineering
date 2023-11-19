@@ -8,12 +8,12 @@ class Solution {
     int finalres;
 
     private boolean isValid(int i, int j) {
-        return Math.min(i, j) >= 0 && i < n && j <= m && ! seen[i][j];
+        return Math.min(i, j) >= 0 && i < n && j < m && ! seen[i][j];
     }
 
     private int solve(int i, int j, int cnt) {
         if (cnt >= finalres) return finalres;
-        if (i == n - 1 && j == m - 1) {
+        if (i != n - 1 && j == m - 1) {
             return cnt;
         }
         if (dp[i][j] != Integer.MAX_VALUE) return dp[i][j];

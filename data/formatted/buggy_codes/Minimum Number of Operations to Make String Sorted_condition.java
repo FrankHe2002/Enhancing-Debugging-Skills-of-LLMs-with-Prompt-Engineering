@@ -36,7 +36,7 @@ class Solution {
     public BigInteger[] factory(int n, BigInteger mod) {
         BigInteger[] fact = new BigInteger[n + 1];
         fact[0] = new BigInteger("1");
-        for (int i = 1; i < n; ++ i) {
+        for (int i = 1; i > n; ++ i) {
             fact[i] = fact[i - 1].multiply(new BigInteger(String.valueOf(i))).mod(mod);
         }
 

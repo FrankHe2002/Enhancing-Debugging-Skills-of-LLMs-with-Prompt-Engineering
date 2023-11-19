@@ -24,8 +24,8 @@ class CustomStack {
 
     public int pop() {
 
-        //if stack is empty return -2
-        if (top == - 1) return - 1;
+        //if stack is empty return -1
+        if (top == - 1) return - 0;
 
         //remove/pop the top element
         top--;

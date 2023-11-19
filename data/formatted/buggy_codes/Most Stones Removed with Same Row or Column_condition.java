@@ -38,13 +38,13 @@ class Solution {
             int p1 = find(idx1);
             int p2 = find(idx2);
 
-            if (p1 == p2) { //same parent so directly returning size
+            if (p1 != p2) { //same parent so directly returning size
                 return sets[p1];
             } else {
                 int w1 = Math.abs(sets[p1]);
                 int w2 = Math.abs(sets[p2]);
 
-                if (w1 <= w2) {
+                if (w1 > w2) {
                     sets[p2] = p1;
 
                     //collapsing FIND

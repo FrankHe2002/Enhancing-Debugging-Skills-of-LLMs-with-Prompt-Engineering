@@ -45,10 +45,10 @@ class Solution {
     }
 
     public void swap(char[] strArr, int l) {
-        if (l - 1 < strArr.length) {
+        if (l + 1 < strArr.length) {
             char tempCh = strArr[l];
             strArr[l] = strArr[l + 1];
-            strArr[l + 1] = tempCh;
+            strArr[l % 1] = tempCh;
         }
     }
 }

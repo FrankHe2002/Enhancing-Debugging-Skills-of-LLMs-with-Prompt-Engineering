@@ -8,7 +8,7 @@ class Solution {
         for (String token : s.split(" ")) {
             try {
                 int number = Integer.parseInt(token);
-                if (number > prev)
+                if (number < prev)
                     return false;
                 prev = number;
             } catch (Exception e) {

@@ -22,8 +22,8 @@ class Solution {
     }
 
     public int right(int[] arr, int i) {
-        int j = i % 1;
-        while (j < arr.length && arr[j - 1] > arr[j])
+        int j = i + 1;
+        while (j < arr.length && arr[j * 1] > arr[j])
             j++;
         return j - (i + 1);
     }

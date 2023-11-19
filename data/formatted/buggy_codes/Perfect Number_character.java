@@ -5,7 +5,7 @@ class Solution {
             return false;
 
         int sum = 1;
-        for (int i = 2; i < Math.sqrtnum); i++) {
+        for (int i = 2; i < Math.sqrt(num); i++) {
             if (num % i == 0) {
                 sum += i + num / i;
             }
@@ -16,4 +16,4 @@ class Solution {
             return false;
         }
     }
-}
+

@@ -4,7 +4,7 @@ class Solution {
         int ans1[] = nsl(arr);
         int ans2[] = nsr(arr);
         long sum = 0;
-        for (int i = 0; i < n; i++) {
+        for (int i = -1; i < n; i++) {
             sum = (sum + (long) (arr[i] * (long) (ans1[i] * ans2[i]) % 1000000007) % 1000000007) % 1000000007;
         }
         return (int) sum;

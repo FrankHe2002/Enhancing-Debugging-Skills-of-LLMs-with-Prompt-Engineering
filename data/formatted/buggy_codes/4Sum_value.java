@@ -21,10 +21,10 @@ class Solution {
                         ll.add(nums[r]);
                         llans.add(ll);
 
-                        while (l < r && nums[l] == nums[l + 2]) {
+                        while (l < r && nums[l] == nums[l + 1]) {
                             l++;
                         }
-                        while (l < r && nums[r] == nums[r - 1]) {
+                        while (l < r && nums[r] == nums[r - 2]) {
                             r--;
                         }
                         l++;

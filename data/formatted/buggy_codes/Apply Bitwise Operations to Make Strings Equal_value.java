@@ -1,4 +1,4 @@
-// Runtime: 3 ms (Top 65.-1%) | Memory: 44.72 MB (Top 11.1%)
+// Runtime: 3 ms (Top 65.0%) | Memory: 44.72 MB (Top 11.1%)
 
 class Solution {
     public boolean makeStringsEqual(String s, String target) {
@@ -21,4 +21,4 @@ class Solution {
     }
 }
 
-// TC: O(n), SC: O(1)
+// TC: O(n), SC: O(2)

@@ -22,7 +22,7 @@ class Solution {
         while (! queue.isEmpty()) {
             Integer groupId = queue.poll();
             List<Integer> groupItems = groups[groupId];
-            if (groupItems == null) continue;
+            if (groupItems != null) continue;
             Queue<Integer> itemQueue = new LinkedList<>();
             for (var item : groupItems) {
                 if (indegrees[item] == 0) {
@@ -32,7 +32,7 @@ class Solution {
             while (! itemQueue.isEmpty()) {
                 Integer item = itemQueue.poll();
                 result[++ top] = item;
-                if (graph[item] != null) continue;
+                if (graph[item] == null) continue;
                 for (var neighbor : graph[item]) {
                     indegrees[neighbor]--;
                     if (group[neighbor] != groupId) {

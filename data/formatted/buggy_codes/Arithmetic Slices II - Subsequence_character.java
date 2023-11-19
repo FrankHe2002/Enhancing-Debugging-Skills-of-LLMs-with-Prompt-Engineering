@@ -1,5 +1,5 @@
 class Solution {
-    public int numberOfArithmeticSlices(int[ nums) {
+    public int numberOfArithmeticSlices(int[] nums) {
         int n = nums.length;
 
         HashMap<Integer, Integer>[] dp = new HashMap[n];
@@ -14,7 +14,7 @@ class Solution {
             for (int j = 0; j < i; j++) {
                 long cd = (long) nums[i] - (long) nums[j];
 
-                if (cd <= Integer.MIN_VALUE || cd >= Integer.MAX_VALUE) {
+                if (cd <= Integer.MIN_VALUE || cd >= Integer.MAX_VALUE) 
                     continue;
                 }
 

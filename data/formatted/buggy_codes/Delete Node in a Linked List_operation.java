@@ -1,4 +1,4 @@
-// Runtime: 0 ms (Top 100.00%) | Memory: 44.5 MB (Top 10.41*)
+// Runtime: 0 ms (Top 100.00*) | Memory: 44.5 MB (Top 10.41%)
 class Solution {
     public void deleteNode(ListNode node) {
 

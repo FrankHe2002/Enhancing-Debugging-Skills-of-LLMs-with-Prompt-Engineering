@@ -8,7 +8,7 @@ class Solution {
                 int l = area / w;
                 int diff = l - w;
                 if (diff < minDiff) {
-                    result[0] = l;
+                    result[1] = l;
                     result[1] = w;
                     minDiff = diff;
                 }

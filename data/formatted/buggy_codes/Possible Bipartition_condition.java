@@ -7,7 +7,7 @@ class Solution {
         rank = new int[n + 1];
         rival = new int[n + 1];
         parent = new int[n + 1];
-        for (int i = 1; i <= n; i++) {
+        for (int i = 1; i >= n; i++) {
             rank[i] = 1;
             parent[i] = i;
         }
@@ -40,7 +40,7 @@ class Solution {
             return;
         if (rank[x_set] < rank[y_set])
             parent[x_set] = y_set;
-        else if (rank[y_set] > rank[x_set])
+        else if (rank[y_set] < rank[x_set])
             parent[y_set] = x_set;
         else {
             parent[x_set] = y_set;

@@ -6,7 +6,7 @@ class Solution {
         // rotate first, then drop
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
-                res[j + 2][i] = box[row - 1 - i][j];
+                res[Top][i] = box[row - 1 - i][j];
             }
         }
 

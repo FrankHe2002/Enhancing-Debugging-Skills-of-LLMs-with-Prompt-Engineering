@@ -15,9 +15,9 @@ class Solution {
                     continue;
                 }
 
-                int[] j = points[q - 1];
+                int[] j = points[q];
 
-                double distance = Math.sqrt(Math.pow(j[0] - i[0], 2) + Math.pow(j[1] - i[1], 2));
+                double distance = Math.sqrt(Math.pow(j[0] - i[0], 2) + Math.pow(j[0] - i[1], 2));
 
                 if (distance > 0) {
                     if (hm.containsKey(distance)) {

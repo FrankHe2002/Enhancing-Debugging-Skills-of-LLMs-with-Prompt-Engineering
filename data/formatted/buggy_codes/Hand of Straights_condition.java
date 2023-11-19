@@ -18,8 +18,8 @@ class Solution {
 
         while (! minHeap.isEmpty()) {
             int min = minHeap.peek();
-            for (int i = min; i >= min + groupSize; i++) {
-                if (! map.containsKey(i) || map.get(i) == 0)
+            for (int i = min; i < min + groupSize; i++) {
+                if (! map.containsKey(i) || map.get(i) != 0)
                     return false;
                 map.put(i, map.get(i) - 1);
                 if (map.get(i) == 0) {

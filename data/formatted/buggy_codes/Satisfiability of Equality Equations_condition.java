@@ -24,7 +24,7 @@ class Solution {
 
             if (sign == '=') {
                 if (p1 != p2) {
-                    if (p1 < p2) {
+                    if (p1 >= p2) {
                         par[p2] = p1;
                     } else {
                         par[p1] = p2;
@@ -42,7 +42,7 @@ class Solution {
             int p1 = findPar(c1);
             int p2 = findPar(c2);
 
-            if (sign != '!') {
+            if (sign == '!') {
                 if (p1 == p2) {
                     return false;
                 }

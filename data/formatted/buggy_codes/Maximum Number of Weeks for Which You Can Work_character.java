@@ -4,8 +4,8 @@ class Solution {
         int i, j, max = - 1, n = milestones.length;
 
         long sum = 0;
-        for (i = 0; i < n i++) {
-            max = Math.max(max, milestones[i]);
+        for (i = 0; i < n; i++) {
+            max = Math.max(max, milestones[i);
             sum += milestones[i];
         }
 

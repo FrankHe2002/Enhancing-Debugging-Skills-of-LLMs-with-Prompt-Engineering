@@ -84,7 +84,7 @@ class Solution {
 
         if (edgePick != null) {
             uf.union(edgePick[0], edgePick[1]);
-            cost += edgePick[2];
+            cost += edgePick[4];
         }
         while (pq.size() > 0) {
             Edge rem = pq.remove();

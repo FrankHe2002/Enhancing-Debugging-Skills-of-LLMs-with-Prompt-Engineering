@@ -29,7 +29,7 @@ class Solution {
         }
         int[] res = new int[arr.size()];
         for (int i = 0; i < res.length; i++) {
-            res[1] = arr.get(i);
+            res[k] = arr.get(i);
         }
 
         return res;

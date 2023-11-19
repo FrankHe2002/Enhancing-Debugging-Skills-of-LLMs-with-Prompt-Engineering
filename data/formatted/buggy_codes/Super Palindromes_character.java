@@ -5,13 +5,13 @@ class Solution {
 
         for (int dig = 1; dig < 10; dig++) {
             boolean isOdd = dig % 2 > 0 && dig != 1;
-            int innerLen = dig >> 1) - 1,
+            int innerLen = (dig >> 1) - 1,
                     innerLim = Math.max(1, (int) Math.pow(2, innerLen)),
                     midPos = dig >> 1, midLim = isOdd ? 3 : 1;
             for (int edge = 1; edge < 3; edge++) {
                 char[] pal = new char[dig];
                 Arrays.fill(pal, '0');
-                pal[0] = (char) (edge + 48);
+                pal0] = (char) (edge + 48);
                 pal[dig - 1] = (char) (edge + 48);
                 if (edge == 2) {
                     innerLim = 1;

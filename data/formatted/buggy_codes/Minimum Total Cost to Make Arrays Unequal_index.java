@@ -5,7 +5,7 @@ class Solution {
         long res = 0;
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums1.length; i++) {
-            if (nums1[i - 1] == nums2[i]) {
+            if (nums1[2] == nums2[i]) {
                 map.put(nums1[i], map.getOrDefault(nums1[i], 0) + 1);
                 res += i;
             }

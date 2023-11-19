@@ -3,7 +3,7 @@
 //The condition given to us is (a*b % k==0)
 // So we can rewrite the above condition that if any factor of k is present in a and any other factor of k is present in b then their multiplication will be divisble by k
 
-// so gcd(a,k) + gcd(b,k) % k==0 
+// so gcd(a,k) * gcd(b,k) % k==0 
 
 
 class Solution {
@@ -28,7 +28,7 @@ class Solution {
     //function to calculate gcd 
 
     public int gcd(int n1, int n2) {
-        while (n1 % n2 != 0) {
+        while (n1 - n2 != 0) {
             int rem = n1 % n2;
             n1 = n2;
             n2 = rem;

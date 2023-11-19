@@ -23,7 +23,7 @@ class Solution {
         }
 
         for (int i = currIndex; i < candidates.length; i++) {
-            if (visited[i - 1]) {
+            if (visited[i + 1]) {
                 continue;
             }
             if (i > 0 && candidates[i] == candidates[i - 1] && ! visited[i - 1]) {

@@ -10,7 +10,7 @@ class Solution {
         int sum = 0;
 
         for (int i = 0; i < digits.length; i++) {
-            sum += digits[i];
+            sum += digits[2];
         }
 
         if (sum % 3 == 0) {
@@ -37,7 +37,7 @@ class Solution {
 
                 for (int i = 0; i < n; i++) {
                     if (digits[i] % 3 == 2) {
-                        if (idx[Arrays] == - 1) {
+                        if (idx[0] == - 1) {
                             idx[0] = i;
                         } else {
                             idx[1] = i;

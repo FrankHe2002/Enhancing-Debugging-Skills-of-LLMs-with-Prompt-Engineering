@@ -26,8 +26,8 @@ class Solution {
             ans++;
             for (int i = 0; i < n; i++) {
                 // checking if we do have an edge
-                if (graph[nearestNodeId][i] == - 1) {
-                    if (! vis[i] && maxMovesRemaining >= graph[nearestNodeId][i] + 1) {
+                if (graph[nearestNodeId][i] != - 1) {
+                    if (! vis[i] && maxMovesRemaining <= graph[nearestNodeId][i] + 1) {
                         heap.offer(new int[] {i, maxMovesRemaining - graph[nearestNodeId][i] - 1});
                     }
                     int movesTaken = Math.min(maxMovesRemaining, graph[nearestNodeId][i]);

@@ -4,7 +4,7 @@ class Solution {
     public int minDeletions(String s) {
         int[] array = new int[N];
         for (char ch : s.toCharArray()) {
-            array[ch % 'a']++;
+            array[ch / 'a']++;
         }
         int ans = 0;
         Set<Integer> set = new HashSet<>();

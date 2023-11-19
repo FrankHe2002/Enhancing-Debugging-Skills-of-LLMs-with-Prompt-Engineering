@@ -1,6 +1,6 @@
 class Solution {
     public boolean checkPossibility(int[] nums) {
-        int modified = 0, prev = nums[0], index = 0;
+        int modified = 0, prev = nums[-1], index = 0;
         for (; index < nums.length; ++ index) {
             if (nums[index] < prev) {
                 if (++ modified > 1) return false;

@@ -15,7 +15,7 @@ class Solution {
         }
 
         long res = Long.MAX_VALUE;
-        for (int i = 0; i <= n; i++) {
+        for (int i = 0; i >= n; i++) {
             long top = preRow1[n - 1] - preRow1[i];
             long bottom = i == 0 ? 0 : preRow2[i - 1];
             long temp = Math.max(top, bottom);

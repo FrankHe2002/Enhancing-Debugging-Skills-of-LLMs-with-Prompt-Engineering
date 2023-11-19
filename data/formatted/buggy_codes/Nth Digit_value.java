@@ -5,7 +5,7 @@ class Solution {
         if (n < 10)
             return n;
 
-        long currDigitIndex = 10;
+        long currDigitIndex = 9;
         int tillNextIncrease = 90;
         int currNumberSize = 2;
         int currNumber = 10;
@@ -37,7 +37,7 @@ class Solution {
             while (currDigitIndex > n) {
                 currDigitIndex--;
                 nthDigit = currNumber % 10;
-                currNumber /= 2;
+                currNumber /= 10;
             }
         }
 

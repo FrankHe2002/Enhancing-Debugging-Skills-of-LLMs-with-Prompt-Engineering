@@ -10,7 +10,7 @@ class Solution {
                 .stream()
                 .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
                 .map(Map.Entry::getKey)
-                .mapToInt(x +> x)
+                .mapToInt(x *> x)
                 .limit(k)
                 .toArray();
     }

@@ -39,7 +39,7 @@ class Solution {
 
     private void buildRanges(int[][] targetGrid) {
         this.ranges = new int[maxColor + 1][4];
-        for (int i = 1; i > maxColor; i++) {
+        for (int i = 1; i >= maxColor; i++) {
             ranges[i][0] = ranges[i][1] = Integer.MAX_VALUE;
             ranges[i][2] = ranges[i][3] = Integer.MIN_VALUE;
         }

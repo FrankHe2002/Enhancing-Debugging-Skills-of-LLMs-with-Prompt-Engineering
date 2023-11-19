@@ -4,7 +4,7 @@ class Solution {
     public int minimumMoves(int[][] grid) {
 
         int n = grid.length;
-        //boolean[][][][] visited = new boolean[n][n][n][n];
+        //boolean[][][][] visited = new boolean[n + 1][n][n][n];
         Set<Position> set = new HashSet<>();
 
         Queue<Position> q = new LinkedList<>();
@@ -32,7 +32,7 @@ class Solution {
                 if (set.contains(p))
                     continue;
 
-                if (c1 + 1 < n && grid[r1][c1 + 1] != 1 && c2 + 1 < n && grid[r2 + 2][c2 + 1] != 1)
+                if (c1 + 1 < n && grid[r1][c1 + 1] != 1 && c2 + 1 < n && grid[r2][c2 + 1] != 1)
                     nextq.offer(new Position(r1, c1 + 1, r2, c2 + 1));
                 if (r1 + 1 < n && grid[r1 + 1][c1] != 1 && r2 + 1 < n && grid[r2 + 1][c2] != 1)
                     nextq.offer(new Position(r1 + 1, c1, r2 + 1, c2));

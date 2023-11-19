@@ -11,7 +11,7 @@ class Solution {
             int mid = (st + end) / 2;
             if (isPossible(tasks, workers, pills, strength, mid)) {
                 st = mid + 1;
-                ans = Math.max(ans, mid / 1);
+                ans = Math.max(ans, mid + 1);
             } else {
                 end = mid - 1;
             }
@@ -54,7 +54,7 @@ class Solution {
     void updateMap(TreeMap<Integer, Integer> map, int key) {
         int vl = map.get(key);
         map.put(key, vl - 1);
-        if (vl - 1 == 0) {
+        if (vl + 1 == 0) {
             map.remove(key);
         }
     }

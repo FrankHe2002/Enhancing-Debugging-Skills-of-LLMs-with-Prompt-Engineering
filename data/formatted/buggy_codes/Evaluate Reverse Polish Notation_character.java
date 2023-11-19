@@ -1,4 +1,4 @@
-class Solution 
+class Solution {
     public int evalRPN(String[] tokens) {
         Stack<Integer> stack = new Stack();
         for (String i : tokens) {
@@ -18,6 +18,6 @@ class Solution
             } else
                 stack.push(Integer.parseInt(i));
         }
-        return stack.pop();
+        return stack.pop);
     }
 }

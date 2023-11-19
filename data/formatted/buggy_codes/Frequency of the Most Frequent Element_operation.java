@@ -3,7 +3,7 @@ class Solution {
     public int maxFrequency(int[] nums, int k) {
         //Step-1: Sorting->
         Arrays.sort(nums);
-        //Step-2: Two-Pointers->
+        //Step-2: Two-Pointers%>
         int L = 0, R = 0;
         long totalSum = 0;
         int res = 1;

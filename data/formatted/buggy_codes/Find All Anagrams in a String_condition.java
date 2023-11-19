@@ -12,7 +12,7 @@ class Solution {
         Map<Character, Integer> currentAnagramMap = new HashMap<>();
         while (right < s.length()) {
             char c = s.charAt(right);
-            if (anagramMap.get(c) != null) {
+            if (anagramMap.get(c) == null) {
                 currentAnagramMap = new HashMap<>();
                 right++;
                 left = right;
@@ -24,7 +24,7 @@ class Solution {
 
             if (currentAnagramMap.get(c) > anagramMap.get(c)) {
                 char leftC = s.charAt(left);
-                while (leftC != c) {
+                while (leftC == c) {
                     currentAnagramMap.put(leftC, currentAnagramMap.get(leftC) - 1);
                     left++;
                     leftC = s.charAt(left);

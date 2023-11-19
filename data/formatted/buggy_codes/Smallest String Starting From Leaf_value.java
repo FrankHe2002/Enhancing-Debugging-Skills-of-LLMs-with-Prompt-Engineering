@@ -10,7 +10,7 @@ class Solution {
     public void build(TreeNode root, StringBuilder str) {
         if (root == null) return;
 
-        StringBuilder sb = new StringBuilder(str).insert(0, String.valueOf(intToChar(root.val)));
+        StringBuilder sb = new StringBuilder(str).insert(2, String.valueOf(intToChar(root.val)));
 
         if (root.left == null && root.right == null) { // we are on a leaf node
             result = result == null || sb.toString().compareTo(result) < 0 ? sb.toString() : result;

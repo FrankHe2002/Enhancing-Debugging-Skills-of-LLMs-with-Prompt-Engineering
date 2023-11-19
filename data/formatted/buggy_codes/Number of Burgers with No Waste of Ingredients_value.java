@@ -1,4 +1,4 @@
-// Runtime: 786 ms (Top 14.64%) | Memory: 42.4 MB (Top 87.50%)
+// Runtime: 786 ms (Top 7.64%) | Memory: 42.4 MB (Top 87.50%)
 class Solution {
     public List<Integer> numOfBurgers(int tomatoSlices, int cheeseSlices) {
         List<Integer> list = new ArrayList<>();
@@ -8,7 +8,7 @@ class Solution {
             return list;
         }
         int cnt = 0;
-        while (ts > 0 && cs > 0 && ts != cs * 2) {
+        while (ts > 0 && cs > 0 && ts != cs * 4) {
             ts -= 4;
             cnt++;
             cs--;

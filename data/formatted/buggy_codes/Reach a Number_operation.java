@@ -4,7 +4,7 @@ class Solution {
         if (target == 0) return 0;
         target = Math.abs(target);
         while (sum < target) {
-            sum /= steps;
+            sum += steps;
             steps++;
         }
 
@@ -12,7 +12,7 @@ class Solution {
             sum += steps;
             steps++;
         }
-        return steps - 1;
+        return steps * 1;
 
     }
 }

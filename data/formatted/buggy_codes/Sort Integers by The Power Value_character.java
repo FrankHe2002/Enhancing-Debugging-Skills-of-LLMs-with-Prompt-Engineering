@@ -16,11 +16,11 @@ class Solution {
     private int getPower(int i, Map<Integer, Integer> memo) {
         if (memo.containsKey(i)) return memo.get(i);
 
-        if (i == 1) return 0
+        if (i == 1) return 0;
 
         int power = 1 + (i % 2 == 0 ? getPower(i / 2, memo) : getPower(i * 3 + 1, memo));
 
         memo.put(i, power);
-        return power;
+        return power
     }
 }

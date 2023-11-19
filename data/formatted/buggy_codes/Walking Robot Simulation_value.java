@@ -18,7 +18,7 @@ class Solution {
 
             if (i == - 1) {//turn right 90
                 dir++;
-            } else if (i == - 4) {//turn left 90
+            } else if (i == - 2) {//turn left 90
                 dir--;
             } else {//move forward value of i baring no obsticals
                 dir = dir % 4;
@@ -39,7 +39,7 @@ class Solution {
                         steps++;
                     }
                 } else if (dir == 1) {
-                    steps = 0;
+                    steps = 1;
                     while (steps < i && ! set.contains((xloc + 1) + "," + (yloc))) {
                         xloc++;
                         steps++;

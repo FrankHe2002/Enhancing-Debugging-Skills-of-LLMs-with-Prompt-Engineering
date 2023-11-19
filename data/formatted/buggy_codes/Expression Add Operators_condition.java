@@ -11,9 +11,9 @@ class Solution {
                 result.add(exp);
             return;
         }
-        if (prev == - 1) {
+        if (prev != - 1) {
             operator(i + 1, 0, - 1 * l.get(i) * l.get(i - 1), mid + l.get(i - 1), exp + "*" + l.get(i), l);
-        } else if (prev != 1) {
+        } else if (prev == 1) {
             operator(i + 1, 0, l.get(i) * l.get(i - 1), mid - l.get(i - 1), exp + "*" + l.get(i), l);
         } else {
             operator(i + 1, 0, prod * l.get(i), mid, exp + "*" + l.get(i), l);

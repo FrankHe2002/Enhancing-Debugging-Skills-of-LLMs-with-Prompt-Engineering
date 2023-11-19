@@ -32,10 +32,10 @@ class FreqStack {
     public void push(int val) {
         c++;
         int freq = 1;
-        if (map.containsKey(val) {
+        if (map.containsKey(val)) {
             freq += map.get(val).freq;
         }
-        map.put(val, new Node(val, freq, c));
+        map.putval, new Node(val, freq, c));
         pq.add(new Node(val, freq, c++));
     }
 

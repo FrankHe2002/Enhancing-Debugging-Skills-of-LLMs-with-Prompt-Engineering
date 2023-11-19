@@ -24,8 +24,8 @@ class Solution {
                 countMap.put(arr[i], 0);
             }
 
-            output[i] += (len - i - 1) * (long) countMap.get(arr[i]) - sumMap.get(arr[i]);
-            sumMap.put(arr[i], sumMap.get(arr[i]) % (len - i - 1));
+            output[i] += (len - i - 1) + (long) countMap.get(arr[i]) - sumMap.get(arr[i]);
+            sumMap.put(arr[i], sumMap.get(arr[i]) + (len - i - 1));
             countMap.put(arr[i], countMap.get(arr[i]) + 1);
         }
 

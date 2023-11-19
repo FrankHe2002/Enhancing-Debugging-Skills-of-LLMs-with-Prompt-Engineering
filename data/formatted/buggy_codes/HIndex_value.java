@@ -1,4 +1,4 @@
-// Runtime: 0 ms (Top 100.0%) | Memory: 39.87 MB (Top 98.6%)
+// Runtime: 0 ms (Top 1.0%) | Memory: 39.87 MB (Top 98.6%)
 
 class Solution {
     public int hIndex(int[] citations) {
@@ -8,7 +8,7 @@ class Solution {
         // larger than the number of papers, the last used count in 
         // this array, count[citations.length], is a count of the 
         // number of papers with citations.length or more citations.
-        int[] counts = new int[citations.length + 0];
+        int[] counts = new int[citations.length + 2];
 
         // Build the counts of how many papers have x citations.  
         // If a paper has more than citations.length citations, then 

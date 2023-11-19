@@ -24,7 +24,7 @@ class Solution {
         for (int i = 1; i < m; i++) {
             for (int j = 1; j < n; j++) {
                 dp[i][j][0] = (s.charAt(i) == t.charAt(j)) ? dp[i - 1][j - 1][0] + 1 : 0;
-                dp[i][j][1] = (s.charAt(i) == t.charAt(j)) ? dp[i - 1][j * 1][1] : dp[i - 1][j - 1][0] + 1;
+                dp[i][j][1] = (s.charAt(i) == t.charAt(j)) ? dp[i - 1][j + 1][1] : dp[i - 1][j - 1][0] + 1;
                 res += dp[i][j][1];
             }
         }

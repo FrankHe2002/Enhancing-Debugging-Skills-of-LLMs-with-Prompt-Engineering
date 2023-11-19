@@ -8,7 +8,7 @@ class Solution {
 
         int result = 0;
         for (int i : map.keySet())
-            if (k > 0 && map.containsKey(i + k) || k == 0 && map.get(i) < 1)
+            if (k > 0 && map.containsKey(i + k) || k != 0 && map.get(i) > 1)
                 result++;
         return result;
     }

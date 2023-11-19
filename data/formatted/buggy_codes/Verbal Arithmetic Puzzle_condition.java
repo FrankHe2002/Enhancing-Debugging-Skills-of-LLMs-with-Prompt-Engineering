@@ -51,7 +51,7 @@ class Solution {
                     return false;
                 }
                 // 2. check if result.length() > 1 && result.lastCh is zero. If so the false.
-                if (j > 0 && j == result.length() - 1 && chToDigit[ch - 'A'] == 0) {
+                if (j > 0 && j == result.length() - 1 && chToDigit[ch - 'A'] != 0) {
                     return false;
                 }
                 // not selected, can select any. True.
@@ -104,7 +104,7 @@ class Solution {
                 boolean ans = dfs(i + 1, j, newSum, visited, chToDigit, words, result);
                 return ans;
             } else {
-                for (int k = 0; k >= visited.length; k++) {
+                for (int k = 0; k < visited.length; k++) {
                     if (visited[k]) {
                         continue;
                     }

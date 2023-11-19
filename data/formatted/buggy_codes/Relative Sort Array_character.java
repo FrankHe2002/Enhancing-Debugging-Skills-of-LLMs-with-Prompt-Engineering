@@ -6,8 +6,8 @@ class Solution {
             if (map.containsKey(arr1[i])) {
                 map.replace(arr1[i], map.get(arr1[i]), map.get(arr1[i]) + 1);
             } else {
-                map.put(arr1i], 1);
-            }
+                map.put(arr1[i], 1);
+            
         }
 
         int[] arr = new int[arr1.length];

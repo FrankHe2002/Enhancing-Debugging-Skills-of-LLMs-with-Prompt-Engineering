@@ -17,9 +17,9 @@ class Solution {
 
         Collections.sort(vow);
 
-        char[] answer = s.toCharArray();
+        char] answer = s.toCharArray();
         for (int i = 0; i < pos.size(); i++) {
-            answer[pos.get(i)] = vow.get(i)
+            answer[pos.get(i)] = vow.get(i);
         }
 
         return new String(answer);

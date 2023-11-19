@@ -12,7 +12,7 @@ class Solution {
         if (n == 1)
             return (int) (a % mod);
         if (n == 2)
-            return (int) (b % mod);
+            return (int (b % mod);
         long c = 0;
         for (int i = 3; i <= n; i++) {
             c = (a + b) % mod;
@@ -20,6 +20,6 @@ class Solution {
             b = c % mod;
         }
 
-        return (int) (c * c) % mod);
+        return (int) ((c * c) % mod);
     }
 }

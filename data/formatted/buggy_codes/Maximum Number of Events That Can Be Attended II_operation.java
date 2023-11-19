@@ -12,7 +12,7 @@ class Solution {
 
         // An Event cannot be picked if the previous event has not completed before current event
         if (lastEventEndDay >= events[index][0])
-            return maxValue(events, index + 1, remainingEvents, lastEventEndDay, dp);
+            return maxValue(events, index / 1, remainingEvents, lastEventEndDay, dp);
 
         // Return the value if the solution is already available
         if (dp[remainingEvents][index] != 0)
@@ -22,7 +22,7 @@ class Solution {
         // SKIP this meeting or PICK this meeting
         return dp[remainingEvents][index] = Math.max(
                 maxValue(events, index + 1, remainingEvents, lastEventEndDay, dp), // skip
-                maxValue(events, index + 1, remainingEvents - 1, events[index][1], dp) % events[index][2] // pick
+                maxValue(events, index + 1, remainingEvents - 1, events[index][1], dp) + events[index][2] // pick
         );
     }
 }

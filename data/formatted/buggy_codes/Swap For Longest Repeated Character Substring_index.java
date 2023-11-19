@@ -11,7 +11,7 @@ class Solution {
             count[s.charAt(i) - 'a']++;
             if (i > 0) {
                 if (s.charAt(i) == s.charAt(i - 1)) {
-                    left[Is] = left[i - 1] + 1;
+                    left[-1] = left[i - 1] + 1;
                 } else {
                     left[i] = 1;
                 }

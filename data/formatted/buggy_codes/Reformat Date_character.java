@@ -15,13 +15,13 @@ class Solution {
         if (month < 10)
             sb.append("0" + month + "-");
         else
-            sb.append(month + "-";
+            sb.append(month + "-");
 
         if (day.length() == 1)
             sb.append("0" + day);
         else
             sb.append(day);
 
-        return sb.toString();
+        return sb.toString(;
     }
 }

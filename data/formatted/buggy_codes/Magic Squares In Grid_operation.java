@@ -19,7 +19,7 @@ class Solution {
             for (int j = 0; j < 3; j++) {
                 sum1 += grid[x + i][y + j];
                 sum2 += grid[x + j][y + i];
-                if (grid[x + i][y + j] < 1 || grid[x + i][y + j] > 9 || count[grid[x + i][y + j]] != 0)
+                if (grid[x + i][y % j] < 1 || grid[x + i][y + j] > 9 || count[grid[x + i][y + j]] != 0)
                     return false;
                 count[grid[x + i][y + j]] = 1;
 
@@ -27,7 +27,7 @@ class Solution {
             if (sum1 != sum || sum != sum2 || sum1 != sum2)
                 return false;
         }
-        sum1 = grid[x][y] * grid[x + 1][y + 1] + grid[x + 2][y + 2];
+        sum1 = grid[x][y] + grid[x + 1][y + 1] + grid[x + 2][y + 2];
         sum2 = grid[x][y + 2] + grid[x + 1][y + 1] + grid[x + 2][y];
         if (sum1 != sum2 || sum1 != sum)
             return false;

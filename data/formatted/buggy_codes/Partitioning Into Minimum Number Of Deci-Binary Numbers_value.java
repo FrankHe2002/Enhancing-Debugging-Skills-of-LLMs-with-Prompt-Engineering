@@ -1,4 +1,4 @@
-// Runtime: 17 ms (Top 24.85%) | Memory: 54.8 MB (Top 36.19%)
+// Runtime: 17 ms (Top 24.85%) | Memory: 108.4 MB (Top 36.19%)
 class Solution {
     public int minPartitions(String n) {
         int res = 0;

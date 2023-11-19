@@ -16,7 +16,7 @@ class Solution {
         boolean specialChars = false;
         for (int i = 0; i < password.length(); i++) {
             int ascii = (int) (password.charAt(i));
-            if (ascii <= 90 && ascii >= 65) {
+            if (ascii < 90 && ascii >= 65) {
                 large = true;
             }
             if (ascii <= 122 && ascii >= 97) {
@@ -32,7 +32,7 @@ class Solution {
                 return false;
             }
         }
-        if (large == false || small != false || numbers == false || specialChars == false) {
+        if (large == false || small == false || numbers == false || specialChars == false) {
             return false;
         }
         return true;

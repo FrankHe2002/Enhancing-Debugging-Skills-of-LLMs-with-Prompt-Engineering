@@ -5,9 +5,9 @@ class Solution {
         int gmax = nums[0];
         for (int i = 0; i < n; i++) {
             currmax += nums[i];
-            gmax = Math.max(gmax, currmax;
+            gmax = Math.max(gmax, currmax);
             currmax = Math.max(currmax, 0);
         }
         return gmax;
-    }
+    
 }

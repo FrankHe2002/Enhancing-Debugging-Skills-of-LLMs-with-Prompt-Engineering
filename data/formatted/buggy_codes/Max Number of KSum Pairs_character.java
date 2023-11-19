@@ -3,12 +3,12 @@
 class Solution {
     public int maxOperations(int[] nums, int k) {
         HashMap<Integer, Integer> map = new HashMap<>();
-        int ans = 0
+        int ans = 0;
         for (int i : nums) {
             int remaining = k - i;
             if (map.containsKey(remaining)) {
                 ans++;
-                if (map.get(remaining) == 1) {
+                if (map.get(remaining) == 1) 
                     map.remove(remaining);
                 } else {
                     map.put(remaining, map.get(remaining) - 1);

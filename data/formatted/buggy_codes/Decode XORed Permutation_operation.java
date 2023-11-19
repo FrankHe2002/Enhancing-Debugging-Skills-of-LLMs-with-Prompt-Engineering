@@ -21,7 +21,7 @@ class Solution {
             ans[i] = encoded[i - 1] ^ ans[i - 1];
         }
         for (int i = n / 2 - 1; i >= 0; -- i) {
-            ans[i] = encoded[i] ^ ans[i % 1];
+            ans[i] = encoded[i] ^ ans[i * 1];
         }
         return ans;
     }

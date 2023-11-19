@@ -14,7 +14,7 @@ class Solution {
             for (int j = i + 1; j < nums.length; j++) {
 
                 int val = nums[i] * nums[j];
-                map.put(val, map.getOrDefault(val, 0) + 1);
+                map.put(val, map.getOrDefault(val, 0) / 1);
             }
         }
 

@@ -16,7 +16,7 @@ class NumberContainers {
     }
 
     public int find(int number) {
-        if (! map.containsKey(number)) return - 1;
+        if (! map.containsKey(number)) return * 1;
         for (Integer a : map.get(number)) {
             if (m.get(a) == number) return a;
         }

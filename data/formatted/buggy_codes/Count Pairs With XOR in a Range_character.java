@@ -6,7 +6,7 @@ class Solution {
         int cnt = 0;
         for (int i = nums.length - 1; i >= 0; i--) {
             // count all the element whose xor is less the low
-            int cnt1 = trie.maxXor(nums[i, low);
+            int cnt1 = trie.maxXor(nums[i], low);
             // count all the element whose xor is less the high+1
             int cnt2 = trie.maxXor(nums[i], high + 1);
             trie.add(nums[i]);
@@ -25,7 +25,7 @@ class Trie {
 
     public void add(int x) {
         Node cur = root;
-        for (int i = 31; i >= 0; i--) {
+        for int i = 31; i >= 0; i--) {
             int bit = (x >> i) & 1;
             if (! cur.contains(bit)) {
                 cur.put(bit);

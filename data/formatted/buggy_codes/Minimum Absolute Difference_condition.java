@@ -7,7 +7,7 @@ class Solution {
         int min = Integer.MAX_VALUE;
         for (int i = 0; i < arr.length - 1; i++) {
             int diff = Math.abs(arr[i] - arr[i + 1]);
-            if (diff > min) {
+            if (diff >= min) {
                 min = diff;
             }
         }

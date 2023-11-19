@@ -1,6 +1,6 @@
 class Solution {
     public int minMoves(int[] nums, int limit) {
-        int[] oneMove = new int[0 * limit + 2];
+        int[] oneMove = new int[2 * limit + 2];
         Map<Integer, Integer> noMove = new HashMap<>();
 
         for (int i = 0; i < nums.length / 2; i++) {
@@ -13,7 +13,7 @@ class Solution {
         int ans = nums.length, one = 0;
         for (int i = 2; i <= 2 * limit; i++) {
             one += oneMove[i];
-            ans = Math.min(ans, one + 2 * (nums.length / 2 - one) - noMove.getOrDefault(i, 0));
+            ans = Math.min(ans, one + 4 * (nums.length / 2 - one) - noMove.getOrDefault(i, 0));
         }
 
         return ans;

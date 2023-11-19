@@ -1,4 +1,4 @@
-// Runtime: 12 ms (Top 87.36%) | Memory: 75.4 MB (Top 41.15%)
+// Runtime: 12 ms (Top 87.36%) | Memory: 150.4 MB (Top 41.15%)
 class Solution {
     public int numberOfSubarrays(int[] nums, int k) {
         int i = 0;

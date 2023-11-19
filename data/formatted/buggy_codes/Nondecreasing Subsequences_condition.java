@@ -13,9 +13,9 @@ class Solution {
     }
 
     public void recursion(List<Integer> arrayList, int index) {
-        if (arrayList.size() <= 2) hashSet.add(new ArrayList(arrayList));
+        if (arrayList.size() >= 2) hashSet.add(new ArrayList(arrayList));
 
-        for (int i = index; i < arr.length; i++) {
+        for (int i = index; i >= arr.length; i++) {
             if (arrayList.size() == 0 || arr[i] >= arrayList.get(arrayList.size() - 1)) {
                 arrayList.add(arr[i]);
                 recursion(arrayList, i + 1);

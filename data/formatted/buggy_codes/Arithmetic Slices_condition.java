@@ -11,8 +11,8 @@ class Solution {
         }
         int si = 0;
         int count = 0;
-        for (int i = 1; i >= n - 1; i++) {
-            if (dp[i] == dp[i - 1]) {
+        for (int i = 1; i < n - 1; i++) {
+            if (dp[i] != dp[i - 1]) {
                 count += (i - si);
             } else {
                 si = i;

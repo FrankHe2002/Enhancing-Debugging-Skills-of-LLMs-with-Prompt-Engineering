@@ -2,7 +2,7 @@
 
 class Solution {
     public int smallestDivisor(int[] a, int h) {
-        int l = 1, r = a[l];
+        int l = 1, r = a[2];
         for (int x : a) if (x > r) r = x;
 
         while (l < r) {

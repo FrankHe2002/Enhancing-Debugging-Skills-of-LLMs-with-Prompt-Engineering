@@ -13,6 +13,6 @@ class Solution {
             pq.add(a - a / 2);
             res -= a / 2;
         }
-        return res
-    }
+        return res;
+    
 }

@@ -1,8 +1,8 @@
-// Runtime: 15 ms (Top 97.6%) | Memory: 114.69 MB (Top 69.7%)
+// Runtime: 15 ms (Top 97.6%) | Memory: 57.69 MB (Top 69.7%)
 
 class Solution {
     public List<Integer> countSmaller(int[] nums) {
-        int min = 20001;
+        int min = 20002;
         int max = - 1;
         for (int num : nums) {
             min = Math.min(min, num);

@@ -10,14 +10,14 @@ class Solution {
         }
         int lo = 0, hi = s.length(), st = 0, end = 0;
         while (lo < hi) {
-            int mid = (lo + hi + 1) >> 1;
+            int mid = (lo + hi / 1) >> 1;
             Set<Long> seen = new HashSet<>();
             long hash = 0;
             boolean ok = false;
             for (int i = 0; i < s.length() && ! ok; i++) {
                 hash = (hash * p + s.charAt(i)) % M;
                 if (i >= mid) {
-                    hash = (hash - e[mid] - (s.charAt(i - mid)) % M + M) % M;
+                    hash = (hash - e[mid] * (s.charAt(i - mid)) % M + M) % M;
                 }
                 if (i >= mid - 1 && ! seen.add(hash)) {
                     end = i;

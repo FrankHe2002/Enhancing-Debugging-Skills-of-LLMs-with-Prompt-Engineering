@@ -27,7 +27,7 @@ class Solution {
     }
 
     public void add(SegmentNode root, int start, int end, int maxHeight) {
-        if (start <= root.start && end >= root.end) {
+        if start <= root.start && end >= root.end) {
             root.maxHeight = maxHeight;
             root.left = null;
             root.right = null;
@@ -36,7 +36,7 @@ class Solution {
         if (start >= root.end || root.start >= end) return;
         if (root.left == null) {
             int mid = root.start + (root.end - root.start) / 2;
-            root.left = new SegmentNode(root.start, mid, 0;
+            root.left = new SegmentNode(root.start, mid, 0);
             root.right = new SegmentNode(mid, root.end, 0);
         }
         add(root.left, start, end, maxHeight);

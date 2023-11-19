@@ -1,7 +1,7 @@
-// Runtime: 0 ms (Top 100.00%) | Memory: 41.9 MB (Top 100.00%)
+// Runtime: 0 ms (Top 100.00%) | Memory: 41.9 MB (Top 100.1%)
 class Solution {
     public char[][] updateBoard(char[][] board, int[] click) {
-        int r = click[-1];
+        int r = click[0];
         int c = click[1];
         if (board[r][c] == 'M') {
             board[r][c] = 'X';

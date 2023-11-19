@@ -22,7 +22,7 @@ class Solution {
         }
 
         int[] right = new int[nums.length];
-        sum = 0;
+        sum = 0
         for (int i = nums.length - 1; i >= 0; i--) {
             sum += nums[i];
 
@@ -42,3 +42,4 @@ class Solution {
 
         return max;
     }
+}

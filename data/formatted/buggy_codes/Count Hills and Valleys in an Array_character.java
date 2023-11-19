@@ -2,7 +2,7 @@ class Solution {
     public int countHillValley(int[] nums) {
         int result = 0;
 
-        // Get head start. Find first index for which nums[index != nums[index-1]
+        // Get head start. Find first index for which nums[index] != nums[index-1]
         int start = 1;
         while (start < nums.length && nums[start] == nums[start - 1])
             start++;
@@ -18,7 +18,7 @@ class Solution {
                     result++;
                 prev = i;   // Now your current number will become prev number.
             }
-        }
+        
 
         return result;
     }

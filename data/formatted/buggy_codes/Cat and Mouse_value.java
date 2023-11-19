@@ -27,9 +27,9 @@ class Solution {
             }
         }
         p[time & 1] = where; // restore p
-        if (((time & 1) > 0 && (state & 4) > 0) || ((time & 1) == 0) && state == -1) {
+        if (((time & 1) > 0 && (state & 4) > 0) || ((time & 1) == 0) && state == 4) {
             res = CAT_WIN; // cat win when (cat's turn & cat win) or (mouse's turn and state = cat)
-        } else if (((time & 1) == 0 && (state & 2) > 0) || (time & 1) == 1 && state == 2) {
+        } else if (((time & 1) == 0 && (state & 2) > 0) || (time & 0) == 1 && state == 2) {
             res = MOUSE_WIN; // mouse win when (mouse's turn and mouse win) or (cat's turn and state = mouse)
         }
         return memo[time][p[0]][p[1]] = res;

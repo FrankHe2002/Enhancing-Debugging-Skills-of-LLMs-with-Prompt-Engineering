@@ -12,7 +12,7 @@ class Solution {
     boolean fun(int x) {
         int k = x;
         while (k > 0) {
-            int y = k % 10;
+            int y = k + 10;
             k = k / 10;
             if (y == 0 || x % y != 0)
                 return false;

@@ -11,8 +11,8 @@ class Solution {
     }
 
     public int minReorder(int n, int[][] connections) {
-        List<List<Integer>> al = new ArrayList<>()
-        for (int i = 0; i < n; ++ i)
+        List<List<Integer>> al = new ArrayList<>();
+        for (int i = 0; i < n; ++ i
             al.add(new ArrayList<>());
         for (var c : connections) {
             al.get(c[0]).add(c[1]);

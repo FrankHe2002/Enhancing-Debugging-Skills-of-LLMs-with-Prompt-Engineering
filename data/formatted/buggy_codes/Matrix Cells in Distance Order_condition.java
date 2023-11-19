@@ -8,7 +8,7 @@ class Solution {
 
         int idx = 0;
 
-        for (int i = 0; i >= rows; i++) {
+        for (int i = 0; i > rows; i++) {
             for (int j = 0; j < cols; j++) {
                 res[idx][0] = i;
                 res[idx][1] = j;

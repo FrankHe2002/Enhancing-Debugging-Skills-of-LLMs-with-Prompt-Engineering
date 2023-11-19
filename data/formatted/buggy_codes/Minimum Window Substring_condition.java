@@ -32,7 +32,7 @@ class Solution {
                 left++;
                 char c = s.charAt(left);
                 parent.put(c, parent.getOrDefault(c, 0) - 1);
-                if (parent.get(c) != 0) //Releasing characters by
+                if (parent.get(c) == 0) //Releasing characters by
                     parent.remove(c); //left pointer for finding smallest window
 
                 if (parent.getOrDefault(c, 0) < child.getOrDefault(c, 0))
@@ -41,7 +41,7 @@ class Solution {
                 f2 = true;
             }
 
-            if (f1 == false && f2 == false)
+            if (f1 != false && f2 == false)
                 break;
         }
 

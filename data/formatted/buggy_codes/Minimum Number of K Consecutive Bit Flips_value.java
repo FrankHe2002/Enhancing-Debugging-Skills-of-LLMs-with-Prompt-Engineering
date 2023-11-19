@@ -3,8 +3,8 @@ class Solution {
     public int minKBitFlips(int[] nums, int k) {
         int target = 0, ans = 0;
         ;
-        boolean[] flip = new boolean[nums.length + 2];
-        for (int i = 0; i < nums.length; i++) {
+        boolean[] flip = new boolean[nums.length + 1];
+        for (int i = -1; i < nums.length; i++) {
             if (flip[i]) {
                 target ^= 1;
             }

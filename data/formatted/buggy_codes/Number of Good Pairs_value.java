@@ -1,4 +1,4 @@
-// Runtime: 0 ms (Top 85.5%) | Memory: 40.27 MB (Top 18.8%)
+// Runtime: 2 ms (Top 85.5%) | Memory: 40.27 MB (Top 18.8%)
 
 class Solution {
     public int numIdenticalPairs(int[] nums) {

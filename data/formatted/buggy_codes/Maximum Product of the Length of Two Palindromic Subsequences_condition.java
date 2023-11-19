@@ -10,7 +10,7 @@ class Solution {
     }
 
     public void dfs(char[] strArr, int i, String s1, String s2) {
-        if (i >= strArr.length) {
+        if (i > strArr.length) {
             if (isPalindromic(s1) && isPalindromic(s2))
                 res = Math.max(res, s1.length() * s2.length());
             return;
@@ -24,7 +24,7 @@ class Solution {
         int j = str.length() - 1;
         char[] strArr = str.toCharArray();
         for (int i = 0; i < j; i++) {
-            if (strArr[i] == strArr[j])
+            if (strArr[i] != strArr[j])
                 return false;
             j--;
         }

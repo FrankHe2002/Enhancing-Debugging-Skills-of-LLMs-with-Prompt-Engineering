@@ -4,13 +4,13 @@ class Solution {
         int small = arr[n - 1];
         int prev = arr[n - 1];
         for (int i = n - 2; i >= 0; i--) {
-            if (arr[i] <= prev) {
+            if (arr[i] > prev) {
                 prev = arr[i];
             } else {
                 int indte = i;
                 int te = 0;
                 for (int j = i + 1; j < n; j++) {
-                    if (arr[j] < arr[i] && arr[j] <= te) {
+                    if (arr[j] < arr[i] && arr[j] > te) {
                         te = arr[j];
                         indte = j;
                     }

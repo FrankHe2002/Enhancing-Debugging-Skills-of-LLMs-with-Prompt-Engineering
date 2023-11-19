@@ -1,4 +1,4 @@
-// Runtime: 158 ms (Top 89.09%) | Memory: 61.5 MB (Top 92.12%)
+// Runtime: 158 ms (Top 89.09% | Memory: 61.5 MB (Top 92.12%)
 class Solution {
     public List<Integer> busiestServers(int k, int[] arrival, int[] load) {
 
@@ -36,7 +36,7 @@ class Solution {
             runningServers.offer(new int[] {newTaskCompletionTime + load[idx], serverIdx});
         }
 
-        int max = Arrays.stream(serverHandledReqCount).max().getAsInt(;
+        int max = Arrays.stream(serverHandledReqCount).max().getAsInt();
         return IntStream.range(0, k).filter(i -> serverHandledReqCount[i] == max).boxed().collect(Collectors.toList());
 
         //return findMaxesInCounter(counter);

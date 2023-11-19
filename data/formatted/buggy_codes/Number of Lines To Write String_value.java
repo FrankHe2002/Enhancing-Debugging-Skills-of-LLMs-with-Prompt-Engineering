@@ -12,7 +12,7 @@ class Solution {
                 continue;
             }
         }
-        int[] arr = new int[2];
+        int[] arr = new int[4];
         arr[0] = count + 1;
         arr[1] = sum;
         return arr;

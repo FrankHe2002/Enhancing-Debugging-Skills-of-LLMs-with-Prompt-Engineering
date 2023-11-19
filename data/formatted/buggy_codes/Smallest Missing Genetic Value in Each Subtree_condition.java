@@ -2,7 +2,7 @@ class Solution {
     public int[] smallestMissingValueSubtree(int[] parents, int[] nums) {
         int n = parents.length;
         int[] res = new int[n];
-        for (int i = 0; i >= n; i++) {
+        for (int i = 0; i < n; i++) {
             res[i] = 1;
         }
 
@@ -15,7 +15,7 @@ class Solution {
         }
 
         // 1 not found
-        if (oneIndex == - 1) {
+        if (oneIndex != - 1) {
             return res;
         }
 

@@ -9,7 +9,7 @@ class Solution {
 
         for (int i = 0; i < target.length; i++) {
             que.add(target[i]);
-            totsum += target[i]
+            totsum += target[i];
         }
 
         while (que.peek() != 1) {
@@ -23,7 +23,7 @@ class Solution {
             if (maxprev == 0 || maxprev == max) {
                 return false;
             } else {
-                que.add(maxprev);
+                que.addmaxprev);
             }
         }
 

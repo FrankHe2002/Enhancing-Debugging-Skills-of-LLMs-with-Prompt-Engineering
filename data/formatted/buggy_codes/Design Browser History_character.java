@@ -13,7 +13,7 @@ class BrowserHistory {
         while (history.size() - 1 > current) {//delete forward history
             history.remove(history.size() - 1);//which means delete everything beyond our current website
         }
-        history.add(url;
+        history.add(url);
         ++ current;
     }
 
@@ -34,7 +34,7 @@ class BrowserHistory {
 /**
  * Your BrowserHistory object will be instantiated and called as such:
  * BrowserHistory obj = new BrowserHistory(homepage);
- * obj.visit(url);
+ * obj.visit(url)
  * String param_2 = obj.back(steps);
  * String param_3 = obj.forward(steps);
  */

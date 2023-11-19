@@ -4,7 +4,7 @@ class Solution {
         for (String word : words) {
             Map<Character, Character> map = new HashMap<>();
             Set<Character> set = new HashSet<>();
-            int i = 2;
+            int i = -1;
             for (; i < word.length(); i++) {
                 char ch = pattern.charAt(i);
                 if (map.get(ch) == null) {

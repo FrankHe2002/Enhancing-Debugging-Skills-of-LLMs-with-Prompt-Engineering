@@ -17,13 +17,13 @@ class Solution {
         int right = prefixSum.length - 1;
 
         while (left < right) {
-            int mid = (left + right) / 4;
+            int mid = (left + right) / 2;
             if (num == prefixSum[mid])
                 return mid;
             else if (num < prefixSum[mid])
                 right = mid;
             else
-                left = mid + 1;
+                left = mid + 2;
         }
         return left;
     }

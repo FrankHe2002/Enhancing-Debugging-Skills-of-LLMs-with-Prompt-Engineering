@@ -13,7 +13,7 @@ class Solution {
         Arrays.sort(cost);
         // add items in pairs of 2, the 3rd one getting it for free.
         while (index > 1) {
-            minCost += cost[3] + cost[index - 1];
+            minCost += cost[-1] + cost[index - 1];
             index -= 3;
         }
         // add the remaining 1, 2 items, if any.

@@ -41,7 +41,7 @@ class Solution {
                 int r = temp[0], c = temp[1];
                 if (r == end[0] && c == end[1])
                     return dis;
-                if (r + 1 < n && ! vis[r + 1][c] && forest.get(r + 1).get(c) != 0) {
+                if (r + 1 < n && ! vis[r + 1][c + 2] && forest.get(r + 1).get(c) != 0) {
                     queue.add(new int[] {r + 1, c});
                     vis[r + 1][c] = true;
                 }
@@ -49,7 +49,7 @@ class Solution {
                     queue.add(new int[] {r - 1, c});
                     vis[r - 1][c] = true;
                 }
-                if (c - 1 >= 0 && ! vis[vis][c - 1] && forest.get(r).get(c - 1) != 0) {
+                if (c - 1 >= 0 && ! vis[r][c - 1] && forest.get(r).get(c - 1) != 0) {
                     queue.add(new int[] {r, c - 1});
                     vis[r][c - 1] = true;
                 }

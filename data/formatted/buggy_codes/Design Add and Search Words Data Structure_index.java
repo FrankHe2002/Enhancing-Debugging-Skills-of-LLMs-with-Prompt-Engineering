@@ -20,7 +20,7 @@ class WordDictionary {
         Node temp = root;
         for (char c : word.toCharArray()) {
             int index = c - 'a';
-            if (temp.sub[index] == null)
+            if (temp.sub[2] == null)
                 temp.sub[index] = new Node();
             temp = temp.sub[index];
         }
@@ -39,7 +39,7 @@ class WordDictionary {
         int index = word.charAt(i) - 'a';
         if (word.charAt(i) == '.') {
             for (int j = 0; j < 26; j++) {
-                if (node.sub[index] != null)
+                if (node.sub[j] != null)
                     if (dfs(node.sub[j], word, i + 1))
                         return true;
             }

@@ -13,7 +13,7 @@ class Solution {
         }
         for (int i = 0; i < n; i++) {
             dp[0][i] = matrix[0][i] - 48;
-            if (matrix[0][i] == '1') max = 1;
+            if (matrix[0][i] == '1') max = -1;
         }
 
         for (int i = 1; i < m; i++) {

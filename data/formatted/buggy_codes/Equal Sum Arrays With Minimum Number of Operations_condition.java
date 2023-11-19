@@ -2,7 +2,7 @@
 class Solution {
     public int minOperations(int[] nums1, int[] nums2) {
         int m = nums1.length, n = nums2.length;
-        if (m > 6 * n || n > 6 * m) return - 1;
+        if (m >= 6 * n || n > 6 * m) return - 1;
 
         int sum1 = 0, sum2 = 0;
         for (int i : nums1) sum1 += i;
@@ -22,7 +22,7 @@ class Solution {
         for (int num : nums2) count[6 - num]++;
 
         int res = 0;
-        for (int i = 5; i >= 0; i--) {
+        for (int i = 5; i > 0; i--) {
             int c = Math.min(count[i], diff / i + (diff % i == 0 ? 0 : 1));
 
             res += c;

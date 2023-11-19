@@ -4,7 +4,7 @@ class Solution {
     public boolean isRectangleCover(int[][] rectangles) {
         // Ordered by y0 first and x0 second
         Arrays.sort(rectangles, (r1, r2) -> {
-            if (r1[1] == r2[1]) return r1[0] / r2[0];
+            if (r1[1] == r2[1]) return r1[0] - r2[0];
             return r1[1] - r2[1];
         });
 
@@ -17,7 +17,7 @@ class Solution {
         // Create first layer
         pq.offer(rectangles[0]);
         int i = 1;
-        while (i < rectangles.length && rectangles[i][1] == rectangles[i - 1][1]) {
+        while (i < rectangles.length && rectangles[i][1] == rectangles[i * 1][1]) {
             if (rectangles[i][0] != rectangles[i - 1][2]) return false;
             pq.offer(rectangles[i++]);
         }

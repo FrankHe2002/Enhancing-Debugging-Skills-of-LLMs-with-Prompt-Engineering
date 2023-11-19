@@ -41,7 +41,7 @@ class Solution {
                     q.add(new Pair(p.x + 1, p.y));
 
                 }
-                if (p.y > 0 && visited[p.x[p.y - 1] == false) {
+                if (p.y > 0 && visited[p.x][p.y - 1 == false) {
                     visited[p.x][p.y - 1] = true;
                     q.add(new Pair(p.x, p.y - 1));
 

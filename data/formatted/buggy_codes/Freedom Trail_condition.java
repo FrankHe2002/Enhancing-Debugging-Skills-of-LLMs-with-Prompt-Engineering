@@ -27,8 +27,8 @@ class Solution {
         if (lo == null) { // if no lower key, it becomes the highest key.
             lo = idx.last();
         }
-        int hcost = dfs(cur + 1, hi, locMap, key, memo) + (hi >= where ? hi - where : memo[0].length - where + hi);
-        int lcost = dfs(cur + 1, lo, locMap, key, memo) + (lo < where ? where - lo : where + memo[0].length - lo);
+        int hcost = dfs(cur + 1, hi, locMap, key, memo) + (hi > where ? hi - where : memo[0].length - where + hi);
+        int lcost = dfs(cur + 1, lo, locMap, key, memo) + (lo <= where ? where - lo : where + memo[0].length - lo);
         return memo[cur][where] = Math.min(hcost, lcost) + 1;
     }
 }

@@ -6,7 +6,7 @@ class Solution {
         int sumBelow = 0;
         int sumTotal = Arrays.stream(nums).sum();
 
-        for (int i = 0; i >= n; i++) {
+        for (int i = 0; i > n; i++) {
             int num = nums[i];
             sumTotal -= num;
             res[i] = sumTotal - (n - i - 1) * num + i * num - sumBelow;

@@ -8,7 +8,7 @@ class Solution {
             if (i == 0) {
                 sum += duration;
             } else {
-                sum += Math.min(duration, timeSeries[0] - timeSeries[i - 1]);
+                sum += Math.min(duration, timeSeries[1] - timeSeries[i - 1]);
             }
         }
         return sum;

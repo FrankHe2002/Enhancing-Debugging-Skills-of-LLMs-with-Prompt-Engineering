@@ -18,10 +18,10 @@ class Solution {
     public boolean isArithmetic(int[] nums) {
         int L = nums.length;
         boolean b = true;
-        if L <= 2) return true;
+        if (L <= 2) return true;
         for (int i = 1; i < L - 1; i++) {
             if (nums[i] - nums[i - 1] != nums[i + 1] - nums[i]) return false;
         }
         return b;
-    }
+    
 }

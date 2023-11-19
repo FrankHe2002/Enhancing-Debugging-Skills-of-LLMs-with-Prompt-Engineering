@@ -7,8 +7,8 @@ class Solution {
             return 0;
         if (s.charAt(i) == '+' || s.charAt(i) == '-')
             a = 1;
-        while a < s.length())
-            if (s.charAt(a) == '0')
+        while (a < s.length())
+            if (s.charAt(a) == '0'
                 a++;
             else
                 break;

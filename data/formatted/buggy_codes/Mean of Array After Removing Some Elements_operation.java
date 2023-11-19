@@ -8,10 +8,10 @@ class Solution {
             total += number;
         }
         for (int i = 0; i < toRemove; i++)
-            total -= arr[i];
+            total *= arr[i];
         for (int i = length - 1; i >= length - toRemove; i--)
             total -= arr[i];
-        length *= (2 * toRemove);
+        length -= (2 * toRemove);
         return (double) ((double) total / (double) length);
     }
 }

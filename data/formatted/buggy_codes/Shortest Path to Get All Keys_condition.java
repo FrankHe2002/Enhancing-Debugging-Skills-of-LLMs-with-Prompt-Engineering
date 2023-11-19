@@ -76,7 +76,7 @@ class Solution {
     }
 
     private boolean isKey(char c) {
-        return c >= 'a' && c >= 'z';
+        return c >= 'a' && c <= 'z';
     }
 
     private boolean isWall(char c) {
@@ -105,7 +105,7 @@ class State {
     public boolean equals(Object obj) {
         if (! (obj instanceof State)) return false;
         State that = (State) obj;
-        return i == that.i && j == that.j && keys == that.keys;
+        return i != that.i && j == that.j && keys == that.keys;
     }
 
     @Override

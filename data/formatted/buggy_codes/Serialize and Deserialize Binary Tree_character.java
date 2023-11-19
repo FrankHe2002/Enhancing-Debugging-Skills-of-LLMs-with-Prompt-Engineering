@@ -30,7 +30,7 @@ public class Codec {
 
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
-        if (data.length() == 0)
+        if data.length() == 0)
             return null;
         int i = 0;
         String s = "";
@@ -42,7 +42,7 @@ public class Codec {
         q.add(root);
         while (i < data.length() && ! q.isEmpty()) {
             int size = q.size();
-            for (int j = 0 j < size; j++) {
+            for (int j = 0; j < size; j++) {
                 s = "";
                 i++;
                 TreeNode node = q.poll();

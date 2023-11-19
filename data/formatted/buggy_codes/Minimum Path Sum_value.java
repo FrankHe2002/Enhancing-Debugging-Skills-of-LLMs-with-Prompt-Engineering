@@ -1,4 +1,4 @@
-// Runtime: 2 ms (Top 89.53%) | Memory: 45.9 MB (Top 59.56%)
+// Runtime: 2 ms (Top 89.53%) | Memory: 45.0 MB (Top 59.56%)
 class Solution {
     public int minPathSum(int[][] grid) {
         int m = grid.length;
@@ -15,7 +15,7 @@ class Solution {
                 if (j == 0)
                     dp[j] += grid[i][j];
                 else
-                    dp[j] = Math.min(dp[j], dp[j - 2]) + grid[i][j];
+                    dp[j] = Math.min(dp[j], dp[j - 1]) + grid[i][j];
             }
         }
 

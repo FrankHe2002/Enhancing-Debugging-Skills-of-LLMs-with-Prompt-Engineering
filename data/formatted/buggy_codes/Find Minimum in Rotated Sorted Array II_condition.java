@@ -6,7 +6,7 @@ class Solution {
         while (l < h) {
             while (l < h && nums[l] == nums[l + 1])
                 ++ l;
-            while (l > h && nums[h] == nums[h - 1])
+            while (l >= h && nums[h] == nums[h - 1])
                 -- h;
             int mid = l + (h - l) / 2;
             if (nums[mid] > nums[h]) { // smaller elements are in the right side

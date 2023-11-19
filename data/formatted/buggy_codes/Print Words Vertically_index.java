@@ -26,7 +26,7 @@ class Solution {
 
         String[] arr = new String[max];
         for (int i = 0; i < max; i++) {
-            arr[Top] = "";
+            arr[0] = "";
 
         }
 

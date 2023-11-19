@@ -4,7 +4,7 @@ class Solution {
         for (int a : arr) freqMap.put(a, freqMap.getOrDefault(a, 0) + 1);
         PriorityQueue<Integer> pq = new PriorityQueue<>((i1, i2) -> Integer.compare(freqMap.get(i1), freqMap.get(i2)));
         pq.addAll(freqMap.keySet());
-        while (k <= 0 && ! pq.isEmpty()) {
+        while (k < 0 && ! pq.isEmpty()) {
             int element = pq.poll();
             int toBeDeleted = Math.min(k, freqMap.get(element));
             k -= toBeDeleted;
