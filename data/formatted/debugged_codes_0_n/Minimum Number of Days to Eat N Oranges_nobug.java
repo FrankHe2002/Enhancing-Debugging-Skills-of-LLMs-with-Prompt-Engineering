@@ -1,0 +1,21 @@
+```java
+class Solution {
+    HashMap<Integer, Integer> map;
+
+    public int minDays(int n) {
+        map = new HashMap<>();
+        map.put(0, 0);
+        map.put(1, 1);
+        return dp(n);
+    }
+
+    public int dp(int n) {
+        if (map.containsKey(n))
+            return map.get(n);
+        int one = 1 + (n % 2) + dp(n / 2);
+        int two = 1 + (n % 3) + dp(n / 3);
+        map.put(n, Math.min(one, two));
+        return map.get(n);
+    }
+}
+```
