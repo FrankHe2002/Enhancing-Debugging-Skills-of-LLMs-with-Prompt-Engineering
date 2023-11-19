@@ -2,7 +2,7 @@
 
 import os
 import glob
-from bug_gen import bug_gen  # Replace 'your_bug_gen_module' with the actual name of your module
+from bug_gen import bug_gen
 
 def generate_bugs_for_all_files(source_directory, target_directory, num_bugs=1):
     # Create the target directory if it doesn't exist
