@@ -1,0 +1,60 @@
+The bug in the provided code is that it does not handle the case when `n = 1` correctly. 
+
+In the current implementation, when `n = 1`, the code assigns `ans[0]` and `ans[1]` with `1`, which violates the condition that the elements in the sequence should be distinct. 
+
+To fix the bug, we need to add a special case for `n = 1` in the `constructDistancedSequence()` method.
+
+Here is the modified code with the bug fix:
+
+```java
+class Solution {
+    public int[] constructDistancedSequence(int n) {
+        if (n == 1) {
+            return new int[]{1};
+        }
+        
+        int[] ans = new int[n * 2 - 1];
+        boolean[] visited = new boolean[n + 1];
+        calc(0, ans, visited, n);
+        return ans;
+    }
+
+    private boolean calc(int index, int[] ans, boolean[] visited, int n) {
+        if (index == ans.length) {
+            return true;
+        }
+        
+        if (ans[index] != 0)
+            return calc(index + 1, ans, visited, n); // value already assigned in this position. So go ahead with the next index.
+        else {
+            // we start from n to 1 since we need to find out the lexicographically largest sequence.
+            for (int i = n; i >= 1; i--) {
+                if (visited[i]) {
+                    continue;
+                }
+                
+                visited[i] = true;
+                ans[index] = i;
+                
+                if (i == 1) {
+                    if (calc(index + 1, ans, visited, n)) {
+                        return true;
+                    }
+                } else if (index + i < ans.length && ans[index + i] == 0) {
+                    ans[index + i] = i; // assigning the second occurrence of i in the desired position i.e, (current index + i )
+                    if (calc(index + 1, ans, visited, n)) {
+                        return true; // largest possible sequence satisfying the given conditions found.
+                    }
+                    ans[index + i] = 0;
+                }
+                
+                ans[index] = 0;
+                visited[i] = false;
+            }
+        }
+        return false;
+    }
+}
+```
+
+By adding the special case for `n = 1` in the `constructDistancedSequence()` method,

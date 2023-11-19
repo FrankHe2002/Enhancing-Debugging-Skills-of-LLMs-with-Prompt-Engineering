@@ -1,0 +1,52 @@
+The bug in the provided Java code is in the line:
+
+```java
+arr[i] = arrInt[i;
+```
+
+There is a missing closing bracket in the expression `arr[i] = arrInt[i`. The correct expression should be `arr[i] = arrInt[i];`.
+
+To fix this bug, the missing closing bracket should be added to the expression.
+
+Here is the fixed code:
+
+```java
+// Runtime: 9 ms (Top 70.77%) | Memory: 42.3 MB (Top 96.77%)
+class Solution {
+    public int[] sortByBits(int[] arr) {
+
+        Integer[] arrInt = new Integer[arr.length];
+
+        for (int i = 0; i < arr.length; i++) {
+            arrInt[i] = arr[i];
+        }
+
+        Arrays.sort(arrInt, new Comparator<Integer>() {
+            @Override
+            public int compare(Integer a, Integer b) {
+                int aBits = numOfBits(a);
+                int bBits = numOfBits(b);
+                if (aBits == bBits) {
+                    return a - b;
+                }
+                return aBits - bBits;
+            }
+        });
+
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = arrInt[i];
+        }
+        return arr;
+    }
+
+    public int numOfBits(int a) {
+        int bits = 0;
+        while (a != 0) {
+            bits += a & 1;
+            a = a >>> 1;
+        }
+
+        return bits;
+    }
+}
+```

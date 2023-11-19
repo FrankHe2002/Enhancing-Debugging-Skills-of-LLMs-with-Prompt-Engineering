@@ -1,0 +1,30 @@
+The code contains a logical error. The issue lies in the condition `if (f < i + -1)` in the while loop. The expression `i + -1` should be `i - 1` to set `f` to the previous value of `j` instead of decrementing `f` by 2 each time. 
+
+To fix the bug, the condition should be modified to `if (f < i - 1)`.
+
+Here's the corrected code:
+
+```java
+// Runtime: 16 ms (Top 80.93%) | Memory: 104.9 MB (Top 83.74%)
+class Solution {
+    public int findMaxValueOfEquation(int[][] points, int k) {
+        int ans = Integer.MIN_VALUE;
+        int i = 0;
+        int f = 1;
+        while (i < points.length) {
+            if (f < i - 1)
+                f = i + 1;
+            for (int j = f; j <= points.length - 1; j++) {
+                if (points[j][0] > (points[i][0] + k))
+                    break;
+                if ((points[i][1] + points[j][1] + points[j][0] - points[i][0]) > ans) {
+                    ans = points[i][1] + points[j][1] + points[j][0] - points[i][0];
+                    f = j - 1;
+                }
+            }
+            i++;
+        }
+        return ans;
+    }
+}
+```
