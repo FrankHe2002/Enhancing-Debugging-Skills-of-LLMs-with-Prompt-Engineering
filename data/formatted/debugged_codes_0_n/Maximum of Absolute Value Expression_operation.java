@@ -1,0 +1,25 @@
+```java
+import java.util.Arrays;
+
+class Solution {
+    public int maxAbsValExpr(int[] arr1, int[] arr2) {
+        int arrayLength = arr1.length;
+        int v1[] = new int[arrayLength];
+        int v2[] = new int[arrayLength];
+        int v3[] = new int[arrayLength];
+        int v4[] = new int[arrayLength];
+        int res = 0;
+        for (int i = 0; i < arrayLength; i++) {
+            v1[i] = arr1[i] + arr2[i] + i;
+            v2[i] = arr1[i] - arr2[i] + i;
+            v3[i] = arr1[i] + arr2[i] - i;
+            v4[i] = arr1[i] - arr2[i] - i;
+        }
+        res = Math.max(res, Arrays.stream(v1).max().getAsInt() - Arrays.stream(v1).min().getAsInt());
+        res = Math.max(res, Arrays.stream(v2).max().getAsInt() - Arrays.stream(v2).min().getAsInt());
+        res = Math.max(res, Arrays.stream(v3).max().getAsInt() - Arrays.stream(v3).min().getAsInt());
+        res = Math.max(res, Arrays.stream(v4).max().getAsInt() - Arrays.stream(v4).min().getAsInt());
+        return res;
+    }
+}
+```
