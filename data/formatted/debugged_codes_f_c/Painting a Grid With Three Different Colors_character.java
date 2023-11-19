@@ -1,0 +1,63 @@
+The bug in the provided code is a syntax error. There is a missing semicolon at line 61 (`adj.get(i).add(j)`), causing a compilation error.
+
+To fix the bug, we need to add the missing semicolon at line 61, completing the statement.
+
+Here's the fixed code:
+
+```java
+class Solution {
+    static int mod = (int) (1e9 + 7);
+
+    public static int dfs(int n, ArrayList<ArrayList<Integer>> arr, int src, int dp[][]) {
+        if (n == 0) {
+            return 1;
+        }
+        if (dp[n][src] != - 1) {
+            return dp[n][src];
+        }
+        int val = 0;
+        for (Integer ap : arr.get(src)) {
+            val = (val % mod + dfs(n - 1, arr, ap, dp) % mod) % mod;
+        }
+        return dp[n][src] = val;
+    }
+
+    public static void val(ArrayList<String> arr, int color, int m, String s) {
+        if (m == 0) {
+            arr.add(s);
+            return;
+        }
+        for (int i = 0; i < 3; i++) {
+            if (color != i)
+                val(arr, i, m - 1, s + i);
+        }
+    }
+
+    public static boolean Match(String s, String s1) {
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == s1.charAt(i)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public int colorTheGrid(int m, int n) {
+        ArrayList<String> arr = new ArrayList<String>();
+        for (int i = 0; i < 3; i++) {
+            String s = "";
+            val(arr, i, m - 1, s + i);
+        }
+        ArrayList<ArrayList<Integer>> adj = new ArrayList<ArrayList<Integer>>();
+        for (int i = 0; i < arr.size(); i++) {
+            adj.add(new ArrayList<Integer>());
+        }
+
+        for (int i = 0; i < adj.size(); i++) {
+            for (int j = 0; j < arr.size(); j++) {
+                if (Match(arr.get(i), arr.get(j))) {
+                    adj.get(i).add(j);
+                }
+            }
+        }
+        int dp[][] = new int

@@ -1,0 +1,54 @@
+Bug Type: Syntax Error
+
+Reasoning: The bug is a missing semicolon at line 50, which causes a syntax error. 
+
+Fix:
+```java
+ret = Math.min(size, ret);
+```
+
+
+Fixed Code:
+```java
+// Runtime: 7 ms (Top 31.8%) | Memory: 39.08 MB (Top 78.7%)
+
+class Solution {
+    int ret; // store the final result
+    int m, n; // m is the height, and n is the width
+
+    // Note: original signature is changed from n,m to m,n
+    public int tilingRectangle(int m, int n) {
+        this.m = m;
+        this.n = n;
+        this.ret = m * n; // initialize the result as m*n if cut rectangle to be all 1*1 squares
+        int[][] mat = new int[m][n]; // record the status of every location, 0 means not covered, 1 means covered
+        backtrack(mat, 0); // start backtracking
+        return ret;
+    }
+
+    // the size means how many squares cut now
+    public void backtrack(int[][] mat, int size) {
+        if (size > ret) return; // if we already have more squares than the min result, no need to go forward
+
+        // find out the leftmost and topmost position where is not covered yet
+        int x = - 1, y = - 1;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (mat[i][j] == 0) {
+                    x = i;
+                    y = j;
+                    break;
+                }
+            }
+            if (x != - 1 && y != - 1) break;
+        }
+        // if not found, we know that all positions are covered
+        if (x == - 1 && y == - 1) {
+            // update the result
+            ret = Math.min(size, ret);
+        } else {
+            int len = findWidth(x, y, mat); // find the maximum width to cut the square
+            while (len >= 1) {
+                cover(x, y, len, mat, 1); // cover the current square
+                backtrack(mat, size + 1);
+                cover(x, y, len, mat, 0); // uncover the previous result

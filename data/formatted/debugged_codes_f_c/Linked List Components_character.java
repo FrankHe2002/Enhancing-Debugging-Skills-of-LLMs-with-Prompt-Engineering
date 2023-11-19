@@ -1,0 +1,24 @@
+The bug in the provided code is a syntax error. There is a missing opening parenthesis in the `while` loop condition, causing a compilation error. The fix is to add an opening parenthesis `(` before `head != null` in the `while` loop condition.
+
+Fixed Code:
+```java
+class Solution {
+    public int numComponents(ListNode head, int[] nums) {
+        int count = 0;
+        HashSet<Integer> set = new HashSet();
+        for (int i = 0; i < nums.length; i++) {
+            set.add(nums[i]);
+        }
+        while (head != null) {
+            if (set.contains(head.val)) {
+                while (head.next != null && set.contains(head.next.val)) {
+                    head = head.next;
+                }
+                count++;
+            }
+            head = head.next;
+        }
+        return count;
+    }
+}
+```
