@@ -9,16 +9,16 @@ class Solution {
             if (max1 < nums[i]) {
                 max2 = max1;
                 max1 = nums[i];
-            } else if(nums[i] > max2)
+            } else if (nums[i] > max2)
                 max2 = nums[i];
 
-            if(min1 > nums[i]){
+            if (min1 > nums[i]) {
                 min2 = min1;
                 min1 = nums[i];
-            }else if (nums[i] < min2)
+            } else if (nums[i] < min2)
                 min2 = nums[i];
         }
-        
+
         return (max1 * max2) - (min1 * min2);
     }
 }

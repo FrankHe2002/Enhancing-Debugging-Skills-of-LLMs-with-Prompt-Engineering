@@ -7,7 +7,8 @@ class MyQueue {
     /**
      * Initialize your data structure here.
      */
-    public MyQueue() {}
+    public MyQueue() {
+    }
 
     /**
      * Pushes element x to the back of the queue.
@@ -24,7 +25,7 @@ class MyQueue {
             temp.push(stack.pop());
 
         var val = stack.pop();
-        while (!temp.isEmpty())
+        while (! temp.isEmpty())
             stack.push(temp.pop());
 
         return val;
@@ -38,7 +39,7 @@ class MyQueue {
             temp.push(stack.pop());
 
         var val = stack.peek();
-        while (!temp.isEmpty())
+        while (! temp.isEmpty())
             stack.push(temp.pop());
 
         return val;

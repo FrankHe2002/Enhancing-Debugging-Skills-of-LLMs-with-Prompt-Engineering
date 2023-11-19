@@ -2,35 +2,33 @@
 
 class Solution {
     public List<Integer> partitionLabels(String s) {
-        
-    List<Integer>lr=new ArrayList<>();
 
-    HashMap<Character,Boolean>mp=new HashMap<>();
+        List<Integer> lr = new ArrayList<>();
 
-    int count=0;
+        HashMap<Character, Boolean> mp = new HashMap<>();
 
-    for(int i=0;i<s.length();i++){
+        int count = 0;
 
-    if(!mp.containsKey(s.charAt(i))&&s.lastIndexOf(Character.toString(s.charAt(i)))!=i){
-        mp.put(s.charAt(i),true);
-    }
-    else if(mp.containsKey(s.charAt(i))&&s.lastIndexOf(Character.toString(s.charAt(i)))==i){
+        for (int i = 0; i < s.length(); i++) {
 
-    mp.remove(s.charAt(i));
+            if (! mp.containsKey(s.charAt(i)) && s.lastIndexOf(Character.toString(s.charAt(i))) != i) {
+                mp.put(s.charAt(i), true);
+            } else if (mp.containsKey(s.charAt(i)) && s.lastIndexOf(Character.toString(s.charAt(i))) == i) {
 
-    }
-    
-    if(mp.isEmpty()){
-    lr.add(count+1);
-    count=0;
-    }
-    else{
-        count++;
-    }
-    }
+                mp.remove(s.charAt(i));
+
+            }
+
+            if (mp.isEmpty()) {
+                lr.add(count + 1);
+                count = 0;
+            } else {
+                count++;
+            }
+        }
 
 
-    return lr;
+        return lr;
 
 
     }

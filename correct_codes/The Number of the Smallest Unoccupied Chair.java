@@ -12,7 +12,7 @@ class Solution {
         PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[0] - b[0]);
 
         for (int i = 0; i < times.length; ++ i) {
-            while (!pq.isEmpty() && pq.peek()[0] <= times[i][0]) {
+            while (! pq.isEmpty() && pq.peek()[0] <= times[i][0]) {
                 available.offer(pq.poll()[1]);
             }
 
@@ -20,7 +20,7 @@ class Solution {
                 break;
             }
 
-            pq.offer(new int[]{times[i][1], available.poll()});
+            pq.offer(new int[] {times[i][1], available.poll()});
         }
 
         return available.peek();

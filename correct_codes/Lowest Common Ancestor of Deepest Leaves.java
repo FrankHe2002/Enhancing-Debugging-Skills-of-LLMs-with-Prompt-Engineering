@@ -6,7 +6,7 @@ class Solution {
         Queue<TreeNode> q = new LinkedList<>();
         q.offer(root);
         int count = 0;
-        while (!q.isEmpty()) {
+        while (! q.isEmpty()) {
             int size = q.size();
             count++;
             if (count == depth) {
@@ -19,7 +19,7 @@ class Solution {
             }
         }
         Set<Integer> set = new HashSet<>();
-        while (!q.isEmpty()) {
+        while (! q.isEmpty()) {
             set.add(q.poll().val);
         }
         return find(root, set);

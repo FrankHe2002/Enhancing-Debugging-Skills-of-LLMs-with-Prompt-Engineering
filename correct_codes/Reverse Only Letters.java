@@ -5,26 +5,26 @@ class Solution {
         char[] ch = s.toCharArray();
 
         int start = 0;
-        int end = s.length()-1;
+        int end = s.length() - 1;
 
         // Storing all the english alphabets in a hashmap so that the searching becomes easy...
-        HashMap<Character , Integer> hash = new HashMap<>();
-        for(int i=0 ; i<26 ;i++){
-            hash.put((char)(97+i) , 1);
+        HashMap<Character, Integer> hash = new HashMap<>();
+        for (int i = 0; i < 26; i++) {
+            hash.put((char) (97 + i), 1);
         }
-        for(int i=0 ; i<26 ; i++){
-            hash.put((char)(65+i) , 1);
+        for (int i = 0; i < 26; i++) {
+            hash.put((char) (65 + i), 1);
         }
 
         // using two while loops ..since the constraints are too less thats why we can prefer nested loops approach..
-        while(start<end){
+        while (start < end) {
 
             // interating untill start pointer reacher a good character
-            while(start<end&&!hash.containsKey(ch[start])){
+            while (start < end && ! hash.containsKey(ch[start])) {
                 start++;
             }
             // iterating untill the end pointer reaches the good character..
-            while(end>start&&!hash.containsKey(ch[end])){
+            while (end > start && ! hash.containsKey(ch[end])) {
                 end--;
             }
 

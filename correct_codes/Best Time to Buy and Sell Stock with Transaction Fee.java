@@ -3,16 +3,17 @@ class Solution {
     public int maxProfit(int[] prices, int fee) {
         int[][] dp = new int[prices.length][2];
         for (int[] a : dp) {
-            a[0] = -1;
-            a[1] = -1;
+            a[0] = - 1;
+            a[1] = - 1;
         }
         return profit(prices, fee, 0, 1, dp);
     }
+
     public int profit(int[] prices, int fee, int i, int buy, int[][] dp) {
         if (i == prices.length) {
             return 0;
         }
-        if (dp[i][buy] != -1) {
+        if (dp[i][buy] != - 1) {
             return dp[i][buy];
         }
         int maxProfit = 0;

@@ -23,22 +23,22 @@ class Solution {
     public List<List<Integer>> findCriticalAndPseudoCriticalEdges(int n, int[][] edges) {
         List<Integer> critical = new ArrayList<>();
         List<Integer> pseudoCritical = new ArrayList<>();
-        
+
         for (int i = 0; i < edges.length; i++) {
             int[] edge = edges[i];
             edge = Arrays.copyOf(edge, edge.length + 1);
             edge[3] = i;
             edges[i] = edge;
         }
-        
+
         Arrays.sort(edges, (a, b) -> Integer.compare(a[2], b[2]));
 
-        int mstwt = findMST(n, edges, -1, -1);
+        int mstwt = findMST(n, edges, - 1, - 1);
 
         for (int i = 0; i < edges.length; i++) {
-            if (mstwt < findMST(n, edges, i, -1))
+            if (mstwt < findMST(n, edges, i, - 1))
                 critical.add(edges[i][3]);
-            else if (mstwt == findMST(n, edges, -1, i))
+            else if (mstwt == findMST(n, edges, - 1, i))
                 pseudoCritical.add(edges[i][3]);
         }
 
@@ -52,7 +52,7 @@ class Solution {
         UnionFind uf = new UnionFind(n);
         int weight = 0;
 
-        if (e != -1) {
+        if (e != - 1) {
             weight += edges[e][2];
             uf.union(edges[e][0], edges[e][1]);
         }

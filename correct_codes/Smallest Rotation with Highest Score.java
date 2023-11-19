@@ -46,16 +46,16 @@ class Solution {
         int[] cnt = new int[2 * n];
         int max = 0;
         int res = 0;
-        for(int r = 0, l = 0, sum = 0; r < 2 * n; r++) {
+        for (int r = 0, l = 0, sum = 0; r < 2 * n; r++) {
             int v = r - nums[r % n];
-            if(v >= 0) {
+            if (v >= 0) {
                 cnt[Math.min(2 * n - 1, v)]++;
-                if(v >= l) {
+                if (v >= l) {
                     sum++;
                 }
             }
-            if(r - l == n - 1) {
-                if(sum > max) {
+            if (r - l == n - 1) {
+                if (sum > max) {
                     max = sum;
                     res = l;
                 }

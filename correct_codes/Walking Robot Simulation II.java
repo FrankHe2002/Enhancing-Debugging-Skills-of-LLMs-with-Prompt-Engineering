@@ -4,6 +4,7 @@ class Robot {
     int p;
     int w;
     int h;
+
     public Robot(int width, int height) {
         w = width - 1;
         h = height - 1;
@@ -17,15 +18,15 @@ class Robot {
     public int[] getPos() {
         int remain = p % (2 * (w + h));
         if (remain <= w)
-            return new int[]{remain, 0};
+            return new int[] {remain, 0};
         remain -= w;
         if (remain <= h)
-            return new int[]{w, remain};
+            return new int[] {w, remain};
         remain -= h;
         if (remain <= w)
-            return new int[]{w - remain, h};
+            return new int[] {w - remain, h};
         remain -= w;
-        return new int[]{0, h - remain};
+        return new int[] {0, h - remain};
     }
 
     public String getDir() {

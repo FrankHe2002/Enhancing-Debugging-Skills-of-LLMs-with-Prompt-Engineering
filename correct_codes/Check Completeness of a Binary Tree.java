@@ -4,12 +4,12 @@ class Solution {
         boolean end = false;
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
-        while(!queue.isEmpty()) {
+        while (! queue.isEmpty()) {
             TreeNode currentNode = queue.poll();
-            if(currentNode == null) {
+            if (currentNode == null) {
                 end = true;
             } else {
-                if(end) {
+                if (end) {
                     return false;
                 }
                 queue.offer(currentNode.left);

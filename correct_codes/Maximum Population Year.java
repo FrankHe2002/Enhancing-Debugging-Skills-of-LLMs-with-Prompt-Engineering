@@ -6,7 +6,7 @@ class Solution {
 
         // O(n) -> n is log.length
 
-        for(int[] log : logs){
+        for (int[] log : logs) {
 
             year[log[0]] += 1;
             year[log[1]] -= 1;
@@ -16,10 +16,10 @@ class Solution {
 
         // O(100) -> 2050 - 1950 = 100
 
-        for(int i = 1951; i < year.length; i++){
+        for (int i = 1951; i < year.length; i++) {
             year[i] += year[i - 1]; // Generating Prefix Sum
 
-            if(year[i] > maxNum){
+            if (year[i] > maxNum) {
                 maxNum = year[i];
                 maxYear = i;
             }

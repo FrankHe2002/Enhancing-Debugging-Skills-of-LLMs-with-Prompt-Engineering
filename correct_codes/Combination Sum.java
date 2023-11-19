@@ -7,16 +7,17 @@ class Solution {
         dfs(0, candidates, target, 0, cur, result);
         return result;
     }
-    public void dfs(int start, int[] candidates, int target, int sum, List<Integer> cur, List<List<Integer>> result){
-        if(sum == target){
+
+    public void dfs(int start, int[] candidates, int target, int sum, List<Integer> cur, List<List<Integer>> result) {
+        if (sum == target) {
             result.add(new ArrayList<>(cur));
             return;
         }
-        for(int i = start; i < candidates.length; i++) {
-            if(sum + candidates[i] <= target) {
-              cur.add(candidates[i]);
-              dfs(i, candidates, target, sum + candidates[i], cur, result);
-              cur.remove((cur.size()- 1));
+        for (int i = start; i < candidates.length; i++) {
+            if (sum + candidates[i] <= target) {
+                cur.add(candidates[i]);
+                dfs(i, candidates, target, sum + candidates[i], cur, result);
+                cur.remove((cur.size() - 1));
             }
         }
         return;

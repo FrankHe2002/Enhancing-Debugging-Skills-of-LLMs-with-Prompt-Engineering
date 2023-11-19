@@ -1,19 +1,19 @@
 class Solution {
     public long smallestNumber(long num) {
-        if(num == 0){
+        if (num == 0) {
             return 0;
         }
         boolean isNegative = num < 0;
-        num  = num < 0 ? num * -1 : num;
-        
+        num = num < 0 ? num * - 1 : num;
+
         char[] c = String.valueOf(num).toCharArray();
         Arrays.sort(c);
         String str;
-        if(!isNegative){
+        if (! isNegative) {
             int non = 0;
-			//if not negative we need to find out the first non-leading zero then swap with first zero
-            for(; non < c.length; non++){
-                if(c[non] != '0'){
+            //if not negative we need to find out the first non-leading zero then swap with first zero
+            for (; non < c.length; non++) {
+                if (c[non] != '0') {
                     break;
                 }
             }
@@ -21,7 +21,7 @@ class Solution {
             c[non] = c[0];
             c[0] = temp;
             str = new String(c);
-        }else{
+        } else {
             str = new String(c);
             StringBuilder sb = new StringBuilder(str);
             str = "-".concat(sb.reverse().toString());

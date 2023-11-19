@@ -12,7 +12,7 @@ class Solution {
 
             int localMaxRight = 0;
 
-            for (int i=L; i<=R; i++) {
+            for (int i = L; i <= R; i++) {
 
                 localMaxRight = Math.max(i + nums[i], localMaxRight);
             }

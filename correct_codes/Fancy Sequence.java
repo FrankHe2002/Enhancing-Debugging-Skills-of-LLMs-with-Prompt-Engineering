@@ -20,8 +20,8 @@ class Fancy {
     }
 
     public void addAll(int inc) {
-       int l = add.size();
-       add.set(l - 1, add.get(l - 1) + inc);
+        int l = add.size();
+        add.set(l - 1, add.get(l - 1) + inc);
     }
 
     public void multAll(int m) {
@@ -31,7 +31,7 @@ class Fancy {
     }
 
     public int getIndex(int idx) {
-        if (idx >= lst.size()) return -1;
+        if (idx >= lst.size()) return - 1;
 
         int l = add.size();
         long m = (mult.get(l - 1) * inverse(mult.get(idx))) % MOD;

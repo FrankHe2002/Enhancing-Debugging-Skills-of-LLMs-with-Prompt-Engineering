@@ -15,7 +15,7 @@ class Solution {
     private void dfs(int[][] matrix, int i, int j, int[][] memo) {
         if (memo[i][j] != 0)
             return;
-        int[][] dirs = {{-1,0}, {0,1}, {1,0}, {0,-1}};
+        int[][] dirs = {{- 1, 0}, {0, 1}, {1, 0}, {0, - 1}};
         int max = 0;
         for (int k = 0; k < dirs.length; k++) {
             int x = dirs[k][0] + i;

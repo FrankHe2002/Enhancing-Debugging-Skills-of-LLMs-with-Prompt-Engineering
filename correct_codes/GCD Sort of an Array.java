@@ -1,6 +1,7 @@
 // Runtime: 47 ms (Top 94.62%) | Memory: 71.9 MB (Top 80.64%)
 class Solution {
     private static final int[] primes;
+
     // precompute prime numbers
     static {
         primes = new int[5133];

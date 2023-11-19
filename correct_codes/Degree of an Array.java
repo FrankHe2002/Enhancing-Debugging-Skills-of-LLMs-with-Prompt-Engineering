@@ -1,6 +1,6 @@
 class Solution {
     public int findShortestSubArray(int[] nums) {
-       int ans = Integer.MAX_VALUE;
+        int ans = Integer.MAX_VALUE;
         Map<Integer, Integer> count = new HashMap<>();
         Map<Integer, Integer> startIndex = new HashMap<>();
         Map<Integer, Integer> endIndex = new HashMap<>();
@@ -11,7 +11,7 @@ class Solution {
 
         for (int i = 0; i < nums.length; i++) {
             int no = nums[i];
-            if (!startIndex.containsKey(no)) {
+            if (! startIndex.containsKey(no)) {
                 startIndex.put(no, i);
             }
             endIndex.put(no, i);
@@ -29,6 +29,6 @@ class Solution {
             }
         }
 
-        return ans; 
+        return ans;
     }
 }

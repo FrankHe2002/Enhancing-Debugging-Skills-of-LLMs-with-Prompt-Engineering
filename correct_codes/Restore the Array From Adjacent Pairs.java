@@ -10,7 +10,7 @@ class Solution {
         }
 
         // Find an item that has only one neighbour.
-        int start = -1;
+        int start = - 1;
         for (int i : iToPairs.keySet()) {
             if (iToPairs.get(i).size() == 1) {
                 start = i;

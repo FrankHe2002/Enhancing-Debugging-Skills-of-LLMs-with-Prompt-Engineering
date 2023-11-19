@@ -1,7 +1,7 @@
 // Runtime: 1 ms (Top 98.48%) | Memory: 42.5 MB (Top 63.64%)
 class Solution {
     public int maximumGood(int[][] statements) {
-        int[] result = { 0 };
+        int[] result = {0};
         maximumGood(statements, new boolean[statements.length], 0, 0, result);
         return result[0];
     }
@@ -49,12 +49,12 @@ class Solution {
     private boolean isValid(int[][] statements, boolean[] goodPeople, int currentPerson) {
         // To verify if the current assumption of good/bad people is correct, we need to do 2 things.
         // 1. We need to verify the statements from all processed good people. What they said about the current person should be correct.
-        for (int i = 0; i < currentPerson; ++i) {
+        for (int i = 0; i < currentPerson; ++ i) {
             if (goodPeople[i]) {
                 if (goodPeople[currentPerson] && statements[i][currentPerson] == 0) {
                     return false;
                 }
-                if (!goodPeople[currentPerson] && statements[i][currentPerson] == 1) {
+                if (! goodPeople[currentPerson] && statements[i][currentPerson] == 1) {
                     return false;
                 }
             }
@@ -62,9 +62,9 @@ class Solution {
 
         // 2. We need to verify the statement from the current person if he is good. What he said about other people should be correct.
         if (goodPeople[currentPerson]) {
-            for (int i = 0; i < currentPerson; ++i) {
+            for (int i = 0; i < currentPerson; ++ i) {
                 if (goodPeople[i] && statements[currentPerson][i] == 0) return false;
-                if (!goodPeople[i] && statements[currentPerson][i] == 1) return false;
+                if (! goodPeople[i] && statements[currentPerson][i] == 1) return false;
             }
         }
 

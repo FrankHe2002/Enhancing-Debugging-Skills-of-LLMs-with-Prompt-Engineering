@@ -4,7 +4,7 @@ class Solution {
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 if (((board[0][0] ^ board[i][0]) ^ (board[i][j] ^ board[0][j])) == 1) {
-                    return -1;
+                    return - 1;
                 }
             }
         }
@@ -19,10 +19,10 @@ class Solution {
             }
         }
         if (rowOneCnt < N / 2 || rowOneCnt > (N + 1) / 2) {
-            return -1;
+            return - 1;
         }
         if (colOneCnt < N / 2 || colOneCnt > (N + 1) / 2) {
-            return -1;
+            return - 1;
         }
         if (N % 2 == 1) {
             // we cannot make it when ..ToMove is odd

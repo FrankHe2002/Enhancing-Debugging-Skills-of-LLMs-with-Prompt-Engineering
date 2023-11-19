@@ -17,7 +17,7 @@ class Solution {
         th = null;
         tt = null;
 
-        if(head == null || head.next == null)
+        if (head == null || head.next == null)
             return head;
 
         int size = length(head);
@@ -25,26 +25,20 @@ class Solution {
         ListNode curr = head;
         int group = 1;
 
-        while(curr!=null)
-        {
+        while (curr != null) {
             int temp = size - idx + 1;
-            if((temp>=group && group%2 == 0) || (temp<group && temp%2 == 0))
-            {
+            if ((temp >= group && group % 2 == 0) || (temp < group && temp % 2 == 0)) {
                 int k = group;
-                while(k-->0 && curr!=null)
-                {
+                while (k-- > 0 && curr != null) {
                     ListNode t = curr.next;
                     curr.next = null;
                     addFirst(curr);
                     curr = t;
                     idx++;
                 }
-            }
-            else
-            {
+            } else {
                 int k = group;
-                while(k-->0 && curr!=null)
-                {
+                while (k-- > 0 && curr != null) {
                     ListNode t = curr.next;
                     curr.next = null;
                     addLast(curr);
@@ -53,13 +47,10 @@ class Solution {
                 }
             }
 
-            if(oh==null && ot==null)
-            {
+            if (oh == null && ot == null) {
                 oh = th;
                 ot = tt;
-            }
-            else
-            {
+            } else {
                 ot.next = th;
                 ot = tt;
             }
@@ -72,42 +63,32 @@ class Solution {
         return oh;
     }
 
-    public int length (ListNode head)
-    {
-        if(head==null) return 0;
+    public int length(ListNode head) {
+        if (head == null) return 0;
         ListNode curr = head;
         int k = 0;
-        while(curr!=null)
-        {
-             k++;
+        while (curr != null) {
+            k++;
             curr = curr.next;
         }
         return k;
     }
 
-    public void addFirst(ListNode head)
-    {
-        if(tt == null && th == null)
-        {
+    public void addFirst(ListNode head) {
+        if (tt == null && th == null) {
             th = head;
             tt = head;
-        }
-        else
-        {
+        } else {
             head.next = th;
             th = head;
         }
     }
 
-    public void addLast(ListNode head)
-    {
-        if(tt == null && th == null)
-        {
+    public void addLast(ListNode head) {
+        if (tt == null && th == null) {
             th = head;
             tt = head;
-        }
-        else
-        {
+        } else {
             tt.next = head;
             tt = head;
         }

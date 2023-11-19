@@ -1,14 +1,14 @@
 class Solution {
     public List<List<String>> accountsMerge(List<List<String>> accounts) {
-        
+
         int l = accounts.size();
         UnionFind uf = new UnionFind(l);
-        
+
         Map<String, Integer> emailToNameId = new HashMap<>();
-        
-        for(int i=0; i<l; i++) {
+
+        for (int i = 0; i < l; i++) {
             List<String> account = accounts.get(i);
-            for(int j=1; j<account.size(); j++) {
+            for (int j = 1; j < account.size(); j++) {
                 String email = account.get(j);
                 int currentNameId = i;
                 if (emailToNameId.containsKey(email)) {
@@ -24,7 +24,7 @@ class Solution {
 
         // Use TreeSet for alphabetical order. 
         Map<Integer, TreeSet<String>> nameIdToEmails = new HashMap<>();
-        for(int i=0; i<l; i++) {
+        for (int i = 0; i < l; i++) {
             int root = uf.find(i);
             nameIdToEmails.putIfAbsent(root, new TreeSet<>());
             List<String> account = accounts.get(i);
@@ -34,7 +34,7 @@ class Solution {
         // nameIdToEmails = {1=[john00@mail.com, john_newyork@mail.com, johnsmith@mail.com], 2=[mary@mail.com], 3=[johnnybravo@mail.com]}
 
         List<List<String>> out = new ArrayList<>();
-        for(int id : nameIdToEmails.keySet()) {
+        for (int id : nameIdToEmails.keySet()) {
             String name = accounts.get(id).get(0);
             List<String> emails = new ArrayList<>(nameIdToEmails.get(id));
             emails.add(0, name);
@@ -42,20 +42,20 @@ class Solution {
         }
         return out;
     }
-    
+
     class UnionFind {
         int[] parent;
         int[] rank;
-        
+
         UnionFind(int size) {
             parent = new int[size];
             rank = new int[size];
-            for(int i=0; i<size; i++) {
+            for (int i = 0; i < size; i++) {
                 parent[i] = i;
                 rank[i] = 1;
             }
         }
-        
+
         public void union(int x, int y) {
             int rootX = find(x);
             int rootY = find(y);
@@ -70,14 +70,14 @@ class Solution {
                 }
             }
         }
-        
+
         public int find(int x) {
             if (x == parent[x]) {
                 return x;
             }
             return parent[x] = find(parent[x]);
         }
-        
-        
+
+
     }
 }

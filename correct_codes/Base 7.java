@@ -6,7 +6,7 @@ class Solution {
         StringBuilder sb = new StringBuilder();
         int temp = num;
         if (temp < 0) {
-            temp = -temp;
+            temp = - temp;
         }
         while (temp > 0) {
             int rem = temp % 7;

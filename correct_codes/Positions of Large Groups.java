@@ -5,12 +5,12 @@ class Solution {
         List<List<Integer>> res = new ArrayList<>();
         List<Integer> tmp = new ArrayList<>();
         int count = 1;
-        
+
         for (int i = 0; i < s.length() - 1; i++) {
             // Increment the count until the next element is the same as the previous element. Ex: "aaa"
             if (s.charAt(i) == s.charAt(i + 1)) {
                 count++;
-            } 
+            }
             // Add the first and last indices of the substring to the list when the next element is different from the previous element. Ex: "aaab"
             else if (s.charAt(i) != s.charAt(i + 1) && count >= 3) {
                 // gives the starting index of substring
@@ -20,8 +20,7 @@ class Solution {
                 res.add(tmp);
                 count = 1;
                 tmp = new ArrayList<>();
-            } 
-            else {
+            } else {
                 count = 1;
             }
         }

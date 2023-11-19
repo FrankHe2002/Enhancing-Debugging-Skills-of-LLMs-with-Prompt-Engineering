@@ -11,7 +11,8 @@ public class Solution {
             lenB++;
             tempB = tempB.next;
         }
-        tempA = headA; tempB = headB;
+        tempA = headA;
+        tempB = headB;
         if (lenB > lenA) {
             for (int i = 0; i < lenB - lenA; i++) {
                 tempB = tempB.next;

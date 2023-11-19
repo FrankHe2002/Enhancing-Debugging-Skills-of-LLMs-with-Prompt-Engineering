@@ -5,7 +5,7 @@ class Solution {
         int[][] plants = new int[n][2];
         int totalPlantTime = 0;
         for (int i = 0; i < n; i++) {
-            plants[i] = new int[]{plantTime[i], growTime[i]};
+            plants[i] = new int[] {plantTime[i], growTime[i]};
             totalPlantTime += plantTime[i];
         }
         // Sort plants by grow time.

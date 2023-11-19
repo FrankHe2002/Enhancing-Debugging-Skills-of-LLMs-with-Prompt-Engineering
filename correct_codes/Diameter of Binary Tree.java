@@ -2,9 +2,10 @@
 class Solution {
     // Declare Global Variable ans to 0
     int ans = 0;
+
     // Depth First Search Function
     public int dfs(TreeNode root) {
-        if(root == null) return 0;
+        if (root == null) return 0;
         // recursive call for left height
         int lh = dfs(root.left);
         // recursive call for right height

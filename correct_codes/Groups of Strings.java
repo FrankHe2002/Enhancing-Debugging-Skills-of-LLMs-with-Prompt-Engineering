@@ -43,11 +43,11 @@ class Solution {
             max = Math.max(max, cnt);
         }
 
-        return new int[]{map.size(), max};
+        return new int[] {map.size(), max};
     }
 
     private int find(int[] parents, int i) {
-        return parents[i] = parents[i] == i ? i: find(parents, parents[i]);
+        return parents[i] = parents[i] == i ? i : find(parents, parents[i]);
     }
 
     private void merge(int[] parents, int[] ranks, int i, int j) {

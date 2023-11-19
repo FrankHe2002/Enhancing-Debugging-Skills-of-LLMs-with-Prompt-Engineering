@@ -4,10 +4,10 @@ class Solution {
         Map<String, Integer> varMap = new HashMap<>();
         int varCnt = 0;
         for (int i = 0; i < len; i++) {
-            if (!varMap.containsKey(equations.get(i).get(0))) {
+            if (! varMap.containsKey(equations.get(i).get(0))) {
                 varMap.put(equations.get(i).get(0), varCnt++);
             }
-            if (!varMap.containsKey(equations.get(i).get(1))) {
+            if (! varMap.containsKey(equations.get(i).get(1))) {
                 varMap.put(equations.get(i).get(1), varCnt++);
             }
         }
@@ -28,7 +28,7 @@ class Solution {
         double[] ans = new double[queriesCnt];
         for (int i = 0; i < queriesCnt; i++) {
             List<String> query = queries.get(i);
-            double result = -1.0;
+            double result = - 1.0;
             if (varMap.containsKey(query.get(0)) && varMap.containsKey(query.get(1))) {
                 int idxA = varMap.get(query.get(0));
                 int idxB = varMap.get(query.get(1));
@@ -38,9 +38,9 @@ class Solution {
                     Queue<Integer> points = new LinkedList<>();
                     points.offer(idxA);
                     double[] ratios = new double[varCnt];
-                    Arrays.fill(ratios, -1.0);
+                    Arrays.fill(ratios, - 1.0);
                     ratios[idxA] = 1.0;
-                    while (!points.isEmpty() && ratios[idxB] < 0) {
+                    while (! points.isEmpty() && ratios[idxB] < 0) {
                         int cur = points.poll();
                         for (Pair pair : edges[cur]) {
                             int y = pair.index;

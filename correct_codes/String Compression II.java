@@ -1,5 +1,5 @@
 class Solution {
-	 public int getLengthOfOptimalCompression(String s, int k) {
+    public int getLengthOfOptimalCompression(String s, int k) {
         Map<String, Integer> memo = new HashMap<>();
         return recur(s, '\u0000', 0, k, 0, memo);
     }
@@ -58,6 +58,7 @@ class Solution {
         memo.put(key, ans);
         return ans;
     }
+
     //Since length for aaaaa will be a5(2) aaaaaaaaaa a10(3) etc.
     private int getLength(int n) {
 
@@ -69,7 +70,7 @@ class Solution {
             return 2;
         } else if (n < 100) {
             return 3;
-        } else  {
+        } else {
             return 4;
         }
     }

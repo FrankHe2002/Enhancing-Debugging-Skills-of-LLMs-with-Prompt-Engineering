@@ -5,14 +5,15 @@ class Solution {
         char[] two = s2.toCharArray();
         Arrays.sort(one);
         Arrays.sort(two);
-        if(check(one,two,n) || check(two,one,n)){
+        if (check(one, two, n) || check(two, one, n)) {
             return true;
         }
         return false;
     }
-    public boolean check(char[] one,char[] two,int n){
-        for(int i=0;i<n;i++){
-            if(one[i]-'a'>two[i]-'a'){
+
+    public boolean check(char[] one, char[] two, int n) {
+        for (int i = 0; i < n; i++) {
+            if (one[i] - 'a' > two[i] - 'a') {
                 return false;
             }
         }

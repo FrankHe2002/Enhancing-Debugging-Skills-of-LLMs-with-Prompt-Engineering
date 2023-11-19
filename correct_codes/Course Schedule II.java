@@ -5,23 +5,23 @@ class Solution {
         for (int i = 0; i < numCourses; i++) {
             graph.put(i, new HashSet<Integer>());
         }
-        
+
         for (int[] pair : prerequisites) {
             graph.get(pair[1]).add(pair[0]);
             inDegree[pair[0]]++;
         }
-        
+
         // BFS - Kahn's Algorithm - Topological Sort
         Queue<Integer> bfsContainer = new LinkedList<>();
         for (int i = 0; i < numCourses; i++) {
             if (inDegree[i] == 0) {
-                bfsContainer.add(i);    
+                bfsContainer.add(i);
             }
         }
-        
+
         int count = 0;
         int[] ans = new int[numCourses];
-        while (!bfsContainer.isEmpty()) {
+        while (! bfsContainer.isEmpty()) {
             int curr = bfsContainer.poll();
             ans[count++] = curr;
             for (Integer num : graph.get(curr)) {
@@ -31,7 +31,7 @@ class Solution {
                 }
             }
         }
-        
+
         if (count < numCourses) {
             return new int[] {};
         } else {

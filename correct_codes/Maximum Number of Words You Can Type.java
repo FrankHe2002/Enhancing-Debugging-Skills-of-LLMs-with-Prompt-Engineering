@@ -8,7 +8,7 @@ class Solution {
                 isBad = false;
                 count++;
             } else {
-                if (!isBad && brokenLetters.indexOf(c) != -1) {
+                if (! isBad && brokenLetters.indexOf(c) != - 1) {
                     isBad = true;
                     count--;
                 }

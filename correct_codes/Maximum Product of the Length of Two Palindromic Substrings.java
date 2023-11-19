@@ -14,7 +14,7 @@ class Solution {
         left[0] = max;
         for (int i = 1; i <= n - 1; i++) {
             // does any palindrome end at i with length greater than max
-            if (len[(i - max - 1 + i)/2] > max) max += 2;
+            if (len[(i - max - 1 + i) / 2] > max) max += 2;
             left[i] = max;
         }
         max = 1;
@@ -23,7 +23,7 @@ class Solution {
 
         for (int i = n - 2; i >= 0; i--) {
             // does any palindrome start at i with length greater than max
-            if (len[(i + max + 1 + i)/2] > max) max += 2;
+            if (len[(i + max + 1 + i) / 2] > max) max += 2;
             right[i] = max;
         }
 
@@ -44,21 +44,21 @@ class Solution {
         int r = 0; //stores the right boundary of the longest palindromic substring until now
         int maxLen = 0;
 
-        for(int i = 0; i < len; i++) {
+        for (int i = 0; i < len; i++) {
             //get mirror index of i
             int mirror = (2 * c) - i;
 
             //see if the mirror of i is expanding beyond the left boundary of current longest palindrome at center c
             //if it is, then take r - i as P[i]
             //else take P[mirror] as P[i]
-            if(i < r) {
+            if (i < r) {
                 P[i] = Math.min(r - i, P[mirror]);
             }
 
             //expand at i
             int a = i + (1 + P[i]);
             int b = i - (1 + P[i]);
-            while(a < len && b >= 0 && s.charAt(a) == s.charAt(b)) {
+            while (a < len && b >= 0 && s.charAt(a) == s.charAt(b)) {
                 P[i]++;
                 a++;
                 b--;
@@ -66,12 +66,12 @@ class Solution {
 
             //check if the expanded palindrome at i is expanding beyond the right boundary of current longest palindrome at center c
             //if it is, the new center is i
-            if(i + P[i] > r) {
+            if (i + P[i] > r) {
                 c = i;
                 r = i + P[i];
             }
         }
-        for (int i = 0; i < len; i++) P[i] = 1 + 2*P[i];
+        for (int i = 0; i < len; i++) P[i] = 1 + 2 * P[i];
         return P;
     }
 

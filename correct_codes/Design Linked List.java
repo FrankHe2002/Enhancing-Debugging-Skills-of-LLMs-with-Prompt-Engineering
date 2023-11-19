@@ -28,7 +28,7 @@ class MyLinkedList {
     }
 
     public int get(int index) {
-        if (index > length - 1 || index < 0) return -1;
+        if (index > length - 1 || index < 0) return - 1;
         int thisIndex = 0;
         ListNode temp = head;
         while (thisIndex != index) {
@@ -93,7 +93,6 @@ class MyLinkedList {
         if (index == length) {
             tail = temp;
             temp.next = null;
-        }
-        else temp.next = temp.next.next;
+        } else temp.next = temp.next.next;
     }
 }

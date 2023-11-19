@@ -18,15 +18,13 @@ class Solution {
         // This represents List that is being processed and not yet merged to currentSet.
         List<String> currentList = new ArrayList<>();
 
-        for (int i = startIndex; i < expression.length(); ++i) {
+        for (int i = startIndex; i < expression.length(); ++ i) {
 
             if (expression.charAt(i) == ',') {
                 isAdditive = true;
                 if (currentString != "" && currentList.size() == 0) {
                     currentSet.add(currentString);
-                }
-
-                else if (currentList.size() > 0) {
+                } else if (currentList.size() > 0) {
                     for (var entry : currentList) {
                         currentSet.add(entry);
                     }
@@ -35,15 +33,15 @@ class Solution {
                 currentString = "";
                 currentList = new ArrayList<>();
             } else if (expression.charAt(i) >= 'a' && expression.charAt(i) <= 'z') {
-               if (currentList.size() > 0) {
-                  List<String> tempStringList = new ArrayList<>();
-                   for (var entry : currentList) {
-                       tempStringList.add(entry + expression.charAt(i));
-                   }
-                   currentList = tempStringList;
-               } else {
-                currentString = currentString + expression.charAt(i);
-               }
+                if (currentList.size() > 0) {
+                    List<String> tempStringList = new ArrayList<>();
+                    for (var entry : currentList) {
+                        tempStringList.add(entry + expression.charAt(i));
+                    }
+                    currentList = tempStringList;
+                } else {
+                    currentString = currentString + expression.charAt(i);
+                }
             } else if (expression.charAt(i) == '{') {
                 List<String> list = util(i + 1, expression);
                 // System.out.println(list);
@@ -57,7 +55,7 @@ class Solution {
                     currentList = list;
                 } else {
                     if (currentList.size() > 0) {
-                        List <String> tempList = new ArrayList<>();
+                        List<String> tempList = new ArrayList<>();
                         for (var entry1 : currentList) {
                             for (var entry2 : list) {
                                 // CASE 3
@@ -68,9 +66,7 @@ class Solution {
                         // System.out.println(currentList);
                         currentList = tempList;
                         currentString = "";
-                    }
-
-                    else if (currentString != "") {
+                    } else if (currentString != "") {
                         List<String> tempList = new ArrayList<>();
                         for (var entry : list) {
                             // case 2
@@ -116,11 +112,11 @@ class Solution {
 
             List<String> tempSet = new ArrayList<>();
             if (currentSet.size() > 0) {
-            for (var entry : currentSet) {
-                tempSet.add(entry + currentString);
-            }
+                for (var entry : currentSet) {
+                    tempSet.add(entry + currentString);
+                }
 
-            currentSet = tempSet;
+                currentSet = tempSet;
             } else {
                 currentSet = new ArrayList<>();
                 currentSet.add(currentString);

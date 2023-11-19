@@ -21,14 +21,13 @@ class Solution {
             if (c[i - 1][0] + c[i - 1][1] >= tops.length) {
                 if (c[i - 1][0] >= c[i - 1][1] && c[i - 1][1] - common[i - 1] + c[i - 1][0] == tops.length) {
                     min = Math.min(min, c[i - 1][1] - common[i - 1]);
-                }
-                else if (c[i - 1][1] >= c[i - 1][0] && c[i - 1][0] - common[i - 1] + c[i - 1][1] == tops.length) {
+                } else if (c[i - 1][1] >= c[i - 1][0] && c[i - 1][0] - common[i - 1] + c[i - 1][1] == tops.length) {
                     int left = c[i - 1][0] - common[i - 1];
                     min = Math.min(min, c[i - 1][0] - common[i - 1]);
                 }
             }
         }
 
-        return min == Integer.MAX_VALUE ? -1 : min;
+        return min == Integer.MAX_VALUE ? - 1 : min;
     }
 }

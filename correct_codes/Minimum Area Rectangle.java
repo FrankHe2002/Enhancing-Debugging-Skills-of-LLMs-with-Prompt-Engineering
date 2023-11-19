@@ -6,9 +6,9 @@ class Solution {
 
         Map<Integer, Set<Integer>> map = new HashMap<>();
 
-		// Group the points by x coordinates
+        // Group the points by x coordinates
         for (int[] point : points) {
-            if (!map.containsKey(point[0])) map.put(point[0], new HashSet<>());
+            if (! map.containsKey(point[0])) map.put(point[0], new HashSet<>());
             map.get(point[0]).add(point[1]);
         }
 

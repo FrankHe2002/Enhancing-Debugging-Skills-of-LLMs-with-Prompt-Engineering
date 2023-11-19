@@ -4,19 +4,19 @@ class Solution {
 
         List<List<Integer>> temp = new ArrayList<List<Integer>>();
         List<List<Integer>> result = new ArrayList<List<Integer>>();
-        for(int i = 0; i<groupSizes.length; i++){
+        for (int i = 0; i < groupSizes.length; i++) {
             int k = groupSizes[i];
             boolean flag = true;
-            for(int j = 0; j<temp.size(); j++){
+            for (int j = 0; j < temp.size(); j++) {
                 // If there is a list of reqired group size and it is filled lesser than we can put element in that one
-                if(k == temp.get(j).get(0) && k >temp.get(j).get(1)){
+                if (k == temp.get(j).get(0) && k > temp.get(j).get(1)) {
                     result.get(j).add(i);
-                    temp.get(j).set(1,temp.get(j).get(1)+1);
-                    flag=false;
+                    temp.get(j).set(1, temp.get(j).get(1) + 1);
+                    flag = false;
                     break;
                 }
             }
-            if(flag){
+            if (flag) {
                 // comment 1
                 // We create a list with index and put it to result
                 List<Integer> res = new ArrayList();

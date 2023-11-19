@@ -11,14 +11,14 @@ class Solution {
         set.add('I');
         set.add('O');
         set.add('U');
-        
+
         StringBuilder str = new StringBuilder(s);
         int left = 0, right = str.length() - 1;
         while (left < right) {
-            if (!set.contains(str.charAt(left))) {
+            if (! set.contains(str.charAt(left))) {
                 left++;
             }
-            if (!set.contains(str.charAt(right))) {
+            if (! set.contains(str.charAt(right))) {
                 right--;
             }
             if (set.contains(str.charAt(left)) && set.contains(s.charAt(right))) {

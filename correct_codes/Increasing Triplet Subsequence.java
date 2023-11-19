@@ -1,20 +1,20 @@
 class Solution {
     public boolean increasingTriplet(int[] nums) {
-        if(nums.length < 3)
+        if (nums.length < 3)
             return false;
-        
+
         int x = Integer.MAX_VALUE;
         int y = Integer.MAX_VALUE;
-        
-        for (int i : nums){
-            if(i <= x){
+
+        for (int i : nums) {
+            if (i <= x) {
                 x = i;
-            }else if (i <= y)
+            } else if (i <= y)
                 y = i;
-            else 
+            else
                 return true;
         }
-        
+
         return false;
     }
 }

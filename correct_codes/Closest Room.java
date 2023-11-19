@@ -17,10 +17,11 @@ class Solution {
         }
         return ans;
     }
+
     int searchClosetRoomId(TreeSet<Integer> treeSet, int preferredId) {
         Integer floor = treeSet.floor(preferredId);
         Integer ceiling = treeSet.ceiling(preferredId);
-        int ansAbs = Integer.MAX_VALUE, ans = -1;
+        int ansAbs = Integer.MAX_VALUE, ans = - 1;
         if (floor != null) {
             ans = floor;
             ansAbs = Math.abs(preferredId - floor);

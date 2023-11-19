@@ -6,16 +6,17 @@ class Solution {
         matrix[n2][m2] = a;
         matrix[n1][m1] = temp;
     }
+
     public void rotate(int[][] matrix) {
         int n = matrix.length;
-        for (int i = 0; i < n/2; i++) {
+        for (int i = 0; i < n / 2; i++) {
             for (int j = 0; j < n; j++) {
-                swap(matrix, i,j, n-i-1, j);
+                swap(matrix, i, j, n - i - 1, j);
             }
         }
-        for (int i = n-1; i >= 0; i--) {
+        for (int i = n - 1; i >= 0; i--) {
             for (int j = 0; j < i; j++) {
-                swap(matrix, i,j, j, i);
+                swap(matrix, i, j, j, i);
             }
         }
     }

@@ -8,9 +8,9 @@ class Solution {
             fav[i] = new HashSet<>(favoriteCompanies.get(i));
         }
         for (int i = 1; i < favoriteCompanies.size(); i++) {
-            if (!set.contains(i)) continue;
+            if (! set.contains(i)) continue;
             for (int j = 0; j < i; j++) {
-                if (!set.contains(j)) continue;
+                if (! set.contains(j)) continue;
                 if (isSubSet(fav[j], fav[i])) set.remove(j);
                 if (isSubSet(fav[i], fav[j])) set.remove(i);
             }

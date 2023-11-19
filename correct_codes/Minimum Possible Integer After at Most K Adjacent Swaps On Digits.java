@@ -4,24 +4,24 @@ class Solution {
     public String minInteger(String num, int k) {
         //pqs stores the location of each digit.
         List<Queue<Integer>> pqs = new ArrayList<>();
-        for (int i = 0; i <= 9; ++i) {
+        for (int i = 0; i <= 9; ++ i) {
             pqs.add(new LinkedList<>());
         }
 
-        for (int i = 0; i < num.length(); ++i) {
+        for (int i = 0; i < num.length(); ++ i) {
             pqs.get(num.charAt(i) - '0').add(i);
         }
         String ans = "";
         SegmentTree seg = new SegmentTree(num.length());
 
-        for (int i = 0; i < num.length(); ++i) {
+        for (int i = 0; i < num.length(); ++ i) {
             // At each location, try to place 0....9
-            for (int digit = 0; digit <= 9; ++digit) {
+            for (int digit = 0; digit <= 9; ++ digit) {
                 // is there any occurrence of digit left?
                 if (pqs.get(digit).size() != 0) {
                     // yes, there is a occurrence of digit at pos
                     Integer pos = pqs.get(digit).peek();
-					// Since few numbers already shifted to left, this `pos` might be outdated.
+                    // Since few numbers already shifted to left, this `pos` might be outdated.
                     // we try to find how many number already got shifted that were to the left of pos.
                     int shift = seg.getCountLessThan(pos);
                     // (pos - shift) is number of steps to make digit move from pos to i.

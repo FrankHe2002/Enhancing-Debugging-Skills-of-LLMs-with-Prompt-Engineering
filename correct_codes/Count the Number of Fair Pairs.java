@@ -9,6 +9,7 @@ class Solution {
         }
         return result;
     }
+
     public long binarySearch1(int[] nums, int currentValue, int index, int lower, int upper) {
         int start = index + 1;
         int end = nums.length;
@@ -22,7 +23,8 @@ class Solution {
         }
         return start;
     }
-     public long binarySearch2(int[] nums, int currentValue, int index, int lower, int upper) {
+
+    public long binarySearch2(int[] nums, int currentValue, int index, int lower, int upper) {
         int start = index + 1;
         int end = nums.length;
         while (start < end) {

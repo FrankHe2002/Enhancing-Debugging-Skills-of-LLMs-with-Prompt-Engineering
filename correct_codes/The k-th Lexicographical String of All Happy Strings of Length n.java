@@ -2,9 +2,9 @@
 
 class Solution {
 
- public String getHappyString(int n, int k) {
+    public String getHappyString(int n, int k) {
         List<String> innerList = new ArrayList<>();
-        getHappyStringUtil(n, k, new char[] { 'a', 'b', 'c' }, new StringBuilder(), innerList);
+        getHappyStringUtil(n, k, new char[] {'a', 'b', 'c'}, new StringBuilder(), innerList);
         if (innerList.size() < k)
             return "";
         return innerList.get(k - 1);

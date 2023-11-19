@@ -14,7 +14,7 @@ class Solution {
         var m = new TreeMap<Integer, Integer>();
         for (var e : cm.entrySet()) {
             if (e.getValue() % 2 == 1) {
-                return -1;
+                return - 1;
             }
             min = Math.min(min, e.getKey());
             var missingCount = ac.getOrDefault(e.getKey(), 0) - e.getValue() / 2;
@@ -31,19 +31,19 @@ class Solution {
             if (m.firstKey() <= min * 2) {
                 // swap min missing with max missing
                 res += m.firstKey();
-                if (m.merge(m.firstKey(), -1, Integer::sum) == 0) {
+                if (m.merge(m.firstKey(), - 1, Integer::sum) == 0) {
                     m.remove(m.firstKey());
                 }
-                if (m.merge(m.lastKey(), -1, Integer::sum) == 0) {
+                if (m.merge(m.lastKey(), - 1, Integer::sum) == 0) {
                     m.remove(m.lastKey());
                 }
             } else {
                 // use min twice to swap two largest
                 res += min * 2;
-                if (m.merge(m.lastKey(), -1, Integer::sum) == 0) {
+                if (m.merge(m.lastKey(), - 1, Integer::sum) == 0) {
                     m.remove(m.lastKey());
                 }
-                if (m.merge(m.lastKey(), -1, Integer::sum) == 0) {
+                if (m.merge(m.lastKey(), - 1, Integer::sum) == 0) {
                     m.remove(m.lastKey());
                 }
             }

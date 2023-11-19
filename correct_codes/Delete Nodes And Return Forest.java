@@ -7,14 +7,14 @@ class Solution {
     public List<TreeNode> delNodes(TreeNode root, int[] to_delete) {
 
         // initialize map
-        parent_val_child_nodes_map = new HashMap<> ();
-        child_val_parent_node_map = new HashMap<> ();
+        parent_val_child_nodes_map = new HashMap<>();
+        child_val_parent_node_map = new HashMap<>();
 
         // fill map
         dfsFillMap(root);
 
         // traverse to_delete to find those that do not have parent after deleting it
-        List<TreeNode> res = new ArrayList<> ();
+        List<TreeNode> res = new ArrayList<>();
 
         // actually deleting nodes
         for (int delete_val : to_delete) {
@@ -34,7 +34,7 @@ class Solution {
 
         // add root to the list first because root has no parent
         // only if root.val is not in to_delete
-        if (!Arrays.stream(to_delete).anyMatch(j -> j == root.val)) {
+        if (! Arrays.stream(to_delete).anyMatch(j -> j == root.val)) {
             res.add(root);
         }
 
@@ -45,7 +45,7 @@ class Solution {
 
                     // make sure the add node is not in to_delete
                     int child_node_val = parent_val_child_nodes_map.get(delete_val).get(i).val;
-                    if (!Arrays.stream(to_delete).anyMatch(j -> j == child_node_val)) {
+                    if (! Arrays.stream(to_delete).anyMatch(j -> j == child_node_val)) {
                         res.add(parent_val_child_nodes_map.get(delete_val).get(i));
                     }
                 }
@@ -62,7 +62,7 @@ class Solution {
         }
 
         if (root.left != null) {
-            parent_val_child_nodes_map.putIfAbsent(root.val, new ArrayList<> ());
+            parent_val_child_nodes_map.putIfAbsent(root.val, new ArrayList<>());
             parent_val_child_nodes_map.get(root.val).add(root.left);
 
             child_val_parent_node_map.putIfAbsent(root.left.val, root);
@@ -70,7 +70,7 @@ class Solution {
         }
 
         if (root.right != null) {
-            parent_val_child_nodes_map.putIfAbsent(root.val, new ArrayList<> ());
+            parent_val_child_nodes_map.putIfAbsent(root.val, new ArrayList<>());
             parent_val_child_nodes_map.get(root.val).add(root.right);
 
             child_val_parent_node_map.putIfAbsent(root.right.val, root);

@@ -7,7 +7,7 @@ class Solution {
         int count = 0;
         while (count++ < k) pq.offer((int) Math.sqrt(pq.poll()));
         long sum = 0;
-        while (!pq.isEmpty()) sum += pq.poll();
+        while (! pq.isEmpty()) sum += pq.poll();
         return sum;
     }
 }

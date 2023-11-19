@@ -17,7 +17,7 @@ class Solution {
                 num = nums[i];
             }
         }
-        
+
         return count;
     }
 }

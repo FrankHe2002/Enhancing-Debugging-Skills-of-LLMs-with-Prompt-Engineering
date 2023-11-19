@@ -1,6 +1,7 @@
 // Runtime: 49 ms (Top 24.43%) | Memory: 65.2 MB (Top 52.71%)
 class Solution {
     HashMap<Integer, HashMap<Integer, Integer>> map = new HashMap<>();
+
     public int networkDelayTime(int[][] times, int n, int k) {
         for (int i = 1; i <= n; i++) {
             map.put(i, new HashMap<>());
@@ -10,8 +11,9 @@ class Solution {
         }
         int ans = BFS(k, n);
 
-        return ans == 1000 ? -1 : ans;
+        return ans == 1000 ? - 1 : ans;
     }
+
     public int BFS(int k, int n) {
         LinkedList<Integer> queue = new LinkedList<>();
 
@@ -23,7 +25,7 @@ class Solution {
 
         queue.add(k);
 
-        while (!queue.isEmpty()) {
+        while (! queue.isEmpty()) {
             int rv = queue.remove();
             for (int nbrs : map.get(rv).keySet()) {
                 int t = map.get(rv).get(nbrs) + timeReach[rv];

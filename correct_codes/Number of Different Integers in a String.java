@@ -5,8 +5,8 @@ class Solution {
         Set<String> set = new HashSet<String>();
 
         for (String str : arr) {
-            if (!str.isEmpty())
-                set.add(String.valueOf(str.replaceAll("^0*","")));
+            if (! str.isEmpty())
+                set.add(String.valueOf(str.replaceAll("^0*", "")));
         }
 
         return set.size();

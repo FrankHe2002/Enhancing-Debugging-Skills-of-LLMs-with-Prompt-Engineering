@@ -4,10 +4,9 @@ class Solution {
     public String removeOccurrences(String s, String part) {
         // s.replace(part,"");
         // System.out.println(s);
-        
-        while(s.contains(part))
-        {
-            s=s.replaceFirst(part,"");
+
+        while (s.contains(part)) {
+            s = s.replaceFirst(part, "");
         }
         return s;
     }

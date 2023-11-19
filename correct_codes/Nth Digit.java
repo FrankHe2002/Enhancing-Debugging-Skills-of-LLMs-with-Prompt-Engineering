@@ -2,7 +2,7 @@
 class Solution {
     public int findNthDigit(int n) {
 
-        if(n < 10)
+        if (n < 10)
             return n;
 
         long currDigitIndex = 10;
@@ -11,13 +11,13 @@ class Solution {
         int currNumber = 10;
         int next = tillNextIncrease;
 
-        while(currDigitIndex < n) {
+        while (currDigitIndex < n) {
 
             currNumber++;
             currDigitIndex += currNumberSize;
             next--;
 
-            if(next == 0) {
+            if (next == 0) {
                 currNumberSize++;
                 tillNextIncrease *= 10;
                 next = tillNextIncrease;
@@ -25,16 +25,16 @@ class Solution {
         }
 
         int nthDigit = currNumber % 10;
-        if(currDigitIndex == n) {
-            while(currNumber != 0) {
+        if (currDigitIndex == n) {
+            while (currNumber != 0) {
                 nthDigit = currNumber % 10;
                 currNumber /= 10;
             }
-        } else if(currDigitIndex > n) {
+        } else if (currDigitIndex > n) {
 
             currNumber--;
 
-            while(currDigitIndex > n) {
+            while (currDigitIndex > n) {
                 currDigitIndex--;
                 nthDigit = currNumber % 10;
                 currNumber /= 10;

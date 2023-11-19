@@ -17,8 +17,8 @@ class Solution {
                     res[next] = rains[i];
                     zeros.remove(next);
                 }
-                res[i] = -1;
-				map.put(rains[i], i);
+                res[i] = - 1;
+                map.put(rains[i], i);
             }
         }
         for (int i : zeros) res[i] = 1;

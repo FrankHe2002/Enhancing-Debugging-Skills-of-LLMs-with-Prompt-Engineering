@@ -22,13 +22,13 @@ class Solution {
     }
 
     public int[] flip() {
-        if (size <= 0) return new int[]{-1, -1}; // or throw exception.
+        if (size <= 0) return new int[] {- 1, - 1}; // or throw exception.
         Integer rand = random.nextInt(size);
         size--;
         int idx = map.getOrDefault(rand, rand);
         Integer tail = map.getOrDefault(size, size);
         map.put(rand, tail);
-        return new int[]{idx / N, idx % N};
+        return new int[] {idx / N, idx % N};
     }
 
     public void reset() {

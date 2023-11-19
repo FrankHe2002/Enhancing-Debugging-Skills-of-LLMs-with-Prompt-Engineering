@@ -20,7 +20,7 @@ class Solution {
             }
             while (b < a && logs[b][1] < t - x) {
                 int s = logs[b++][0];
-                if (--counts[s] == 0) c++;
+                if (-- counts[s] == 0) c++;
             }
             for (int i : entry.getValue()) output[i] = c;
         }

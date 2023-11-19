@@ -1,7 +1,7 @@
 class Solution {
     public int[][] insert(int[][] intervals, int[] newInterval) {
         if (newInterval == null || newInterval.length == 0) return intervals;
-        
+
         List<int[]> merged = new LinkedList<>();
         int i = 0;
         // add not overlapping

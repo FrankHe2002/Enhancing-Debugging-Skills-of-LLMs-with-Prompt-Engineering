@@ -30,7 +30,7 @@ class Solution {
                         par[p1] = p2;
                     }
                 }
-            } 
+            }
         }
 
         /*Now traverse on the whole string and search for any != operation and check if there parents are same*/

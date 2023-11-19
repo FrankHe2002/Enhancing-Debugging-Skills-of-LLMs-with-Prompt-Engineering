@@ -23,7 +23,7 @@ class Solution {
     }
 
     private final int findSmallestTriangularNotLessThan(int t) {
-        int a = -1 + (int) Math.floor(Math.sqrt(product(t, 2)));
+        int a = - 1 + (int) Math.floor(Math.sqrt(product(t, 2)));
         while (triangular(a) < t) {
             a++;
         }

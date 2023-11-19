@@ -3,8 +3,8 @@ class Solution {
     public int[] findRedundantConnection(int[][] edges) {
         UnionFind uf = new UnionFind(edges.length);
         for (int[] edge : edges) {
-            if (!uf.union(edge[0], edge[1])) {
-                return new int[]{edge[0], edge[1]};
+            if (! uf.union(edge[0], edge[1])) {
+                return new int[] {edge[0], edge[1]};
             }
         }
         return null;

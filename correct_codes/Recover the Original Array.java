@@ -14,12 +14,12 @@ class Solution {
             Map<Integer, Integer> map = new HashMap<>(map1);
             List<Integer> tmp = new ArrayList<>();
             for (int i = 0; i < N; i++) {
-			    if (tmp.size() == N / 2) break;
+                if (tmp.size() == N / 2) break;
                 int low = nums[i];
                 int high = low + 2 * diff;
                 if (map.containsKey(low) && map.containsKey(high)) {
                     tmp.add(low + diff);
-                    map.put(low, map.get(low) - 1); 
+                    map.put(low, map.get(low) - 1);
                     map.put(high, map.get(high) - 1);
                     if (map.get(low) == 0) map.remove(low);
                     if (map.get(high) == 0) map.remove(high);

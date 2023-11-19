@@ -6,14 +6,14 @@ class Solution {
         ListNode first = head, second = head;
 
         // Put fast (k-1) nodes after slow
-        for(int i = 0; i < k - 1; ++i)
+        for (int i = 0; i < k - 1; ++ i)
             fast = fast.next;
 
         // Save the node for swapping
         first = fast;
 
         // Move until the end of the list
-        while(fast.next != null) {
+        while (fast.next != null) {
             slow = slow.next;
             fast = fast.next;
         }

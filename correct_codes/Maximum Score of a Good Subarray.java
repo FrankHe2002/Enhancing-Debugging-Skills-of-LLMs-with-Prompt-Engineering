@@ -6,27 +6,26 @@ class Solution {
         int min = nums[k];
         int ans = min;
 
-        while(i >= 0 || j < n) {
+        while (i >= 0 || j < n) {
             int v1 = 0, v2 = 0;
             int min1 = min, min2 = min;
 
-            if(i >= 0) {
+            if (i >= 0) {
                 min1 = Math.min(min, nums[i]);
                 v1 = min1 * (j - i);
             }
 
-            if(j < n) {
+            if (j < n) {
                 min2 = Math.min(min, nums[j]);
                 v2 = min2 * (j - i);
             }
 
-            if(v1 > v2) {
-                --i;
+            if (v1 > v2) {
+                -- i;
                 ans = Math.max(v1, ans);
                 min = Math.min(min1, min);
-            }
-            else {
-                ++j;
+            } else {
+                ++ j;
                 ans = Math.max(ans, v2);
                 min = Math.min(min, min2);
             }

@@ -5,12 +5,12 @@ class Solution {
         Map<Integer, Long> sumMap = new HashMap<>();
         Map<Integer, Integer> countMap = new HashMap<>();
         for (int i = 0; i < arr.length; ++ i) {
-            if (!sumMap.containsKey(arr[i])) {
+            if (! sumMap.containsKey(arr[i])) {
                 sumMap.put(arr[i], 0l);
                 countMap.put(arr[i], 0);
             }
 
-            output[i] += i * (long)countMap.get(arr[i]) - sumMap.get(arr[i]);
+            output[i] += i * (long) countMap.get(arr[i]) - sumMap.get(arr[i]);
             sumMap.put(arr[i], sumMap.get(arr[i]) + i);
             countMap.put(arr[i], countMap.get(arr[i]) + 1);
         }
@@ -19,12 +19,12 @@ class Solution {
         countMap = new HashMap<>();
         int len = arr.length;
         for (int i = len - 1; i >= 0; -- i) {
-            if (!sumMap.containsKey(arr[i])) {
+            if (! sumMap.containsKey(arr[i])) {
                 sumMap.put(arr[i], 0l);
                 countMap.put(arr[i], 0);
             }
 
-            output[i] += (len - i - 1) * (long)countMap.get(arr[i]) - sumMap.get(arr[i]);
+            output[i] += (len - i - 1) * (long) countMap.get(arr[i]) - sumMap.get(arr[i]);
             sumMap.put(arr[i], sumMap.get(arr[i]) + (len - i - 1));
             countMap.put(arr[i], countMap.get(arr[i]) + 1);
         }

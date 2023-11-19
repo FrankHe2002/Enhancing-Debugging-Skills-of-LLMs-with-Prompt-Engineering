@@ -12,18 +12,18 @@ class Solution {
             if (res[i] == '.') {
                 i++;
             } else if (res[i] == 'L') { // push left
-                int j = i-1;
+                int j = i - 1;
                 while (j >= 0 && res[j] == '.') {
                     res[j--] = 'L';
                 }
                 i++;
             } else { // res[i] == 'R'
-                int j = i+1;
+                int j = i + 1;
                 while (j < N && res[j] == '.') { // try to find 'R' or 'L' in the right side
                     j++;
                 }
                 if (j < N && res[j] == 'L') { // if found 'L', push left and right
-                    for (int l = i+1, r = j-1; l < r; l++, r--) {
+                    for (int l = i + 1, r = j - 1; l < r; l++, r--) {
                         res[l] = 'R';
                         res[r] = 'L';
                     }

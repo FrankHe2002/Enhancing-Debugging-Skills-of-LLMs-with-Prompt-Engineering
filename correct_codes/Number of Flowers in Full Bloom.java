@@ -1,6 +1,6 @@
 // Runtime: 204 ms (Top 31.03%) | Memory: 131.5 MB (Top 7.83%)
 class Solution {
-public int[] fullBloomFlowers(int[][] flowers, int[] persons) {
+    public int[] fullBloomFlowers(int[][] flowers, int[] persons) {
         int n = persons.length;
         int[] result = new int[n];
 

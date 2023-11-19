@@ -64,7 +64,7 @@ class Solution {
         int digit = 1;
         int upper = 1;
         int lower = 1;
-        for (char c: password.toCharArray()) {
+        for (char c : password.toCharArray()) {
             if (Character.isDigit(c)) {
                 digit = 0;
             }

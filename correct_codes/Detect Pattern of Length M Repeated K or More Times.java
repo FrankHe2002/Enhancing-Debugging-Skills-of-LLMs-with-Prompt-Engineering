@@ -9,7 +9,7 @@ class Solution {
             } else {
                 count = 0;
             }
-            if (count == m * (k-1)) {
+            if (count == m * (k - 1)) {
                 return true;
             }
         }

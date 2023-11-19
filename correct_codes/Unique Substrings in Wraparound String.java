@@ -10,7 +10,7 @@ class Solution {
         int[] counts = new int[26];
         for (int i = 0; i < N; i++) {
             char ch = p.charAt(i);
-            if (i > 0 && (ch - p.charAt(i-1) == 1 || ch - p.charAt(i-1) == -25)) {
+            if (i > 0 && (ch - p.charAt(i - 1) == 1 || ch - p.charAt(i - 1) == - 25)) {
                 len++;
             } else {
                 len = 1;

@@ -1,4 +1,5 @@
 // Runtime: 3 ms (Top 94.64%) | Memory: 42.3 MB (Top 95.72%)
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -20,6 +21,7 @@ class Solution {
         TreeNode Node;
         int hDist;
         int level;
+
         MNode(TreeNode node, int hd, int l) {
             Node = node;
             hDist = hd;
@@ -33,30 +35,32 @@ class Solution {
 
         q.add(new MNode(root, 0, 0));
 
-        while(!q.isEmpty()) {
+        while (! q.isEmpty()) {
 
             MNode curr = q.poll();
-            if(map.containsKey(curr.hDist))
-                  map.get(curr.hDist).add(curr);
+            if (map.containsKey(curr.hDist))
+                map.get(curr.hDist).add(curr);
 
             else {
                 PriorityQueue<MNode> pq = new PriorityQueue<>
-                    ((a,b) -> (a.level == b.level)? a.Node.val - b.Node.val: a.level - b.level);
+                        ((a, b) -> (a.level == b.level) ? a.Node.val - b.Node.val : a.level - b.level);
                 pq.add(curr);
                 map.put(curr.hDist, pq);
             }
 
-            if(curr.Node.left != null)
-                q.add(new MNode(curr.Node.left, curr.hDist -1, curr.level + 1));
+            if (curr.Node.left != null)
+                q.add(new MNode(curr.Node.left, curr.hDist - 1, curr.level + 1));
 
-            if(curr.Node.right != null)
-                q.add(new MNode(curr.Node.right, curr.hDist +1, curr.level + 1));
+            if (curr.Node.right != null)
+                q.add(new MNode(curr.Node.right, curr.hDist + 1, curr.level + 1));
         }
 
         List<List<Integer>> ans = new ArrayList<>();
-        for(Integer key: map.keySet()) {
+        for (Integer key : map.keySet()) {
             List<Integer> temp = new ArrayList<>();
-            while(!map.get(key).isEmpty()) { temp.add(map.get(key).poll().Node.val); }
+            while (! map.get(key).isEmpty()) {
+                temp.add(map.get(key).poll().Node.val);
+            }
             ans.add(new ArrayList<>(temp));
         }
 

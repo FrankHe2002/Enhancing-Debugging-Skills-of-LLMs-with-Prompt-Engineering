@@ -23,10 +23,12 @@ class Solution {
     }
 
     private boolean playerWins(int n, List<Integer> P, HashMap<Integer, Boolean> m) {
-        if (m.containsKey(n)) { return m.get(n); } // if we already computed the answer for n, just return it
+        if (m.containsKey(n)) {
+            return m.get(n);
+        } // if we already computed the answer for n, just return it
         m.put(n, false); // otherwise, assume it's false to begin...
         for (Integer p : P) { // check every perfect square p...
-            if (p <= n && !playerWins(n - p, P, m)) {
+            if (p <= n && ! playerWins(n - p, P, m)) {
                 // if p <= n AND the player who goes next (e.g., Bob) does not win a game that begins with
                 // n - p stones, then we know that the player whose turn it is right now (e.g., Alice) wins
                 // a game that begins with n stones, so record this discovery in the memo and then break out

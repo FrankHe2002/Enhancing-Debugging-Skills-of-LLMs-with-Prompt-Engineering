@@ -3,7 +3,7 @@
 class Solution {
     public void nextPermutation(int[] nums) {
         // FIND peek+1
-        int nextOfPeak = -1;
+        int nextOfPeak = - 1;
         for (int i = nums.length - 1; i > 0; i--) {
             if (nums[i] > nums[i - 1]) {
                 nextOfPeak = i - 1;
@@ -12,7 +12,7 @@ class Solution {
         }
 
         // Return reverse Array
-        if (nextOfPeak == -1) {
+        if (nextOfPeak == - 1) {
             int start = 0;
             int end = nums.length - 1;
             while (start <= end) {

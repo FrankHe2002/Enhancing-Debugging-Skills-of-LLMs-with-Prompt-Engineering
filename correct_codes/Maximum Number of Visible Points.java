@@ -8,7 +8,7 @@ class Solution {
                 overlap++;
             } else {
                 list.add(angle(p.get(1) - location.get(1),
-                               p.get(0) - location.get(0)));
+                        p.get(0) - location.get(0)));
             }
         }
         Collections.sort(list);
@@ -23,11 +23,11 @@ class Solution {
             // edge case handling: allow i2 to circle around and calculate second leg as (360 + list.get(i2 % n))
             // then i1 = 350, i2 = 370, delta = 20 degrees < 30 degrees
             while ((i2 < n && list.get(i2) - list.get(i1) <= angle) ||
-                   (i2 >= n && 360 + list.get(i2 % n) - list.get(i1) <= angle)) {
+                    (i2 >= n && 360 + list.get(i2 % n) - list.get(i1) <= angle)) {
                 i2++;
             }
             // after i2 went as far as possible away from i1 under allowed limit - check if a new maximum found
-            max = Math.max(max, i2-i1);
+            max = Math.max(max, i2 - i1);
         }
         return max + overlap;
     }

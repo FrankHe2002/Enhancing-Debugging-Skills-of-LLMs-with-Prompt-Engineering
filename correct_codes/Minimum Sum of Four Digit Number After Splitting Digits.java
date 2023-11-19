@@ -1,10 +1,8 @@
-class Solution
-{
-    public int minimumSum(int num)
-    {
+class Solution {
+    public int minimumSum(int num) {
         int[] dig = new int[4]; // For each digit
         int cur = 0;
-        while(num > 0) // Getting each digit
+        while (num > 0) // Getting each digit
         {
             dig[cur++] = num % 10;
             num /= 10;

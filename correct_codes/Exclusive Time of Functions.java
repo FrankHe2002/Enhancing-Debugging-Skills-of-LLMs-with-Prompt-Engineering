@@ -22,7 +22,7 @@ class Solution {
             if (startOrEnd.equals("start")) {
 
                 //calculate previous in-progress length
-                if (!stack.empty()) {
+                if (! stack.empty()) {
                     Pair<Integer, Integer> pair = stack.peek();
                     int oldFunctionId = pair.getKey();
                     int oldTimestamp = pair.getValue();
@@ -39,7 +39,7 @@ class Solution {
                 result[functionId] += timestamp - oldTimestamp + 1;
 
                 //reset previous function's start
-                if (!stack.empty()) {
+                if (! stack.empty()) {
                     pair = stack.pop();
                     Pair<Integer, Integer> replacementPair = new Pair(pair.getKey(), timestamp + 1);
                     stack.push(replacementPair);

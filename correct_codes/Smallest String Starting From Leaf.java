@@ -1,6 +1,7 @@
 // Runtime: 7 ms (Top 58.14%) | Memory: 45.5 MB (Top 29.64%)
 class Solution {
     String result = null;
+
     public String smallestFromLeaf(TreeNode root) {
         build(root, new StringBuilder());
         return result;

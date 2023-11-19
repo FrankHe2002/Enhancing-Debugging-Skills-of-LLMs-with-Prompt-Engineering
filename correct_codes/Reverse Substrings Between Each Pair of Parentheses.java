@@ -4,13 +4,13 @@ class Solution {
         Stack<String> stack = new Stack<>();
 
         int j = 0;
-        while(j < s.length()){
+        while (j < s.length()) {
             /*
                 We need to keep on adding whatever comes
                 as long as it is not a ')'.
             */
-            if(s.charAt(j) != ')')
-                stack.push(s.charAt(j)+"");
+            if (s.charAt(j) != ')')
+                stack.push(s.charAt(j) + "");
 
             /*
                 Now that we have encountered an ')', its time
@@ -22,9 +22,9 @@ class Solution {
 
                 Try dry running and it will all make sense
             */
-            else{
+            else {
                 StringBuilder sb = new StringBuilder();
-                while(!stack.isEmpty() && !stack.peek().equals("(")){
+                while (! stack.isEmpty() && ! stack.peek().equals("(")) {
                     sb.append(stack.pop());
                 }
 
@@ -39,7 +39,7 @@ class Solution {
             we just need to pop it and return the reverse of it.
         */
         StringBuilder res = new StringBuilder();
-        while(!stack.isEmpty())
+        while (! stack.isEmpty())
             res.append(stack.pop());
 
         return res.reverse().toString();

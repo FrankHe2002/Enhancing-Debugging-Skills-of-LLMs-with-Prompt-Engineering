@@ -7,7 +7,7 @@ class Solution {
         valToPos.put(0, 0);
         for (int i = 0; i < nums.length; i++) {
             sums += nums[i];
-            int pos = valToPos.getOrDefault(sums - target, -1);
+            int pos = valToPos.getOrDefault(sums - target, - 1);
             if (pos >= lastEndPos) {
                 count += 1;
                 lastEndPos = i + 1;

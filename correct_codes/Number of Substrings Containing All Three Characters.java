@@ -5,26 +5,32 @@ class Solution {
         int a = 0, b = 0, c = 0, count = 0;
         for (int i = 0; i < s.length(); i++) {
             switch (s.charAt(i)) {
-                case 'a': ++a; break;
-                case 'b': ++b; break;
-                case 'c': ++c; break;
+                case 'a':
+                    ++ a;
+                    break;
+                case 'b':
+                    ++ b;
+                    break;
+                case 'c':
+                    ++ c;
+                    break;
             }
             if (a > 0 && b > 0 && c > 0) {
                 while (a > 0 && b > 0 && c > 0) {
                     char farLeft = s.charAt(i - a - b - c + 1);
                     switch (farLeft) {
                         case 'a': {
-                            --a;
+                            -- a;
                             count += doCount(s, i);
                             break;
                         }
                         case 'b': {
-                            --b;
+                            -- b;
                             count += doCount(s, i);
                             break;
                         }
                         case 'c': {
-                            --c;
+                            -- c;
                             count += doCount(s, i);
                             break;
                         }

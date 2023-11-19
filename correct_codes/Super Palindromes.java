@@ -6,13 +6,13 @@ class Solution {
         for (int dig = 1; dig < 10; dig++) {
             boolean isOdd = dig % 2 > 0 && dig != 1;
             int innerLen = (dig >> 1) - 1,
-                innerLim = Math.max(1, (int)Math.pow(2, innerLen)),
-                midPos = dig >> 1, midLim = isOdd ? 3 : 1;
+                    innerLim = Math.max(1, (int) Math.pow(2, innerLen)),
+                    midPos = dig >> 1, midLim = isOdd ? 3 : 1;
             for (int edge = 1; edge < 3; edge++) {
                 char[] pal = new char[dig];
                 Arrays.fill(pal, '0');
-                pal[0] = (char)(edge + 48);
-                pal[dig-1] = (char)(edge + 48);
+                pal[0] = (char) (edge + 48);
+                pal[dig - 1] = (char) (edge + 48);
                 if (edge == 2) {
                     innerLim = 1;
                     midLim = Math.min(midLim, 2);
@@ -23,12 +23,12 @@ class Solution {
                         while (innerStr.length() < innerLen)
                             innerStr = "0" + innerStr;
                         for (int i = 0; i < innerLen; i++) {
-                            pal[1+i] = innerStr.charAt(i);
-                            pal[dig-2-i] = innerStr.charAt(i);
+                            pal[1 + i] = innerStr.charAt(i);
+                            pal[dig - 2 - i] = innerStr.charAt(i);
                         }
                     }
                     for (int mid = 0; mid < midLim; mid++) {
-                        if (isOdd) pal[midPos] = (char)(mid + 48);
+                        if (isOdd) pal[midPos] = (char) (mid + 48);
                         String palin = new String(pal);
                         long square = Long.parseLong(palin) * Long.parseLong(palin);
                         if (square > Long.parseLong(right)) return ans;

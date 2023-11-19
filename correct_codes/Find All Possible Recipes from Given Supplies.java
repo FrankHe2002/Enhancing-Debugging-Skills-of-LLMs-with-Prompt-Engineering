@@ -13,20 +13,20 @@ class Solution {
             prereqs.put(recipes[i], ingredients.get(i));
         }
 
-        for (String s: supplies) {
+        for (String s : supplies) {
             status.put(s, VISITED);
         }
 
         List<String> output = new ArrayList<>();
-        for (String s: recipes) {
-            dfs (s, prereqs, status, output);
+        for (String s : recipes) {
+            dfs(s, prereqs, status, output);
         }
 
         return output;
     }
 
     public boolean dfs(String s, Map<String, List<String>> prereqs, Map<String, Integer> status, List<String> output) {
-        if (!status.containsKey(s)) {
+        if (! status.containsKey(s)) {
             return false;
         }
 
@@ -39,8 +39,8 @@ class Solution {
         }
 
         status.put(s, VISITING);
-        for (String p: prereqs.get(s)) {
-            if (!dfs(p, prereqs, status, output)) {
+        for (String p : prereqs.get(s)) {
+            if (! dfs(p, prereqs, status, output)) {
                 return false;
             }
         }

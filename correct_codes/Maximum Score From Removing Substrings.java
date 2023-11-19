@@ -1,11 +1,11 @@
 class Solution {
     public int maximumGain(String s, int x, int y) {
-        
+
         int aCount = 0;
         int bCount = 0;
         int lesser = Math.min(x, y);
         int result = 0;
-        
+
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             if (c > 'b') {
@@ -25,12 +25,13 @@ class Solution {
                     result += x;
                 } else {
                     bCount++;
-                };
+                }
+                ;
             }
         }
-        
+
         result += Math.min(aCount, bCount) * lesser;
-        
+
         return result;
     }
 }

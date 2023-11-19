@@ -9,23 +9,24 @@ class Solution {
         helper(res, path, candidates, visited, target, 0);
         return res;
     }
+
     private void helper(List<List<Integer>> res,
-                  List<Integer> path, int[] candidates,
-                  boolean[] visited, int remain, int currIndex
-                 ){
-        if (remain == 0){
+                        List<Integer> path, int[] candidates,
+                        boolean[] visited, int remain, int currIndex
+    ) {
+        if (remain == 0) {
             res.add(new ArrayList<>(path));
             return;
         }
-        if (remain < 0){
+        if (remain < 0) {
             return;
         }
 
-        for(int i = currIndex; i < candidates.length; i++){
-            if (visited[i]){
+        for (int i = currIndex; i < candidates.length; i++) {
+            if (visited[i]) {
                 continue;
             }
-            if (i > 0 && candidates[i] == candidates[i - 1] && !visited[i - 1]){
+            if (i > 0 && candidates[i] == candidates[i - 1] && ! visited[i - 1]) {
                 continue;
             }
             int curr = candidates[i];

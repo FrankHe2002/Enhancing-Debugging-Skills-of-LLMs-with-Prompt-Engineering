@@ -5,7 +5,7 @@ class Solution {
         //Define the initial window and initial sum
         int start = 1, end = k, sum = 0;
         if (k < 0) {//If k < 0, the starting point will be end of the array.
-            k = -k;
+            k = - k;
             start = code.length - k;
             end = code.length - 1;
         }
@@ -14,7 +14,7 @@ class Solution {
         for (int i = 0; i < code.length; i++) {
             res[i] = sum;
             sum -= code[(start++) % code.length];
-            sum += code[(++end) % code.length];
+            sum += code[(++ end) % code.length];
         }
         return res;
     }

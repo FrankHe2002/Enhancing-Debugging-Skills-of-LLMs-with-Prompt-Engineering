@@ -6,6 +6,6 @@ class Solution {
         while (answer * answer <= x) {
             answer += 1;
         }
-        return (int)answer - 1;
+        return (int) answer - 1;
     }
 }

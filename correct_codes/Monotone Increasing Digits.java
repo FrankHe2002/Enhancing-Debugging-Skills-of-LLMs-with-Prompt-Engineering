@@ -4,7 +4,7 @@ class Solution {
     public int monotoneIncreasingDigits(int n) {
         int position;
         int digitInTheNextPosition;
-        while ((position = getThePositionNotSatisfied(n)) != -1) {
+        while ((position = getThePositionNotSatisfied(n)) != - 1) {
             digitInTheNextPosition = ((int) (n / Math.pow(10, position - 1))) % 10;
             n -= Math.pow(10, position - 1) * (digitInTheNextPosition + 1);
             n -= n % Math.pow(10, position);
@@ -25,6 +25,6 @@ class Solution {
                 position++;
             }
         }
-        return -1;
+        return - 1;
     }
 }

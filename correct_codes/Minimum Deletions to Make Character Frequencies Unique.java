@@ -1,5 +1,6 @@
 class Solution {
     private int N = 26;
+
     public int minDeletions(String s) {
         int[] array = new int[N];
         for (char ch : s.toCharArray()) {

@@ -14,7 +14,7 @@ class Solution {
             numToFirstPrimeFactor.put(num, firstPrimeFactor);
 
             for (int i = 1; i < primeFactors.size(); i++) {
-                ds.union(primeFactors.get(i-1), primeFactors.get(i));
+                ds.union(primeFactors.get(i - 1), primeFactors.get(i));
             }
         }
 
@@ -28,7 +28,7 @@ class Solution {
             int firstPrimeFactor = numToFirstPrimeFactor.get(num);
             int component = ds.find(firstPrimeFactor);
             int size = componentToSize.getOrDefault(component, 0);
-            componentToSize.put(component, ++size);
+            componentToSize.put(component, ++ size);
             maxSize = Math.max(maxSize, size);
         }
         return maxSize;
@@ -46,29 +46,29 @@ class Solution {
         List<Integer> primeFactors = new ArrayList<>();
 
         // even prime factor i.e. 2
-        if((num & 1) == 0){
+        if ((num & 1) == 0) {
             primeFactors.add(2);
 
-            do{
+            do {
                 num >>= 1;
-            }while((num & 1) == 0);
+            } while ((num & 1) == 0);
         }
 
         // odd prime factors
         int primeFactor = 3;
-        while(num != 1 && primeFactor*primeFactor <= num){
-            if(num % primeFactor == 0){
+        while (num != 1 && primeFactor * primeFactor <= num) {
+            if (num % primeFactor == 0) {
                 primeFactors.add(primeFactor);
 
-                do{
+                do {
                     num /= primeFactor;
-                }while(num % primeFactor == 0);
+                } while (num % primeFactor == 0);
             }
             primeFactor += 2;
         }
 
         // num is prime
-        if(num != 1){
+        if (num != 1) {
             primeFactors.add(num);
         }
         return primeFactors;

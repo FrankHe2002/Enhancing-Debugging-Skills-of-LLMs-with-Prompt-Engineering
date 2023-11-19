@@ -2,12 +2,12 @@
 class Solution {
     public int maximumSum(int[] nums) {
         HashMap<Integer, Integer> map = new HashMap<>();
-        int result = -1;
+        int result = - 1;
 
         for (int item : nums) {
             int key = getNumberTotal(item);
 
-            if (!map.containsKey(key))
+            if (! map.containsKey(key))
                 map.put(key, item);
             else {
                 result = Math.max(result, map.get(key) + item);

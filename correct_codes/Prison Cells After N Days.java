@@ -7,15 +7,13 @@ class Solution {
         // #                       - You do a first round of 14 iteration
         // #                       - Than you do a second round of n%14 iteration
         // #                       ===> O(27)
-        
-        n = n % 14 == 0 ? 14 : n%14;
+
+        n = n % 14 == 0 ? 14 : n % 14;
         int temp[] = new int[cells.length];
-        
-        while(n-- > 0)
-        {
-            for(int i=1; i <cells.length- 1; i++)
-            {
-              temp[i] = cells[i-1] == cells[i+1]? 1: 0;
+
+        while (n-- > 0) {
+            for (int i = 1; i < cells.length - 1; i++) {
+                temp[i] = cells[i - 1] == cells[i + 1] ? 1 : 0;
             }
             cells = temp.clone();
         }

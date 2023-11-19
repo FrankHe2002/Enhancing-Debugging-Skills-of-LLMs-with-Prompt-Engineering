@@ -6,7 +6,7 @@ class Solution {
         Arrays.setAll(map, o -> new HashMap<>());
         String pattern = "[aeiou]";
 
-        for (String w : wordlist){
+        for (String w : wordlist) {
             String lo = w.toLowerCase();
             map[0].put(w, "");
             map[1].putIfAbsent(lo, w);
@@ -14,16 +14,16 @@ class Solution {
         }
 
         int i = 0;
-        for (String q : queries){
+        for (String q : queries) {
             String lo = q.toLowerCase();
             String re = lo.replaceAll(pattern, ".");
-            if (map[0].containsKey(q)){
+            if (map[0].containsKey(q)) {
                 ans[i] = q;
-            }else if (map[1].containsKey(lo)){
+            } else if (map[1].containsKey(lo)) {
                 ans[i] = map[1].get(lo);
-            }else if (map[2].containsKey(re)){
+            } else if (map[2].containsKey(re)) {
                 ans[i] = map[2].get(re);
-            }else{
+            } else {
                 ans[i] = "";
             }
             i++;

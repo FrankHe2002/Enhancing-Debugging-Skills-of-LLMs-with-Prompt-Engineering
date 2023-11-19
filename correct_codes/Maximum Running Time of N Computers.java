@@ -27,12 +27,12 @@ class Solution {
         for (int bat : batteries) {
             batSum += bat;
         }
-        
+
         long lower = 0;
         long upper = batSum / n;
-        long res = -1;
+        long res = - 1;
 
-		// binary search
+        // binary search
         while (lower <= upper) {
             long mid = lower + (upper - lower) / 2;
 

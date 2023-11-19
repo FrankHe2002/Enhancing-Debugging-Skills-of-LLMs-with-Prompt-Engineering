@@ -9,13 +9,13 @@ class Solution {
         // this array, count[citations.length], is a count of the 
         // number of papers with citations.length or more citations.
         int[] counts = new int[citations.length + 2];
-        
+
         // Build the counts of how many papers have x citations.  
         // If a paper has more than citations.length citations, then 
         // count it as citations.length citations.
-        for (int i = citations.length - 1; i >= 0; i--)  
+        for (int i = citations.length - 1; i >= 0; i--)
             counts[Math.min(citations[i], citations.length)]++;
-        
+
         // Go through the count[] array from last index down to 0, trying 
         // successively smaller values for h.  Looping from high to low 
         // possible values for h, will find the highest valid value for 
@@ -29,7 +29,7 @@ class Solution {
         int h;
         for (h = citations.length; h > 0; h--) {
             counts[h] += counts[h + 1];
-            if (counts[h] >= h)  break;
+            if (counts[h] >= h) break;
         }
         return h;
     }

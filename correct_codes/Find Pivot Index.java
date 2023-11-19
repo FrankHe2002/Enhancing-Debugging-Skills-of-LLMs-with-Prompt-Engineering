@@ -5,16 +5,16 @@ class Solution {
         int leftsum = 0;
         int rightsum = 0;
 
-        for(int i =1; i< nums.length; i++) rightsum += nums[i];
+        for (int i = 1; i < nums.length; i++) rightsum += nums[i];
 
         if (leftsum == rightsum) return 0;
 
-        for(int i = 1 ; i < nums.length; i++){
-            leftsum += nums[i-1];
+        for (int i = 1; i < nums.length; i++) {
+            leftsum += nums[i - 1];
             rightsum -= nums[i];
 
-            if(leftsum == rightsum) return i;
+            if (leftsum == rightsum) return i;
         }
-        return -1;
+        return - 1;
     }
 }

@@ -9,7 +9,7 @@ class Solution {
         Map<Integer, Integer> count = new HashMap<>(); //contribution of prefixes without changing
         count.put(pref[0], 1);
 
-        for (int i = 1; i < n - 1; i++){
+        for (int i = 1; i < n - 1; i++) {
             pref[i] += pref[i - 1] + nums[i];
             count.put(pref[i], count.getOrDefault(pref[i], 0) + 1);
         }
@@ -21,7 +21,7 @@ class Solution {
             max = count.getOrDefault(sum / 2, 0); //max without changing
 
         Map<Integer, Integer> countPrev = new HashMap<>(); //contribution of prefixes before current step
-        for (int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             int diff = k - nums[i];
             int changedSum = sum + diff;
             if (changedSum % 2 == 0)

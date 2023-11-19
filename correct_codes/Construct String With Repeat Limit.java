@@ -11,7 +11,7 @@ class Solution {
         int repeated = 0;
         StringBuilder builder = new StringBuilder();
         while (max >= 0) {
-            builder.append((char)('a' + max));
+            builder.append((char) ('a' + max));
             counter[max]--;
             repeated++;
             if (counter[max] == 0) {
@@ -26,7 +26,7 @@ class Solution {
                 if (lower < 0) {
                     return builder.toString();
                 }
-                builder.append((char)('a' + lower));
+                builder.append((char) ('a' + lower));
                 counter[lower]--;
                 repeated = 0;
             }

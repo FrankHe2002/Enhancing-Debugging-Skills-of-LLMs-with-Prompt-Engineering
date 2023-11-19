@@ -12,8 +12,8 @@ class MyStack {
         Queue<Integer> tempQueue = new LinkedList<>();
         tempQueue.add(x);
 
-        while(!queue.isEmpty()){
-         tempQueue.add(queue.remove());
+        while (! queue.isEmpty()) {
+            tempQueue.add(queue.remove());
         }
 
         queue = tempQueue;
@@ -21,7 +21,7 @@ class MyStack {
     }
 
     public int pop() {
-       return queue.remove();
+        return queue.remove();
     }
 
     public int top() {

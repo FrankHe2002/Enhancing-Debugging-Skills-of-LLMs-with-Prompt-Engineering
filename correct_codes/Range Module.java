@@ -17,11 +17,9 @@ class RangeModule {
         // try to visualize each case, and what to do based on r1
         if (l1 == null && l2 == null) {
             map.put(left, right);
-        }
-        else if (l1 != null && map.get(l1) >= left) {
+        } else if (l1 != null && map.get(l1) >= left) {
             map.put(l1, Math.max(right, map.get(l2))); // r2 will always be greater than r1, so no need to check r1
-        }
-        else {
+        } else {
             map.put(left, Math.max(right, map.get(l2)));
         }
 

@@ -17,8 +17,8 @@ class Solution {
 
     public int nextState(int[][] board, int i, int j, int m, int n) {
         int ones = 0;
-        for (int x = -1; x <=1; x++) {
-            for (int y = -1; y <= 1; y++) {
+        for (int x = - 1; x <= 1; x++) {
+            for (int y = - 1; y <= 1; y++) {
                 if (x == 0 && y == 0) {
                     continue;
                 }

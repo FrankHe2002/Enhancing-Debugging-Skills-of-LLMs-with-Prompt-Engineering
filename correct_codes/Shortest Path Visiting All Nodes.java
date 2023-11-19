@@ -3,11 +3,13 @@ class Solution {
     class Pair {
         int i;
         int path;
+
         public Pair(int i, int path) {
             this.i = i;
             this.path = path;
         }
     }
+
     public int shortestPathLength(int[][] graph) {
         /*
         For each node currentNode, steps as key, visited as value
@@ -26,16 +28,16 @@ class Solution {
             q.offer(new Pair(i, 1 << i));
         }
         int step = 0;
-        while (!q.isEmpty()) {
+        while (! q.isEmpty()) {
             int size = q.size();
             for (int i = 0; i < size; i++) {
                 Pair p = q.poll();
                 int[] edges = graph[p.i];
 
-                for(int t: edges) {
+                for (int t : edges) {
                     int path = p.path | (1 << t);
                     if (path == allVisited) return step + 1;
-                    if (!visited[t][path]) {
+                    if (! visited[t][path]) {
                         visited[t][path] = true;
                         q.offer(new Pair(t, path));
                     }

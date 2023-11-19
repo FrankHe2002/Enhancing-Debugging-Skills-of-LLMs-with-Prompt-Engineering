@@ -23,7 +23,7 @@ class Solution {
         }
 
         boolean[] visited = new boolean[favorite.length];
-        for (List<Integer> pair: pairs) {
+        for (List<Integer> pair : pairs) {
             answer += dfs(graph, pair.get(0), visited) + dfs(graph, pair.get(1), visited);
         }
 
@@ -61,7 +61,7 @@ class Solution {
     private int dfs(List<List<Integer>> graph, int node, boolean[] visited) {
         visited[node] = true;
         int max = 0;
-        for (int neighbor: graph.get(node)) {
+        for (int neighbor : graph.get(node)) {
             max = Math.max(max, dfs(graph, neighbor, visited));
         }
         return max + 1;

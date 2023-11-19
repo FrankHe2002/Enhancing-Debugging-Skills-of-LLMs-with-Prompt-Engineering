@@ -1,4 +1,3 @@
-
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -15,14 +14,14 @@ class Solution {
         int[][] visited = new int[n][m];
         visited[0][0] = 1;
 
-        while (!Q.isEmpty()) {
+        while (! Q.isEmpty()) {
             Pair<Integer, Integer, Integer> at = Q.poll();
-            int[][] moves = new int[][]{{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+            int[][] moves = new int[][] {{- 1, 0}, {1, 0}, {0, - 1}, {0, 1}};
 
             for (int[] to : moves) {
                 int ii = at.first + to[0];
                 int jj = at.second + to[1];
-                if (!inBounds(ii, jj, n, m) || visited[ii][jj] == 1 || grid[ii][jj] == 2) continue;
+                if (! inBounds(ii, jj, n, m) || visited[ii][jj] == 1 || grid[ii][jj] == 2) continue;
                 if (ii == n - 1 && jj == m - 1 && dist[ii][jj] >= at.third + 1) return true;
                 if (dist[ii][jj] <= at.third + 1) continue;
                 Q.add(new Pair<>(ii, jj, 1 + at.third));
@@ -55,13 +54,13 @@ class Solution {
             }
         }
 
-        while (!Q.isEmpty()) {
+        while (! Q.isEmpty()) {
             Pair<Integer, Integer, Integer> at = Q.poll();
-            int[][] moves = new int[][]{{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+            int[][] moves = new int[][] {{- 1, 0}, {1, 0}, {0, - 1}, {0, 1}};
             for (int[] to : moves) {
                 int ii = at.first + to[0];
                 int jj = at.second + to[1];
-                if (!inBounds(ii, jj, n, m) || grid[ii][jj] == 2 || dist[ii][jj] <= at.third + 1) continue;
+                if (! inBounds(ii, jj, n, m) || grid[ii][jj] == 2 || dist[ii][jj] <= at.third + 1) continue;
                 dist[ii][jj] = 1 + at.third;
                 Q.add(new Pair<>(ii, jj, 1 + at.third));
             }
@@ -70,7 +69,7 @@ class Solution {
         int left = 0;
         int right = 1_000_000_000;
 
-        int ans = -1;
+        int ans = - 1;
 
         while (left <= right) {
             int mid = left + (right - left) / 2;
@@ -83,7 +82,7 @@ class Solution {
         return ans;
     }
 
-    static class Pair<T, K, L> {
+    static class Pair <T, K, L> {
         T first;
         K second;
         L third;

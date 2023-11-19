@@ -1,5 +1,5 @@
 class Solution {
-     public int findSpecialInteger(int[] arr) {
+    public int findSpecialInteger(int[] arr) {
         if (arr.length == 1) {
             return arr[0];
         }
@@ -14,6 +14,6 @@ class Solution {
                 return i;
             }
         }
-        return -1;
+        return - 1;
     }
 }

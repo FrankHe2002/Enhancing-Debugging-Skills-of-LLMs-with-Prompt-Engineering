@@ -8,6 +8,7 @@ class Solution {
     private int m;
     private int n;
     private int maxColor = 60;
+
     public boolean isPrintable(int[][] targetGrid) {
         this.m = targetGrid.length;
         this.n = targetGrid[0].length;
@@ -24,17 +25,18 @@ class Solution {
                 totalCount++;
             }
         }
-        while (!queue.isEmpty()) {
+        while (! queue.isEmpty()) {
             count++;
             Integer current = queue.poll();
-            for (Integer neighbor: graph[current]) {
-                if (--indegrees[neighbor] == 0) {
+            for (Integer neighbor : graph[current]) {
+                if (-- indegrees[neighbor] == 0) {
                     queue.offer(neighbor);
                 }
             }
         }
         return count == totalCount;
     }
+
     private void buildRanges(int[][] targetGrid) {
         this.ranges = new int[maxColor + 1][4];
         for (int i = 1; i <= maxColor; i++) {
@@ -56,6 +58,7 @@ class Solution {
         }
         maxColor = max;
     }
+
     // TC O(n^3) to build graph
     private void buildGraph(int[][] targetGrid) {
         graph = new Set[maxColor + 1];
@@ -66,7 +69,7 @@ class Solution {
                 for (int i = ranges[c][1]; i <= ranges[c][3]; i++) {
                     for (int j = ranges[c][0]; j <= ranges[c][2]; j++) {
                         int other = targetGrid[i][j];
-                        if (other != c && !graph[c].contains(other)) {
+                        if (other != c && ! graph[c].contains(other)) {
                             graph[c].add(other);
                             indegrees[other]++;
                         }

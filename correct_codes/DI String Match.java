@@ -4,10 +4,10 @@ class Solution {
         int low = 0;
         int high = s.length();
         int[] ans = new int[s.length() + 1];
-        for(int i = 0; i < s.length(); i++){
-            if(s.charAt(i) == 'I'){
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == 'I') {
                 ans[i] = low++;
-            } else{
+            } else {
                 ans[i] = high--;
             }
         }

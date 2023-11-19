@@ -36,9 +36,9 @@ class Solution {
             } else if (c % 3 == 2) {
                 nr2 = Math.max(nr2, c);
             }
-            r0=nr0;
-            r1=nr1;
-            r2=nr2;
+            r0 = nr0;
+            r1 = nr1;
+            r2 = nr2;
         }
 
         return r0;

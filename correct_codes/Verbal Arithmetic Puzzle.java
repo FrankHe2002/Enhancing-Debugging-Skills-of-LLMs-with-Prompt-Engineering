@@ -1,18 +1,18 @@
 // Runtime: 7 ms (Top 96.2%) | Memory: 40.32 MB (Top 56.2%)
 
 class Solution {
-     public static boolean isSolvable(String[] words, String result) {
-	    // reverse all strings to facilitate add calculation.
+    public static boolean isSolvable(String[] words, String result) {
+        // reverse all strings to facilitate add calculation.
         for (int i = 0; i < words.length; i++) {
             words[i] = new StringBuilder(words[i]).reverse().toString();
         }
         result = new StringBuilder(result).reverse().toString();
-        if (!checkLength(words, result)) {
+        if (! checkLength(words, result)) {
             return false;
         }
         boolean[] visited = new boolean[10];    // digit 0, 1, ..., 9
         int[] chToDigit = new int[26];
-        Arrays.fill(chToDigit, -1);
+        Arrays.fill(chToDigit, - 1);
         return dfs(0, 0, 0, visited, chToDigit, words, result);
     }
 
@@ -55,7 +55,7 @@ class Solution {
                     return false;
                 }
                 // not selected, can select any. True.
-                if (chToDigit[ch - 'A'] == -1) {
+                if (chToDigit[ch - 'A'] == - 1) {
                     System.out.println(Arrays.toString(chToDigit));
                     return true;
                 } else {    // if selected, check if it matches with carrier. Also, carrier can't be 0. result = '00' is invalid
@@ -63,7 +63,7 @@ class Solution {
                 }
             } else {    // reached normal result line.
                 // 1. if not selected. Use current carrier's unit digit
-                if (chToDigit[ch - 'A'] == -1) {
+                if (chToDigit[ch - 'A'] == - 1) {
                     int selectedDigit = carrier % 10;
                     // For example carrier = 13. selectedDigit = 3. ch = 'H'. Should set 3 to 'H'.
                     // But 3 is already taken by 'B' previously. So wrong.
@@ -75,7 +75,7 @@ class Solution {
                     if (dfs(0, j + 1, carrier / 10, visited, chToDigit, words, result)) {
                         return true;
                     }
-                    chToDigit[ch - 'A'] = -1;
+                    chToDigit[ch - 'A'] = - 1;
                     visited[selectedDigit] = false;
                 } else { // 2. selected
                     // just need to check if ch.digit equals to unit digit.
@@ -99,7 +99,7 @@ class Solution {
             }
             char ch = word.charAt(j);
             // 3. check if word.ch is selected. Just add current digit and move to next word.
-            if (chToDigit[ch - 'A'] != -1) {
+            if (chToDigit[ch - 'A'] != - 1) {
                 int newSum = carrier + chToDigit[ch - 'A'];
                 boolean ans = dfs(i + 1, j, newSum, visited, chToDigit, words, result);
                 return ans;
@@ -116,7 +116,7 @@ class Solution {
                         return true;
                     }
                     visited[k] = false;
-                    chToDigit[ch - 'A'] = -1;
+                    chToDigit[ch - 'A'] = - 1;
                 }
             }
         }

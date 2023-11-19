@@ -8,7 +8,6 @@ class Tuple {
 
     int col;
 
-    
 
     Tuple(int distance, int row, int col) {
 
@@ -23,7 +22,6 @@ class Tuple {
 }
 
 
-
 class Solution {
 
     public int minimumEffortPath(int[][] heights) {
@@ -32,19 +30,16 @@ class Solution {
 
         PriorityQueue<Tuple> minHeap = new PriorityQueue<>((x, y) -> x.distance - y.distance);
 
-        
 
         int rows = heights.length;
 
         int cols = heights[0].length;
 
-        
 
         // Create a 2D array to store the minimum effort to reach each cell
 
         int effort[][] = new int[rows][cols];
 
-        
 
         // Initialize all efforts to maximum initially
 
@@ -54,27 +49,23 @@ class Solution {
 
         }
 
-        
 
         effort[0][0] = 0; // Initial effort at the starting cell
 
-        
 
         // Add the starting cell to the min heap
 
         minHeap.add(new Tuple(0, 0, 0));
 
-        
 
         // Arrays to represent row and column changes for 4 directions
 
-        int dr[] = {-1, 0, 1, 0}; // Up, Right, Down, Left
+        int dr[] = {- 1, 0, 1, 0}; // Up, Right, Down, Left
 
-        int dc[] = {0, 1, 0, -1};
+        int dc[] = {0, 1, 0, - 1};
 
-        
 
-        while (!minHeap.isEmpty()) {
+        while (! minHeap.isEmpty()) {
 
             Tuple current = minHeap.poll(); // Get the cell with the minimum effort
 
@@ -84,7 +75,6 @@ class Solution {
 
             int col = current.col;
 
-            
 
             if (row == rows - 1 && col == cols - 1) {
 
@@ -92,7 +82,6 @@ class Solution {
 
             }
 
-            
 
             // Explore each of the 4 possible directions
 
@@ -102,19 +91,16 @@ class Solution {
 
                 int newCol = col + dc[i]; // Calculate new column index
 
-                
 
                 // Check if the new cell is within bounds
 
                 if (newRow >= 0 && newRow < rows && newCol >= 0 && newCol < cols) {
 
-                    
 
                     // Calculate the new effort based on the maximum of height difference and current effort
 
                     int newEffort = Math.max(Math.abs(heights[row][col] - heights[newRow][newCol]), distance);
 
-                    
 
                     // If the new effort is less than the stored effort for the cell, update and add to heap
 

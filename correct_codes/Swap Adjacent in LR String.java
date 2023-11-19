@@ -4,29 +4,29 @@ class Solution {
         int startL = 0, startR = 0;
         int endL = 0, endR = 0;
         String stLR = "", edLR = "";
-        for(int i = 0; i < start.length(); i++) {
-            if(start.charAt(i) != 'X') {
-                if(start.charAt(i) == 'L') {
+        for (int i = 0; i < start.length(); i++) {
+            if (start.charAt(i) != 'X') {
+                if (start.charAt(i) == 'L') {
                     startL++;
-                } else{
+                } else {
                     startR++;
                 }
-                stLR+= start.charAt(i);
+                stLR += start.charAt(i);
             }
-            if(end.charAt(i) != 'X') {
-                if(end.charAt(i) == 'L') {
+            if (end.charAt(i) != 'X') {
+                if (end.charAt(i) == 'L') {
                     endL++;
-                } else{
+                } else {
                     endR++;
                 }
                 edLR += end.charAt(i);
             }
 
-            if(startL > endL || startR < endR) //Check conditions at each instant
+            if (startL > endL || startR < endR) //Check conditions at each instant
                 return false;
         }
 
-        if(startL != endL || startR != endR || !stLR.equals(edLR)) //check their final count and positions
+        if (startL != endL || startR != endR || ! stLR.equals(edLR)) //check their final count and positions
             return false;
 
         return true;

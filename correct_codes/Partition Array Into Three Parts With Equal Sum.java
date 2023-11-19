@@ -1,7 +1,7 @@
-class Solution { 
-     public boolean canThreePartsEqualSum(int[] arr) {
+class Solution {
+    public boolean canThreePartsEqualSum(int[] arr) {
         int sum = 0;
-        
+
         for (Integer no : arr) {
             sum += no;
         }

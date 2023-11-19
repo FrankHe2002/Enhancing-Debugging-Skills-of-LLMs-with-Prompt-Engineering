@@ -28,21 +28,20 @@ class Solution {
         2. if out leftover elements do not have any odd element left
             then our leftover elements must also take in consideration becuase they will also contribute in forming subarrays
         */
-        while(j< nums.length){
-            if(nums[j]%2 != 0)
-            {
+        while (j < nums.length) {
+            if (nums[j] % 2 != 0) {
                 odd++;
                 //if leftover elements have odd element then new window is formed so we set temp = 0;
                 temp = 0;
             }
-            while(odd ==k){
+            while (odd == k) {
                 temp++;
-                if(nums[i] %2 != 0)
+                if (nums[i] % 2 != 0)
                     odd--;
                 i++;
-             }
-          //if no leftover elements is odd, each element will part in forming subarray
-        //so include them
+            }
+            //if no leftover elements is odd, each element will part in forming subarray
+            //so include them
             result += temp;
             j++;
 

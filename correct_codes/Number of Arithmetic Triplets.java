@@ -5,14 +5,14 @@ class Solution {
         int result = 0;
         int[] map = new int[201];
 
-        for(int num: nums) {
+        for (int num : nums) {
             map[num] = 1;
 
-            if(num - diff >= 0) {
+            if (num - diff >= 0) {
                 map[num] += map[num - diff];
             }
 
-            if(map[num] >= 3) result += 1;
+            if (map[num] >= 3) result += 1;
         }
 
         return result;

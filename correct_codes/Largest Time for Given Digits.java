@@ -1,14 +1,15 @@
 class Solution {
     public String largestTimeFromDigits(int[] arr) {
         int[] count = new int[10];
-        for (int num: arr) {
+        for (int num : arr) {
             count[num]++;
         }
         StringBuilder sb = backTrack(count, new StringBuilder());
         if (sb.length() == 4) sb.insert(2, ':');
         return sb.toString();
-        
+
     }
+
     private StringBuilder backTrack(int[] count, StringBuilder sb) {
         int size = sb.length();
         int start = 0;
@@ -31,8 +32,7 @@ class Solution {
             backTrack(count, sb);
             if (sb.length() == 4) {
                 return sb;
-            }
-            else {
+            } else {
                 count[Character.getNumericValue(sb.charAt(sb.length() - 1))]++;
                 sb.deleteCharAt(sb.length() - 1);
             }

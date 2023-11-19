@@ -9,17 +9,17 @@ class SORTracker {
         int l = 0, r = list.size() - 1, m = 0;
         while (l < r) {
             m = l + (r - l) / 2;
-            if(name.compareTo(list.get(m)) > 0) {
+            if (name.compareTo(list.get(m)) > 0) {
                 l = m + 1;
             } else {
                 r = m;
             }
         }
-        return name.compareTo(list.get(l)) > 0 ? l+1 : l;
+        return name.compareTo(list.get(l)) > 0 ? l + 1 : l;
     }
 
     public SORTracker() {
-        map = new TreeMap<>((a,b) -> (b-a));
+        map = new TreeMap<>((a, b) -> (b - a));
         queryNum = 0;
     }
 
@@ -32,7 +32,7 @@ class SORTracker {
 
     public String get() {
         int index = queryNum;
-        for (int score: map.keySet()) {
+        for (int score : map.keySet()) {
             if (index < map.get(score).size()) {
                 queryNum++;
                 return map.get(score).get(index);

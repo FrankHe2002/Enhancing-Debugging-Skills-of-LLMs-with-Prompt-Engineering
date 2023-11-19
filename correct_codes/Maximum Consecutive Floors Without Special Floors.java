@@ -9,7 +9,7 @@ class Solution {
         max = Math.max(max, special[0] - bottom);
 
         // middle floors
-        for(int i = 1; i < special.length; i++) {
+        for (int i = 1; i < special.length; i++) {
             max = Math.max(max, special[i] - special[i - 1] - 1);
         }
 

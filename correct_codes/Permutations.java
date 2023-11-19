@@ -10,13 +10,13 @@ class Solution {
         return res;
     }
 
-    private void backTrack(int[] nums, ArrayList<Integer> list, boolean[] visited){
-        if(list.size() == nums.length){
+    private void backTrack(int[] nums, ArrayList<Integer> list, boolean[] visited) {
+        if (list.size() == nums.length) {
             res.add(new ArrayList(list));
             return;
         }
-        for(int i = 0; i < nums.length; i++){
-            if(!visited[i]){
+        for (int i = 0; i < nums.length; i++) {
+            if (! visited[i]) {
                 visited[i] = true;
                 list.add(nums[i]);
                 backTrack(nums, list, visited);

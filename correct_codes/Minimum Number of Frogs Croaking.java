@@ -5,7 +5,7 @@ class Solution {
         String corak = "croak";
 
         // Giving index to each characters
-        for (int i = 0; i < corak.length(); ++i)
+        for (int i = 0; i < corak.length(); ++ i)
             index[corak.charAt(i) - 'a'] = i;
 
         int ans = 0, sum = 0;
@@ -15,7 +15,7 @@ class Solution {
             int i = index[c - 'a'];
             // If it is not 'c' it will decrease the sum
             if (c != 'c') {
-                if (count[i - 1]-- <= 0) return -1;
+                if (count[i - 1]-- <= 0) return - 1;
                 sum--;
             }
             // If it is not 'k' it will increase the sum
@@ -25,6 +25,6 @@ class Solution {
             }
             ans = Math.max(ans, sum);
         }
-        return sum == 0 ? ans : -1;
+        return sum == 0 ? ans : - 1;
     }
 }

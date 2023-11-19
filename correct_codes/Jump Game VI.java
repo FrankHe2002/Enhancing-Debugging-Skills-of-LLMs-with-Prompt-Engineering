@@ -8,7 +8,7 @@ class Solution {
             if (deq[a] - i > k) a++;
             nums[i] += nums[deq[a]];
             while (b >= a && nums[deq[b]] <= nums[i]) b--;
-            deq[++b] = i;
+            deq[++ b] = i;
         }
         return nums[0];
     }

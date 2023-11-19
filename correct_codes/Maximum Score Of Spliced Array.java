@@ -13,10 +13,10 @@ class Solution {
         for (int i = 0; i < nums1.length; i++) {
             first += (nums2[i] - nums1[i]);
             second += (nums1[i] - nums2[i]);
-            
+
             max1 = Math.max(max1, first);
             max2 = Math.max(max2, second);
-            
+
             if (first < 0) first = 0;
             if (second < 0) second = 0;
         }

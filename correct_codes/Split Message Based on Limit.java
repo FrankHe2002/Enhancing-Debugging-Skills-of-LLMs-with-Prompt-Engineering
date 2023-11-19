@@ -24,7 +24,7 @@ class Solution {
                 idx++;
             }
         }
-        String[] res = list.toArray(new String[]{});
+        String[] res = list.toArray(new String[] {});
         for (int i = 0; i < res.length; i++)
             res[i] = res[i] + "/" + (idx - 1) + ">";
         return res;

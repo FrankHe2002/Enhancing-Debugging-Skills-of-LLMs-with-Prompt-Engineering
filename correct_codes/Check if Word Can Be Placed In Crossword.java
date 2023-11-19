@@ -11,8 +11,7 @@ class Solution {
                 if (board[i][j] == '#') {
                     insertIntoTrie(trie, curr);
                     curr = "";
-                }
-                else {
+                } else {
                     curr += board[i][j];
                 }
             }
@@ -26,8 +25,7 @@ class Solution {
                 if (board[j][i] == '#') {
                     insertIntoTrie(trie, curr);
                     curr = "";
-                }
-                else {
+                } else {
                     curr += board[j][i];
                 }
             }
@@ -67,10 +65,9 @@ class Solution {
         void insert(String s) {
             TrieNode curr = root;
 
-            for (int i = 0; i < s.length(); i++)
-            {
+            for (int i = 0; i < s.length(); i++) {
                 char c = s.charAt(i);
-                if (!curr.children.containsKey(c)) {
+                if (! curr.children.containsKey(c)) {
                     curr.children.put(c, new TrieNode());
                 }
 

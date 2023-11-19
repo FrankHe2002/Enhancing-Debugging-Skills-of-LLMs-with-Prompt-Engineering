@@ -6,7 +6,7 @@ class Solution {
         }
 
         Robot bender = new Robot();
-        int[] start = new int[]{0, 0};
+        int[] start = new int[] {0, 0};
 
         // 4 represents the max 90 degree turns that can restart initial orientation.
         for (int i = 0; i < 4; i++) {
@@ -18,7 +18,7 @@ class Solution {
             }
 
             // If robot never turns and the first instruction isn't at start, exit.
-            else if (!orientationChanged) {
+            else if (! orientationChanged) {
                 return false;
             }
         }
@@ -36,10 +36,10 @@ class Robot {
 
     Robot() {
         // Start in center
-        location = new int[]{0, 0};
+        location = new int[] {0, 0};
 
         // N, E, S, W
-        orientations = new int[][]{{1,0}, {0, 1}, {-1, 0}, {0, -1}};
+        orientations = new int[][] {{1, 0}, {0, 1}, {- 1, 0}, {0, - 1}};
 
         // Start pointing north
         orientationPos = 0;
@@ -65,7 +65,7 @@ class Robot {
         } else if (order == 'L' || order == 'R') {
             this.turn(order);
         } else {
-           // do nothing
+            // do nothing
         }
     }
 

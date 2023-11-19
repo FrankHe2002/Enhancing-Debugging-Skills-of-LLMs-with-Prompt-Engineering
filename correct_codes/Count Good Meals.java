@@ -2,6 +2,7 @@
 
 class Solution {
     int mod = 1000000007;
+
     public int countPairs(int[] arr) {
         Map<Integer, Integer> map = new HashMap<>();
         int n = arr.length;

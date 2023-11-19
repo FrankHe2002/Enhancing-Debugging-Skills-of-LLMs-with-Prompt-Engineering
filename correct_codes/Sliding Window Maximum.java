@@ -6,7 +6,7 @@ class Solution {
         int index = 0;
         while (r < nums.length) {
             int n = nums[r++];
-            while (!queue.isEmpty() && n > queue.peekLast()) {
+            while (! queue.isEmpty() && n > queue.peekLast()) {
                 queue.pollLast();
             }
             queue.offer(n);

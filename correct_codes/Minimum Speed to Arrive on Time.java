@@ -11,7 +11,7 @@ class Solution {
             else left = middle + 1;
         }
 
-        return right == (int) 1e8 ? -1 : right;
+        return right == (int) 1e8 ? - 1 : right;
     }
 
     private boolean arriveOnTime(int[] dist, double hour, int speed) {

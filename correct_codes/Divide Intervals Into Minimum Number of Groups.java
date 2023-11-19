@@ -4,7 +4,7 @@ class Solution {
 
         for (int[] interval : intervals) {
             treemap.merge(interval[0], 1, Integer::sum);
-            treemap.merge(interval[1] + 1, -1, Integer::sum);
+            treemap.merge(interval[1] + 1, - 1, Integer::sum);
         }
 
         int rooms = 0;

@@ -1,16 +1,17 @@
 class TimeMap {
     private Map<String, List<Entry>> map;
     private final String NOT_FOUND = "";
+
     public TimeMap() {
         map = new HashMap<>();
     }
-    
+
     public void set(String key, String value, int timestamp) {
         List<Entry> entries = map.getOrDefault(key, new ArrayList<>());
         entries.add(new Entry(value, timestamp));
         map.put(key, entries);
     }
-    
+
     public String get(String key, int timestamp) {
         List<Entry> entries = map.get(key);
         if (entries == null) {
@@ -18,11 +19,11 @@ class TimeMap {
         }
         return binarySearch(entries, timestamp);
     }
-    
+
     private String binarySearch(List<Entry> entries, int timestamp) {
-        int lo = 0, hi = entries.size() - 1, mid = -1;
+        int lo = 0, hi = entries.size() - 1, mid = - 1;
         String ans = "";
-        
+
         // Base cases - if value is not set, return empty
         if (entries.get(lo).timestamp > timestamp) {
             return NOT_FOUND;
@@ -31,10 +32,10 @@ class TimeMap {
         else if (entries.get(hi).timestamp <= timestamp) {
             return entries.get(hi).value;
         }
-        
+
         // Else apply binary search to get correct value
         while (lo <= hi) {
-            mid = lo + (hi-lo)/2;
+            mid = lo + (hi - lo) / 2;
             Entry entry = entries.get(mid);
             // System.out.println("mid: "+mid);
             if (entry.timestamp == timestamp) {
@@ -44,8 +45,7 @@ class TimeMap {
             else if (entry.timestamp < timestamp) {
                 ans = entry.value;
                 lo = mid + 1;
-            }
-            else {
+            } else {
                 hi = mid - 1;
             }
         }
@@ -56,7 +56,7 @@ class TimeMap {
 class Entry {
     String value;
     int timestamp;
-    
+
     public Entry(String value, int timestamp) {
         this.value = value;
         this.timestamp = timestamp;

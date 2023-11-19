@@ -4,7 +4,7 @@ class Solution {
         String x[] = sentence.split(" ");
         StringBuilder sb = new StringBuilder();
         for (String s : x) {
-            if (isPrice(s)) sb.append(calc(Double.parseDouble(s.substring(1)), discount) + " "); 
+            if (isPrice(s)) sb.append(calc(Double.parseDouble(s.substring(1)), discount) + " ");
             else sb.append(s + " ");
         }
         sb.deleteCharAt(sb.length() - 1);

@@ -6,7 +6,7 @@ class Solution {
         int evenNo = 0;
         int oddNo = 0;
 
-        for ( int i = 0; i < s.length(); i++) {
+        for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             if (map.containsKey(c)) {
                 map.put(c, map.get(c) + 1);

@@ -3,11 +3,11 @@ class Solution {
     public int maxTwoEvents(int[][] events) {
         Arrays.sort(events, (a, b) -> a[0] - b[0]);
         int onRight = 0, maxOne = 0, n = events.length;
-        int[] rightMax = new int[n+1];
+        int[] rightMax = new int[n + 1];
         for (int i = n - 1; i >= 0; i--) {
             int start = events[i][0], end = events[i][1], val = events[i][2];
             maxOne = Math.max(val, maxOne);
-            rightMax[i] = Math.max(rightMax[i+1], val);
+            rightMax[i] = Math.max(rightMax[i + 1], val);
         }
         int two = 0;
         for (int i = 0; i < n; i++) {

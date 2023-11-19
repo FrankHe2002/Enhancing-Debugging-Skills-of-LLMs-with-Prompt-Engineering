@@ -8,7 +8,7 @@ class Solution {
             boolean done = true;
             for (int i = a[0]; i <= a[2]; i++) {
                 for (int j = a[1]; j <= a[3]; j++) {
-                    if (!set.contains(i + " " + j)) done = false;
+                    if (! set.contains(i + " " + j)) done = false;
                 }
             }
             if (done) c++;

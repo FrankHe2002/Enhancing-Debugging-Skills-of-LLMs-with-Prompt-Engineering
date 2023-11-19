@@ -3,9 +3,9 @@ class Solution {
         int n = flowers.length;
         long[] prefix = new long[n + 1];
         Arrays.sort(flowers);
-        for (int i = 0; i < n; ++i) prefix[i + 1] = prefix[i] + Math.min(flowers[i], target);
+        for (int i = 0; i < n; ++ i) prefix[i + 1] = prefix[i] + Math.min(flowers[i], target);
         long res = 0;
-        for (int c = 0, i = n - 1; c <= n; ++c) {
+        for (int c = 0, i = n - 1; c <= n; ++ c) {
             long remain = prefix[n] - prefix[n - c] + newFlowers - c * (long) target, min = 0;
             if (0 > remain) break;
             i = Math.min(i, n - c - 1);

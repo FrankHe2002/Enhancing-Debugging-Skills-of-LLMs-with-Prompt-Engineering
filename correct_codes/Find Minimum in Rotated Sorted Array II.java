@@ -5,9 +5,9 @@ class Solution {
         int h = nums.length - 1;
         while (l < h) {
             while (l < h && nums[l] == nums[l + 1])
-                ++l;
+                ++ l;
             while (l < h && nums[h] == nums[h - 1])
-                --h;
+                -- h;
             int mid = l + (h - l) / 2;
             if (nums[mid] > nums[h]) { // smaller elements are in the right side
                 l = mid + 1;

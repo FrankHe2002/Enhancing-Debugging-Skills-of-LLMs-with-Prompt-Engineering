@@ -8,15 +8,15 @@ class Solution {
             availableServerIdxs.add(num);
         }
         // use a PQ to maintain the availability based on curTime + loadTime and the server index = idx%k
-        Queue<int[]> runningServers = new PriorityQueue<>((a, b)->(a[0] - b[0]));
+        Queue<int[]> runningServers = new PriorityQueue<>((a, b) -> (a[0] - b[0]));
 
         int[] serverHandledReqCount = new int[k];
 
         for (int idx = 0; idx < arrival.length; idx++) {
             int newTaskCompletionTime = arrival[idx];
 
-          // peek if the server's work time is less than or equal to the next task completion time, if it is poll those servers from the running servers queue and add the index of that server to the availableServerIdxs treeSet
-            while (!runningServers.isEmpty() && runningServers.peek()[0] <= newTaskCompletionTime) {
+            // peek if the server's work time is less than or equal to the next task completion time, if it is poll those servers from the running servers queue and add the index of that server to the availableServerIdxs treeSet
+            while (! runningServers.isEmpty() && runningServers.peek()[0] <= newTaskCompletionTime) {
                 int freedServer = runningServers.poll()[1];
                 availableServerIdxs.add(freedServer);
             }

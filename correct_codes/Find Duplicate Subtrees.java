@@ -1,4 +1,5 @@
 // Runtime: 1783 ms (Top 5.02%) | Memory: 64.5 MB (Top 11.80%)
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -26,14 +27,14 @@ class Solution {
         Stack<TreeNode> s = new Stack<TreeNode>();
 
         s.add(root);
-        while(!s.isEmpty()){
+        while (! s.isEmpty()) {
             TreeNode tmp = s.pop();
             dfs(tmp, "", tmp, list, hashes, added);
 
-            if(tmp.left != null){
+            if (tmp.left != null) {
                 s.add(tmp.left);
             }
-            if(tmp.right != null){
+            if (tmp.right != null) {
                 s.add(tmp.right);
             }
         }
@@ -42,39 +43,36 @@ class Solution {
 
     }
 
-    public void dfs(TreeNode parent, String hash, TreeNode root, List<TreeNode> list, HashSet<String> set, HashSet<String> added){
+    public void dfs(TreeNode parent, String hash, TreeNode root, List<TreeNode> list, HashSet<String> set, HashSet<String> added) {
 
         Stack<TreeNode> stack = new Stack<TreeNode>();
 
         stack.add(root);
         //String hash = "";
         hash += root.val + "ROOT,";
-        while(!stack.isEmpty()){
+        while (! stack.isEmpty()) {
             TreeNode tmp = stack.pop();
             //hash += tmp.val + ",";
 
-            if(tmp.left != null){
+            if (tmp.left != null) {
                 hash += tmp.left.val + "L,";
                 stack.add(tmp.left);
+            } else {
+                hash += "NULLL,";
             }
-            else{
-                hash+= "NULLL,";
-            }
-            if(tmp.right != null){
+            if (tmp.right != null) {
                 hash += tmp.right.val + "R,";
                 stack.add(tmp.right);
+            } else {
+                hash += "NULLR,";
             }
-            else{
-                hash+="NULLR,";
-            }
-            if(tmp.left == null && tmp.right == null && stack.isEmpty()){
-                if(set.contains(hash)){
-                    if(!added.contains(hash)){
+            if (tmp.left == null && tmp.right == null && stack.isEmpty()) {
+                if (set.contains(hash)) {
+                    if (! added.contains(hash)) {
                         list.add(parent);
                         added.add(hash);
                     }
-                }
-                else{
+                } else {
                     set.add(hash);
                 }
                 return;

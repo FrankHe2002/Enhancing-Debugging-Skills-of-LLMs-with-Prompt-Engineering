@@ -8,8 +8,9 @@ class Solution {
                 return n;
             }
             n++;
-        }       
+        }
     }
+
     private boolean isPrime(int n) {
         if (n == 1) {
             return false;
@@ -21,6 +22,7 @@ class Solution {
         }
         return true;
     }
+
     private boolean isPalindrome(int n) {
         String s = String.valueOf(n);
         int i = 0;

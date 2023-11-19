@@ -7,6 +7,6 @@ class Solution {
         for (int i = 1; i <= n; i++) {
             res = res * (2 * i - 1) * i % mod;
         }
-        return (int)res;
+        return (int) res;
     }
 }

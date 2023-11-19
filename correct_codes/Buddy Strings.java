@@ -8,30 +8,28 @@ class Solution {
         boolean flag = true;
         HashSet<Character> hset = new HashSet<>();
 
-        if(lenS != lenGoal)
+        if (lenS != lenGoal)
             return false;
 
-        if(s.equals(goal)){
-            for(int i = 0; i < lenS; i++){
-                if(!hset.contains(s.charAt(i))){
+        if (s.equals(goal)) {
+            for (int i = 0; i < lenS; i++) {
+                if (! hset.contains(s.charAt(i))) {
                     hset.add(s.charAt(i));
-                }
-                else
+                } else
                     return true;
             }
             return false;
-        }
-        else{
-            for(int i = 0; i < lenS; i++){
-                if(s.charAt(i) == goal.charAt(i)){
+        } else {
+            for (int i = 0; i < lenS; i++) {
+                if (s.charAt(i) == goal.charAt(i)) {
                     continue;
                 }
-                if(a == '\u0000'){
+                if (a == '\u0000') {
                     a = s.charAt(i);
                     c = goal.charAt(i);
                     continue;
                 }
-                if(b == '\u0000'){
+                if (b == '\u0000') {
                     b = s.charAt(i);
                     d = goal.charAt(i);
                     continue;
@@ -39,7 +37,7 @@ class Solution {
                 return false;
             }
 
-            if(a == d && c == b && a != '\u0000')
+            if (a == d && c == b && a != '\u0000')
                 return true;
 
             return false;

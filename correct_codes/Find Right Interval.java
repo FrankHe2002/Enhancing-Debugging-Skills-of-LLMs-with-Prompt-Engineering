@@ -17,15 +17,15 @@ class Solution {
         Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
         for (int i = 0; i < n; i++) {
             int[] interval = binarySearch(intervals, intervals[i][1], i);
-            res[map.get(intervals[i])] = interval == null ? -1 : map.get(interval);
+            res[map.get(intervals[i])] = interval == null ? - 1 : map.get(interval);
         }
-        
+
         return res;
     }
 
     private int[] binarySearch(int[][] intervals, int target, int start) {
         int l = start, r = intervals.length - 1;
-        
+
         while (l <= r) {
             int m = l + (r - l) / 2;
             if (intervals[m][0] >= target) {

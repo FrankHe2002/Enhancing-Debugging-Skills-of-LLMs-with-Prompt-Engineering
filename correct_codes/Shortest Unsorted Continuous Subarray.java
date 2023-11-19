@@ -7,17 +7,17 @@ class Solution {
         int s = Integer.MAX_VALUE;
         int e = Integer.MIN_VALUE;
 
-        for(int i = 0; i<nums.length; i++) {
-            if(numsClone[i] != nums[i]) {
+        for (int i = 0; i < nums.length; i++) {
+            if (numsClone[i] != nums[i]) {
                 s = Math.min(s, i);
                 e = Math.max(e, i);
             }
         }
 
-        if(s == Integer.MAX_VALUE || e == Integer.MIN_VALUE) {
+        if (s == Integer.MAX_VALUE || e == Integer.MIN_VALUE) {
             return 0;
         }
 
-        return e-s+1;
+        return e - s + 1;
     }
 }

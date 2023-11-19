@@ -6,7 +6,7 @@ class Solution {
 
         // Filling the permuations array with numbers.
         for (int i = 0; i < m; i++)
-            permutations.add(i+1);
+            permutations.add(i + 1);
 
         // Looping on the queries & checking their index in the permuations
         for (int i = 0; i < queries.length; i++) {

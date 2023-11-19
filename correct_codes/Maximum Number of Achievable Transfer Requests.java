@@ -1,6 +1,7 @@
 // Runtime: 35 ms (Top 65.52%) | Memory: 42.2 MB (Top 56.90%)
 class Solution {
     int max = 0;
+
     public int maximumRequests(int n, int[][] requests) {
         helper(requests, 0, new int[n], 0);
         return max;

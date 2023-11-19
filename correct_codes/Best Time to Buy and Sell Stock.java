@@ -5,12 +5,12 @@ class Solution {
         int op = 0;
         int pist = 0;
 
-        for(int i = 0; i < prices.length; i++){
-            if(prices[i] < lsf){
+        for (int i = 0; i < prices.length; i++) {
+            if (prices[i] < lsf) {
                 lsf = prices[i];
             }
             pist = prices[i] - lsf;
-            if(op < pist){
+            if (op < pist) {
                 op = pist;
             }
         }

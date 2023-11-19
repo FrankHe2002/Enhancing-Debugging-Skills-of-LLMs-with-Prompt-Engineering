@@ -6,9 +6,9 @@ class Solution {
             return true;
         }
         // if both have 1s, return true, otherwise false
-        return hasOnes(s) && hasOnes(target); 
+        return hasOnes(s) && hasOnes(target);
     }
-    
+
     // method to check if the string has 1s
     private boolean hasOnes(String s) {
         for (char c : s.toCharArray()) {
@@ -16,7 +16,7 @@ class Solution {
                 return true;
             }
         }
-        
+
         return false;
     }
 }

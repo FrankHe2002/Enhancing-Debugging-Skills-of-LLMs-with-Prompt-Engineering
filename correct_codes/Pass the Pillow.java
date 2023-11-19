@@ -2,26 +2,26 @@
 
 class Solution {
     public int passThePillow(int n, int time) {
-    //     int count=0;
-    //     for(int i=1; i<=time; i++){
-    //         if(i < n){
-    //             count+=1;
-    //         }
-    //         if(i>n){
-    //             count--;
-    //     }
-    // }
-    //     return count;
-        int cur=1;
-        int d=1;
-        int ela=0;
-        while(ela < time){
-            cur+=d;
-            if(cur == n ||cur == 1){
-                d=-d;
+        //     int count=0;
+        //     for(int i=1; i<=time; i++){
+        //         if(i < n){
+        //             count+=1;
+        //         }
+        //         if(i>n){
+        //             count--;
+        //     }
+        // }
+        //     return count;
+        int cur = 1;
+        int d = 1;
+        int ela = 0;
+        while (ela < time) {
+            cur += d;
+            if (cur == n || cur == 1) {
+                d = - d;
             }
             ela++;
         }
         return cur;
-}
+    }
 }

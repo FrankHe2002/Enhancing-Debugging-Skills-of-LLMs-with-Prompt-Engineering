@@ -1,21 +1,22 @@
 // Runtime: 3 ms (Top 66.89%) | Memory: 41.9 MB (Top 78.38%)
 class Solution {
     // for the ease to check CDATA starting tag
-    private static final char[] CDATA_TAG = {'[','C','D','A','T','A','['};
+    private static final char[] CDATA_TAG = {'[', 'C', 'D', 'A', 'T', 'A', '['};
+
     public boolean isValid(String code) {
         // make sure it is possible to have a start tag and an end tag
-        if (!code.startsWith("<") || !code.endsWith(">")) {
+        if (! code.startsWith("<") || ! code.endsWith(">")) {
             return false;
         }
         Deque<String> stack = new ArrayDeque<>();
-        for (int i = 0; i < code.length(); ++i) {
+        for (int i = 0; i < code.length(); ++ i) {
             char ch = code.charAt(i);
             // if it is a special tag
             if (ch == '<') {
                 if (i == code.length() - 1) {
                     return false;
                 }
-                ch = code.charAt(++i);
+                ch = code.charAt(++ i);
                 // is end tag
                 if (ch == '/') {
                     // we should have a start tag to match the end tag
@@ -27,7 +28,7 @@ class Solution {
                     // build tag and move i to the > for the next round
                     i = buildTag(code, i + 1, sb);
                     // if tag is unmatch, return false
-                    if (!stack.pop().equals(sb.toString())) {
+                    if (! stack.pop().equals(sb.toString())) {
                         return false;
                     }
                     // if no start tag left and we are not at the end. The rest content is not enclosed. -> false
@@ -51,7 +52,7 @@ class Solution {
                         return false;
                     }
                     StringBuilder sb = new StringBuilder();
-                    i = buildTag(code, i , sb);
+                    i = buildTag(code, i, sb);
                     // TAG_NAME should less than 9
                     if (sb.isEmpty() || sb.length() > 9) {
                         return false;
@@ -66,14 +67,14 @@ class Solution {
     private int buildTag(String code, int start, StringBuilder sb) {
         int i = start;
         // we only go to 10 because the max length is 9
-        for (; i < start + 10 && i < code.length(); ++i) {
+        for (; i < start + 10 && i < code.length(); ++ i) {
             char ch = code.charAt(i);
             // find the end;
             if (ch == '>') {
                 break;
             }
             // TAG_NAME should be in uppercase only
-            if (!Character.isUpperCase(ch)) {
+            if (! Character.isUpperCase(ch)) {
                 // clear the string builder for invalid TAG_NAME
                 sb.setLength(0);
                 break;
@@ -86,21 +87,21 @@ class Solution {
     private int validAndMoveCDATA(String code, int start) {
         // the length of [CDATA[]]> is 10 we need at least 10 characters left
         if (code.length() - start < 10) {
-            return -1;
+            return - 1;
         }
         // check the start part
         int i = start;
-        for (int j = 0; j < CDATA_TAG.length; ++j) {
+        for (int j = 0; j < CDATA_TAG.length; ++ j) {
             char ch = code.charAt(i++);
             if (ch != CDATA_TAG[j]) {
-                return -1;
+                return - 1;
             }
         }
         // keep the last two characters for identifying the end
         char prev0 = '\0';
         char prev1 = '\0';
 
-        for (; i < code.length(); ++i) {
+        for (; i < code.length(); ++ i) {
             char ch = code.charAt(i);
             if (ch == '>' && prev1 == ']' && prev0 == ']') {
                 return i;
@@ -109,6 +110,6 @@ class Solution {
             prev1 = ch;
         }
         // no end found
-        return -1;
+        return - 1;
     }
 }

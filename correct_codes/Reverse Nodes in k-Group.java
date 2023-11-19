@@ -18,8 +18,7 @@ class Solution {
                 end.add(ptr);
                 ptr = null;
                 numOfNodes -= count;
-            }
-            else {
+            } else {
                 f = head;
                 break;
             }
@@ -29,6 +28,7 @@ class Solution {
         start.get(n - 1).next = f;
         return end.get(0);
     }
+
     public int count(ListNode head) {
         ListNode temp = head;
         int count = 0;

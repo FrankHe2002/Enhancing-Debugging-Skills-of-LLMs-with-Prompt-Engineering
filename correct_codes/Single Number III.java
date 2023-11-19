@@ -13,6 +13,6 @@ class Solution {
             if ((num & rightmostBit) != 0) num1 ^= num;
             else num2 ^= num;
         }
-        return new int[]{num1, num2};
+        return new int[] {num1, num2};
     }
 }

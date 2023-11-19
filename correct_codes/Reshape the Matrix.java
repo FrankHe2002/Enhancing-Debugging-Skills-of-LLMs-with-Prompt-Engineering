@@ -11,8 +11,8 @@ class Solution {
         int i = 0;
         int j = 0;
 
-        for(int k = 0; k < mat.length; k++) {
-            for(int l = 0; l < mat[0].length; l++) {
+        for (int k = 0; k < mat.length; k++) {
+            for (int l = 0; l < mat[0].length; l++) {
                 if (j == c) {
                     i++;
                     j = 0;

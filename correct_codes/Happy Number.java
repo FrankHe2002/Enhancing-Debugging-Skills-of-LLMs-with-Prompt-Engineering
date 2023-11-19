@@ -19,8 +19,8 @@ class Solution {
             // If total is equal to 1 return true.
             if (total == 1)
                 return true;
-            // Insert the current number into the set s...
-            // Replace the current number with total of the square of its digits.
+                // Insert the current number into the set s...
+                // Replace the current number with total of the square of its digits.
             else
                 n = total;
         }

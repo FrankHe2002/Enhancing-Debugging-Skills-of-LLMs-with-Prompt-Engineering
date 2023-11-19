@@ -9,14 +9,14 @@ class Solution {
         int[] firstOcc = new int[26];
         int[] lastOcc = new int[26];
 
-        Arrays.fill(firstOcc, -1);
-        Arrays.fill(lastOcc, -1);
+        Arrays.fill(firstOcc, - 1);
+        Arrays.fill(lastOcc, - 1);
 
-        for(int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
 
             char ch = chArr[i];
 
-            if(firstOcc[ch - 'a'] == -1){
+            if (firstOcc[ch - 'a'] == - 1) {
                 firstOcc[ch - 'a'] = i;
             }
 
@@ -28,7 +28,7 @@ class Solution {
         boolean[] visited;
 
         // check for each character ( start or end of palindrome )
-        for(int i = 0; i < 26; i++){
+        for (int i = 0; i < 26; i++) {
 
             int si = firstOcc[i]; // si - starting index
             int ei = lastOcc[i]; // ei - ending index
@@ -38,9 +38,9 @@ class Solution {
             count = 0;
 
             // check for unique charcters ( middle of palindrome )
-            for(int j = si + 1; j < ei; j++){
+            for (int j = si + 1; j < ei; j++) {
 
-                if(!visited[chArr[j] - 'a']){
+                if (! visited[chArr[j] - 'a']) {
                     visited[chArr[j] - 'a'] = true;
                     count++;
                 }

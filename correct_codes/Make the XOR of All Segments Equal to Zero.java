@@ -10,9 +10,9 @@ class Solution {
         // iterate over over each offset i of the solution
         for (int i = 0; i < k; i++) {
             // find frequencies of distinct element values present in the subsequence with offset i
-            Map<Integer,Integer> n2c = new HashMap<Integer,Integer>();
+            Map<Integer, Integer> n2c = new HashMap<Integer, Integer>();
             for (int p = i; p < nums.length; p += k) {
-                n2c.put(nums[p],1+n2c.getOrDefault(nums[p],0));
+                n2c.put(nums[p], 1 + n2c.getOrDefault(nums[p], 0));
             }
             // treat initial subsequence (i = 0) correctly
             if (i == 0) {

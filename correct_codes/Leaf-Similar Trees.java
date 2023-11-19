@@ -6,11 +6,11 @@ class Solution {
         List<Integer> list2 = new ArrayList<>();
         checkLeaf(root2, list2);
 
-        if(list1.size() != list2.size()) return false;
+        if (list1.size() != list2.size()) return false;
 
         int i = 0;
-        while(i < list1.size()){
-            if(list1.get(i) != list2.get(i)){
+        while (i < list1.size()) {
+            if (list1.get(i) != list2.get(i)) {
                 return false;
             }
             i++;
@@ -18,9 +18,9 @@ class Solution {
         return true;
     }
 
-    private void checkLeaf(TreeNode node, List<Integer> arr){
-        if(node.left == null && node.right == null) arr.add(node.val);
-        if(node.left != null) checkLeaf(node.left, arr);
-        if(node.right != null) checkLeaf(node.right, arr);
+    private void checkLeaf(TreeNode node, List<Integer> arr) {
+        if (node.left == null && node.right == null) arr.add(node.val);
+        if (node.left != null) checkLeaf(node.left, arr);
+        if (node.right != null) checkLeaf(node.right, arr);
     }
 }

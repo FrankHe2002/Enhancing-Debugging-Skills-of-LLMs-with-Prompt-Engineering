@@ -4,7 +4,7 @@ class Solution {
         Map<Integer, int[]> seats = new HashMap<>();
         int availableSlots = 2 * n; // max available slots since each empty row could fit at max 2 slots
 
-        for (int[] seat: reservedSeats) {
+        for (int[] seat : reservedSeats) {
             int row = seat[0];
             int col = seat[1];
             int[] slots = seats.getOrDefault(row, new int[3]);
@@ -22,7 +22,7 @@ class Solution {
             seats.put(seat[0], slots);
         }
 
-        for (int[] slots: seats.values()) {
+        for (int[] slots : seats.values()) {
             int taken = slots[0] + slots[2];
 
             if (taken == 2) { // both slots at either ends are taken

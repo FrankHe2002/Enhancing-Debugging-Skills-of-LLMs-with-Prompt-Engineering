@@ -6,8 +6,7 @@ class Solution {
         int output = Integer.MIN_VALUE;
 
         //This is greedy, so n/2 pairs must be from start and end and move inwards
-        for(int i=0, j=nums.length - 1; i<nums.length/2; i++, j--)
-        {
+        for (int i = 0, j = nums.length - 1; i < nums.length / 2; i++, j--) {
             output = Math.max(output, nums[i] + nums[j]);
         }
 

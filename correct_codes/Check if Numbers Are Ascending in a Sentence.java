@@ -5,14 +5,14 @@ class Solution {
     public boolean areNumbersAscending(String s) {
         int prev = 0;
 
-        for(String token: s.split(" ")) {
+        for (String token : s.split(" ")) {
             try {
                 int number = Integer.parseInt(token);
-                if(number <= prev)
+                if (number <= prev)
                     return false;
                 prev = number;
+            } catch (Exception e) {
             }
-            catch(Exception e) {}
         }
 
         return true;

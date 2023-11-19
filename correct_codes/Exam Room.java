@@ -31,7 +31,7 @@ class ExamRoom {
         taken.remove(p);
         var lo = taken.lower(p);
         if (lo == null)
-            lo = -1;
+            lo = - 1;
         var hi = taken.higher(p);
         if (hi == null)
             hi = max + 1;

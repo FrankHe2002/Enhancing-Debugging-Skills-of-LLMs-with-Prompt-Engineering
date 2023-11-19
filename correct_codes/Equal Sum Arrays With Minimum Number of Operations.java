@@ -2,7 +2,7 @@
 class Solution {
     public int minOperations(int[] nums1, int[] nums2) {
         int m = nums1.length, n = nums2.length;
-        if (m > 6 * n || n > 6 * m) return -1;
+        if (m > 6 * n || n > 6 * m) return - 1;
 
         int sum1 = 0, sum2 = 0;
         for (int i : nums1) sum1 += i;
@@ -12,7 +12,7 @@ class Solution {
         if (diff == 0) return 0;
 
         return (diff > 0 ? helper(nums1, nums2, diff)
-                         : helper(nums2, nums1, -diff));
+                : helper(nums2, nums1, - diff));
     }
 
     private int helper(int[] nums1, int[] nums2, int diff) {

@@ -21,8 +21,8 @@ class Solution {
         }
         return res;
     }
-    
-    public boolean isPossible(int [] weights, int days, int mid) {
+
+    public boolean isPossible(int[] weights, int days, int mid) {
         int totalDays = 1;
         int totalWeight = 0;
         for (int i = 0; i < weights.length; i++) {
@@ -30,8 +30,8 @@ class Solution {
             // increase totalDays if totalWeight is larger than mid
             if (totalWeight > mid) {
                 totalDays++;
-                totalWeight = weights[i]; 
-            } 
+                totalWeight = weights[i];
+            }
             // the problem states all the packages have to ship within `days` days 
             if (totalDays > days) {
                 return false;
@@ -39,5 +39,5 @@ class Solution {
         }
         return true;
     }
-    
+
 }

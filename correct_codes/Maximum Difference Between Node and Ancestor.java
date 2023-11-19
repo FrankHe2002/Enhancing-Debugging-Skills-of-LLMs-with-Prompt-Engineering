@@ -1,4 +1,5 @@
 // Runtime: 1 ms (Top 70.91%) | Memory: 41.7 MB (Top 98.42%)
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -23,7 +24,7 @@ class Solution {
     }
 
     public int find(TreeNode root, int min, int max) {
-        if (root == null) return Math.abs(max-min);
+        if (root == null) return Math.abs(max - min);
 
         min = Math.min(min, root.val);
         max = Math.max(max, root.val);

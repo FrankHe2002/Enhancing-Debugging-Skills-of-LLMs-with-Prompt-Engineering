@@ -1,13 +1,12 @@
 class Solution {
     public List<String> buildArray(int[] target, int n) {
-      List<String> result=new ArrayList<>();
-        int i=1,j=0;
-        while(j<target.length)
-        {
+        List<String> result = new ArrayList<>();
+        int i = 1, j = 0;
+        while (j < target.length) {
             result.add("Push");
-            if(i==target[j]){
+            if (i == target[j]) {
                 j++;
-            }else{
+            } else {
                 result.add("Pop");
             }
             i++;

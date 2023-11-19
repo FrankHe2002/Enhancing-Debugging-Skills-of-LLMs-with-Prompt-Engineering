@@ -22,7 +22,7 @@ class Solution {
         }
         for (int i = 0; i < groups.size(); i++) {
             if (i < groups.size() - 2) {
-                max = Math.max(max, groups.get(i) + groups.get(i+2));
+                max = Math.max(max, groups.get(i) + groups.get(i + 2));
             } else {
                 max = Math.max(max, groups.get(i));
             }

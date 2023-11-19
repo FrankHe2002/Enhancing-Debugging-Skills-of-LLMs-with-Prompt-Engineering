@@ -4,11 +4,11 @@ class Solution {
         int length = 0;
         boolean flag = false;
 
-        for(Character c : s.toCharArray()) {
-            if(c == ' ' && flag) {
+        for (Character c : s.toCharArray()) {
+            if (c == ' ' && flag) {
                 length++;
-                flag = !flag;
-            } else if(c != ' ') {
+                flag = ! flag;
+            } else if (c != ' ') {
                 flag = true;
             }
         }

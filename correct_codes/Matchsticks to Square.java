@@ -19,7 +19,7 @@ class Solution {
         }
 
         // hypothesis
-        for(int i = idx; i < nums.length; i++) {
+        for (int i = idx; i < nums.length; i++) {
             // if number is already visited or sum if out of range then skip
             if (vis[i] || subsetSum + nums[i] > target)
                 continue;
@@ -27,7 +27,7 @@ class Solution {
             // Pruning
             // if the last position (i - 1) is not visited, that means the current combination didn't work,
             // and since this position (i) has the same value, it won't work for it as well. Thus, skip it.
-            if (i - 1 >= 0 && nums[i] == nums[i - 1] && !vis[i - 1])
+            if (i - 1 >= 0 && nums[i] == nums[i - 1] && ! vis[i - 1])
                 continue;
 
             vis[i] = true;
@@ -57,7 +57,7 @@ class Solution {
         Arrays.sort(matchsticks);
         reverse(matchsticks);
 
-        for(int match: matchsticks)
+        for (int match : matchsticks)
             sum += match;
 
         if (sum % k != 0)

@@ -3,7 +3,7 @@ class Solution {
     public int maximumProduct(int[] nums) {
         int min1 = Integer.MAX_VALUE, min2 = Integer.MAX_VALUE;
         int max1 = Integer.MIN_VALUE, max2 = Integer.MIN_VALUE, max3 = Integer.MIN_VALUE;
-        for (int n: nums) {
+        for (int n : nums) {
             if (n <= min1) {
                 min2 = min1;
                 min1 = n;

@@ -3,7 +3,7 @@
 class Solution {
     public int numOfMinutes(int n, int headID, int[] manager, int[] informTime) {
         Map<Integer, List<Integer>> graph = new HashMap<>();
-        for(int i=0; i<n; i++) {
+        for (int i = 0; i < n; i++) {
             graph.putIfAbsent(manager[i], new ArrayList<>());
             graph.get(manager[i]).add(i);
         }
@@ -12,10 +12,10 @@ class Solution {
 
     int dfs(Map<Integer, List<Integer>> graph, int curHead, int[] informTime) {
         int curMax = 0;
-        if(!graph.containsKey(curHead)){
+        if (! graph.containsKey(curHead)) {
             return curMax;
         }
-        for(int subordinate : graph.get(curHead)) {
+        for (int subordinate : graph.get(curHead)) {
             curMax = Math.max(curMax, dfs(graph, subordinate, informTime));
         }
         return curMax + informTime[curHead];

@@ -10,26 +10,27 @@ class Solution {
         helper(1, n, k, ds, ans);
         return ans;
     }
-    private static void helper(int i, int tar, int k, List<Integer> ds, List<List<Integer>> ans){
+
+    private static void helper(int i, int tar, int k, List<Integer> ds, List<List<Integer>> ans) {
         //base
-        if(k == 0) {
-            if(tar == 0){
+        if (k == 0) {
+            if (tar == 0) {
                 ans.add(new ArrayList<>(ds));
             }
             return;
         }
-        if(tar == 0) return; //bcz if k is not zero and tar is zero then no possible valid combination
-        if(i > tar) return;
-        if(i > 9) return;
+        if (tar == 0) return; //bcz if k is not zero and tar is zero then no possible valid combination
+        if (i > tar) return;
+        if (i > 9) return;
 
         //Take
-        if(i <= tar) {
+        if (i <= tar) {
             ds.add(i);
-            helper(i+1, tar - i, k-1 , ds, ans);
-            ds.remove(ds.size()-1);
+            helper(i + 1, tar - i, k - 1, ds, ans);
+            ds.remove(ds.size() - 1);
         }
         // Not take
-        helper(i+1 , tar, k , ds, ans);
+        helper(i + 1, tar, k, ds, ans);
 
         return;
     }

@@ -13,8 +13,8 @@ class Solution {
         // All of the values r >= m and c >= n should be 0 (and will default to 0 during array construction).
         final int[][] brsum = new int[m + 1][n + 1];
         // Build up from bottom right, bottom to top and right to left.
-        for (int r = (m - 1); r >= 0; --r) {
-            for (int c = (n - 1); c >= 0; --c) {
+        for (int r = (m - 1); r >= 0; -- r) {
+            for (int c = (n - 1); c >= 0; -- c) {
                 final int val = matrix[r][c];
                 // did we happen to find a 1x1 rectangle at (r, c) which sums to k?
                 if (val == k) {
@@ -26,15 +26,15 @@ class Solution {
         }
         // Now, we search.
         int maxSum = Integer.MIN_VALUE;
-        for (int r0 = 0; r0 < m; ++r0) {
-            for (int rf = r0; rf < m; ++rf) {
+        for (int r0 = 0; r0 < m; ++ r0) {
+            for (int rf = r0; rf < m; ++ rf) {
                 final int rfp1 = rf + 1; // Let's avoid computing rf + 1 many times.
-                for (int c0 = 0; c0 < n; ++c0) {
-                    for (int cf = c0; cf < n; ++cf) {
+                for (int c0 = 0; c0 < n; ++ c0) {
+                    for (int cf = c0; cf < n; ++ cf) {
                         final int cfp1 = cf + 1; // Let's avoid computing cf + 1 multiple times.
-						// Compute the sum for this rectangle: complete - right - lower + lower_right.
+                        // Compute the sum for this rectangle: complete - right - lower + lower_right.
                         final int sum = brsum[r0][c0] + brsum[rfp1][cfp1] - brsum[r0][cfp1] - brsum[rfp1][c0];
-						// Did we happen to find a sum adding to k?  If not, did we find a larger sum less than k?
+                        // Did we happen to find a sum adding to k?  If not, did we find a larger sum less than k?
                         if (sum == k) {
                             return sum;
                         } else if (sum < k && sum > maxSum) {

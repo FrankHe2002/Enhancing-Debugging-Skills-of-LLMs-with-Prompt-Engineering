@@ -9,9 +9,9 @@ class Solution {
         long count = 0;
         int len = word.length();
 
-        for(int pos = 0; pos < len; pos++) {
-            if(isVowel(word.charAt(pos))) {
-                count += (long)(len - pos) * (long)(pos + 1);
+        for (int pos = 0; pos < len; pos++) {
+            if (isVowel(word.charAt(pos))) {
+                count += (long) (len - pos) * (long) (pos + 1);
             }
         }
 

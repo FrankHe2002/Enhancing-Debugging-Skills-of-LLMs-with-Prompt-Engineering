@@ -1,8 +1,12 @@
 // Runtime: 34 ms (Top 94.1%) | Memory: 44.35 MB (Top 43.8%)
 
 class Solution {
-    record Node(int i, int t) {}
-    record Cell(int i, int t, int c) {}
+    record Node(int i, int t) {
+    }
+
+    record Cell(int i, int t, int c) {
+    }
+
     public int minCost(int maxTime, int[][] edges, int[] fees) {
         int n = fees.length;
 
@@ -22,10 +26,10 @@ class Solution {
         Arrays.fill(T, maxTime + 1);
         T[0] = 0;
 
-        while (!q.isEmpty()) {
+        while (! q.isEmpty()) {
             var cur = q.poll();
-            if (cur.i == n-1) return cur.c;
-            
+            if (cur.i == n - 1) return cur.c;
+
             for (var nei : g[cur.i]) {
                 int t2 = cur.t + nei.t;
                 if (t2 >= T[nei.i]) continue; // if time is worst, no reason to continue
@@ -34,6 +38,6 @@ class Solution {
             }
         }
 
-        return -1;
+        return - 1;
     }
 }

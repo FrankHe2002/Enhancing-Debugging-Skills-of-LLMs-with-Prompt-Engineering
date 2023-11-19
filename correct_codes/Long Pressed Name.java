@@ -6,19 +6,13 @@ class Solution {
         int m = name.length();
         int n = typed.length();
 
-        while(j < n)
-        {
-            if(i < m && name.charAt(i) == typed.charAt(j))
-            {
+        while (j < n) {
+            if (i < m && name.charAt(i) == typed.charAt(j)) {
                 i++;
                 j++;
-            }
-            else if(j > 0 && typed.charAt(j) == typed.charAt(j-1))
-            {
+            } else if (j > 0 && typed.charAt(j) == typed.charAt(j - 1)) {
                 j++;
-            }
-            else
-            {
+            } else {
                 return false;
             }
         }

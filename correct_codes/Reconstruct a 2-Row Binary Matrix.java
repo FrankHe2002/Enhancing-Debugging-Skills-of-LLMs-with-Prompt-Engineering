@@ -9,57 +9,51 @@ class Solution {
         int uppersum = 0;
         int lowersum = 0;
 
-        for(int i=0; i<colsum.length; i++){
-            if(colsum[i] == 0)
+        for (int i = 0; i < colsum.length; i++) {
+            if (colsum[i] == 0)
                 continue;
 
-            if(colsum[i] == 2){
-                if(uppersum == upper){
-                    if(prev_upper.isEmpty())
+            if (colsum[i] == 2) {
+                if (uppersum == upper) {
+                    if (prev_upper.isEmpty())
                         return new ArrayList<>();
-                    else{
+                    else {
                         mat[0][prev_upper.peek()] = 0;
                         mat[1][prev_upper.pop()] = 1;
                         mat[0][i] = 1;
                         lowersum++;
                     }
-                }
-                else{
+                } else {
                     mat[0][i] = 1;
                     uppersum++;
                 }
 
-                if(lowersum == lower){
-                    if(prev_lower.isEmpty())
+                if (lowersum == lower) {
+                    if (prev_lower.isEmpty())
                         return new ArrayList<>();
-                    else{
+                    else {
                         mat[1][prev_lower.peek()] = 0;
                         mat[0][prev_lower.pop()] = 1;
                         mat[1][i] = 1;
                         uppersum++;
                     }
-                }
-                else{
+                } else {
                     mat[1][i] = 1;
                     lowersum++;
                 }
-            }
-            else if(uppersum < upper){
+            } else if (uppersum < upper) {
                 prev_upper.push(i);
                 mat[0][i] = 1;
                 uppersum++;
-            }
-
-            else if(lowersum < lower){
+            } else if (lowersum < lower) {
                 prev_lower.push(i);
                 mat[1][i] = 1;
                 lowersum++;
-            }
-            else
+            } else
                 return new ArrayList<>();
         }
 
-        if(uppersum != upper || lowersum != lower)
+        if (uppersum != upper || lowersum != lower)
             return new ArrayList<>();
 
         List<List<Integer>> ans = new ArrayList<>();
@@ -67,8 +61,8 @@ class Solution {
         ans.add(new ArrayList<>());
         ans.add(new ArrayList<>());
 
-        for(int i=0; i<mat.length; i++){
-            for(int j=0; j<mat[0].length; j++){
+        for (int i = 0; i < mat.length; i++) {
+            for (int j = 0; j < mat[0].length; j++) {
                 ans.get(i).add(mat[i][j]);
             }
         }

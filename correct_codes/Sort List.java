@@ -1,4 +1,5 @@
 // Runtime: 20 ms (Top 51.11%) | Memory: 78.2 MB (Top 48.67%)
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -22,6 +23,7 @@ class Solution {
 
         return mergeTwoLists(left, right);
     }
+
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode head = new ListNode();
         ListNode tail = head;

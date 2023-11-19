@@ -25,7 +25,7 @@ class Solution {
         }
 
         //compare to 90,180,270 and itself
-        if(Arrays.deepEquals(target, res) || Arrays.deepEquals(target, res2) || Arrays.deepEquals(target, res3) || Arrays.deepEquals(target, mat) ){
+        if (Arrays.deepEquals(target, res) || Arrays.deepEquals(target, res2) || Arrays.deepEquals(target, res3) || Arrays.deepEquals(target, mat)) {
             return true;
         }
         return false;

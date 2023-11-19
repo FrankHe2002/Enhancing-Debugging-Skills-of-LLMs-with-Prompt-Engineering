@@ -6,15 +6,15 @@ class Solution {
         double res = Double.MAX_VALUE;
         for (int i = 0; i < points.length; i++) {
             int[] p1 = points[i];
-            for (int j = i+1; j < points.length; j++) {
+            for (int j = i + 1; j < points.length; j++) {
                 int[] p2 = points[j];
                 // get mid point
-                Pair<Double, Double> pm = new Pair((p1[0]+p2[0])/2d, (p1[1]+p2[1])/2d);
-                if (!map.containsKey(pm))
+                Pair<Double, Double> pm = new Pair((p1[0] + p2[0]) / 2d, (p1[1] + p2[1]) / 2d);
+                if (! map.containsKey(pm))
                     map.put(pm, new HashMap<>());
                 // get diagonal length
                 double dist2 = dist2(p1, p2);
-                if (!map.get(pm).containsKey(dist2))
+                if (! map.get(pm).containsKey(dist2))
                     map.get(pm).put(dist2, new ArrayList<>());
 
                 // calculate area for each pair of p3/p4 and check min
@@ -25,7 +25,7 @@ class Solution {
                     double d2 = dist2(p1, ps[1]);
                     res = Math.min(res, Math.sqrt(d1 * d2));
                 }
-                map.get(pm).get(dist2).add(new int[][]{p1, p2});
+                map.get(pm).get(dist2).add(new int[][] {p1, p2});
             }
         }
 
@@ -33,6 +33,6 @@ class Solution {
     }
 
     private double dist2(int[] p1, int[] p2) {
-        return (p2[0]-p1[0])*(p2[0]-p1[0]) + (p2[1]-p1[1])*(p2[1]-p1[1]);
+        return (p2[0] - p1[0]) * (p2[0] - p1[0]) + (p2[1] - p1[1]) * (p2[1] - p1[1]);
     }
 }

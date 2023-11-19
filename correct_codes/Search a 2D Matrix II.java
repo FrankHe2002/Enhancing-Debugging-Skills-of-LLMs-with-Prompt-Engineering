@@ -4,7 +4,7 @@ class Solution {
         int rows = matrix.length;
         int cols = matrix[0].length;
         int lo = 0, hi = rows;
-        while(lo + 1 < hi) {
+        while (lo + 1 < hi) {
             int mid = lo + (hi - lo) / 2;
             if (matrix[mid][0] <= target) {
                 lo = mid;

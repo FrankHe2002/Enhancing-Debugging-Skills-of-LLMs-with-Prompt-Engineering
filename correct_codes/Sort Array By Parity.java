@@ -5,10 +5,10 @@ class Solution {
         int i = 0;
         int j = 0;
 
-        while(i < nums.length){
-            if(nums[i] % 2 == 1){
+        while (i < nums.length) {
+            if (nums[i] % 2 == 1) {
                 i++;
-            }else{
+            } else {
                 int temp = nums[i];
                 nums[i] = nums[j];
                 nums[j] = temp;

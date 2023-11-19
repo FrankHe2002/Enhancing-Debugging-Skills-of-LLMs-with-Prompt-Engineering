@@ -8,11 +8,11 @@ class Solution {
     public List<Integer> pancakeSort(int[] arr) {
         List<Integer> list = new ArrayList<>();
         int n = arr.length;
-        while(n!=1) {
-            int maxIndex = findIndex(arr,n);
+        while (n != 1) {
+            int maxIndex = findIndex(arr, n);
             reverse(arr, maxIndex);
-            reverse(arr, n-1);
-            list.add(maxIndex+1);
+            reverse(arr, n - 1);
+            list.add(maxIndex + 1);
             list.add(n);
             n--;
         }
@@ -20,8 +20,8 @@ class Solution {
     }
 
     static int findIndex(int[] arr, int value) {
-        for(int i=0; i<arr.length; i++) {
-            if(arr[i] == value){
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == value) {
                 return i;
             }
         }
@@ -30,7 +30,7 @@ class Solution {
 
     static void reverse(int[] arr, int maxIndex) {
         int l = 0;
-        while(l<maxIndex) {
+        while (l < maxIndex) {
             int temp = arr[l];
             arr[l] = arr[maxIndex];
             arr[maxIndex] = temp;

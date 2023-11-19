@@ -33,7 +33,7 @@ class Solution {
         freq = 0;
         long count2 = 0;
         //O(N)
-        for (int i = text2.length() - 1; i>= 0; i--) {
+        for (int i = text2.length() - 1; i >= 0; i--) {
             if (text2.charAt(i) == pattern.charAt(1)) {
                 freq++;
             } else if (text2.charAt(i) == pattern.charAt(0)) {

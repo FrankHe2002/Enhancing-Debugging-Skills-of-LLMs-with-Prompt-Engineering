@@ -2,6 +2,7 @@
 class Solution {
     int max = 0;
     int len;
+
     public int findBestValue(int[] arr, int target) {
         this.len = arr.length;
 
@@ -10,10 +11,10 @@ class Solution {
 
         int l = 0;
         int r = max;
-        while(l < r){
-            int mid = l + (r-l) / 2;
+        while (l < r) {
+            int mid = l + (r - l) / 2;
 
-            if(check(arr, mid, target) <= check(arr, mid+1, target))
+            if (check(arr, mid, target) <= check(arr, mid + 1, target))
                 r = mid;
             else
                 l = mid + 1;
@@ -21,15 +22,15 @@ class Solution {
         return l;
     }
 
-    private int check(int[] arr, int value, int target){
+    private int check(int[] arr, int value, int target) {
         int sum = 0;
-        for(int e : arr){
-            if(e > value)
+        for (int e : arr) {
+            if (e > value)
                 sum += value;
             else
                 sum += e;
         }
 
-        return Math.abs(sum-target);
+        return Math.abs(sum - target);
     }
 }

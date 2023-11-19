@@ -8,45 +8,45 @@ class Solution {
         int prRotn = 0;
         int cSit = 0;
 
-        for(int i = 0 ; i < customers.length ; i++){
+        for (int i = 0; i < customers.length; i++) {
             cust += customers[i];
             rotatn++;
 
             int prof = 0;
-            if(cust >= 4){
-                
+            if (cust >= 4) {
+
                 cust = cust - 4;
                 cSit += 4;
-            }else{
+            } else {
                 cSit += cust;
                 cust = 0;
             }
-            prof = cSit*boardingCost - rotatn*runningCost ;
-            if(prof > profit){
+            prof = cSit * boardingCost - rotatn * runningCost;
+            if (prof > profit) {
                 profit = prof;
                 prRotn = rotatn;
-            }  
+            }
         }
-        while(cust > 0){
+        while (cust > 0) {
             rotatn++;
 
             int prof = 0;
-            if(cust >= 4){
+            if (cust >= 4) {
                 cust = cust - 4;
                 cSit += 4;
-            }else{
+            } else {
                 cSit += cust;
                 cust = 0;
             }
-            prof = cSit*boardingCost - rotatn*runningCost ;
+            prof = cSit * boardingCost - rotatn * runningCost;
 
-            if(prof > profit){
+            if (prof > profit) {
                 profit = prof;
 
                 prRotn = rotatn;
-            } 
+            }
         }
-        if(profit > 0) return prRotn;
-        return -1;
+        if (profit > 0) return prRotn;
+        return - 1;
     }
 }

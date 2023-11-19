@@ -11,6 +11,6 @@ class Solution {
                 sum += Math.min(duration, timeSeries[i] - timeSeries[i - 1]);
             }
         }
-        return sum;       
+        return sum;
     }
 }

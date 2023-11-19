@@ -12,7 +12,7 @@ class Solution {
                 if (curr.left != null) q.offer(curr.left);
                 if (curr.right != null) q.offer(curr.right);
             }
-            ans.add(row/qlen);
+            ans.add(row / qlen);
         }
         return ans;
     }

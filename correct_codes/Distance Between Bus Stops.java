@@ -13,8 +13,7 @@ class Solution {
             //continues checking till start (if needed)
             for (int i = 0; i < start; i++)
                 secondDistance += distance[i];
-        }
-        else {
+        } else {
             for (int i = start; i < distance.length; i++)
                 firstDistance += distance[i];
             for (int i = 0; i < destination; i++)

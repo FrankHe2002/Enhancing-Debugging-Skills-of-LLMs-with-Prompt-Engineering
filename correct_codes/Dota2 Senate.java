@@ -17,7 +17,7 @@ class Solution {
                 queD.add(i);
             }
         }
-        while (!queR.isEmpty() && !queD.isEmpty()) {
+        while (! queR.isEmpty() && ! queD.isEmpty()) {
             int r = queR.poll();
             int d = queD.poll();
             if (r < d) {  // R is alive in the next round.

@@ -23,7 +23,7 @@ class Solution {
         var hi = origHi;
         while (mid < hi) {
             if (pivot < nums[mid])
-                swap(nums, mid, --hi);
+                swap(nums, mid, -- hi);
             else if (pivot > nums[mid])
                 swap(nums, mid++, lo++);
             else

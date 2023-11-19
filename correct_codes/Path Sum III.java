@@ -11,28 +11,28 @@ class Solution {
 
     public int solve(HashMap<Long, Integer> hm, TreeNode node, long tgt, long c_sum) {
 
-        if(node == null)
+        if (node == null)
             return 0;
 
         c_sum += node.val;
 
         int res = 0;
 
-        if(c_sum == tgt) //--> either this condition or the above commented condition.
+        if (c_sum == tgt) //--> either this condition or the above commented condition.
             res++;
 
-        if(hm.containsKey(c_sum-tgt)){
-            res += hm.get(c_sum-tgt);
+        if (hm.containsKey(c_sum - tgt)) {
+            res += hm.get(c_sum - tgt);
         }
 
-        hm.put(c_sum, hm.getOrDefault(c_sum,0)+1);
+        hm.put(c_sum, hm.getOrDefault(c_sum, 0) + 1);
 
         int left = solve(hm, node.left, tgt, c_sum);
         int right = solve(hm, node.right, tgt, c_sum);
 
-        res += (left+right);
+        res += (left + right);
 
-        hm.put(c_sum, hm.getOrDefault(c_sum,0)-1); //remove the calculated cumulative sum
+        hm.put(c_sum, hm.getOrDefault(c_sum, 0) - 1); //remove the calculated cumulative sum
 
         return res;
 

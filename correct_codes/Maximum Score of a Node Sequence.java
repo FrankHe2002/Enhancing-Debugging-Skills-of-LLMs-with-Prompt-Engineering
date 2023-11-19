@@ -70,13 +70,13 @@ class Solution {
                 }
             }
         }
-        int max = -1;
+        int max = - 1;
         for (int[] edge : edges) {
             int s = edge[0];
             int e = edge[1];
             int pos = scores[s] + scores[e];
-            int p1 = -1;
-            int p2 = -1;
+            int p1 = - 1;
+            int p2 = - 1;
             boolean fine = true;
             if (count[s][1] == e) {
                 if (count[s][2] == 0)
@@ -97,8 +97,8 @@ class Solution {
                 if (count[s][2] > 0)
                     p2 = count[s][3];
             }
-            int p3 = -1;
-            int p4 = -1;
+            int p3 = - 1;
+            int p4 = - 1;
             if (count[e][1] == s) {
                 if (count[e][2] == 0)
                     fine = false;
@@ -120,9 +120,9 @@ class Solution {
             }
             if (fine) {
                 if (p1 == p3) {
-                    if (p4 > -1)
+                    if (p4 > - 1)
                         max = Math.max(max, pos + scores[p1] + scores[p4]);
-                    if (p2 > -1)
+                    if (p2 > - 1)
                         max = Math.max(max, pos + scores[p1] + scores[p2]);
                 } else {
                     max = Math.max(max, pos + scores[p1] + scores[p3]);

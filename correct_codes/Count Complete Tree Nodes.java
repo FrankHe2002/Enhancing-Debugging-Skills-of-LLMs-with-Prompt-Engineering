@@ -1,4 +1,5 @@
 // Runtime: 0 ms (Top 100.00%) | Memory: 50.7 MB (Top 10.84%)
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -18,8 +19,8 @@ class Solution {
 
     static int count = 0;
 
-    static void Postorder(TreeNode root){
-        if(root == null){
+    static void Postorder(TreeNode root) {
+        if (root == null) {
             return;
         }
         Postorder(root.left);

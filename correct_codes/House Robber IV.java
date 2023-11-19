@@ -11,7 +11,7 @@ class Solution {
         }
 
         while (l < r) { // straight forward binary search logic for min valid value
-            int m = l + (r-l)/2;
+            int m = l + (r - l) / 2;
             if (valid(a, m, k)) r = m;
             else l = m + 1;
         }
@@ -22,7 +22,7 @@ class Solution {
     private boolean valid(int[] a, int m, int k) {
         for (int i = 0; i < a.length; ) {
             if (a[i] <= m) { // will hit ith house, GREEDY
-                if (--k == 0) return true; // hit enough of k houses
+                if (-- k == 0) return true; // hit enough of k houses
                 i += 2; // if this one is taken, stip next
             } else i++; // if this one is not taken, move on to next
         }

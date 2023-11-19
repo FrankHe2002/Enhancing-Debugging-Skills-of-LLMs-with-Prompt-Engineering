@@ -1,6 +1,7 @@
 // Runtime: 24 ms (Top 51.63%) | Memory: 58.9 MB (Top 49.30%)
 class Solution {
     private int N = 26;
+
     public boolean closeStrings(String word1, String word2) {
         // count the English letters
         int[] arr1 = new int[N], arr2 = new int[N];

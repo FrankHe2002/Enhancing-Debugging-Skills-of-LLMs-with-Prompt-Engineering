@@ -4,8 +4,8 @@ class Solution {
         StringBuffer sb = new StringBuffer();
         StringBuffer temp = new StringBuffer("a"); // temporary stringbuffer
 
-        for(String str : sentence.split(" ")) {
-            if(beginsWithConsonant(str)) {
+        for (String str : sentence.split(" ")) {
+            if (beginsWithConsonant(str)) {
                 sb.append(str.substring(1)); // removing the first letter
                 sb.append(str.charAt(0)); // appending it to the end
             } else {
@@ -26,6 +26,6 @@ class Solution {
     }
 
     public boolean beginsWithConsonant(String str) {
-        return "aeiou".indexOf(str.toLowerCase().charAt(0)) == -1;
+        return "aeiou".indexOf(str.toLowerCase().charAt(0)) == - 1;
     }
 }

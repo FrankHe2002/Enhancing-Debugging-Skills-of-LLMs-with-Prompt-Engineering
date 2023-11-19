@@ -6,7 +6,7 @@ class Solution {
         for (int x : a) if (x > r) r = x;
 
         while (l < r) {
-            int m = l + (r-l)/2;
+            int m = l + (r - l) / 2;
             if (valid(a, m, h)) r = m;
             else l = m + 1;
         }
@@ -16,7 +16,7 @@ class Solution {
 
     private boolean valid(int[] a, int m, int h) {
         for (int x : a)
-            if ((h -= (x + m-1)/m) < 0) return false;
+            if ((h -= (x + m - 1) / m) < 0) return false;
         return true;
     }
 }

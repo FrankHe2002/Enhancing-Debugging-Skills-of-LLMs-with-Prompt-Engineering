@@ -6,7 +6,7 @@ class Solution {
             // char - char is a kind of clever way to get the position of
             // the character in the alphabet. 'a' - 'a' would give you 0.
             // 'b' - 'a' would give you 1. 'c' - 'a' would give you 2, and so on.
-            freq[chars.charAt(i) - 'a'] ++;
+            freq[chars.charAt(i) - 'a']++;
         }
 
         int result = 0;

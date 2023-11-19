@@ -1,14 +1,14 @@
 class Solution {
     public TreeNode convertBST(TreeNode root) {
-    if(root!=null) {
+        if (root != null) {
 
 
-        List<Integer> nodesValues = new ArrayList<>();
-        helperNodesVales(root, nodesValues);
-        traverseAndAdd(root, nodesValues);
+            List<Integer> nodesValues = new ArrayList<>();
+            helperNodesVales(root, nodesValues);
+            traverseAndAdd(root, nodesValues);
 
-        return root;
-    }
+            return root;
+        }
         return null;
     }
 

@@ -3,7 +3,7 @@ class Solution {
     int[] arr;
     int target;
     int min;
-    
+
     public int closestToTarget(int[] arr, int target) {
         int n = arr.length;
         this.arr = arr;
@@ -16,6 +16,7 @@ class Solution {
         }
         return min;
     }
+
     private void add(int x, int l, int r, int n) {
         if (l == r) {
             tree[n] = arr[x];

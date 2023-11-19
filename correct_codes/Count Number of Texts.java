@@ -2,9 +2,9 @@ class Solution {
     int mod = (1000000007);
 
     public int countTexts(String pressedKeys) {
-        int[] key = new int[] { 0, 0, 3, 3, 3, 3, 3, 4, 3, 4 };
+        int[] key = new int[] {0, 0, 3, 3, 3, 3, 3, 4, 3, 4};
         int n = pressedKeys.length();
-        return solve(0,pressedKeys,key);
+        return solve(0, pressedKeys, key);
     }
 
     public int solve(int ind, String s, int[] key) {
@@ -18,6 +18,6 @@ class Solution {
             count += solve(ind + 1 + i, s, key);
             count %= mod;
         }
-        return  count;
+        return count;
     }
 }

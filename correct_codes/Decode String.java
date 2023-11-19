@@ -13,7 +13,7 @@ class Solution {
         String insert = ""; // repeated string
         String end = ""; // remainder of string after repeated portion
 
-        while (bb != -1) { // while the string contains a beginning bracket
+        while (bb != - 1) { // while the string contains a beginning bracket
 
             while (nbb < eb && nbb > bb) { // while the next beginning bracket is before the ending bracket
                 bb = nbb; // update location of beginning bracket
@@ -24,10 +24,9 @@ class Solution {
             while (bb - nl >= 0) { // while there are characters in front of the beginning bracket
                 nd = s.charAt(bb - nl); // next digit
                 if (nd <= '9' && nd >= '0') { // if next digit is an integer
-                    n += (int)(nd - '0') * Math.pow(10, nl - 1); // update value of n
+                    n += (int) (nd - '0') * Math.pow(10, nl - 1); // update value of n
                     nl++; // increment length of n
-                }
-                else break; // not an integer
+                } else break; // not an integer
             }
 
             insert = s.substring(bb + 1, eb); // set repeated string

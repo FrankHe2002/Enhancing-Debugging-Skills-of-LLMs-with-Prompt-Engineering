@@ -1,9 +1,9 @@
 class Solution {
     public int calPoints(String[] ops) {
         List<Integer> list = new ArrayList<Integer>();
-        
-        for(int i = 0; i < ops.length; i++){
-            switch(ops[i]){
+
+        for (int i = 0; i < ops.length; i++) {
+            switch (ops[i]) {
                 case "C":
                     list.remove(list.size() - 1);
                     break;
@@ -18,11 +18,11 @@ class Solution {
                     break;
             }
         }
-        
+
         int finalScore = 0;
-        for(Integer score: list)
+        for (Integer score : list)
             finalScore += score;
-        
+
         return finalScore;
     }
 }

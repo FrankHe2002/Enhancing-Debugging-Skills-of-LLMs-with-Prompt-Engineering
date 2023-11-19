@@ -3,7 +3,7 @@ class Solution {
         int arr[] = new int[10], bulls = 0, cows = 0;
         for (int i = 0; i < secret.length(); i++) {
             char sec = secret.charAt(i);
-            char gue = guess.charAt(i); 
+            char gue = guess.charAt(i);
             if (sec == gue) bulls++;
             else {
                 if (arr[sec - '0'] < 0) cows++;

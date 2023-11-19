@@ -14,6 +14,6 @@ class Solution {
             if (visited.contains(x + "," + y)) return true;
             visited.add(x + "," + y);
         }
-        return false;       
+        return false;
     }
 }

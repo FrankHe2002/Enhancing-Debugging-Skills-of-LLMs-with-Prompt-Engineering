@@ -4,14 +4,14 @@ class Solution {
 
         int[] indegree = new int[n];
 
-        for(List<Integer> edge : edges) {
+        for (List<Integer> edge : edges) {
             indegree[edge.get(1)]++;
         }
 
         List<Integer> result = new ArrayList<>();
 
-        for(int i=0; i<n;i ++) {
-            if(indegree[i]==0)
+        for (int i = 0; i < n; i++) {
+            if (indegree[i] == 0)
                 result.add(i);
         }
 

@@ -3,42 +3,42 @@ class Solution {
 
     private final TrieNode trie = new TrieNode(' ');
 
-    class TrieNode{
+    class TrieNode {
 
         private Character digit;
         private String value;
         private boolean isWord;
         private Map<Character, TrieNode> children;
 
-        TrieNode(Character c){
+        TrieNode(Character c) {
             this.digit = c;
             this.isWord = false;
             this.children = new HashMap<>();
         }
 
-        void insert(String s){
+        void insert(String s) {
             TrieNode current = this;
-            for(Character c : s.toCharArray()){
+            for (Character c : s.toCharArray()) {
                 current = current.children.computeIfAbsent(c, k -> new TrieNode(c));
             }
             current.value = s;
             current.isWord = true;
         }
 
-        List<Integer> getWordsPreOrder(){
+        List<Integer> getWordsPreOrder() {
             return getWordsPreOrder(this);
         }
 
-        private List<Integer> getWordsPreOrder(TrieNode root){
+        private List<Integer> getWordsPreOrder(TrieNode root) {
             List<Integer> result = new ArrayList<>();
-            if(root == null){
+            if (root == null) {
                 return result;
             }
 
-            if(root.isWord){
+            if (root.isWord) {
                 result.add(Integer.parseInt(root.value));
             }
-            for(TrieNode node : root.children.values()){
+            for (TrieNode node : root.children.values()) {
                 result.addAll(getWordsPreOrder(node));
             }
             return result;
@@ -46,7 +46,7 @@ class Solution {
     }
 
     public List<Integer> lexicalOrder(int n) {
-        for(int i = 1 ; i<=n;i++){
+        for (int i = 1; i <= n; i++) {
             trie.insert(String.valueOf(i));
         }
         return trie.getWordsPreOrder();

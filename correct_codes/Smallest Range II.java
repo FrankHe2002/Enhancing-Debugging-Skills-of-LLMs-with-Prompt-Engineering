@@ -2,7 +2,7 @@
 class Solution {
     public int smallestRangeII(int[] nums, int k) {
         int n = nums.length;
-        if (n==1)
+        if (n == 1)
             return 0; // Max and min are the same
 
         Arrays.sort(nums);
@@ -19,8 +19,8 @@ class Solution {
         // numbers and subtract k from some numbers
         // Hence, the minimum score is the current score
 
-        if (k >= nums[n-1]-nums[0]) {
-            return nums[n-1]-nums[0];
+        if (k >= nums[n - 1] - nums[0]) {
+            return nums[n - 1] - nums[0];
         }
 
         // Now k < nums[n-1]-nums[0]
@@ -39,11 +39,11 @@ class Solution {
         // minimum = min (nums[0]+k , nums[p]-k)
         // maximum = max (nums[p-1]+k, nums[n-1]-k)
 
-        int minScore = nums[n-1]-nums[0];
-        for (int p=1;p<n;p++) {
-            int min = Math.min(nums[0]+k,nums[p]-k);
-            int max = Math.max(nums[p-1]+k,nums[n-1]-k);
-            minScore = Math.min(minScore,max-min);
+        int minScore = nums[n - 1] - nums[0];
+        for (int p = 1; p < n; p++) {
+            int min = Math.min(nums[0] + k, nums[p] - k);
+            int max = Math.max(nums[p - 1] + k, nums[n - 1] - k);
+            minScore = Math.min(minScore, max - min);
         }
 
         return minScore;

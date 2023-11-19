@@ -4,8 +4,8 @@ class Solution {
         int max = Integer.MIN_VALUE;
 
         TreeMap<Integer, List<Integer>> rects = new TreeMap<>();
-        for(int[] rect : rectangles) {
-            if (!rects.containsKey(rect[1])) {
+        for (int[] rect : rectangles) {
+            if (! rects.containsKey(rect[1])) {
                 rects.put(rect[1], new ArrayList<Integer>());
             }
 
@@ -13,19 +13,19 @@ class Solution {
             max = Math.max(max, rect[1]);
         }
 
-        for(int k : rects.keySet()) {
+        for (int k : rects.keySet()) {
             Collections.sort(rects.get(k));
         }
 
         int[] ans = new int[points.length];
-        for(int i = 0; i < points.length; i++) {
+        for (int i = 0; i < points.length; i++) {
             if (points[i][1] > max) {
                 continue;
             }
 
             int count = 0;
 
-            for(int key : rects.subMap(points[i][1], max + 1).keySet()) {
+            for (int key : rects.subMap(points[i][1], max + 1).keySet()) {
                 List<Integer> y = rects.get(key);
 
                 count += binarySearch(y, points[i][0]);
@@ -40,9 +40,9 @@ class Solution {
     private int binarySearch(List<Integer> vals, int val) {
         int lo = 0;
         int hi = vals.size() - 1;
-        int id = -1;
+        int id = - 1;
 
-        while(lo <= hi) {
+        while (lo <= hi) {
             int mid = lo + (hi - lo) / 2;
 
             if (vals.get(mid) < val) {

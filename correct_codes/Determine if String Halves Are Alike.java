@@ -19,7 +19,7 @@ class Solution {
         int count = 0;
         //increment the count for left half, decrement count for the second half if its a vowel
         for (int i = 0; i < s.length(); i++)
-            count += (set.contains(s.charAt(i))) ? ((i < mid) ? 1 : -1) : 0;
+            count += (set.contains(s.charAt(i))) ? ((i < mid) ? 1 : - 1) : 0;
         //finally count should be 0 to match left and right half
         return count == 0;
     }

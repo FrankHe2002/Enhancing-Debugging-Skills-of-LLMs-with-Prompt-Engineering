@@ -1,6 +1,6 @@
 class Solution {
     public int kthGrammar(int n, int k) {
-       if (n == 1 || k == 1) {
+        if (n == 1 || k == 1) {
             return 0;
         }
         int length = (int) Math.pow(2, n - 1);
@@ -13,6 +13,7 @@ class Solution {
             return 1;
         }
     }
+
     static int invert(int x) {
         if (x == 0) {
             return 1;

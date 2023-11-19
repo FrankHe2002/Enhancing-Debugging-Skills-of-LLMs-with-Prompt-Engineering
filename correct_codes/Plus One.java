@@ -5,22 +5,22 @@ class Solution {
         int len = digits.length;
 
         //last digit not a 9, just add 1 to it
-        if(digits[len - 1] != 9){
+        if (digits[len - 1] != 9) {
             digits[len - 1] = digits[len - 1] + 1;
             return digits;
         }
 
         //last digit is a 9, find the closest digit that is not a 9
-        else{
+        else {
             int i = len - 1;
-            while(i >= 0 && digits[i] == 9){
+            while (i >= 0 && digits[i] == 9) {
                 digits[i] = 0;
                 i--;
             }
-            if(i == -1){
+            if (i == - 1) {
                 int[] ret = new int[len + 1];
-                for(int j = 0; j < len; j++){
-                    ret[j+1] = digits[j];
+                for (int j = 0; j < len; j++) {
+                    ret[j + 1] = digits[j];
                 }
                 ret[0] = 1;
                 return ret;

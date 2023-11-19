@@ -1,14 +1,14 @@
 class Solution {
     int[] parent;
     boolean[] result;
-    
+
     public boolean[] friendRequests(int n, int[][] restrictions, int[][] requests) {
         parent = new int[n];
         for (int i = 0; i < n; i++) {
             parent[i] = i;
         }
         result = new boolean[requests.length];
-        
+
         for (int i = 0; i < requests.length; i++) {
             // personA and personB can become friends if for all restrictions
             // person x_i and person y_i are not in the same set as personA and personB
@@ -35,13 +35,13 @@ class Solution {
         }
         return result;
     }
-    
+
     private int find(int node) {
         int root = node;
         while (parent[root] != root) {
             root = parent[root];
         }
-        
+
         //path compression
         int curr = node;
         while (parent[curr] != root) {
@@ -51,7 +51,7 @@ class Solution {
         }
         return root;
     }
-    
+
     private boolean union(int node1, int node2) {
         int root1 = find(node1);
         int root2 = find(node2);

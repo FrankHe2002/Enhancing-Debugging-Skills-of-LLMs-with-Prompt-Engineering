@@ -7,14 +7,14 @@ class Solution {
             sum += i;
         }
 
-        TreeSet<Integer>[] sets = new TreeSet[n/2+1];
-        for (int i = 0; i < (1 << (n / 2)); ++i) {
+        TreeSet<Integer>[] sets = new TreeSet[n / 2 + 1];
+        for (int i = 0; i < (1 << (n / 2)); ++ i) {
             int curSum = 0;
             int m = 0;
-            for (int j = 0; j < n / 2; ++j) {
-                if ((i & (1<<j)) != 0) {
+            for (int j = 0; j < n / 2; ++ j) {
+                if ((i & (1 << j)) != 0) {
                     curSum += nums[j];
-                    m ++;
+                    m++;
                 }
             }
             if (sets[m] == null)
@@ -23,18 +23,18 @@ class Solution {
         }
 
         int res = Integer.MAX_VALUE / 3;
-        for (int i = 0; i < (1 << (n / 2)); ++i) {
+        for (int i = 0; i < (1 << (n / 2)); ++ i) {
             int curSum = 0;
             int m = 0;
-            for (int j = 0; j < n / 2; ++j) {
-                if ((i & (1<<j)) != 0) {
-                    curSum += nums[n/2 + j];
-                    m ++;
+            for (int j = 0; j < n / 2; ++ j) {
+                if ((i & (1 << j)) != 0) {
+                    curSum += nums[n / 2 + j];
+                    m++;
                 }
             }
             int target = (sum - 2 * curSum) / 2;
 
-            Integer left = sets[n/2-m].floor(target), right = sets[n/2-m].ceiling(target);
+            Integer left = sets[n / 2 - m].floor(target), right = sets[n / 2 - m].ceiling(target);
             if (left != null) {
                 res = Math.min(res, Math.abs(sum - 2 * (curSum + left.intValue())));
             }

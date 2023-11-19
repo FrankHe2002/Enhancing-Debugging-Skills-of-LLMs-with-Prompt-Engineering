@@ -5,7 +5,7 @@ class Solution {
 
     public int findSecondMinimumValue(TreeNode root) {
         go(root);
-        return x ? -1 : ans;
+        return x ? - 1 : ans;
     }
 
     private void go(TreeNode root) {

@@ -14,6 +14,7 @@ class Solution {
         }
         return ans;
     }
+
     public int freqOfSmallest(String s) {
         int[] freq = new int[26];
         char min = 'z';
@@ -26,6 +27,7 @@ class Solution {
         }
         return freq[min - 'a'];
     }
+
     public int binarySearch(int[] arr, int target) {
         int idx = arr.length;
         int lo = 0;

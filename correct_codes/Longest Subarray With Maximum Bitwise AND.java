@@ -9,7 +9,7 @@ class Solution {
 
         for (int ele : nums) {
             if (ele == max) {
-                result = Math.max(result, ++length);
+                result = Math.max(result, ++ length);
             } else length = 0;
         }
         return result;

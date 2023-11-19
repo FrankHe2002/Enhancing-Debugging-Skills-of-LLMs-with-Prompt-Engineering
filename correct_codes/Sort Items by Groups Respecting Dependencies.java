@@ -7,37 +7,38 @@ class Solution {
     private int[] indegrees;
     // indegrees of group
     private int[] indegreeGroups;
+
     public int[] sortItems(int n, int m, int[] group, List<List<Integer>> beforeItems) {
         buildGroups(n, group);
         buildGraph(n, beforeItems, group);
         int[] result = new int[n];
-        int top = -1;
+        int top = - 1;
         Queue<Integer> queue = new LinkedList<>();
         for (int i = 0; i < n; i++) {
             if (indegreeGroups[i] == 0) {
                 queue.offer(i);
             }
         }
-        while (!queue.isEmpty()) {
+        while (! queue.isEmpty()) {
             Integer groupId = queue.poll();
             List<Integer> groupItems = groups[groupId];
             if (groupItems == null) continue;
             Queue<Integer> itemQueue = new LinkedList<>();
-            for (var item: groupItems) {
+            for (var item : groupItems) {
                 if (indegrees[item] == 0) {
                     itemQueue.offer(item);
                 }
             }
-            while (!itemQueue.isEmpty()) {
+            while (! itemQueue.isEmpty()) {
                 Integer item = itemQueue.poll();
-                result[++top] = item;
+                result[++ top] = item;
                 if (graph[item] == null) continue;
-                for (var neighbor: graph[item]) {
+                for (var neighbor : graph[item]) {
                     indegrees[neighbor]--;
                     if (group[neighbor] != groupId) {
-                         if (--indegreeGroups[group[neighbor]] == 0) {
-                             queue.offer(group[neighbor]);
-                         }
+                        if (-- indegreeGroups[group[neighbor]] == 0) {
+                            queue.offer(group[neighbor]);
+                        }
                     } else if (indegrees[neighbor] == 0) {
                         itemQueue.offer(neighbor);
                     }
@@ -47,12 +48,13 @@ class Solution {
         if (top < n - 1) return new int[] {};
         return result;
     }
+
     private void buildGroups(int n, int[] group) {
         // build groups;
         groups = new List[n];
         int index = n - 1;
         for (int i = 0; i < n; i++) {
-            if (group[i] == -1) {
+            if (group[i] == - 1) {
                 // virtual group
                 group[i] = index--;
             }
@@ -62,12 +64,13 @@ class Solution {
             groups[group[i]].add(i);
         }
     }
+
     private void buildGraph(int n, List<List<Integer>> beforeItems, int[] group) {
         graph = new List[n];
         indegrees = new int[n];
         indegreeGroups = new int[n];
         for (int i = 0; i < n; i++) {
-            for (int j: beforeItems.get(i)) {
+            for (int j : beforeItems.get(i)) {
                 if (graph[j] == null) {
                     graph[j] = new ArrayList<>();
                 }

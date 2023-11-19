@@ -14,6 +14,6 @@ class Solution {
         if (x1 >= x4 || x2 <= x3 || y1 >= y4 || y2 <= y3) {
             return false;
         }
-        return true;       
+        return true;
     }
 }

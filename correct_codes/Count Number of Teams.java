@@ -7,12 +7,12 @@ class Solution {
         final int N = rating.length;
         int res = 0;
         for (int i = 1; i < N; i++) {
-            res += smaller(rating, i, -1) * larger(rating, i, 1);
-            res += larger(rating, i, -1) * smaller(rating, i, 1);
+            res += smaller(rating, i, - 1) * larger(rating, i, 1);
+            res += larger(rating, i, - 1) * smaller(rating, i, 1);
         }
         return res;
     }
-    
+
     private int smaller(int[] rating, int i, int diff) {
         int t = rating[i], count = 0;
         i += diff;
@@ -22,7 +22,7 @@ class Solution {
         }
         return count;
     }
-    
+
     private int larger(int[] rating, int i, int diff) {
         int t = rating[i], count = 0;
         i += diff;

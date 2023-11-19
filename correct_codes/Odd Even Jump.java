@@ -8,35 +8,34 @@ class Solution {
 
         TreeMap<Integer, Integer> map = new TreeMap<>();
         int evjmp, oddjmp;
-        for(int i = len-1; i>=0; i--)
-        {
+        for (int i = len - 1; i >= 0; i--) {
             Integer minpos = map.floorKey(arr[i]);
-            evjmp = (minpos != null)?map.get(minpos):len; //default len, to show not possible
+            evjmp = (minpos != null) ? map.get(minpos) : len; //default len, to show not possible
 
-            if(evjmp != len && (evjmp == len-1 || maxjmp[evjmp] == len-1))
-                evjmp = len-1; //check the last pos reachability
+            if (evjmp != len && (evjmp == len - 1 || maxjmp[evjmp] == len - 1))
+                evjmp = len - 1; //check the last pos reachability
 
             Integer maxpos = map.ceilingKey(arr[i]);
-            oddjmp = (maxpos != null) ? map.get(maxpos):len;
+            oddjmp = (maxpos != null) ? map.get(maxpos) : len;
 
-            if(oddjmp != len && (oddjmp == len-1 || minjmp[oddjmp] == len-1))
-                oddjmp = len-1;//check the last pos reachability
+            if (oddjmp != len && (oddjmp == len - 1 || minjmp[oddjmp] == len - 1))
+                oddjmp = len - 1;//check the last pos reachability
 
             minjmp[i] = evjmp; //specify possible jump path, if not possible assign len
             maxjmp[i] = oddjmp;//specify possible jump path, if not possible assign len
 
-            map.put(arr[i],i); //put the current index
+            map.put(arr[i], i); //put the current index
         }
 
         int res = 0;
 
-        for(int i = 0; i< len-1; i++) {
+        for (int i = 0; i < len - 1; i++) {
 
-            if(maxjmp[i] == len-1)
+            if (maxjmp[i] == len - 1)
                 res++;
         }
 
-        return res+1; //since last position will always be the answer
+        return res + 1; //since last position will always be the answer
     }
 
 }
