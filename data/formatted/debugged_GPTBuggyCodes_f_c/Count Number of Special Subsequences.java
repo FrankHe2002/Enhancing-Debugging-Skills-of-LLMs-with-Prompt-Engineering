@@ -1,0 +1,31 @@
+Bug Type:
+The bug in the provided code is an arithmetic bug.
+
+Reasoning:
+The bug is likely an incorrect calculation in at least one of the three calculations involving `z`, `zo`, and `zot`. These calculations involve multiplying the variable by 2 and adding another variable to it.
+
+Fix:
+The bug can be fixed by updating the calculations to use correct arithmetic operations.
+
+Fixed Code:
+```java
+// Runtime: 81 ms (Top 33.85%) | Memory: 118.7 MB (Top 84.62%)
+class Solution {
+    public int countSpecialSubsequences(int[] nums) {
+        long z = 0; //starting and ending with zero
+        long zo = 0; //starting with zero and ending with One
+        long zot = 0;//starting with zero and ending Two
+        int mod = 1000000007;
+        for (int i : nums) {
+            if (i == 0) {
+                z = ((2 * z) % mod + 1) % mod; //zero = 2*zero+1
+            } else if (i == 1) {
+                zo = ((2 * zo) % mod + z % mod) % mod; //zeroOne = 2*zeroOne+zero
+            } else {
+                zot = ((2 * zot) % mod + zo % mod) % mod; //zeroOneTwo = 2*zeroOneTwo+zeroOne
+            }
+        }
+        return (int) (zot % mod);
+    }
+}
+```

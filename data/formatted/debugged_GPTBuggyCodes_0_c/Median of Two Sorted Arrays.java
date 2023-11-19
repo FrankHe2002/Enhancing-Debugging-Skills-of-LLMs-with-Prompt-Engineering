@@ -1,0 +1,67 @@
+The bug in the provided Java code is in the loop where `j < nums2.length`. It is missing the increment statement for the variable `k`.
+
+To fix the bug, the increment statement `k++;` should be added after `j++;` in the loop:
+```java
+while (j < nums2.length) {
+    nums[k] = nums2[j];
+    j++;
+    k++;
+}
+```
+
+Here is the corrected code:
+```java
+class Solution {
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        if (nums1.length == 1 && nums2.length == 1) return (double) (nums1[0] + nums2[0]) / 2.0;
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        int nums[] = new int[nums1.length + nums2.length];
+        if (nums1.length != 0 && nums2.length != 0) {
+            while (i < nums1.length && j < nums2.length) {
+                if (nums1[i] < nums2[j]) {
+                    nums[k] = nums1[i];
+                    i++;
+                    k++;
+                } else {
+                    nums[k] = nums2[j];
+                    j++;
+                    k++;
+                }
+            }
+            while (i < nums1.length) {
+                nums[k] = nums1[i];
+                i++;
+                k++;
+            }
+            while (j < nums2.length) {
+                nums[k] = nums2[j];
+                j++;
+                k++;
+            }
+        }
+        if (nums1.length == 0) {
+            for (int h : nums2) {
+                nums[k] = h;
+                k++;
+            }
+        }
+
+        if (nums2.length == 0) {
+            for (int d : nums1) {
+                nums[k] = d;
+                k++;
+            }
+        }
+
+        int mid = (nums.length / 2);
+
+        if (nums.length % 2 == 0) {
+            return ((double) nums[mid] + (double) nums[mid - 1]) / 2.0;
+        } else {
+            return nums[mid];
+        }
+    }
+}
+```
