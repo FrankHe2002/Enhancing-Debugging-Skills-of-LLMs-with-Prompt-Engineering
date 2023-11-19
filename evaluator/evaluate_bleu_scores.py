@@ -120,8 +120,7 @@ def evaluate_folders(folder_correct, folder_bug, folder_debugged):
                 if "```" in rdp[i]:
                     rdp = rdp[:i]
                     break
-            if rcp == rbp and "nobug" not in filename:
-                print("No bug in", filename)
+            
             row['codebleu_debugged'] = [score_codebleu(rcp, rdp)[1]]
             row['codebleu_bug'] = [score_codebleu(rcp, rbp)[1]]
             row['difference'] = row['codebleu_debugged'][0] - row['codebleu_bug'][0]
@@ -129,13 +128,13 @@ def evaluate_folders(folder_correct, folder_bug, folder_debugged):
     
     df = pd.concat([df] + rows, ignore_index=True)
 
-    df.to_csv(f'codebleu_evals.csv', index=False)
+    df.to_csv(f'codebleu_evals_f_n.csv', index=False)
     return df
 
 
 # Read files
 def main():
-    df = evaluate_folders('../data/formatted/correct_codes', '../data/formatted/buggy_codes', '../data/formatted/debugged_codes_0_n')
+    df = evaluate_folders('../data/formatted/correct_codes', '../data/formatted/buggy_codes', '../data/formatted/debugged_codes_f_n')
     print(df)
 
     
