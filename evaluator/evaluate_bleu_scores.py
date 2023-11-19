@@ -89,7 +89,7 @@ def evaluate_folders(folder_correct, folder_bug, folder_debugged):
 
 # Read files
 def main():
-    print(evaluate_folders('data/raw/correct_codes', 'data/raw/bug_codes', 'data/raw/debugged_codes'))
+    print(evaluate_folders('data/formatted/correct_codes', 'data/formatted/bug_codes', 'data/formatted/debugged_codes_0_n'))
     
 if __name__ == '__main__':
     main()
