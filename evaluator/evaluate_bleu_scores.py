@@ -6,11 +6,14 @@ import CodeBLEU.weighted_ngram_match as weighted_ngram_match
 import CodeBLEU.syntax_match as syntax_match
 import CodeBLEU.dataflow_match as dataflow_match
 
+import pandas as pd
+import os
+
 def invert(a):
     # a is a list of lists. Invert it.
     return list(map(list, zip(*a)))
 
-def score(pred, actual, hyper=(0.25, 0.25, 0.25, 0.25)): # alpha, beta, gamma, theta
+def score_codebleu(pred, actual, hyper=(0.25, 0.25, 0.25, 0.25)): # alpha, beta, gamma, theta
     # pred/actual are lists of strings (lines)
 
     # First, make sure x and y have the same length by padding
@@ -57,24 +60,36 @@ def score(pred, actual, hyper=(0.25, 0.25, 0.25, 0.25)): # alpha, beta, gamma, t
 
     return (ngram_match_score, weighted_ngram_match_score, syntax_match_score, dataflow_match_score), code_bleu_score
 
-# a = ['public static void main ( String[] args ) {', 'int x = 5;', 'return y; }']
-# b = ['public static void main ( String[] args ) {', 'int x = 3;', 'return x; }']
-# c = ['public static void main ( String[] args ) { System.out.println( " Hello " ); return 0; }']
-# print(score(a, c, hyper=(0.25, 0.25, 0.25, 0.25)))
+def reconstruct_path(bug_path):
+    # The file names of the buggy paths are of the form <problem name>_<bug type>.java but the
+    # file names of the fixed paths are of the form <problem name>.java, so we need to reconstruct
+    # the fixed path from the buggy path. Split the path by '_' and then join everything except
+    # the last element.
+    
+    return '_'.join(bug_path.split('_')[:-1]) + '.java'
+
+
+def evaluate_folders(folder_correct, folder_bug, folder_debugged):
+    df = pd.DataFrame(columns=['problem_name', 'bug_path', 'correct_path', 'debugged_path', 'bug_type', 'ngram_match', 'weighted_ngram_match', 'syntax_match', 'dataflow_match', 'codebleu_bug', 'codebleu_debugged'])
+    for filename in os.listdir(folder_bug):
+        if filename.endswith('.java'):
+            row = {}
+            row['problem_name'] = [filename[:-5]]
+            row['bug_path'] = [os.path.join(folder_bug, filename)]
+            row['correct_path'] = [os.path.join(folder_correct, reconstruct_path(filename))]
+            row['debugged_path'] = [os.path.join(folder_debugged, filename)]
+            row['bug_type'] = [filename.split('_')[-1][:-5]]
+            row['codebleu_debugged'] = [score_codebleu(row['correct_path'], row['debugged_path'])[1]]
+            row['codebleu_bug'] = [score_codebleu(row['correct_path'], row['bug_path'])[1]]
+            df = df.append(pd.DataFrame(row), ignore_index=True)
+
+    df.to_csv(f'codebleu_evals.csv', index=False)
+    return df
+
 
 # Read files
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--pred', type=str, required=True, help='path to prediction file')
-    parser.add_argument('--actual', type=str, required=True, help='path to actual file')
-    parser.add_argument('--hyper', type=str, default='0.25,0.25,0.25,0.25', help='hyperparameters for CodeBLEU')
-    args = parser.parse_args()
-
-    pred = open(args.pred, 'r', encoding='utf-8').readlines()
-    actual = open(args.actual, 'r', encoding='utf-8').readlines()
-    hyper = [float(x) for x in args.hyper.split(',')]
-
-    score(pred, actual, hyper)
+    print(evaluate_folders('data/raw/correct_codes', 'data/raw/bug_codes', 'data/raw/debugged_codes'))
     
 if __name__ == '__main__':
     main()
