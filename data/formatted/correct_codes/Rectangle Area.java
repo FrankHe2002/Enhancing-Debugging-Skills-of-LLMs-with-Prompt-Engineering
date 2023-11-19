@@ -1,3 +1,4 @@
+// Runtime: 5 ms (Top 35.02%) | Memory: 42.9 MB (Top 64.28%)
 class Solution {
     public int computeArea(int ax1, int ay1, int ax2, int ay2, int bx1, int by1, int bx2, int by2) {
         int x1 = Math.max(ax1, bx1);

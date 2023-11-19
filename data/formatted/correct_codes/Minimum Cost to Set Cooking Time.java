@@ -1,3 +1,5 @@
+// Runtime: 1 ms (Top 88.7%) | Memory: 39.44 MB (Top 55.0%)
+
 class Solution {
     public int minCostSetTime(int startAt, int moveCost, int pushCost, int tar) {
 
@@ -6,9 +8,9 @@ class Solution {
         if (min > 99) {
             min--;
             sec += 60;
-        }
+        } // this is required to do because if tar>=6000 then min is 100 which is not possible as it atmost can be 99mins
 
-        while (min >= 0 && sec <= 99) {
+        while (min >= 0 && sec <= 99) { // this while loop will work for atmost 2 iterations
             tar = min * 100 + sec;
             char arr[] = ("" + tar).toCharArray();
             int sameMove = 0;

@@ -1,3 +1,4 @@
+// Runtime: 178 ms (Top 61.28%) | Memory: 109.5 MB (Top 34.27%)
 class Solution {
     public int totalStrength(int[] strength) {
         int mod = 1000000007;

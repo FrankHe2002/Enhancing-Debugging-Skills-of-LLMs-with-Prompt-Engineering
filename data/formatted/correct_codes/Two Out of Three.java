@@ -1,3 +1,4 @@
+// Runtime: 2 ms (Top 97.56%) | Memory: 46.7 MB (Top 58.76%)
 class Solution {
     public List<Integer> twoOutOfThree(int[] nums1, int[] nums2, int[] nums3) {
         int[] bits = new int[101];

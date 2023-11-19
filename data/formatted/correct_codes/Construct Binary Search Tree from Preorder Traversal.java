@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 66.41%) | Memory: 42.3 MB (Top 45.67%)
 class Solution {
     public TreeNode bstFromPreorder(int[] preorder) {
         return bst(preorder, 0, preorder.length - 1);

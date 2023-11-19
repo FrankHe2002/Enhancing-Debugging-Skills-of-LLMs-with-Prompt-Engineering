@@ -1,3 +1,4 @@
+// Runtime: 68 ms (Top 48.70%) | Memory: 45.5 MB (Top 96.95%)
 class Solution {
     public List<List<String>> suggestedProducts(String[] products, String searchWord) {
         PriorityQueue<String> pq = new PriorityQueue<String>();

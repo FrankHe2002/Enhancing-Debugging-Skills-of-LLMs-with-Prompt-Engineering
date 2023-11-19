@@ -1,3 +1,5 @@
+// Runtime: 35 ms (Top 35.1%) | Memory: 54.14 MB (Top 93.9%)
+
 class Solution {
     public int maxOperations(int[] nums, int k) {
         HashMap<Integer, Integer> map = new HashMap<>();

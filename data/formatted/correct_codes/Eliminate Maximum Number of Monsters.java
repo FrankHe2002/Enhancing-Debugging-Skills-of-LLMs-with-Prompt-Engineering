@@ -1,3 +1,5 @@
+// Runtime: 18 ms (Top 72.0%) | Memory: 54.86 MB (Top 75.9%)
+
 class Solution {
     public int eliminateMaximum(int[] dist, int[] speed) {
 
@@ -13,12 +15,14 @@ class Solution {
 
         int eliminated = 0;
 
+        // At i = 0, minute = 0 ( therefore, we can use i in place of minute )
+
         for (int i = 0; i < n; i++) {
 
-            if (time[i] > i) {
+            if (time[i] > i) {  // At ith minute, eliminate the first monster arriving after ith minute
                 eliminated++;
             } else {
-                break;
+                break; // Monster reached the city
             }
         }
 

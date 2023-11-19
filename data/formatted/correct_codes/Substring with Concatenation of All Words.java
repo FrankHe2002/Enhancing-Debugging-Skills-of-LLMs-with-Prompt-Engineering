@@ -1,3 +1,4 @@
+// Runtime: 68 ms (Top 73.46%) | Memory: 43.2 MB (Top 88.65%)
 class Solution {
     public List<Integer> findSubstring(String s, String[] words) {
 
@@ -19,6 +20,8 @@ class Solution {
 
         int curWordId[] = new int[len];
         String cur = " " + s.substring(0, wordLen - 1);
+
+        //Change to int array
         for (int i = 0; i < (len - wordLen + 1); i++) {
             cur = cur.substring(1, cur.length()) + s.charAt(i + wordLen - 1);
             if (input.containsKey(cur)) {
@@ -28,6 +31,8 @@ class Solution {
             }
         }
         List<Integer> res = new ArrayList<>();
+
+        //compare using int make it faster 30 times in each comparison
         for (int i = 0; i <= lastIndex; i++) {
 
             HashMap<Integer, Integer> winMap = new HashMap<>();

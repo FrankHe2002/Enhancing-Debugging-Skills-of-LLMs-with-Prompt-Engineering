@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 100.00%) | Memory: 48.5 MB (Top 26.95%)
 class Solution {
     public boolean validUtf8(int[] data) {
         return help(data, 0);

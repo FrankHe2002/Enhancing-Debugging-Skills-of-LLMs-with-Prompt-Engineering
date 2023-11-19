@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 44.68%) | Memory: 41.8 MB (Top 51.62%)
 class Solution {
     public int isPrefixOfWord(String sentence, String searchWord) {
         if (! sentence.contains(searchWord))

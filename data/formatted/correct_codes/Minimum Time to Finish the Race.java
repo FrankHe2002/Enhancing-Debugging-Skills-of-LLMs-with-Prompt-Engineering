@@ -1,3 +1,4 @@
+// Runtime: 39 ms (Top 41.82%) | Memory: 150.6 MB (Top 27.82%)
 class Solution {
     int changeTime;
 
@@ -12,9 +13,9 @@ class Solution {
 
         int[] dp = new int[numLaps + 1];
         for (int i = 1; i <= numLaps; i++) {
-            dp[i] = minTime[i];
+            dp[i] = minTime[i]; // maxValue for dp[i] is Integer.MAX_VALUE, no need to worry about overflow
             for (int j = 1; j < i; j++) {
-                dp[i] = Math.min(dp[i], dp[j] + changeTime + dp[i - j]);
+                dp[i] = Math.min(dp[i], dp[j] + changeTime + dp[i - j]); // it will never overflow, since dp[j] are far less than Integer.MAX_VALUE
             }
         }
         return dp[numLaps];
@@ -29,7 +30,7 @@ class Solution {
             spent = (i == 1) ? base : spent * ex;
             if (spent > changeTime + base) {
                 break;
-            }
+            } // set boundary
             sum += spent;
             minTime[i] = Math.min(minTime[i], sum);
         }

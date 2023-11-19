@@ -1,3 +1,4 @@
+// Runtime: 82 ms (Top 52.25%) | Memory: 75.8 MB (Top 66.61%)
 class Pair {
     int to;
     double prob;
@@ -18,6 +19,7 @@ class Solution {
             adj.get(edges[i][0]).add(new Pair(edges[i][1], succProb[i]));
             adj.get(edges[i][1]).add(new Pair(edges[i][0], succProb[i]));
         }
+        //node,to node,probability
         double probs[] = new double[n];
         Arrays.fill(probs, 0.0);
         probs[start] = 1.0;

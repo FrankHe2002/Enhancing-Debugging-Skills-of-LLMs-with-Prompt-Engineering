@@ -1,3 +1,4 @@
+// Runtime: 88 ms (Top 72.91%) | Memory: 105 MB (Top 67.49%)
 class SeatManager {
     PriorityQueue<Integer> pq;
     int count;

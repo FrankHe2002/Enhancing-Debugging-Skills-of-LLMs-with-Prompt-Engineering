@@ -1,3 +1,4 @@
+// Runtime: 2 ms (Top 93.59%) | Memory: 83.9 MB (Top 46.18%)
 class Solution {
     public int maxProfit(int[] prices) {
         int lsf = Integer.MAX_VALUE;

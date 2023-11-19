@@ -11,11 +11,11 @@ class Solution {
         int[] dp = new int[1 << n];
 
         for (int i = 0; i < (1 << n); ++ i) {
-            int bits = Integer.bitCount(i);
-            if (bits % 2 != 0)
+            int bits = Integer.bitCount(i); // how many numbers are used
+            if (bits % 2 != 0) // odd numbers, skip it
                 continue;
             for (int k : gcdVal.keySet()) {
-                if ((k & i) != 0)
+                if ((k & i) != 0) // overlapping used numbers
                     continue;
                 dp[i ^ k] = Math.max(dp[i ^ k], dp[i] + gcdVal.get(k) * (bits / 2 + 1));
             }
@@ -31,3 +31,5 @@ class Solution {
     }
 }
 
+// Time: O(2^n * n^2)
+// Space: O(2 ^ n)

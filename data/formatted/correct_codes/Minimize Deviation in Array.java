@@ -1,3 +1,4 @@
+// Runtime: 125 ms (Top 97.34%) | Memory: 51 MB (Top 91.49%)
 class Solution {
     public int minimumDeviation(int[] nums) {
         TreeSet<Integer> temp = new TreeSet<>();

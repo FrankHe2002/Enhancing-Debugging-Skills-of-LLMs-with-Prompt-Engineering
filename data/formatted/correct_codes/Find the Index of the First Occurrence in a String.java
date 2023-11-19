@@ -1,3 +1,5 @@
+// Runtime: 1 ms (Top 32.9%) | Memory: 40.38 MB (Top 71.0%)
+
 class Solution {
     public int strStr(String haystack, String needle) {
         int haylength = haystack.length();

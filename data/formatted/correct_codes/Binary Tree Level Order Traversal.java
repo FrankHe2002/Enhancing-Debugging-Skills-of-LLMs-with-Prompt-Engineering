@@ -1,3 +1,4 @@
+// Runtime: 2 ms (Top 39.54%) | Memory: 43.4 MB (Top 69.45%)
 class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();

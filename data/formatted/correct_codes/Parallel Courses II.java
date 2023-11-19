@@ -1,3 +1,4 @@
+// Runtime: 435 ms (Top 42.70%) | Memory: 45.5 MB (Top 33.71%)
 class Solution {
     public int minNumberOfSemesters(int n, int[][] relations, int k) {
         int[] ok = new int[1 << n];

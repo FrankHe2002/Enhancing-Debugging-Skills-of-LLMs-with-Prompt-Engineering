@@ -1,5 +1,9 @@
+// Runtime: 100 ms (Top 53.2%) | Memory: 108.54 MB (Top 41.1%)
+
 class Solution {
     public List<Integer> findAllPeople(int n, int[][] meetings, int firstPerson) {
+
+        // create <time, index> map
         Map<Integer, List<Integer>> timeToIndexes = new TreeMap<>();
         int m = meetings.length;
         for (int i = 0; i < m; i++) {
@@ -8,7 +12,12 @@ class Solution {
         }
 
         UF uf = new UF(n);
+        // base
         uf.union(0, firstPerson);
+
+        // for every time we have a pool of people that talk to each other
+        // if someone knows a secret proir to this meeting - all pool will too
+        // if not - reset unions from this pool
         for (int time : timeToIndexes.keySet()) {
             Set<Integer> pool = new HashSet<>();
 
@@ -18,13 +27,19 @@ class Solution {
                 pool.add(currentMeeting[0]);
                 pool.add(currentMeeting[1]);
             }
+
+            // meeting that took place now should't affect future
+            // meetings if people don't know the secret
             for (int i : pool) if (! uf.connected(0, i)) uf.reset(i);
         }
+
+        // if the person is conneted to 0 - they know a secret
         List<Integer> ans = new ArrayList<>();
         for (int i = 0; i < n; i++) if (uf.connected(i, 0)) ans.add(i);
         return ans;
     }
 
+    // regular union find
     private static class UF {
         int[] parent, rank;
 

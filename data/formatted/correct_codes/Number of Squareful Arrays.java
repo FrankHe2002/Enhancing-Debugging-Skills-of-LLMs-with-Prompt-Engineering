@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 100.00%) | Memory: 42 MB (Top 28.32%)
 class Solution {
     int count;
 

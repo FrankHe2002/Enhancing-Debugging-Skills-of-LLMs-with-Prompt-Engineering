@@ -1,3 +1,5 @@
+// Runtime: 16 ms (Top 46.1%) | Memory: 40.11 MB (Top 41.3%)
+
 class Solution {
     public boolean circularArrayLoop(int[] nums) {
         for (int i = 0; i < nums.length; i++) {

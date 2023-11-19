@@ -1,3 +1,4 @@
+// Runtime: 177 ms (Top 52.16%) | Memory: 42.7 MB (Top 24.25%)
 class Solution {
     public boolean exist(char[][] board, String word) {
         boolean vis[][] = new boolean[board.length][board[0].length];

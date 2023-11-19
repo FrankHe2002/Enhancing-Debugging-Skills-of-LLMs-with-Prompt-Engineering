@@ -1,3 +1,4 @@
+// Runtime: 2 ms (Top 89.53%) | Memory: 45.9 MB (Top 59.56%)
 class Solution {
     public int minPathSum(int[][] grid) {
         int m = grid.length;

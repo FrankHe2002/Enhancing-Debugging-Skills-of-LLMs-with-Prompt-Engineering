@@ -1,3 +1,5 @@
+// Runtime: 25 ms (Top 23.5%) | Memory: 59.53 MB (Top 23.5%)
+
 class Solution {
     public long minimumTotalCost(int[] nums1, int[] nums2) {
         long res = 0;

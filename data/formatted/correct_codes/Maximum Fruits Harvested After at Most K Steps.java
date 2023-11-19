@@ -1,3 +1,4 @@
+// Runtime: 21 ms (Top 54.24%) | Memory: 127.9 MB (Top 64.41%)
 class Solution {
     public int maxTotalFruits(int[][] fruits, int startPos, int k) {
         int n = fruits.length;

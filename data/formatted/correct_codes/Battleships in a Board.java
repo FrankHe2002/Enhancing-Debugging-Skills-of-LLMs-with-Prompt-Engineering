@@ -1,3 +1,4 @@
+// Runtime: 4 ms (Top 10.56%) | Memory: 44.7 MB (Top 26.11%)
 class Solution {
     public int countBattleships(char[][] board) {
         int result = 0;

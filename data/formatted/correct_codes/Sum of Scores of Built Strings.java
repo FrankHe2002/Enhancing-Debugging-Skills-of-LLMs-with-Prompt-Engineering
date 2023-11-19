@@ -16,6 +16,7 @@ class Solution {
             hsh2[j] = (hsh2[j - 1] * base2 + s.charAt(j - 1)) % mod;
             pw2[j] = pw2[j - 1] * base2 % mod;
         }
+        // binary search for score
         long ans = 0;
         for (int i = n; i >= 1; i--) {
             if (s.charAt(i - 1) != s.charAt(0)) continue;

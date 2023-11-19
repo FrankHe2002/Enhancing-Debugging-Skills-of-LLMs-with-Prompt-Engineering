@@ -1,3 +1,4 @@
+// --------------------- Solution 1 ---------------------
 class Solution {
     public int oddCells(int m, int n, int[][] indices) {
         int[][] matrix = new int[m][n];
@@ -27,6 +28,7 @@ class Solution {
     }
 }
 
+// --------------------- Solution 2 ---------------------
 class Solution {
     public int oddCells(int m, int n, int[][] indices) {
         int[] row = new int[m];

@@ -1,3 +1,5 @@
+// Runtime: 2 ms (Top 62.8%) | Memory: 54.05 MB (Top 10.0%)
+
 class Solution {
     public int[] productExceptSelf(int[] nums) {
         int n = nums.length;

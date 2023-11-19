@@ -1,3 +1,4 @@
+// Runtime: 10 ms (Top 7.32%) | Memory: 48.4 MB (Top 38.52%)
 class Solution {
     public int[] diStringMatch(String s) {
         int low = 0;

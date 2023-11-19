@@ -1,3 +1,4 @@
+// Runtime: 26 ms (Top 93.60%) | Memory: 51.8 MB (Top 51.74%)
 class Solution {
     public int countPalindromicSubsequence(String s) {
 
@@ -25,14 +26,18 @@ class Solution {
         int ans = 0, count = 0;
 
         boolean[] visited;
+
+        // check for each character ( start or end of palindrome )
         for (int i = 0; i < 26; i++) {
 
-            int si = firstOcc[i];
-            int ei = lastOcc[i];
+            int si = firstOcc[i]; // si - starting index
+            int ei = lastOcc[i]; // ei - ending index
 
             visited = new boolean[26];
 
             count = 0;
+
+            // check for unique charcters ( middle of palindrome )
             for (int j = si + 1; j < ei; j++) {
 
                 if (! visited[chArr[j] - 'a']) {

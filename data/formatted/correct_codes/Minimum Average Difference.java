@@ -1,3 +1,4 @@
+// Runtime: 27 ms (Top 34.34%) | Memory: 76.7 MB (Top 35.00%)
 class Solution {
     public int minimumAverageDifference(int[] nums) {
         if (nums.length == 1) {
@@ -34,6 +35,9 @@ class Solution {
             min = arr[calc];
             idx = nums.length - 1;
         }
+        // for(i = 0; i < nums.length; i++){
+        // System.out.println(arr[i]);
+        // }
         return (int) idx;
     }
 }

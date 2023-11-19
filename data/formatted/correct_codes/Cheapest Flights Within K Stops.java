@@ -1,9 +1,12 @@
 class Solution {
     public int findCheapestPrice(int n, int[][] flights, int src, int dst, int k) {
+        // Initialize Prices arr with infinity & src 0
         int[] prices = new int[n];
         for (int i = 0; i < n; i++)
             prices[i] = Integer.MAX_VALUE;
         prices[src] = 0;
+
+        // Build Adj list {key: src | val: dst+price}
         Map<Integer, List<int[]>> flightsMap = new HashMap<>();
         for (int[] flight : flights) {
             int flightSrc = flight[0];
@@ -14,10 +17,12 @@ class Solution {
             flightsList.add(new int[] {flightDst, flightPrice});
             flightsMap.put(flightSrc, flightsList);
         }
+
+        // Start Bellman ford Algo
         Queue<Integer> q = new LinkedList<>();
         q.offer(src);
         while (k >= 0 && ! q.isEmpty()) {
-            int[] tempPrices = new int[n];
+            int[] tempPrices = new int[n];                  // Temporary Prices Arr
             for (int i = 0; i < n; i++)
                 tempPrices[i] = prices[i];
 
@@ -36,7 +41,7 @@ class Solution {
                     }
                 }
             }
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < n; i++)                    // Copy Temp Prices to Original Price Arr
                 prices[i] = tempPrices[i];
             k--;
         }

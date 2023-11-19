@@ -1,7 +1,9 @@
+// Runtime: 12 ms (Top 12.41%) | Memory: 43.5 MB (Top 81.01%)
 class Solution {
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         List<List<Integer>> res = new ArrayList<>();
         List<Integer> path = new ArrayList<>();
+        // O(nlogn)
         Arrays.sort(candidates);
         boolean[] visited = new boolean[candidates.length];
         helper(res, path, candidates, visited, target, 0);

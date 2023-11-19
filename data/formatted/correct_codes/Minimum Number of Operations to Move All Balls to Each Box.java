@@ -1,3 +1,5 @@
+// Runtime: 135 ms (Top 50.7%) | Memory: 44.02 MB (Top 24.4%)
+
 class Solution {
     public int[] minOperations(String boxes) {
         int n = boxes.length();

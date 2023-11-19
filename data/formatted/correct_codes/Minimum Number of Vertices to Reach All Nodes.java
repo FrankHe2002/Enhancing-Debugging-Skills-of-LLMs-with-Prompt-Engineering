@@ -1,3 +1,4 @@
+// Runtime: 18 ms (Top 43.75%) | Memory: 119 MB (Top 77.96%)
 class Solution {
     public List<Integer> findSmallestSetOfVertices(int n, List<List<Integer>> edges) {
 

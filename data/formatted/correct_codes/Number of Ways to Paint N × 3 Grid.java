@@ -11,6 +11,8 @@ class Solution {
     public int numOfWays(int n) {
         if (n == 0)
             return 0;
+
+        // Graph
         for (int prev = 0; prev < 12; prev++) {
             List<Integer> nexts = new ArrayList<>();
             for (int next = 0; next < 12; next++) {
@@ -28,6 +30,8 @@ class Solution {
             }
             nextMap.put(prev, nexts);
         }
+
+        //DFS
         memo = new Long[12][n];
         long ways = 0;
         for (int i = 0; i < 12; i++) {

@@ -9,7 +9,10 @@ class Solution {
     }
 
     public long subArrayRanges(int[] nums) {
+
+        //lesser than current element
         Stack<Node> stack = new Stack<>();
+        //from left
         long[] lesserLeft = new long[nums.length];
         for (int i = 0; i < nums.length; i++) {
             long count = 1;
@@ -20,6 +23,7 @@ class Solution {
             lesserLeft[i] = count;
         }
         stack.clear();
+        //from right
         long[] lesserRight = new long[nums.length];
         for (int i = nums.length - 1; i >= 0; i--) {
             long count = 1;
@@ -29,7 +33,11 @@ class Solution {
             stack.add(new Node(nums[i], count));
             lesserRight[i] = count;
         }
+
+
+        //greater than current element
         stack.clear();
+        //from left
         long[] greaterLeft = new long[nums.length];
         for (int i = 0; i < nums.length; i++) {
             long count = 1;
@@ -40,6 +48,7 @@ class Solution {
             greaterLeft[i] = count;
         }
         stack.clear();
+        //from right
         long[] greaterRight = new long[nums.length];
         for (int i = nums.length - 1; i >= 0; i--) {
             long count = 1;
@@ -51,6 +60,7 @@ class Solution {
         }
 
         long ans = 0;
+        //Now we subtract the count of minimum occurrences from the count of maximum occurrences
 
         for (int i = 0; i < nums.length; i++) {
             ans += ((lesserLeft[i] * lesserRight[i]) - (greaterLeft[i] * greaterRight[i])) * nums[i];

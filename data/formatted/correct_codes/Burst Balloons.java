@@ -1,6 +1,8 @@
 class Solution {
     public int maxCoins(int[] nums) {
         int n = nums.length;
+
+//         adding 1 to the front and back
         int[] temp = new int[n + 2];
         temp[0] = 1;
         for (int i = 1; i < temp.length - 1; i++) {
@@ -8,10 +10,14 @@ class Solution {
         }
         temp[temp.length - 1] = 1;
         nums = temp;
+
+//         memoization
         int[][] dp = new int[n + 1][n + 1];
         for (int[] row : dp) {
             Arrays.fill(row, - 1);
         }
+
+//         result
         return f(1, n, nums, dp);
     }
 
@@ -28,3 +34,5 @@ class Solution {
     }
 }
 
+// Time Complexity: O(N * N * N) ~ O(N^3);
+// Space Complexity: O(N^2) + O(N);

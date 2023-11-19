@@ -23,7 +23,11 @@ class Solution {
             }
             j--;
         }
+
+        //Swapping
         swap(arr, idx1, j);
+
+        //sorting
         int left = idx1 + 1;
         int right = arr.length - 1;
         while (left < right) {

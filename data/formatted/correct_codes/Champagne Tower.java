@@ -1,3 +1,6 @@
+// Champagne Tower
+// Leetcode: https://leetcode.com/problems/champagne-tower/
+
 class Solution {
     public double champagneTower(int poured, int query_row, int query_glass) {
         if (poured == 0) return 0;

@@ -1,3 +1,4 @@
+// Runtime: 116 ms (Top 33.59%) | Memory: 71.2 MB (Top 32.82%)
 class Solution {
     public int smallestChair(int[][] times, int targetFriend) {
         int targetStart = times[targetFriend][0];

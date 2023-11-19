@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 93.52%) | Memory: 42.1 MB (Top 54.01%)
 class Solution {
     public boolean isLongPressedName(String name, String typed) {
         int i = 0;

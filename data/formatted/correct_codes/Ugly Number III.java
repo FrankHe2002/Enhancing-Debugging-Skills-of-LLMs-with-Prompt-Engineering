@@ -24,7 +24,7 @@ class Solution {
         }
         int ans = 0;
         try {
-            ans = (x > y) ? Math.multiplyExact(y, (x / b)) : Math.multiplyExact(x, (y / b));
+            ans = (x > y) ? Math.multiplyExact(y, (x / b)) : Math.multiplyExact(x, (y / b));  // x*y/gcd(x,y)
         } catch (Exception e) {
             ans = Integer.MAX_VALUE;
         }

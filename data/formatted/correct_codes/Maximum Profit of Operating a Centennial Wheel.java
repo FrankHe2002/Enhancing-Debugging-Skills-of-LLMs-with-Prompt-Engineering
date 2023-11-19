@@ -1,3 +1,5 @@
+// Runtime: 9 ms (Top 80.7%) | Memory: 55.64 MB (Top 69.2%)
+
 class Solution {
     public int minOperationsMaxProfit(int[] customers, int boardingCost, int runningCost) {
         int rotatn = 0;

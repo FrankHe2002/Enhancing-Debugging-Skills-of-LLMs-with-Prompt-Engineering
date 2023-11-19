@@ -1,3 +1,5 @@
+// Runtime: 11 ms (Top 68.46%) | Memory: 54.3 MB (Top 56.38%)
+
 class Solution {
 
     public int maxSumDivThree(int[] nums) {

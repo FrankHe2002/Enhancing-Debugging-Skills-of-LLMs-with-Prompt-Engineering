@@ -1,3 +1,4 @@
+// Runtime: 10 ms (Top 6.68%) | Memory: 45.2 MB (Top 20.03%)
 class Solution {
     public String generateTheString(int n) {
         String s = "";

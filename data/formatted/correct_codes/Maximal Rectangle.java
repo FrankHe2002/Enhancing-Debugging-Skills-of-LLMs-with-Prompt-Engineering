@@ -1,3 +1,4 @@
+// Runtime: 64 ms (Top 29.92%) | Memory: 46.6 MB (Top 92.25%)
 class Solution {
     public int maximalRectangle(char[][] matrix) {
         ArrayList<Integer> list = new ArrayList<>();

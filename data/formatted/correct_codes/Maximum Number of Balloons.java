@@ -1,3 +1,4 @@
+// Runtime: 3 ms (Top 74.74%) | Memory: 42.3 MB (Top 69.99%)
 class Solution {
 
     public int maxNumberOfBalloons(String text) {

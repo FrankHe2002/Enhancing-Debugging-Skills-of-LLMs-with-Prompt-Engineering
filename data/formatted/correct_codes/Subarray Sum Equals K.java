@@ -1,3 +1,8 @@
+// Runtime: 80 ms (Top 15.87%) | Memory: 68.2 MB (Top 25.50%)
+/*
+Runtime: 21 ms, faster than 98.97% of Java online submissions for Subarray Sum Equals K.
+Memory Usage: 47.1 MB, less than 85.93% of Java online submissions for Subarray Sum Equals K.
+*/
 class Solution {
     public int subarraySum(int[] nums, int k) {
 

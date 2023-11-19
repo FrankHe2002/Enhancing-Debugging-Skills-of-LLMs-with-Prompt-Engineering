@@ -1,3 +1,5 @@
+// Runtime: 23 ms (Top 77.7%) | Memory: 56.11 MB (Top 49.4%)
+
 class Solution {
     public int totalSteps(int[] nums) {
         Deque<Integer> stack = new ArrayDeque<>();

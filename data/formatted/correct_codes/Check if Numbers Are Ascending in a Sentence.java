@@ -1,3 +1,6 @@
+// Runtime: 7 ms (Top 29.63%) | Memory: 43.3 MB (Top 11.10%)
+// Space Complexity: O(1)
+// Time Complexity: O(n)
 class Solution {
     public boolean areNumbersAscending(String s) {
         int prev = 0;

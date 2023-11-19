@@ -1,3 +1,5 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 39.76 MB (Top 13.5%)
+
 class Solution {
     public boolean hasAlternatingBits(int n) {
         int flag = 1;

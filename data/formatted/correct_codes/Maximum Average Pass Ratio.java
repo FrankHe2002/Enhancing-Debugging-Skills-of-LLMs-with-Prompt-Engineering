@@ -1,3 +1,4 @@
+// Runtime: 575 ms (Top 86.89%) | Memory: 100.8 MB (Top 90.16%)
 class Solution {
     public double maxAverageRatio(int[][] classes, int extraStudents) {
         PriorityQueue<double[]> pq = new PriorityQueue<>(new Comparator<double[]>() {

@@ -1,3 +1,5 @@
+// Runtime: 23 ms (Top 55.73%) | Memory: 44.3 MB (Top 45.07%)
+
 class Solution {
     public String mostCommonWord(String paragraph, String[] banned) {
 

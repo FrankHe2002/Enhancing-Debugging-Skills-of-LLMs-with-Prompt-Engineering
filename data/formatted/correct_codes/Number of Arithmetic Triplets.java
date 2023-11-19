@@ -1,3 +1,5 @@
+// Runtime: 1 ms (Top 98.25%) | Memory: 42.8 MB (Top 15.70%)
+
 class Solution {
     public int arithmeticTriplets(int[] nums, int diff) {
         int result = 0;

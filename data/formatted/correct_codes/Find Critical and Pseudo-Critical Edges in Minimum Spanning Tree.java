@@ -111,12 +111,13 @@ class Solution {
 
             int mstCostWithoutEdge = buildMST(n, edges, edge, null);
             if (mstCostWithoutEdge > mstCost) {
-                critical.add(i);
+                critical.add(i);        //Critical edge index
             } else {
                 int mstCostWithEdge = buildMST(n, edges, null, edge);
                 if (mstCostWithEdge > mstCost) {
+                    //redundant
                 } else {
-                    pcritical.add(i);
+                    pcritical.add(i);   //pseduo critical edge index
                 }
             }
         }

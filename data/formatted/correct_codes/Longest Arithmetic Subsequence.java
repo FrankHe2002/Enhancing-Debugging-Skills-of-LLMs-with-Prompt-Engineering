@@ -1,3 +1,5 @@
+// Runtime: 440 ms (Top 73.2%) | Memory: 70.79 MB (Top 29.5%)
+
 class Solution {
     public int longestArithSeqLength(int[] nums) {
         int n = nums.length;

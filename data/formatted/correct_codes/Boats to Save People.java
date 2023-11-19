@@ -1,3 +1,4 @@
+// Runtime: 24 ms (Top 38.47%) | Memory: 65.6 MB (Top 33.01%)
 class Solution {
     public int numRescueBoats(int[] people, int limit) {
         int boatCount = 0;

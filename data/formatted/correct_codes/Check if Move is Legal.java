@@ -1,3 +1,5 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 41.24 MB (Top 69.6%)
+
 class Solution {
     public boolean checkMove(char[][] board, int rMove, int cMove, char color) {
 

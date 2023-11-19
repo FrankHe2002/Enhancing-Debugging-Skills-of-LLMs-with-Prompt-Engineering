@@ -22,16 +22,18 @@ class Solution {
     }
 
     private boolean isItPossible(int x, int[] quantities, int n) {
+
+        // isItPossible to distribute <= x products to each of the n shops
         for (int i = 0; i < quantities.length; i++) {
 
             int products = quantities[i];
 
             n -= Math.ceil(products / (x * 1.0));
 
-            if (n < 0)
+            if (n < 0)     // means it requires more than n shops to distribute all products
                 return false;
         }
 
-        return true;
+        return true; // distributed all products to exactly n shops
     }
 }

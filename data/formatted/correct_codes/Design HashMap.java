@@ -1,5 +1,8 @@
 class MyHashMap {
 
+    /**
+     * Initialize your data structure here.
+     */
     LinkedList<Entry>[] map;
     public static int SIZE = 769;
 
@@ -7,6 +10,9 @@ class MyHashMap {
         map = new LinkedList[SIZE];
     }
 
+    /**
+     * value will always be non-negative.
+     */
     public void put(int key, int value) {
         int bucket = key % SIZE;
         if (map[bucket] == null) {
@@ -23,6 +29,9 @@ class MyHashMap {
         }
     }
 
+    /**
+     * Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key
+     */
     public int get(int key) {
         int bucket = key % SIZE;
         LinkedList<Entry> entries = map[bucket];
@@ -33,6 +42,9 @@ class MyHashMap {
         return - 1;
     }
 
+    /**
+     * Removes the mapping of the specified value key if this map contains a mapping for the key
+     */
     public void remove(int key) {
         int bucket = key % SIZE;
         Entry toRemove = null;

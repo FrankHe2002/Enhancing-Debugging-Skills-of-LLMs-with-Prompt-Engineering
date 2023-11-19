@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 42.1 MB (Top 73.63%)
 class Solution {
     public void gameOfLife(int[][] board) {
         int m = board.length, n = board[0].length;

@@ -1,3 +1,5 @@
+// Runtime: 1 ms (Top 100.0%) | Memory: 40.04 MB (Top 68.2%)
+
 class Solution {
     private Integer[][] f;
     private int n;

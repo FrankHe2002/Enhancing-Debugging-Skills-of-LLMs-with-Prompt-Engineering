@@ -9,6 +9,7 @@ class Solution {
         freq = freq ^ (1 << node.val);
         if (node.left == null && node.right == null) {
             return (freq & (freq - 1)) == 0 ? 1 : 0;
+            // return Integer.bitCount(freq) <= 1 ? 1 : 0;
         }
         return helper(node.left, freq) + helper(node.right, freq);
     }

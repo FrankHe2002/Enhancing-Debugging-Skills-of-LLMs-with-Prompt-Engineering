@@ -4,6 +4,20 @@ Simple backtracking logic,try out each row and col and check position is valid o
 
         so,we need to check col,diagonals for valid position.
 
+// col is straightforward flag for each column
+
+// dia1
+// 0 1 2 3
+// 1 2 3 4
+// 2 3 4 5
+// 3 4 5 6
+
+// dia2
+// 0 -1 -2 -3
+// 1  0 -1 -2
+// 2  1  0 -1
+// 3  2  1  0
+
         negative numbers are not allowed as index,so we add n-1to diagonal2.
 
 class Solution {
@@ -27,6 +41,7 @@ class Solution {
             copyBoardToAns(board);
             return;
         }
+        // brute force all col in that row
         for (int i = 0; i < n; i++) {
             if (isValid(col, dia1, dia2, i, row)) {
                 col[i] = true;

@@ -1,5 +1,8 @@
+// Runtime: 1 ms (Top 98.74%) | Memory: 41.1 MB (Top 50.94%)
 class Solution {
     public int numDupDigitsAtMostN(int n) {
+        // 983582
+        // 108318
         int ttl = n++;
         int ans = 0;
         List<Integer> list = new ArrayList<>();
@@ -28,6 +31,8 @@ class Solution {
     }
 
     private int find(int n, int d) {
+        // dCn*n!
+        // d!/(d-n)/(d-n).../1
         int ans = 1;
         for (int i = 1; i <= d; i++) {
             ans *= i;

@@ -1,4 +1,7 @@
+// Runtime: 5 ms (Top 93.32%) | Memory: 48.7 MB (Top 36.20%)
 class Solution {
+    // g1-> graph with red edges
+    // g2-> graph with blue edges
     List<Integer> g1[], g2[];
     int[] dist1, dist2, ans;
     int MX = (int) 2e9;

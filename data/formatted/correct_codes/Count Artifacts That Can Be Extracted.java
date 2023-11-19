@@ -1,3 +1,4 @@
+// Runtime: 198 ms (Top 10.48%) | Memory: 160.5 MB (Top 45.16%)
 class Solution {
     public int digArtifacts(int n, int[][] artifacts, int[][] dig) {
         HashSet<String> set = new HashSet<>();
@@ -15,3 +16,4 @@ class Solution {
         return c;
     }
 }
+//TC = O(DIG + N^2)

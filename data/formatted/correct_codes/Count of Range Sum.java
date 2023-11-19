@@ -1,3 +1,4 @@
+// Runtime: 194 ms (Top 26.64%) | Memory: 76.2 MB (Top 86.68%)
 class Solution {
     public int countRangeSum(int[] nums, int lower, int upper) {
         int n = nums.length, ans = 0;
@@ -16,7 +17,7 @@ class Solution {
         return ans;
     }
 
-    private int bs(long sum, long[] pre) {
+    private int bs(long sum, long[] pre) { // return the index of first number bigger than sum
         int lo = 0, hi = pre.length;
         while (lo < hi) {
             int mid = (lo + hi) >> 1;

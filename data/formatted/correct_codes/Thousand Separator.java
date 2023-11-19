@@ -1,3 +1,5 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 39.69 MB (Top 67.9%)
+
 class Solution {
     public String thousandSeparator(int n) {
 

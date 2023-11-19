@@ -1,3 +1,5 @@
+// Runtime: 15 ms (Top 97.6%) | Memory: 57.69 MB (Top 69.7%)
+
 class Solution {
     public List<Integer> countSmaller(int[] nums) {
         int min = 20001;

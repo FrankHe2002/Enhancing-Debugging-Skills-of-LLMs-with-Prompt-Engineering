@@ -1,3 +1,4 @@
+// Runtime: 4 ms (Top 35.60%) | Memory: 47.1 MB (Top 38.97%)
 class Solution {
     boolean isClosed = true;
 
@@ -25,7 +26,7 @@ class Solution {
     public void dfs(int[][] grid, int i, int j) {
         if (i < 0 || j < 0 || i > grid.length - 1 || j > grid[0].length - 1 || grid[i][j] != 0) return;
 
-        grid[i][j] = 1;
+        grid[i][j] = 1; // to mark as visited
 
         if (i == 0 || j == 0 || i == grid.length - 1 || j == grid[0].length - 1) isClosed = false;
 

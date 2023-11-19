@@ -1,3 +1,5 @@
+// Runtime: 8 ms (Top 41.3%) | Memory: 44.12 MB (Top 6.5%)
+
 class Solution {
     public boolean divideArray(int[] arr) {
         HashMap<Integer, Integer> map = new HashMap<>();

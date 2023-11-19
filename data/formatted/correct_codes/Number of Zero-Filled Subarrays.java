@@ -1,3 +1,4 @@
+// Runtime: 5 ms (Top 80.84%) | Memory: 59.7 MB (Top 94.86%)
 class Solution {
     public long zeroFilledSubarray(int[] nums) {
         long len = 0;

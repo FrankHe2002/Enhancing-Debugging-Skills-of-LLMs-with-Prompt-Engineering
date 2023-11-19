@@ -1,3 +1,5 @@
+// Runtime: 42 ms (Top 84.2%) | Memory: 79.20 MB (Top 85.9%)
+
 class Solution {
 
     public int[] countServers(int n, int[][] logs, int x, int[] queries) {

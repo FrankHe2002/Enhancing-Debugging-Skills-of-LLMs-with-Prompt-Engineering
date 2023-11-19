@@ -8,7 +8,7 @@ class Solution {
             }
         }
 
-        int left = grid[0][0];
+        int left = grid[0][0]; // answer cannot be less than value of starting position
         int right = len * len - 1;
 
         int ans = right;
@@ -29,6 +29,8 @@ class Solution {
     boolean canSwim(int[][] grid, Map<Integer, int[]> reverseIndex, int ans, int len) {
         int[] x_diff = {1, - 1, 0, 0};
         int[] y_diff = {0, 0, 1, - 1};
+
+        // BFS
         Queue<int[]> container = new LinkedList<>();
         container.add(new int[] {0, 0});
 
@@ -55,6 +57,7 @@ class Solution {
     }
 
     boolean isValidCell(int[][] grid, int x, int y, int ans) {
+        // check boundary and if grid elevation is greater than evaluated answer
         return ! (x < 0 || x >= grid.length || y < 0 || y >= grid[0].length || grid[x][y] > ans);
     }
 }

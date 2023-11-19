@@ -1,3 +1,5 @@
+// Runtime: 7 ms (Top 73.3%) | Memory: 44.18 MB (Top 74.0%)
+
 class FrontMiddleBackQueue {
 
     Deque<Integer> dq1, dq2;

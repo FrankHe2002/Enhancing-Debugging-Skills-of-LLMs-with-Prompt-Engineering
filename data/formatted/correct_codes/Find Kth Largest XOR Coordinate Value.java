@@ -1,3 +1,4 @@
+// Runtime: 56 ms (Top 96.62%) | Memory: 250.3 MB (Top 62.84%)
 class Solution {
 
     private static final Random RAND = new Random(0);

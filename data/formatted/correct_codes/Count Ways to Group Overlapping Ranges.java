@@ -1,3 +1,5 @@
+// Runtime: 20 ms (Top 41.6%) | Memory: 77.50 MB (Top 30.8%)
+
 class Solution {
     public int countWays(int[][] ranges) {
         final long MOD = 1000000007;

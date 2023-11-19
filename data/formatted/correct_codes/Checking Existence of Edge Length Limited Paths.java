@@ -6,11 +6,16 @@ class Solution {
         for (int i = 0; i < n; i++) parents[i] = i;
 
         int m = queries.length;
+
+        // storing {u, v, weight, original idx} by increasing weight
         int[][] sortedQueries = new int[m][4];
         for (int i = 0; i < m; i++) {
             sortedQueries[i] = new int[] {queries[i][0], queries[i][1], queries[i][2], i};
         }
         Arrays.sort(sortedQueries, (a, b) -> a[2] - b[2]);
+
+
+        // sort edgeList by increasing weight 
         Arrays.sort(edgeList, (a, b) -> a[2] - b[2]);
         int idx = 0;
 
@@ -19,6 +24,8 @@ class Solution {
         for (int i = 0; i < m; i++) {
             int[] q = sortedQueries[i];
             int w = q[2];
+
+            // union all edges with weight less than current query
             while (idx < edgeList.length && edgeList[idx][2] < w) {
                 int[] e = edgeList[idx++];
                 int u = e[0], v = e[1];

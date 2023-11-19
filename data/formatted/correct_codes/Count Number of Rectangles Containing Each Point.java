@@ -1,3 +1,4 @@
+// Runtime: 1094 ms (Top 10.04%) | Memory: 110.7 MB (Top 25.95%)
 class Solution {
     public int[] countRectangles(int[][] rectangles, int[][] points) {
         int max = Integer.MIN_VALUE;

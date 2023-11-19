@@ -1,3 +1,5 @@
+// Runtime: 42 ms (Top 76.3%) | Memory: 72.93 MB (Top 48.8%)
+
 class Solution {
     int dfs(List<List<Integer>> al, boolean[] visited, int from) {
         int change = 0;

@@ -1,3 +1,4 @@
+// Runtime: 893 ms (Top 61.90%) | Memory: 51.3 MB (Top 87.91%)
 class Solution {
     public int minimumDifference(int[] nums) {
         int n = nums.length;
@@ -50,3 +51,4 @@ class Solution {
         return res;
     }
 }
+// Time Complexity: O(2^(n/2) * n/2 * n/2)

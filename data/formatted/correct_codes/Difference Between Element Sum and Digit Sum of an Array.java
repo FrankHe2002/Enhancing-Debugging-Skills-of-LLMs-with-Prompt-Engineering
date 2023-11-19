@@ -1,3 +1,5 @@
+// Runtime: 2 ms (Top 98.7%) | Memory: 43.90 MB (Top 44.7%)
+
 class Solution {
     public static int digiSum(int num) {
         int sum = 0;

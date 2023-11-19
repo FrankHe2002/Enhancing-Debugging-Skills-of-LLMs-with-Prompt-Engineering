@@ -1,3 +1,4 @@
+// Runtime: 57 ms (Top 71.43%) | Memory: 109.9 MB (Top 23.21%)
 class Solution {
     public int minimumLines(int[][] stockPrices) {
         if (stockPrices.length == 1) return 0;

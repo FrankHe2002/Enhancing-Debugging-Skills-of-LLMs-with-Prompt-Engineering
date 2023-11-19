@@ -1,3 +1,4 @@
+// Runtime: 57 ms (Top 16.02%) | Memory: 101.7 MB (Top 80.40%)
 class Solution {
     public int maxDistance(int[] nums1, int[] nums2) {
         int max = 0;

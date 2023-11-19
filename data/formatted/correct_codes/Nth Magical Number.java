@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 60.59%) | Memory: 40.8 MB (Top 59.85%)
 class Solution {
     public int nthMagicalNumber(int n, int a, int b) {
         long N = (long) n;

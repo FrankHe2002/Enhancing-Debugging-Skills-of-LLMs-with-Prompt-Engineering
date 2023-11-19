@@ -1,3 +1,4 @@
+// Runtime: 48 ms (Top 45.59%) | Memory: 42 MB (Top 92.59%)
 class Solution {
     public int maxPoints(int[][] points) {
         int n = points.length;

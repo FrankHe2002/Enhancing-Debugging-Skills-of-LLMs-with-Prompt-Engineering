@@ -1,3 +1,4 @@
+// Runtime: 3 ms (Top 81.75%) | Memory: 52.8 MB (Top 24.19%)
 class Solution {
     public int longestMountain(int[] arr) {
         if (arr.length < 3)

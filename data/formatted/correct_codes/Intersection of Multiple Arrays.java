@@ -1,3 +1,5 @@
+// Runtime: 3 ms (Top 94.41%) | Memory: 46.4 MB (Top 56.41%)
+
 class Solution {
     public List<Integer> intersection(int[][] nums) {
 

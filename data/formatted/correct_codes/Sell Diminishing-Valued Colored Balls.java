@@ -1,9 +1,13 @@
+// Runtime: 89 ms (Top 16.36%) | Memory: 101.4 MB (Top 5.25%)
 class Solution {
     private long mod = 1000000007L;
 
     public int maxProfit(int[] inventory, int orders) {
+        // we use pq to find the most balls
         PriorityQueue<Long> pq = new PriorityQueue<>((x, y) -> Long.compare(y, x));
         pq.offer(0L);
+
+        // we use map to count the balls
         Map<Long, Long> map = new HashMap<>();
         map.put(0L, 0L);
 

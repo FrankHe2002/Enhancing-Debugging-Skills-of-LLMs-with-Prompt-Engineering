@@ -13,6 +13,8 @@ class Solution {
                 break;
             }
         }
+
+        // 1 not found
         if (oneIndex == - 1) {
             return res;
         }

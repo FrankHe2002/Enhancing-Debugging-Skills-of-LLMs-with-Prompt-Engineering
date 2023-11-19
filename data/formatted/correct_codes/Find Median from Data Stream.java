@@ -1,3 +1,4 @@
+// Runtime: 183 ms (Top 63.97%) | Memory: 124.7 MB (Top 57.27%)
 class MedianFinder {
 
     PriorityQueue maxHeap;
@@ -9,11 +10,15 @@ class MedianFinder {
     }
 
     public void addNum(int num) {
+
+        //Pushing
         if (maxHeap.isEmpty() || ((int) maxHeap.peek() > num)) {
             maxHeap.offer(num);
         } else {
             minHeap.offer(num);
         }
+
+        //Balancing
         if (maxHeap.size() > minHeap.size() + 1) {
             minHeap.offer(maxHeap.peek());
             maxHeap.poll();
@@ -25,12 +30,14 @@ class MedianFinder {
     }
 
     public double findMedian() {
-        if (maxHeap.size() == minHeap.size()) {
+
+        //Evaluating Median
+        if (maxHeap.size() == minHeap.size()) { // Even Number
             return ((int) maxHeap.peek() + (int) minHeap.peek()) / 2.0;
-        } else {
+        } else { //Odd Number
             if (maxHeap.size() > minHeap.size()) {
                 return (int) maxHeap.peek() + 0.0;
-            } else {
+            } else { // minHeap.size() > maxHeap.size()
                 return (int) minHeap.peek() + 0.0;
             }
         }

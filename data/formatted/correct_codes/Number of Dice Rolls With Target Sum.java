@@ -1,3 +1,4 @@
+// Runtime: 12 ms (Top 94.21%) | Memory: 40.8 MB (Top 96.38%)
 class Solution {
     public int numRollsToTarget(int n, int k, int target) {
         if (target < n || target > n * k) return 0;

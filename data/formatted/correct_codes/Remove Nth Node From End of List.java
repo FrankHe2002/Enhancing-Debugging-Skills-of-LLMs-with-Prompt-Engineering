@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 72.17%) | Memory: 42.2 MB (Top 52.18%)
 class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode temp = head;

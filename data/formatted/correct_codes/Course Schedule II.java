@@ -10,6 +10,8 @@ class Solution {
             graph.get(pair[1]).add(pair[0]);
             inDegree[pair[0]]++;
         }
+
+        // BFS - Kahn's Algorithm - Topological Sort
         Queue<Integer> bfsContainer = new LinkedList<>();
         for (int i = 0; i < numCourses; i++) {
             if (inDegree[i] == 0) {

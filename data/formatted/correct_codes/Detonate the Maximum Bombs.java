@@ -1,4 +1,10 @@
+// Runtime: 234 ms (Top 36.67%) | Memory: 42.3 MB (Top 94.92%)
 class Solution {
+    /*
+    Make directed graph
+    u -> v means, v is in the range of u
+    check from which node maximum nodes can be reached and return the number of nodes reached
+    */
     public int maximumDetonation(int[][] bombs) {
         Map<Integer, List<Integer>> graph = new HashMap<>();
 
@@ -20,6 +26,9 @@ class Solution {
     }
 
     private boolean inRange(int[] u, int[] v) {
+        // (x-a)^2 + (y-b)^2 = R^2 -> point (a, b) is at border
+        // (x-a)^2 + (y-b)^2 < R^2 -> point (a, b) is inside the circle
+        // (x-a)^2 + (y-b)^2 > R^2 -> point (a, b) is outside the circle
         return Math.pow(u[0] - v[0], 2) + Math.pow(u[1] - v[1], 2) <= Math.pow(u[2], 2);
     }
 

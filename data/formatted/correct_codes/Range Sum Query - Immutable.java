@@ -1,3 +1,4 @@
+// Runtime: 10 ms (Top 88.88%) | Memory: 49.9 MB (Top 6.06%)
 class NumArray {
     int[] prefix;
 

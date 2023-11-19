@@ -1,3 +1,4 @@
+// 0 ms. 100%
 class Solution {
     private static final double EPS = 1e-6;
 

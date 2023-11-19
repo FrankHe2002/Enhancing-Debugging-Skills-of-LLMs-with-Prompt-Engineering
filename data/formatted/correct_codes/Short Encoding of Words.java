@@ -1,3 +1,4 @@
+// Runtime: 23 ms (Top 85.71%) | Memory: 59.1 MB (Top 35.19%)
 class Node {
     private boolean flag;
     private Node[] children;

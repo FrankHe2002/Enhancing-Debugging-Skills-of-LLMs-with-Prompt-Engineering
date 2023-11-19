@@ -1,3 +1,4 @@
+// Runtime: 4 ms (Top 17.33%) | Memory: 42.9 MB (Top 9.03%)
 class Solution {
     public int matrixScore(int[][] grid) {
         ArrayList<Integer> arr = new ArrayList<Integer>();

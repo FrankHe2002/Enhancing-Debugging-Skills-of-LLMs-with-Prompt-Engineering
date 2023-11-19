@@ -1,3 +1,4 @@
+// Runtime: 17 ms (Top 82.83%) | Memory: 42.5 MB (Top 98.57%)
 class Solution {
     public List<List<Integer>> fourSum(int[] nums, int target) {
         Arrays.sort(nums);

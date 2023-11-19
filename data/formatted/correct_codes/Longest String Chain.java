@@ -1,6 +1,7 @@
 class Solution {
 
     Boolean compareForIncreaseByOne(String str1, String str2) {
+        //str 1 will be long than str2
         int first = 0;
         int second = 0;
         if (str1.length() != (str2.length() + 1)) {
@@ -22,7 +23,7 @@ class Solution {
 
     public int longestStrChain(String[] words) {
         int N = words.length;
-        Arrays.sort(words, (a, b) -> a.length() - b.length());
+        Arrays.sort(words, (a, b) -> a.length() - b.length());  //as Sequence/Subset are not ordered
         int[] dp = new int[N];
         Arrays.fill(dp, 1);
         int maxi = 1;
@@ -33,7 +34,7 @@ class Solution {
                     maxi = Math.max(maxi, dp[i]);
                 }
             }
-        }
+        }//for neds
         return maxi;
     }
 }

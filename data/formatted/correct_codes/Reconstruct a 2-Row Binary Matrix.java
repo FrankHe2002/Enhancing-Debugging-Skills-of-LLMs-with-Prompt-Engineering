@@ -1,3 +1,4 @@
+// Runtime: 18 ms (Top 71.11%) | Memory: 51.5 MB (Top 97.04%)
 class Solution {
     public List<List<Integer>> reconstructMatrix(int upper, int lower, int[] colsum) {
         int[][] mat = new int[2][colsum.length];

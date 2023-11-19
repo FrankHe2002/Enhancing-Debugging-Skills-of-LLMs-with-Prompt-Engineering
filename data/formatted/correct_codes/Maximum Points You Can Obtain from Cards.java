@@ -1,3 +1,4 @@
+// Runtime: 5 ms (Top 20.60%) | Memory: 66.5 MB (Top 16.04%)
 class Solution {
     public int maxScore(int[] cardPoints, int k) {
         int n = cardPoints.length;

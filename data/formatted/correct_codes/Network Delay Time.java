@@ -1,3 +1,4 @@
+// Runtime: 49 ms (Top 24.43%) | Memory: 65.2 MB (Top 52.71%)
 class Solution {
     HashMap<Integer, HashMap<Integer, Integer>> map = new HashMap<>();
 

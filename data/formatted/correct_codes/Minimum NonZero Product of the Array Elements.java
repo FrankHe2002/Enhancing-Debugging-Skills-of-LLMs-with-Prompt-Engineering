@@ -1,3 +1,5 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 39.20 MB (Top 68.6%)
+
 class Solution {
     public int mod = 1_000_000_007;
 

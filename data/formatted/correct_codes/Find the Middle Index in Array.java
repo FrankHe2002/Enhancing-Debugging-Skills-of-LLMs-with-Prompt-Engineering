@@ -1,3 +1,5 @@
+// Runtime: 2 ms (Top 16.64%) | Memory: 42.4 MB (Top 52.37%)
+
 class Solution {
     public int findMiddleIndex(int[] nums) {
 

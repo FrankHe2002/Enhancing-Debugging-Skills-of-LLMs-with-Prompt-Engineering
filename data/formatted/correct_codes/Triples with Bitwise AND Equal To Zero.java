@@ -1,3 +1,5 @@
+// Runtime: 113 ms (Top 49.3%) | Memory: 43.66 MB (Top 52.1%)
+
 class Solution {
     public int countTriplets(int[] nums) {
         int[] count = new int[1 << 16];

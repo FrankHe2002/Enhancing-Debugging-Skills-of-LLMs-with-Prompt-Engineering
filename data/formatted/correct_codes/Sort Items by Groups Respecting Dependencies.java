@@ -1,7 +1,11 @@
+// Runtime: 104 ms (Top 36.60%) | Memory: 71.6 MB (Top 49.67%)
 class Solution {
+    // topological sort group first, then node within the group
     private List<Integer>[] groups;
     private List<Integer>[] graph;
+    // indegrees of node
     private int[] indegrees;
+    // indegrees of group
     private int[] indegreeGroups;
 
     public int[] sortItems(int n, int m, int[] group, List<List<Integer>> beforeItems) {
@@ -46,10 +50,12 @@ class Solution {
     }
 
     private void buildGroups(int n, int[] group) {
+        // build groups;
         groups = new List[n];
         int index = n - 1;
         for (int i = 0; i < n; i++) {
             if (group[i] == - 1) {
+                // virtual group
                 group[i] = index--;
             }
             if (groups[group[i]] == null) {

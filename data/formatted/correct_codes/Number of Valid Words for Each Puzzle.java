@@ -29,7 +29,7 @@ class Solution {
 
                 if (sub == 0) break;
 
-                sub = (sub - 1) & mask;
+                sub = (sub - 1) & mask; // get the next substring
             }
 
             res.add(c);

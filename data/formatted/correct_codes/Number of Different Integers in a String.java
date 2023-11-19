@@ -1,3 +1,4 @@
+// Runtime: 22 ms (Top 16.67%) | Memory: 44.5 MB (Top 21.67%)
 class Solution {
     public int numDifferentIntegers(String word) {
         String[] arr = word.replaceAll("[a-zA-Z]", " ").split("\\s+");

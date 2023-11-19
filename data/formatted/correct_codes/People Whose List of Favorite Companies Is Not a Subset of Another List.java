@@ -1,3 +1,4 @@
+// Runtime: 362 ms (Top 62.96%) | Memory: 52.4 MB (Top 92.59%)
 class Solution {
     public List<Integer> peopleIndexes(List<List<String>> favoriteCompanies) {
         Set<String>[] fav = new Set[favoriteCompanies.size()];

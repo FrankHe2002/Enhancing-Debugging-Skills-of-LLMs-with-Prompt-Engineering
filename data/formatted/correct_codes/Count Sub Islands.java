@@ -1,3 +1,4 @@
+// Runtime: 74 ms (Top 10.84%) | Memory: 133.6 MB (Top 38.64%)
 class Solution {
     public int countSubIslands(int[][] grid1, int[][] grid2) {
         int m = grid1.length;

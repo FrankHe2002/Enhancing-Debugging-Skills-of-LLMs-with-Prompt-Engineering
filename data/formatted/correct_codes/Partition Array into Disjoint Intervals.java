@@ -1,7 +1,7 @@
 class Solution {
     public int partitionDisjoint(int[] nums) {
-        int mts = nums[0];
-        int mtp = nums[0];
+        int mts = nums[0]; // max till scan
+        int mtp = nums[0]; // max till partition
         int idx = 0;
 
         for (int i = 1; i < nums.length; i++) {

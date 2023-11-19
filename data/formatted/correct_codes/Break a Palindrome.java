@@ -23,6 +23,9 @@ class Solution {
 
         }
 
+        // aaaa
+        // aba
+
 
         StringBuilder sb = new StringBuilder(palindrome);
         sb.setCharAt(palindrome.length() - 1, 'b');

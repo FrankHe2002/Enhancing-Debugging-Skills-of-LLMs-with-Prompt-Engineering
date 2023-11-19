@@ -1,3 +1,4 @@
+// Runtime: 2 ms (Top 90.24%) | Memory: 43 MB (Top 54.79%)
 class Solution {
     public boolean buddyStrings(String s, String goal) {
         char a = '\u0000', b = '\u0000';

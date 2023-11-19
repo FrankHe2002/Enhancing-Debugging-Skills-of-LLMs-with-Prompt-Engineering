@@ -57,6 +57,7 @@ class SegmentTree {
         if (tl == tr) {
             tree[pos] = new Node(1, tl, tl, tr, tr);
             s.setCharAt(idx, ch);
+            // System.out.println(pos);
         } else {
             int tm = tl + (tr - tl) / 2;
             if (idx <= tm)

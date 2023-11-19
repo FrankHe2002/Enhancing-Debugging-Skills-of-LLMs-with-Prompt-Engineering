@@ -1,3 +1,8 @@
+// One Pass Counting Solution
+// 1. check cur-prev == 1 or -25 to track the length of longest continuos subtring.
+// 2. counts to track the longest continuos subtring starting with current character.
+// Time complexity: O(N)
+// Space complexity: O(1)
 class Solution {
     public int findSubstringInWraproundString(String p) {
         final int N = p.length();

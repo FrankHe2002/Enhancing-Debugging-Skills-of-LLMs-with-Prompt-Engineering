@@ -1,3 +1,4 @@
+// Runtime: 7 ms (Top 34.08%) | Memory: 44.9 MB (Top 74.04%)
 class Solution {
     public List<Integer> minSubsequence(int[] nums) {
         int total = 0;

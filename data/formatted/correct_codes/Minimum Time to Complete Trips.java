@@ -5,7 +5,7 @@ class Solution {
         long left = 1, right = 100000000000001L;
 
         while (left <= right) {
-            long mid = left + (right - left) / 2;
+            long mid = left + (right - left) / 2;  //find mid point like this to avoid overflow
             long curr_trips = 0;
             for (int t : time) {
                 curr_trips += mid / t;

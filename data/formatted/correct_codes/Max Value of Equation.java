@@ -1,3 +1,4 @@
+// Runtime: 16 ms (Top 80.93%) | Memory: 104.9 MB (Top 83.74%)
 class Solution {
     public int findMaxValueOfEquation(int[][] points, int k) {
         int ans = Integer.MIN_VALUE;

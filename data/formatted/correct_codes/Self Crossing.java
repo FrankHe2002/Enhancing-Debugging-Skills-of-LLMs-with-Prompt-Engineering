@@ -7,8 +7,8 @@ class Solution {
             int a = f(x, i - 2) - f(x, i - 4);
             int b = f(x, i - 2);
 
-            if (arm && x[i] >= b) return true;
-            if (leg && x[i] >= a && a > 0) return true;
+            if (arm && x[i] >= b) return true;  // cross [i - 2]
+            if (leg && x[i] >= a && a > 0) return true;  // cross [i - 4]
 
             if (x[i] < a) arm = true;
             else if (x[i] <= b) leg = true;

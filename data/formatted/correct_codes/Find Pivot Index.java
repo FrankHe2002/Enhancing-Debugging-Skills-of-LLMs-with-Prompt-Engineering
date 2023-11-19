@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 100.00%) | Memory: 43.2 MB (Top 91.78%)
 class Solution {
     public int pivotIndex(int[] nums) {
 

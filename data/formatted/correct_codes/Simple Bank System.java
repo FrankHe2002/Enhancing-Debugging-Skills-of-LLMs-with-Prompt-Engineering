@@ -1,3 +1,4 @@
+// Runtime: 265 ms (Top 12.10%) | Memory: 117.3 MB (Top 39.86%)
 class Bank {
 
     int N;

@@ -1,3 +1,4 @@
+// Runtime: 4 ms (Top 25.35%) | Memory: 56.8 MB (Top 44.29%)
 class Solution {
     public int findMaxConsecutiveOnes(int[] nums) {
         int max = 0;

@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 100.00%) | Memory: 48.1 MB (Top 66.96%)
 class Solution {
 
     public int[] sortArrayByParity(int[] nums) {

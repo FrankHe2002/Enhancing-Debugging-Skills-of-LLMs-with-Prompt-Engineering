@@ -1,3 +1,5 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 39.00 MB (Top 80.9%)
+
 class Solution {
     public int climbStairs(int n) {
         int[] memo = new int[n + 1];

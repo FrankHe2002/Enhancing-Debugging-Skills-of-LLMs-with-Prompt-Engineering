@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 88.84%) | Memory: 42.3 MB (Top 22.19%)
 class Solution {
     public int specialArray(int[] nums) {
         int x = nums.length;

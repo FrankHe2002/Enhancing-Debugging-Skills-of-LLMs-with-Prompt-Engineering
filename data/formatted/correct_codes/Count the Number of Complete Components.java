@@ -1,3 +1,5 @@
+// Runtime: 83 ms (Top 5.5%) | Memory: 43.82 MB (Top 67.0%)
+
 class Solution {
     public int countCompleteComponents(int n, int[][] edges) {
         int[] parent = new int[n];

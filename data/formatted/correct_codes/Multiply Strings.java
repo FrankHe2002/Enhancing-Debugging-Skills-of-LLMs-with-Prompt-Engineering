@@ -1,3 +1,4 @@
+// Runtime: 17 ms (Top 37.52%) | Memory: 44.4 MB (Top 28.50%)
 class Solution {
     public String multiply(String num1, String num2) {
         if (num1.equals("0") || num2.equals("0"))

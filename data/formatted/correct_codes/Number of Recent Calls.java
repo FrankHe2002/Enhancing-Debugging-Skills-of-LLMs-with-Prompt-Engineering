@@ -1,3 +1,5 @@
+// Runtime: 1373 ms (Top 10.1%) | Memory: 52.32 MB (Top 27.9%)
+
 class RecentCounter {
     ArrayList<Integer> calls;
 
@@ -16,3 +18,8 @@ class RecentCounter {
     }
 }
 
+/**
+ * Your RecentCounter object will be instantiated and called as such:
+ * RecentCounter obj = new RecentCounter();
+ * int param_1 = obj.ping(t);
+ */

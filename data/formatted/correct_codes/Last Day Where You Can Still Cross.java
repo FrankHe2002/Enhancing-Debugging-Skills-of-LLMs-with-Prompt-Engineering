@@ -1,3 +1,4 @@
+// Runtime: 150 ms (Top 49.61%) | Memory: 121.4 MB (Top 10.85%)
 class Solution {
     int[][] dir = new int[][] {{0, - 1}, {- 1, 0}, {1, 0}, {0, 1}};
 

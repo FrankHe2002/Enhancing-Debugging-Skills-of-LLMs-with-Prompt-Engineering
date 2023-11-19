@@ -1,3 +1,4 @@
+// Runtime: 17 ms (Top 78.04%) | Memory: 46.7 MB (Top 69.44%)
 class Solution {
     class Pair {
         int i;
@@ -10,7 +11,13 @@ class Solution {
     }
 
     public int shortestPathLength(int[][] graph) {
+        /*
+        For each node currentNode, steps as key, visited as value
+        boolean[currentNode][steps]
+        */
         int n = graph.length;
+
+        // 111....1, 1<< n - 1
         int allVisited = (1 << n) - 1;
 
         boolean[][] visited = new boolean[n][1 << n];

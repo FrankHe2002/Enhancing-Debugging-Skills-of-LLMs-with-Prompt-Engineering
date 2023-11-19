@@ -1,3 +1,4 @@
+// Runtime: 14 ms (Top 30.54%) | Memory: 57.2 MB (Top 69.94%)
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
         int rows = matrix.length;

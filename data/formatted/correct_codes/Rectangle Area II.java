@@ -1,3 +1,4 @@
+// Runtime: 32 ms (Top 17.31%) | Memory: 42.3 MB (Top 86.54%)
 class Solution {
     public int rectangleArea(int[][] rectangles) {
         int n = rectangles.length;

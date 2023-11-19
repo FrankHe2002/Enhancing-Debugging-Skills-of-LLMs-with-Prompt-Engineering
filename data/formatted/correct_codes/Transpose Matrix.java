@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 43.1 MB (Top 92.66%)
 class Solution {
     public int[][] transpose(int[][] matrix) {
         int m = matrix.length;

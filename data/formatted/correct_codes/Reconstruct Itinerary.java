@@ -1,3 +1,4 @@
+// Runtime: 7 ms (Top 90.17%) | Memory: 50.3 MB (Top 42.47%)
 class Solution {
     LinkedList<String> res = new LinkedList<>();
 

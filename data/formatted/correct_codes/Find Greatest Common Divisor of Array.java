@@ -1,3 +1,5 @@
+// Runtime: 3 ms (Top 25.8%) | Memory: 42.56 MB (Top 95.7%)
+
 class Solution {
     public int findGCD(int[] nums) {
         Arrays.sort(nums);

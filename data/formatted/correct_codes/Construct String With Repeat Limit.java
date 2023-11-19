@@ -1,3 +1,4 @@
+// Runtime: 35 ms (Top 93.53%) | Memory: 64.8 MB (Top 62.59%)
 class Solution {
     public String repeatLimitedString(String s, int repeatLimit) {
         int[] counter = new int[26];
@@ -19,6 +20,8 @@ class Solution {
                 continue;
             }
             if (repeated == repeatLimit) {
+                // Greedy, use the next possible char once and get back to curr.
+                // if no other char available, the curr word is the largest subsequence.
                 int lower = findNextMax(counter, max - 1);
                 if (lower < 0) {
                     return builder.toString();

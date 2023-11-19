@@ -1,3 +1,5 @@
+// Runtime: 11 ms (Top 40.95%) | Memory: 94.7 MB (Top 51.18%)
+
 class Solution {
     public long gridGame(int[][] grid) {
         int n = grid[0].length;

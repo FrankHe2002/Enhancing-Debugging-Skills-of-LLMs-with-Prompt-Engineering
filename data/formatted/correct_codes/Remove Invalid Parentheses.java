@@ -1,3 +1,5 @@
+// Runtime: 42 ms (Top 72.6%) | Memory: 44.48 MB (Top 39.7%)
+
 class Solution {
     public List<String> removeInvalidParentheses(String s) {
         List<String> ans = new ArrayList<>();

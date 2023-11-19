@@ -1,3 +1,4 @@
+// Runtime: 55 ms (Top 48.30%) | Memory: 81.3 MB (Top 78.98%)
 class Solution {
     public int[] getStrongest(int[] arr, int k) {
         int[] result = new int[k];

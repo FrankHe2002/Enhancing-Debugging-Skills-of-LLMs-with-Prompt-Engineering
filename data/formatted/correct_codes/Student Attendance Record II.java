@@ -1,3 +1,5 @@
+// Runtime: 343 ms (Top 29.4%) | Memory: 78.58 MB (Top 12.2%)
+
 class Solution {
     int mod = 1000000000 + 7;
 
@@ -15,10 +17,13 @@ class Solution {
         if (ptr >= n) return 1;
         if (cache[ptr][aCount][lCount] != - 1) return cache[ptr][aCount][lCount];
         long count = 0;
+        // Late
         if (lCount > 0) {
             count = populate(n, ptr + 1, aCount, lCount - 1, cache) % mod;
         }
+        // Present
         count = (count + populate(n, ptr + 1, aCount, 2, cache)) % mod;
+        // Absent
         if (aCount == 1) count = (count + populate(n, ptr + 1, aCount - 1, 2, cache)) % mod;
         cache[ptr][aCount][lCount] = (int) (count % mod);
         return cache[ptr][aCount][lCount];

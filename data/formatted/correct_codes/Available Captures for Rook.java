@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 41.3 MB (Top 62.26%)
 class Solution {
     public int numRookCaptures(char[][] board) {
         int ans = 0;

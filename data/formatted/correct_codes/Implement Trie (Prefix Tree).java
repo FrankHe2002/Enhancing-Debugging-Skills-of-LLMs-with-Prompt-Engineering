@@ -1,3 +1,4 @@
+// Runtime: 67 ms (Top 53.89%) | Memory: 70 MB (Top 22.15%)
 class Trie {
     private class Node {
         char character;

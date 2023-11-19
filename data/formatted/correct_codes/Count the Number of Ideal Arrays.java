@@ -8,7 +8,7 @@ class Solution {
         long[] fact = new long[N];
         long[] factinv = new long[N];
         inv[1] = fact[0] = fact[1] = factinv[0] = factinv[1] = 1;
-        for (int i = 2; i < N; i++) {
+        for (int i = 2; i < N; i++) { // mod inverse
             inv[i] = M - M / i * inv[M % i] % M;
             fact[i] = fact[i - 1] * i % M;
             factinv[i] = factinv[i - 1] * inv[i] % M;
@@ -17,7 +17,7 @@ class Solution {
             int tmp = i;
             Map<Integer, Integer> map = new HashMap<>();
             for (int j = 2; j * j <= tmp; j++) {
-                while (tmp % j == 0) {
+                while (tmp % j == 0) {  // prime factorization.
                     tmp /= j;
                     map.merge(j, 1, Integer::sum);
                 }
@@ -26,7 +26,7 @@ class Solution {
                 map.merge(tmp, 1, Integer::sum);
             }
             long gain = 1;
-            for (int val : map.values()) {
+            for (int val : map.values()) { // arranges all the primes.
                 gain *= comb(n + val - 1, val, fact, factinv);
                 gain %= M;
             }

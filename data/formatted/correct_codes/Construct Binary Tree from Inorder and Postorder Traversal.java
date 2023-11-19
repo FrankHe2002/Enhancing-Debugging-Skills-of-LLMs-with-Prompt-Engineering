@@ -1,7 +1,7 @@
 class Solution {
     int[] io;
     int[] po;
-    int n;
+    int n;   // nth post order node 
 
     public TreeNode buildTree(int[] inorder, int[] postorder) {
         this.n = inorder.length - 1;
@@ -15,9 +15,9 @@ class Solution {
         int currNode = po[n--];
         int idxInInorder = low;
         TreeNode root = new TreeNode(currNode);
-        if (low == high) return root;
+        if (low == high) return root;   // no more nodes
 
-        while (io[idxInInorder] != currNode) idxInInorder++;
+        while (io[idxInInorder] != currNode) idxInInorder++; // find index of currNode in inorder
         root.right = buildTree(idxInInorder + 1, high);
         root.left = buildTree(low, idxInInorder - 1);
         return root;

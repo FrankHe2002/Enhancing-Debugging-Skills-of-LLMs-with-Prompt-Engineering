@@ -1,3 +1,4 @@
+// Runtime: 5 ms (Top 98.27%) | Memory: 53.6 MB (Top 98.31%)
 class Solution {
     public int maximalSquare(char[][] matrix) {
         int m = matrix.length;

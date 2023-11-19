@@ -1,3 +1,4 @@
+// Runtime: 35 ms (Top 28.44%) | Memory: 75.6 MB (Top 11.81%)
 class Solution {
 
     public void downHeapify(int[] nums, int startIndex, int lastIndex) {
@@ -29,9 +30,11 @@ class Solution {
 
     public int[] sortArray(int[] nums) {
         int len = nums.length;
+        //building a heap - O(n) time
         for (int i = (len / 2) - 1; i >= 0; i--) {
             downHeapify(nums, i, len - 1);
         }
+        //sorting element - nlogn(n) time
         for (int i = len - 1; i > 0; i--) {
             int temp = nums[i];
             nums[i] = nums[0];

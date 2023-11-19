@@ -1,3 +1,5 @@
+// Runtime: 9 ms (Top 33.5%) | Memory: 41.11 MB (Top 16.7%)
+
 class Solution {
     public String optimalDivision(int[] nums) {
 

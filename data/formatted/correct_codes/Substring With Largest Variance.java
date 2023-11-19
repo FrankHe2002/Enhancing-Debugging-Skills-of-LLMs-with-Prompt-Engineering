@@ -1,3 +1,5 @@
+// Runtime: 170 ms (Top 86.6%) | Memory: 41.17 MB (Top 94.8%)
+
 class Solution {
     public int largestVariance(String s) {
 
@@ -11,6 +13,8 @@ class Solution {
                 int remainingA = freq[a];
                 int remainingB = freq[b];
                 if (a == b || remainingA == 0 || remainingB == 0) continue;
+
+                // run kadanes on each possible character pairs (A & B)
                 int currBFreq = 0, currAFreq = 0;
                 for (int i = 0; i < s.length(); i++) {
                     int c = (int) (s.charAt(i) - 'a');

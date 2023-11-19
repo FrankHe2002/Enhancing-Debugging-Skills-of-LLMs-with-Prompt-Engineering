@@ -1,3 +1,5 @@
+// Runtime: 16 ms (Top 70.5%) | Memory: 56.31 MB (Top 66.2%)
+
 class Solution {
 
     private boolean canFit(int n, long k, int[] batteries) {
@@ -29,6 +31,8 @@ class Solution {
         long lower = 0;
         long upper = batSum / n;
         long res = - 1;
+
+        // binary search
         while (lower <= upper) {
             long mid = lower + (upper - lower) / 2;
 

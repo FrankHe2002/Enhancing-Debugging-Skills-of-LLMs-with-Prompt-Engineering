@@ -1,3 +1,5 @@
+// Runtime: 9 ms (Top 72.82%) | Memory: 46.7 MB (Top 65.16%)
+
 class Solution {
     public int minFlips(String target) {
 

@@ -1,3 +1,5 @@
+// Runtime: 19 ms (Top 53.0%) | Memory: 44.86 MB (Top 93.0%)
+
 class Solution {
     public List<Integer> getAllElements(TreeNode root1, TreeNode root2) {
         Stack<TreeNode> st1 = new Stack<>();

@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 41.4 MB (Top 60.13%)
 class Solution {
     public String toHex(int num) {
         if (num == 0) return "0";
@@ -16,8 +17,8 @@ class Solution {
                 char curr = (char) (digit + '0');
                 sb.append(curr);
                 start = false;
-            } else {
-                if (start == false) {
+            } else {//digit == 0
+                if (start == false) { //avoid case: 00001a
                     sb.append('0');
                 }
             }

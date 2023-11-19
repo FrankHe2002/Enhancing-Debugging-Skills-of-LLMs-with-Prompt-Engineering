@@ -1,3 +1,4 @@
+// Runtime: 24 ms (Top 22.67%) | Memory: 61.2 MB (Top 10.43%)
 class Solution {
     public int longestIncreasingPath(int[][] matrix) {
         int[][] memo = new int[matrix.length][matrix[0].length];
@@ -20,7 +21,8 @@ class Solution {
             int x = dirs[k][0] + i;
             int y = dirs[k][1] + j;
             if (isValid(matrix, x, y) && matrix[x][y] > matrix[i][j]) {
-                if (memo[x][y] == 0) {
+                // Get/compute the largest path for that index
+                if (memo[x][y] == 0) { // If longest path doesn't exist for that path then compute it
                     dfs(matrix, x, y, memo);
                 }
                 max = Math.max(max, memo[x][y]);

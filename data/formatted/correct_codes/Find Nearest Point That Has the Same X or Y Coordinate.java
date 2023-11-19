@@ -12,6 +12,7 @@ class Solution {
             }
 
         }
+        // if ( min== Integer.MAX_VALUE) return -1; --> no longer needed as index is initialized as -1 in the declartion.
         return index;
 
     }

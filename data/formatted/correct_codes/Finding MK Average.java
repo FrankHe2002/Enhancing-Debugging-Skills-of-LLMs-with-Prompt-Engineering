@@ -15,7 +15,7 @@ class MKAverage {
         }
     }
 
-    private TreeSet<Node> set = new TreeSet<>();
+    private TreeSet<Node> set = new TreeSet<>();          // natural order
     private Deque<Node> queue = new LinkedList<>();
     private Node kLeft;
     private Node kRight;

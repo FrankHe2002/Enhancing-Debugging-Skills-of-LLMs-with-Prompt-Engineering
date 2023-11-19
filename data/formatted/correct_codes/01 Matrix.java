@@ -1,6 +1,9 @@
 class Solution {
+    //  BFS
+// We add all 0 to the queue in the 0th level of the BFS. From there, every subsequent pair of indexes added would be 1 in the mat. THis way levels can represent the distance of a one from the closest 0 to it.
     boolean visited[][];
 
+    // Could also convert the indexes to a single number by mat[0].length * i + j.
     class Pair {
         int x;
         int y;
@@ -15,6 +18,7 @@ class Solution {
         int level = 0;
         visited = new boolean[mat.length][mat[0].length];
         Queue<Pair> q = new ArrayDeque<>();
+        // Addition of all pairs in mat that have 0.
         for (int i = 0; i < mat.length; i++) {
             for (int j = 0; j < mat[0].length; j++) {
                 if (mat[i][j] == 0) {

@@ -6,6 +6,7 @@ class Solution {
         for (int i : nums) {
 
             pre += i;
+            //   if(pre-goal<0)continue;
             if (pre - goal == 0) cnt++;
 
             if (m.containsKey(pre - goal)) {

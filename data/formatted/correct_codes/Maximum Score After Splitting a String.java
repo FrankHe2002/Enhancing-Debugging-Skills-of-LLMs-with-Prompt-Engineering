@@ -1,3 +1,5 @@
+// Runtime: 17 ms (Top 14.4%) | Memory: 44.28 MB (Top 5.7%)
+
 class Solution {
     public int maxScore(String s) {
         int max = 0;

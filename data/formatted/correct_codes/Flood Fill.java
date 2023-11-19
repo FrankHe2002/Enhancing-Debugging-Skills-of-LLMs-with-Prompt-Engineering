@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 91.13%) | Memory: 48.4 MB (Top 21.53%)
 class Solution {
     void colorFill(int[][] image, int sr, int sc, int sourceColor, int targetColor) {
         int m = image.length, n = image[0].length;
@@ -6,10 +7,10 @@ class Solution {
             if ((image[sr][sc] != sourceColor) || (image[sr][sc] == targetColor)) return;
 
             image[sr][sc] = targetColor;
-            colorFill(image, sr, sc - 1, sourceColor, targetColor);
-            colorFill(image, sr, sc + 1, sourceColor, targetColor);
-            colorFill(image, sr - 1, sc, sourceColor, targetColor);
-            colorFill(image, sr + 1, sc, sourceColor, targetColor);
+            colorFill(image, sr, sc - 1, sourceColor, targetColor); // left
+            colorFill(image, sr, sc + 1, sourceColor, targetColor); // right
+            colorFill(image, sr - 1, sc, sourceColor, targetColor); // up
+            colorFill(image, sr + 1, sc, sourceColor, targetColor); // down
         } else
             return;
     }

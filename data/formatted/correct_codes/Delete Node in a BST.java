@@ -1,3 +1,5 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 44.92 MB (Top 83.3%)
+
 class Solution {
     public TreeNode deleteNode(TreeNode root, int key) {
         if (root == null) return null;

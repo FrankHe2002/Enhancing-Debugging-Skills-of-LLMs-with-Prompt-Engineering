@@ -1,3 +1,5 @@
+// Runtime: 160 ms (Top 78.2%) | Memory: 55.21 MB (Top 66.3%)
+
 class Solution {
     int mod = 1000000007;
 

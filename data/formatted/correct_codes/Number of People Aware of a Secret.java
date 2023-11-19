@@ -1,3 +1,4 @@
+// Runtime: 14 ms (Top 38.08%) | Memory: 41.3 MB (Top 54.72%)
 class Solution {
     public int peopleAwareOfSecret(int n, int delay, int forget) {
         long mod = 1000000007L;

@@ -1,3 +1,5 @@
+// Runtime: 15 ms (Top 66.0%) | Memory: 46.54 MB (Top 44.7%)
+
 class Solution {
     public boolean can(int r, int[] houses, int[] heaters) {
         int prevHouseIdx = - 1;

@@ -4,6 +4,8 @@ class Solution {
         boolean xFound = false, yFound = false, zFound = false;
 
         for (int[] triplet : triplets) {
+
+            //Current Triplet is target
             if (triplet[0] == target[0] && triplet[1] == target[1] && triplet[2] == target[2]) return true;
 
             if (triplet[0] == target[0]) {

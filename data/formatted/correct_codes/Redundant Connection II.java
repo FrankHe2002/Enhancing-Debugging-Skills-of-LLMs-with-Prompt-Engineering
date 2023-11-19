@@ -1,3 +1,4 @@
+// Runtime: 3 ms (Top 24.18%) | Memory: 44.9 MB (Top 16.79%)
 class Solution {
     int[] dsu;
 

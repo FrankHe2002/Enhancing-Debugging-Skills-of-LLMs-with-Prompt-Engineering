@@ -1,3 +1,4 @@
+// Runtime: 125 ms (Top 16.02%) | Memory: 64.6 MB (Top 78.83%)
 class Solution {
 
     int a[];
@@ -25,3 +26,9 @@ class Solution {
     }
 }
 
+/**
+ * Your Solution object will be instantiated and called as such:
+ * Solution obj = new Solution(nums);
+ * int[] param_1 = obj.reset();
+ * int[] param_2 = obj.shuffle();
+ */

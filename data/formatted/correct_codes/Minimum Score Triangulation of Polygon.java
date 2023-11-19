@@ -1,3 +1,4 @@
+// Runtime: 10 ms (Top 13.89%) | Memory: 41.7 MB (Top 61.06%)
 class Solution {
     int solve(int[] v, int i, int j) {
         if (i + 1 == j)
@@ -46,7 +47,16 @@ class Solution {
 
     public int minScoreTriangulation(int[] values) {
         int n = values.length;
+        // return solve(values, 0, n-1); // For Recursion
 
-        return solveTab(values);
+    /* int[][] dp= new int[n][n]; // For Top-Down DP(Memoisation)
+        for(int[] row:dp){
+            Arrays.fill(row,-1);
+        }
+
+        return solveMem(values,0,n-1,dp);
+        */
+
+        return solveTab(values); //For Bottom-Down DP(Tabulisation)
     }
 }

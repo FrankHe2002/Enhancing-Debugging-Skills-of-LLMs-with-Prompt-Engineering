@@ -1,3 +1,5 @@
+// Runtime: 1 ms (Top 100.0%) | Memory: 42.10 MB (Top 46.5%)
+
 class Solution {
     public int findTheLongestBalancedSubstring(String s) {
         int max = 0;

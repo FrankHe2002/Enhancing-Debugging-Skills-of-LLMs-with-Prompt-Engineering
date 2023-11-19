@@ -1,3 +1,4 @@
+// Runtime: 10 ms (Top 73.55%) | Memory: 62.3 MB (Top 52.61%)
 class Solution {
     public int islandPerimeter(int[][] grid) {
         if (grid == null || grid.length == 0) return 0;

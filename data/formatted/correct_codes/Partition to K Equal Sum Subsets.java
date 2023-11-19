@@ -1,3 +1,5 @@
+// Runtime: 277 ms (Top 51.4%) | Memory: 43.53 MB (Top 23.8%)
+
 class Solution {
     private final List<Set<Integer>> allSubsets = new ArrayList<>();
 

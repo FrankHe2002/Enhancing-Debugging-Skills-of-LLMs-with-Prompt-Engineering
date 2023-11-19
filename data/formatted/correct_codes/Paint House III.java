@@ -1,3 +1,4 @@
+// Runtime: 70 ms (Top 34.94%) | Memory: 52.8 MB (Top 34.74%)
 class Solution {
     public int helper(int idx, int[] houses, int[][] cost, int target, int prevColor, int neigh, Integer[][][] dp) {
         if (idx == houses.length || neigh > target) {
@@ -13,10 +14,10 @@ class Solution {
             for (int j = 0; j < cost[idx].length; j++) {
                 int minCostHere = Integer.MAX_VALUE;
 
-                if (j + 1 == prevColor)
+                if (j + 1 == prevColor) // Painting the house with the same colour as that of the previous one.
                     minCostHere = helper(idx + 1, houses, cost, target, prevColor, neigh, dp);
 
-                else
+                else // Painting the house with a different color and incrementing the neighbour count.
                     minCostHere = helper(idx + 1, houses, cost, target, j + 1, neigh + 1, dp);
 
                 if (minCostHere != Integer.MAX_VALUE)

@@ -1,3 +1,5 @@
+// Runtime: 21 ms (Top 78.9%) | Memory: 48.13 MB (Top 74.6%)
+
 class Solution {
     public int longestCommonSubsequence(String text1, String text2) {
         int m = text1.length();

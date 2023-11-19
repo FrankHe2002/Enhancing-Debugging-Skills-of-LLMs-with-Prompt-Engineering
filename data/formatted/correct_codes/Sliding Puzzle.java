@@ -1,3 +1,4 @@
+// Runtime: 22 ms (Top 35.42%) | Memory: 44.4 MB (Top 46.82%)
 class Solution {
     int[][] dir = {{1, 3}, {0, 2, 4}, {1, 5}, {0, 4}, {1, 3, 5}, {2, 4}};
 

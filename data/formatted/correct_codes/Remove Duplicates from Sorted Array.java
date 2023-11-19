@@ -1,3 +1,5 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 43.72 MB (Top 69.8%)
+
 class Solution {
     public int removeDuplicates(int[] arr) {
         int i = 0;

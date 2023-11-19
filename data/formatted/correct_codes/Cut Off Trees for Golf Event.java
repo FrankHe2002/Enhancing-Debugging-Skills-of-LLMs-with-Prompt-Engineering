@@ -1,4 +1,10 @@
+// Runtime: 273 ms (Top 92.8%) | Memory: 44.58 MB (Top 18.0%)
+
 class Solution {
+    //approach: 1st store all the positions in the min heap acc. to their height
+    //now start removing the elements from the heap and calculate their dis using bfs
+    // if at any point we cann't reach at the next position return -1;
+    // else keep on adding the distances and return;
     public int cutOffTree(List<List<Integer>> forest) {
         PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> (forest.get(a[0]).get(a[1]) - forest.get(b[0]).get(b[1])));
         for (int i = 0; i < forest.size(); i++) {
@@ -12,6 +18,7 @@ class Solution {
         while (pq.size() > 0) {
             int[] temp = pq.poll();
             int dis = calcDis(forest, curr, temp);
+            //System.out.println(dis+" "+temp.height);
             if (dis == - 1)
                 return - 1;
             ans += dis;

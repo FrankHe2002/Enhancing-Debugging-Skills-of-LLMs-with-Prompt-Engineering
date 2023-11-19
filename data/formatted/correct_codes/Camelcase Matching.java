@@ -1,3 +1,5 @@
+// Runtime: 1 ms (Top 33.0%) | Memory: 40.70 MB (Top 50.3%)
+
 class Solution {
     public List<Boolean> camelMatch(String[] queries, String pattern) {
         List<Boolean> list = new ArrayList<>();

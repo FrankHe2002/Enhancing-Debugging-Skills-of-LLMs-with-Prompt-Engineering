@@ -1,3 +1,4 @@
+// Runtime: 9 ms (Top 32.99%) | Memory: 94.3 MB (Top 24.39%)
 class Solution {
     public int minDominoRotations(int[] tops, int[] bottoms) {
 

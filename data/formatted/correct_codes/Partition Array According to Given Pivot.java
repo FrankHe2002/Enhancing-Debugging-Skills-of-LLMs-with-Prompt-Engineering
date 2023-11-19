@@ -1,3 +1,7 @@
+// Runtime: 12 ms (Top 37.13%) | Memory: 169.4 MB (Top 17.70%)
+// Time complexity = 2n = O(n)
+// Space complexity = O(1), or O(n) if the result array is including in the complexity analysis.
+
 class Solution {
     public int[] pivotArray(int[] nums, int pivot) {
         int[] result = new int[nums.length];

@@ -1,3 +1,4 @@
+// Runtime: 12 ms (Top 82.12%) | Memory: 70.1 MB (Top 38.32%)
 class Solution {
     public void findMaxSum(TreeNode node, long sum[]) {
         if (node == null) return;

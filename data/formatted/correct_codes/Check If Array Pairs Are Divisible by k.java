@@ -1,3 +1,5 @@
+// Runtime: 5 ms (Top 78.2%) | Memory: 60.02 MB (Top 5.2%)
+
 class Solution {
     public boolean canArrange(int[] arr, int k) {
         int[] frequency = new int[k];

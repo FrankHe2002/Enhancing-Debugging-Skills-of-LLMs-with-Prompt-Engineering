@@ -1,3 +1,4 @@
+// Runtime: 72 ms (Top 44.52%) | Memory: 128.2 MB (Top 22.61%)
 class Solution {
     public List<List<Integer>> kSmallestPairs(int[] nums1, int[] nums2, int k) {
         PriorityQueue<int[]> pq = new PriorityQueue<>(

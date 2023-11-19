@@ -9,6 +9,7 @@ class Solution {
                 graph.get(i).add(friends[i][j]);
             }
         }
+        // System.out.println(graph.get(0));
         Queue<Integer> queue = new ArrayDeque<>();
         queue.offer(id);
         visited[id] = true;
@@ -19,6 +20,7 @@ class Solution {
                 int vertex = queue.remove();
                 for (int child : graph.get(vertex)) {
                     if (! visited[child]) {
+                        //   if(level == 1) System.out.println(watchedVideos.get(child));
                         if (level == 1) {
                             for (String a : watchedVideos.get(child)) {
                                 answer.put(a, answer.getOrDefault(a, 0) + 1);

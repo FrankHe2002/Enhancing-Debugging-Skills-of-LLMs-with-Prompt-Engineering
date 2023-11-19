@@ -1,3 +1,4 @@
+// Runtime: 143 ms (Top 19.44%) | Memory: 114.3 MB (Top 55.56%)
 class Solution {
     public int maxBuilding(int n, int[][] restrictions) {
         List<int[]> list = new ArrayList<>();
@@ -21,10 +22,10 @@ class Solution {
 
         int result = 0;
         for (int i = 1; i < list.size(); i++) {
-            int h1 = list.get(i - 1)[1];
-            int h2 = list.get(i)[1];
-            int x = list.get(i - 1)[0];
-            int y = list.get(i)[0];
+            int h1 = list.get(i - 1)[1]; // heigth of previous restriction
+            int h2 = list.get(i)[1]; // height of current restriction
+            int x = list.get(i - 1)[0]; // id of previous restriction
+            int y = list.get(i)[0]; // id of current restriction
 
             result = Math.max(result, Math.max(h1, h2) + (y - x - Math.abs(h1 - h2)) / 2);
         }

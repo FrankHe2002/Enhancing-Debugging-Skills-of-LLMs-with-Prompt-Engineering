@@ -13,12 +13,16 @@ class Solution {
                 int currentNameId = i;
                 if (emailToNameId.containsKey(email)) {
                     int oldNameId = emailToNameId.get(email);
+                    // Join new and old name ids so that we can know which emails can be merged together. Emails in a single component can be merged together.
                     uf.union(currentNameId, oldNameId);
                 } else {
                     emailToNameId.put(email, currentNameId);
                 }
             }
         }
+        // emailToNameId = {johnnybravo@mail.com=3, johnsmith@mail.com=0, john00@mail.com=1, john_newyork@mail.com=0, mary@mail.com=2}
+
+        // Use TreeSet for alphabetical order. 
         Map<Integer, TreeSet<String>> nameIdToEmails = new HashMap<>();
         for (int i = 0; i < l; i++) {
             int root = uf.find(i);
@@ -27,6 +31,7 @@ class Solution {
             List<String> emails = account.subList(1, account.size());
             nameIdToEmails.get(root).addAll(emails);
         }
+        // nameIdToEmails = {1=[john00@mail.com, john_newyork@mail.com, johnsmith@mail.com], 2=[mary@mail.com], 3=[johnnybravo@mail.com]}
 
         List<List<String>> out = new ArrayList<>();
         for (int id : nameIdToEmails.keySet()) {

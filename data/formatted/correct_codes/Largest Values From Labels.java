@@ -22,6 +22,7 @@ class Solution {
                 sum += maxHeap.poll().getKey();
                 numWanted--;
             }
+            // This Holds since at most numWanted is mentioned.
             if (maxHeap.isEmpty()) {
                 return sum;
             }

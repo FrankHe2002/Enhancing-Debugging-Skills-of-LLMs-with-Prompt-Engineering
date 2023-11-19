@@ -1,3 +1,4 @@
+// Runtime: 907 ms (Top 10.13%) | Memory: 306.2 MB (Top 27.03%)
 class Solution {
     public int minimumOperations(int[] nums, int start, int goal) {
         int res = 0;

@@ -1,5 +1,7 @@
 class Solution {
     public int sumOddLengthSubarrays(int[] arr) {
+
+        // Using two loops in this question...
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
             int prevSum = 0;
@@ -10,6 +12,8 @@ class Solution {
                 }
             }
         }
+        // Time Complexity : O(n-square)
+        // Space Complexity : O(1)
         return sum;
     }
 }

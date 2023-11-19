@@ -1,3 +1,5 @@
+// Runtime: 42 ms (Top 19.3%) | Memory: 56.45 MB (Top 7.1%)
+
 class Solution {
     public static int largestCombination(int[] candidates) {
         int arr[] = new int[32];

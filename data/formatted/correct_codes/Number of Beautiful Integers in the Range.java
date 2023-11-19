@@ -1,3 +1,5 @@
+// Runtime: 12 ms (Top 87.3%) | Memory: 43.43 MB (Top 64.1%)
+
 class Solution {
     String s;
     int k;

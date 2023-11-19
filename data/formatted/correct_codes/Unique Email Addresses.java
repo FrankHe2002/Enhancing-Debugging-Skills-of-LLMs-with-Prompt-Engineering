@@ -1,3 +1,4 @@
+// Runtime: 27 ms (Top 57.45%) | Memory: 46.9 MB (Top 71.39%)
 class Solution {
     public int numUniqueEmails(String[] emails) {
 

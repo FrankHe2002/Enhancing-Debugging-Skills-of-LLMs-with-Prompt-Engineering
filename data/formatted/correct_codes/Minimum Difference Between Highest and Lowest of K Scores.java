@@ -1,3 +1,4 @@
+// Runtime: 6 ms (Top 73.44%) | Memory: 47.5 MB (Top 27.33%)
 class Solution {
     public int minimumDifference(int[] nums, int k) {
         if (k == 1) return 0;

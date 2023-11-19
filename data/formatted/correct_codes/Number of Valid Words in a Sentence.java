@@ -7,6 +7,7 @@ class Solution {
         for (String s : arr) {
             if (s.matches(regex) && s.matches(r2)) {
                 ans++;
+                //System.out.println(s);
             }
         }
         return ans;

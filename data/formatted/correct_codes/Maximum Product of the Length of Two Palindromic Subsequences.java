@@ -1,3 +1,5 @@
+// Runtime: 952 ms (Top 21.5%) | Memory: 44.16 MB (Top 54.1%)
+
 class Solution {
     int res = 0;
 

@@ -1,3 +1,4 @@
+// Runtime: 35 ms (Top 23.02%) | Memory: 47.3 MB (Top 32.61%)
 class CBTInserter {
 
     private TreeNode root;
@@ -42,6 +43,13 @@ class CBTInserter {
             n /= 2;
         }
         if ((1 << depth) - 1 == total) depth++;
+        // k is the new index in the lowest level of tree, right is the max index of the lowest level of tree
+        // e.g. for tree
+        // 1
+        // / \
+        // 2 new
+//index 0 1
+        // it's insertBinary(val, 1, 1)
         var res = insertBinary(val, total - (1 << (depth - 1)) + 1, (1 << (depth - 1)) - 1);
         total++;
         return res;

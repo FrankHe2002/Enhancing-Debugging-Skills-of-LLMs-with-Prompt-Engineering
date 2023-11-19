@@ -1,6 +1,14 @@
+// Runtime: 136 ms (Top 26.4%) | Memory: 44.16 MB (Top 70.9%)
+
 class Solution {
     private int mod = 1000000007;
+    //100 digits in a number 10 ^ 100
 
+    // 2nd dimesion is for whether you passed a digit equal to the digit in the same index upper bound of range which is numStr->> if yes -- then you are bounded other wise you can take any digit after it as per your choice
+
+    //3rd dimension is for whether the previous digits include before current digit to be considered to be included are zero or not ? if yes then you can take any digit of your choice, if no then you can only take those digits whose absoulte difference with previous digit included is one
+
+    //4th dimesnion is for how many options are you having to fill the current position-- if there are no constraints there are 0 to 9 i.e. 10 options available only  
     private Integer stepCount[][][][] = null;
 
     public int countSteppingNumbers(String low, String high) {

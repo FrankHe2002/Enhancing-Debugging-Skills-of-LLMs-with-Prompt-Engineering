@@ -1,3 +1,4 @@
+// Runtime: 38 ms (Top 26.09%) | Memory: 55.8 MB (Top 6.28%)
 class Solution {
     public int mismatchCount(String s) {
         int n = s.length() - 1;

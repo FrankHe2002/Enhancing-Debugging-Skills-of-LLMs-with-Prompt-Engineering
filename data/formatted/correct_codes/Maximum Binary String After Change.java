@@ -1,3 +1,5 @@
+// Runtime: 68 ms (Top 32.6%) | Memory: 45.01 MB (Top 8.1%)
+
 class Solution {
     public String maximumBinaryString(String binary) {
         int n = binary.length();

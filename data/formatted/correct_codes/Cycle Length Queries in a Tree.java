@@ -1,3 +1,5 @@
+// Runtime: 19 ms (Top 78.2%) | Memory: 89.35 MB (Top 43.5%)
+
 class Solution {
     public int[] cycleLengthQueries(int n, int[][] queries) {
         int[] count = new int[queries.length];

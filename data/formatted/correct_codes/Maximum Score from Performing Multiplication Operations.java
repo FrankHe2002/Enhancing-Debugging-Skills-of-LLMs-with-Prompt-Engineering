@@ -1,3 +1,4 @@
+// Runtime: 360 ms (Top 22.12%) | Memory: 168.2 MB (Top 19.45%)
 class Solution {
     public int maximumScore(int[] nums, int[] multipliers) {
         int n = nums.length, m = multipliers.length;

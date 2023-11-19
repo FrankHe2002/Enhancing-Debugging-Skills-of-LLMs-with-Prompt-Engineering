@@ -1,3 +1,5 @@
+// Runtime: 4 ms (Top 41.38%) | Memory: 50.1 MB (Top 6.90%)
+
 class Solution {
     public int smallestRangeI(int[] nums, int k) {
         if (nums.length == 1)

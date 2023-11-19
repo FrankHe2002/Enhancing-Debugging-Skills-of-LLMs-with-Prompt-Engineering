@@ -1,3 +1,4 @@
+// Runtime: 161 ms (Top 18.27%) | Memory: 63.5 MB (Top 16.98%)
 class Solution {
     public int calculateSetBits(String s) {
         int count = 0;
@@ -12,6 +13,7 @@ class Solution {
         for (int i = 2; i <= n / 2; i++) {
             if (n % i == 0) return false;
         }
+// System.out.println(n+" - ");
         return true;
     }
 

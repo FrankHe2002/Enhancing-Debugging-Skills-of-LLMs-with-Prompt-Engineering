@@ -64,7 +64,7 @@ def bug_gen(**kwargs):
     # Generate the output file name
     base_name = os.path.splitext(os.path.basename(file_path))[0]
     bug_types_str = '_'.join(bug_list)
-    new_file_name = f"{base_name}_{bug_types_str}.java" if bug_types_str else f"{base_name}_no_bug.java"
+    new_file_name = f"{base_name}_{bug_types_str}.java" if bug_types_str else f"{base_name}_nobug.java"
     output_path = os.path.join(os.path.dirname(output_path), new_file_name)
 
     # Write to output file

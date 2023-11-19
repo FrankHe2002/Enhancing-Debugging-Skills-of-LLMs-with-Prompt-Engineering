@@ -11,6 +11,7 @@ class Solution {
         return ans;
     }
 
+    //putting comma
     void util(String s, int idx) {
         if (idx == s.length() - 2) {
             return;
@@ -21,6 +22,7 @@ class Solution {
         util(s, idx + 1);
     }
 
+    //helper function for puting decimals after comma
     void fun() {
         for (String s : ret) {
             int cIndex = 0;
@@ -34,9 +36,9 @@ class Solution {
             String b = s.substring(cIndex + 2, s.length() - 1);
             List<String> n1 = dot(a);
             List<String> n2 = dot(b);
-            if (n1 == null || n2 == null) {
+            if (n1 == null || n2 == null) { //invalid strings
                 continue;
-            } else {
+            } else { //valid strings
                 for (String fir : n1) {
                     for (String sec : n2) {
                         ans.add("(" + fir + ", " + sec + ")");
@@ -46,11 +48,14 @@ class Solution {
         }
     }
 
+    //putting decimal point
     List<String> dot(String n) {
         List<String> li = new ArrayList<>();
         if (n.length() == 1) {
             li.add(n);
         } else {
+
+            //just checking for first and last zeroes and making conditions accordingly
 
             if (n.charAt(n.length() - 1) == '0') {
                 if (n.charAt(0) == '0') {
@@ -64,7 +69,7 @@ class Solution {
                 for (int i = 0; i < n.length() - 1; i++) {
                     li.add(n.substring(0, i + 1) + "." + n.substring(i + 1));
                 }
-                li.add(n);
+                li.add(n);  //without any decimal
             }
         }
         return li;

@@ -1,3 +1,5 @@
+// Runtime: 8 ms (Top 19.3%) | Memory: 44.65 MB (Top 6.2%)
+
 class Solution {
     public boolean isNumber(String s) {
         try {

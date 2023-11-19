@@ -1,3 +1,5 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 40.6 MB (Top 74.32%)
+
 class Solution {
     public boolean isPerfectSquare(int num) {
         long start = 1;

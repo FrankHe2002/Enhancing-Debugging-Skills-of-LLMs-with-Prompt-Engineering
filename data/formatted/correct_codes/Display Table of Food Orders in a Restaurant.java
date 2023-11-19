@@ -1,3 +1,4 @@
+// Runtime: 157 ms (Top 14.06%) | Memory: 126.7 MB (Top 62.50%)
 class Solution {
     public List<List<String>> displayTable(List<List<String>> orders) {
         List<List<String>> ans = new ArrayList<>();

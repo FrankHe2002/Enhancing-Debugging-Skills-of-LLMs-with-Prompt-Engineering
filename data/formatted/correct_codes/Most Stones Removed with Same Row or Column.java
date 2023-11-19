@@ -1,3 +1,4 @@
+// Runtime: 70 ms (Top 33.32%) | Memory: 48.7 MB (Top 77.91%)
 class Solution {
     public int removeStones(int[][] stones) {
         int ret = 0;
@@ -13,6 +14,7 @@ class Solution {
                 }
             }
         }
+        // System.out.println(Arrays.toString(ds.sets));
         for (int i = 0; i < ds.sets.length; i++) {
             if (ds.sets[i] < 0)
                 ret += Math.abs(ds.sets[i]) - 1;
@@ -29,11 +31,14 @@ class Solution {
             Arrays.fill(sets, - 1);
         }
 
+        //
+        // weighted union
+        //union->return size in negative
         public int union(int idx1, int idx2) {
             int p1 = find(idx1);
             int p2 = find(idx2);
 
-            if (p1 == p2) {
+            if (p1 == p2) { //same parent so directly returning size
                 return sets[p1];
             } else {
                 int w1 = Math.abs(sets[p1]);
@@ -41,12 +46,16 @@ class Solution {
 
                 if (w1 > w2) {
                     sets[p2] = p1;
+
+                    //collapsing FIND
                     sets[idx1] = p1;
                     sets[idx2] = p1;
 
                     return sets[p1] = - (w1 + w2);
                 } else {
                     sets[p1] = p2;
+
+                    //collapsing FIND
                     sets[idx1] = p2;
                     sets[idx2] = p2;
 
@@ -55,6 +64,8 @@ class Solution {
             }
         }
 
+        // collapsing FIND
+        //find parent
         public int find(int idx) {
             int p = idx;
             while (sets[p] >= 0) {

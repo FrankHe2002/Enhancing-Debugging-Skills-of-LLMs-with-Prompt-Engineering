@@ -2,6 +2,8 @@ class Solution {
     public int maxSumMinProduct(int[] nums) {
         int mod = (int) Math.pow(10, 9) + 7;
         int n = nums.length;
+
+        //next smaller on left
         int[] left = new int[n];
         Stack<Integer> st = new Stack<>();
         left[0] = - 1;
@@ -16,6 +18,8 @@ class Solution {
 
             st.push(i);
         }
+
+        //next smaller on right
         int[] right = new int[n];
         st = new Stack<>();
         right[n - 1] = n;

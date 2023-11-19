@@ -12,9 +12,10 @@ class Solution {
             for (int j = text2.length() - 1; j >= 0; j--) {
                 char ch1 = text1.charAt(i);
                 char ch2 = text2.charAt(j);
-                if (ch1 == ch2)
+                if (ch1 == ch2) // diagnal
                     dp[i][j] = 1 + dp[i + 1][j + 1];
-                else
+                else// right,down considering not matchning char from s1 and skipping s2 
+                    //considering not matchning char from s2 and skipping s1
                     dp[i][j] = Math.max(dp[i][j + 1], dp[i + 1][j]);
 
             }

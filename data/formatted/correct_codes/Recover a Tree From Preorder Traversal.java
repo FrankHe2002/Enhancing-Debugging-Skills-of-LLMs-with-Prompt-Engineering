@@ -8,6 +8,7 @@ class Solution {
             number += traversal.charAt(i);
             i++;
         }
+        //System.out.print("root = " + number + " " + i + "     ");
         TreeNode root = new TreeNode(Integer.parseInt(number));
         StringBuilder str = new StringBuilder();
         int bk = 0;

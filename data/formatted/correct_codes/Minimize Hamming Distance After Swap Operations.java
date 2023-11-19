@@ -5,6 +5,10 @@ class Solution {
         for (int[] swap : allowedSwaps) {
             int firstIndex = swap[0];
             int secondIndex = swap[1];
+            // int firstParent = uf.find(firstIndex);
+            // int secondParent = uf.find(secondIndex);
+            // if (firstParent != secondParent)
+            //     uf.parent[firstParent] = secondParent;
             uf.union(firstIndex, secondIndex);
         }
         Map<Integer, Map<Integer, Integer>> map = new HashMap<>();

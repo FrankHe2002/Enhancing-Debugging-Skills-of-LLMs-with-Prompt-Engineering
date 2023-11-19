@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 39.4 MB (Top 99.44%)
 class Solution {
     public int rob(int[] nums) {
         if (nums.length == 1) {

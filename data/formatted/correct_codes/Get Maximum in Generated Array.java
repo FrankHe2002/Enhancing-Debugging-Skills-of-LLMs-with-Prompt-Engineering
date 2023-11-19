@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 71.82%) | Memory: 41.2 MB (Top 34.16%)
 class Solution {
     public int getMaximumGenerated(int n) {
         if (n == 0 || n == 1) return n;

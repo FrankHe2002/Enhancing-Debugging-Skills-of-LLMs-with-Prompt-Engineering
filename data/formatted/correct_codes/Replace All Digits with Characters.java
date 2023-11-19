@@ -1,3 +1,4 @@
+// Runtime: 2 ms (Top 43.86%) | Memory: 42.6 MB (Top 27.39%)
 class Solution {
     public String replaceDigits(String s) {
         char[] str = s.toCharArray();

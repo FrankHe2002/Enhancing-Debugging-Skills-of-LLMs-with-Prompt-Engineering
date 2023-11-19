@@ -1,3 +1,4 @@
+// Runtime: 27 ms (Top 87.99%) | Memory: 52.8 MB (Top 24.67%)
 class ExamRoom {
 
     private final int max;

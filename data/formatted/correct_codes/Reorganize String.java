@@ -1,3 +1,4 @@
+// Runtime: 14 ms (Top 11.69%) | Memory: 42.5 MB (Top 40.28%)
 class Solution {
     public String reorganizeString(String s) {
         StringBuilder ans = new StringBuilder("");

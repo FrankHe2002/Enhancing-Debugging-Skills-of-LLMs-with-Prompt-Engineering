@@ -1,3 +1,4 @@
+// Runtime: 71 ms (Top 53.30%) | Memory: 48.3 MB (Top 81.34%)
 class Solution {
     public String removeDuplicates(String s, int k) {
         int i = 0;

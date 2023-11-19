@@ -1,3 +1,4 @@
+// Runtime: 50 ms (Top 49.30%) | Memory: 48.5 MB (Top 48.18%)
 class Solution {
     public int longestIdealString(String s, int k) {
         int DP[] = new int[26], ans = 1;

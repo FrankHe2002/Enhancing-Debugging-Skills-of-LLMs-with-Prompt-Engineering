@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 100.00%) | Memory: 85.6 MB (Top 12.35%)
 class Solution {
     public int maximumTop(int[] nums, int k) {
         int n = nums.length, max = - 1;

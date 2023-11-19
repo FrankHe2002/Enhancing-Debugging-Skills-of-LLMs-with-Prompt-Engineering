@@ -1,3 +1,4 @@
+// Runtime: 3 ms (Top 80.60%) | Memory: 41.7 MB (Top 87.57%)
 class Solution {
     public int maxSatisfaction(int[] satisfaction) {
         Arrays.sort(satisfaction);

@@ -1,3 +1,4 @@
+// Runtime: 2 ms (Top 82.01%) | Memory: 50 MB (Top 21.41%)
 class Solution {
 
     public int jump(int[] nums) {

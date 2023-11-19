@@ -1,3 +1,20 @@
+// Runtime: 86 ms (Top 5.00%) | Memory: 44 MB (Top 76.22%)
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode() {}
+ * TreeNode(int val) { this.val = val; }
+ * TreeNode(int val, TreeNode left, TreeNode right) {
+ * this.val = val;
+ * this.left = left;
+ * this.right = right;
+ * }
+ * }
+ */
 class Solution {
 
     public int treeHeight(TreeNode root) {
@@ -20,6 +37,8 @@ class Solution {
         boolean rightBalanced = isBalanced(root.right);
         int leftHeight = treeHeight(root.left);
         int rightHeight = treeHeight(root.right);
+
+        //Return true only when all conditions are true
         return (leftBalanced && rightBalanced && Math.abs(leftHeight - rightHeight) <= 1);
 
     }

@@ -1,3 +1,4 @@
+// Runtime: 77 ms (Top 48.15%) | Memory: 41.6 MB (Top 50.00%)
 class Solution {
     double all = 0;
 
@@ -32,7 +33,7 @@ class Solution {
             return 0;
         }
         double ans = 0;
-        for (int i = 0; i <= balls[idx]; i++) {
+        for (int i = 0; i <= balls[idx]; i++) { // for this level of ball, try to take 0 to balls[idx]
             cur[idx] += i;
             ans += solve(idx + 1, got + i, need, cur, balls, fact);
             cur[idx] -= i;

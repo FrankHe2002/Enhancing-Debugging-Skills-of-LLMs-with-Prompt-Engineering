@@ -1,3 +1,5 @@
+// Runtime: 34 ms (Top 98.4%) | Memory: 43.48 MB (Top 21.6%)
+
 class Solution {
     static HashSet<Integer> set = new HashSet<>();
 

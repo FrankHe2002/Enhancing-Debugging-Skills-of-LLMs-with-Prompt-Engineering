@@ -1,3 +1,5 @@
+// Runtime: 210 ms (Top 41.6%) | Memory: 104.25 MB (Top 18.7%)
+
 class Solution {
     Integer[][][] memo;
     int n;
@@ -10,14 +12,14 @@ class Solution {
 
     int dp(int i, int k, int isStart) {
         if (memo[i][k][isStart] != null) return memo[i][k][isStart];
-        if (k == 0) return 1;
-        if (i == n) return 0;
+        if (k == 0) return 1; // Found a way to draw k valid segments
+        if (i == n) return 0; // Reach end of points
 
-        int ans = dp(i + 1, k, isStart);
+        int ans = dp(i + 1, k, isStart); // Skip ith point
         if (isStart == 1)
-            ans += dp(i + 1, k, 0);
+            ans += dp(i + 1, k, 0); // Take ith point as start
         else
-            ans += dp(i, k - 1, 1);
+            ans += dp(i, k - 1, 1); // Take ith point as end
 
         return memo[i][k][isStart] = ans % 1_000_000_007;
     }

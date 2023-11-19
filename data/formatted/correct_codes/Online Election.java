@@ -1,3 +1,4 @@
+// Runtime: 91 ms (Top 91.57%) | Memory: 51.6 MB (Top 89.43%)
 class TopVotedCandidate {
     int[] persons;
     int[] times;

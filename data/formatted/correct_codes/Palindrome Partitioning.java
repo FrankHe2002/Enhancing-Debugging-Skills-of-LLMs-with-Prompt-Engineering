@@ -1,3 +1,7 @@
+// Runtime: 26 ms (Top 25.04%) | Memory: 136.1 MB (Top 72.32%)
+// Plaindrome Partitioning
+// Leetcode : https://leetcode.com/problems/palindrome-partitioning/
+
 class Solution {
     public List<List<String>> partition(String s) {
         List<List<String>> result = new ArrayList<>();

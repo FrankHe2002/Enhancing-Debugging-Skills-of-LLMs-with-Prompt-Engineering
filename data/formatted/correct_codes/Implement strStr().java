@@ -22,7 +22,7 @@ class Solution {
                     return j - needle.length();
                 }
             } else {
-                j = j - i + 1;
+                j = j - i + 1; // backtrack to last pos+1 where there was a probable match
                 i = 0;
             }
         }

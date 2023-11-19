@@ -8,7 +8,7 @@ class Solution {
         return max(arr.clone()) - min(arr);
     }
 
-    private int max(int[] arr) {
+    private int max(int[] arr) { // find max
         for (int i = 0, t = - 1; i < arr.length; i++) {
             if (t == - 1 && arr[i] != 9) {
                 t = arr[i];
@@ -20,7 +20,7 @@ class Solution {
         return parse(arr);
     }
 
-    private int min(int[] arr) {
+    private int min(int[] arr) { // find min
         int re = arr[0] == 1 ? 0 : 1;
         int t = arr[0] == 1 ? - 1 : arr[0];
         for (int i = 0; i < arr.length; i++) {

@@ -1,3 +1,5 @@
+// Runtime: 1 ms (Top 90.5%) | Memory: 39.56 MB (Top 93.7%)
+
 class Solution {
     public double soupServings(int n) {
         if (n > 4800) return 1;
@@ -14,3 +16,4 @@ class Solution {
         return dp[a][b] = 0.25 * (helper(a - 4, b, dp) + helper(a - 3, b - 1, dp) + helper(a - 2, b - 2, dp) + helper(a - 1, b - 3, dp));
     }
 }
+// Upvote please !!

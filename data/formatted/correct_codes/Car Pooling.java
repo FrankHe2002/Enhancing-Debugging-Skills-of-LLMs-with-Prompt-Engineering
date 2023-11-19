@@ -1,3 +1,4 @@
+// Runtime: 10 ms (Top 30.51%) | Memory: 45.4 MB (Top 20.46%)
 class Solution {
     public boolean carPooling(int[][] trips, int capacity) {
         Map<Integer, Integer> destinationToPassengers = new TreeMap<>();

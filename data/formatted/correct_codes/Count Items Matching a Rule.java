@@ -1,3 +1,4 @@
+// Runtime: 8 ms (Top 61.48%) | Memory: 56.3 MB (Top 75.54%)
 class Solution {
     public int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
         int res = 0;

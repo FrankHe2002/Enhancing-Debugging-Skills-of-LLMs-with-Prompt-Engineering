@@ -1,3 +1,4 @@
+// Runtime: 72 ms (Top 33.33%) | Memory: 54.3 MB (Top 43.02%)
 class Solution {
 
     int[][] dp;
@@ -62,3 +63,32 @@ class Solution {
     }
 }
 
+//-------------------------TLE--------------------------
+
+// class Solution {
+// public int superEggDrop(int k, int n) {
+// int [][]dp=new int[k+1][n+1];
+
+// for(int i=1;i<=k;i++){
+// for(int j=1;j<=n;j++){
+// if(i==1){
+// dp[i][j]=j;
+// }else if(j==1){
+// dp[i][j]=1;
+// }else{
+// int min=Integer.MAX_VALUE;
+
+// for(int m=j-1,p=0;m>=0;m--,p++){
+// int max=Math.max(dp[i][m],dp[i-1][p]);
+
+// min=Math.min(min,max);
+// }
+
+// dp[i][j]=min+1;
+// }
+// }
+// }
+
+// return dp[k][n];
+// }
+// }

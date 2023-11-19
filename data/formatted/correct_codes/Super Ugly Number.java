@@ -1,3 +1,5 @@
+//---------------------O(nlogk)-------------------------
+
 class Solution {
     public int nthSuperUglyNumber(int n, int[] primes) {
         int[] dp = new int[n + 1];
@@ -43,3 +45,39 @@ class Pair implements Comparable<Pair> {
     }
 }
 
+//-----------------------O(nk)---------------------------
+
+// class Solution {
+//     public int nthSuperUglyNumber(int n, int[] primes) {
+//         int []dp=new int[n+1];
+//         dp[1]=1;
+
+//         int []ptr=new int[primes.length];
+
+//         Arrays.fill(ptr,1);
+
+//         for(int i=2;i<=n;i++){
+
+//             int min=Integer.MAX_VALUE;
+
+//             for(int j=0;j<ptr.length;j++){
+//                 int val=dp[ptr[j]]*primes[j];
+//                 if(val>0){
+//                     min=Math.min(min,val);
+//                 }
+
+//             }
+
+//             dp[i]=min;
+
+//             for(int j=0;j<ptr.length;j++){
+//                 int val=dp[ptr[j]]*primes[j];
+//                 if(val>0 && min==val){
+//                     ptr[j]++;
+//                 }
+//             }
+//         }
+
+//         return dp[n];
+//     }
+// }

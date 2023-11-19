@@ -1,4 +1,5 @@
 class Solution {
+    //Great Common Divisor 
     private int gcd(int a, int b) {
         int r = b % a;
         if (r == 0) return a;

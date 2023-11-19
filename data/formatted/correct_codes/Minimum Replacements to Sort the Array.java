@@ -1,3 +1,4 @@
+// Runtime: 4 ms (Top 98.50%) | Memory: 81.6 MB (Top 36.30%)
 class Solution {
     public long minimumReplacement(int[] nums) {
         long ret = 0L;
@@ -9,11 +10,13 @@ class Solution {
                 continue;
             }
             if (nums[i] % last == 0) {
+                // split into nums[i] / last elements, operations cnt = nums[i] / last - 1;
                 ret += nums[i] / last - 1;
             } else {
-                int k = nums[i] / last + 1;
+                // split into k elements operations cnt = k - 1;
+                int k = nums[i] / last + 1; // ceil
                 ret += k - 1;
-                last = nums[i] / k;
+                last = nums[i] / k; // left most element max is nums[i] / k
             }
 
         }

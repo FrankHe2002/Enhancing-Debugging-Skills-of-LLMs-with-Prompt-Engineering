@@ -1,3 +1,4 @@
+// Runtime: 63 ms (Top 70.73%) | Memory: 73 MB (Top 78.21%)
 class Solution {
     private static final int NOT_VISITED = 0;
     private static final int VISITING = 1;

@@ -1,6 +1,7 @@
+// Runtime: 9 ms (Top 81.09%) | Memory: 53.8 MB (Top 84.02%)
 class Solution {
     public int[][] reconstructQueue(int[][] people) {
-        List<int[]> result = new ArrayList<>();
+        List<int[]> result = new ArrayList<>(); //return value
 
         Arrays.sort(people, (a, b) -> {
             int x = Integer.compare(b[0], a[0]);

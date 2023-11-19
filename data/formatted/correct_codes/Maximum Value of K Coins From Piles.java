@@ -1,3 +1,4 @@
+// Runtime: 223 ms (Top 73.40%) | Memory: 55.8 MB (Top 38.07%)
 class Solution {
     public int maxValueOfCoins(List<List<Integer>> piles, int k) {
         int n = piles.size();
@@ -10,6 +11,7 @@ class Solution {
                 int sum = 0;
                 ans[j][i] = ans[j - 1][i];
                 for (int l = 1; l <= Math.min(i, sizeOfPile); l++) {
+                    // Take K from this pile + remaining from previous piles
                     sum += pile.get(l - 1);
                     int rem = i - l;
                     ans[j][i] = Math.max(ans[j][i], sum + ans[j - 1][rem]);

@@ -1,3 +1,5 @@
+// Runtime: 13 ms (Top 25.2%) | Memory: 50.15 MB (Top 25.4%)
+
 class Solution {
     public int findJudge(int n, int[][] trust) {
         int count = 0;

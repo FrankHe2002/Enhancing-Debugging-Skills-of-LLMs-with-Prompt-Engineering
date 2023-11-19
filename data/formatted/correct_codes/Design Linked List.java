@@ -1,3 +1,4 @@
+// Runtime: 14 ms (Top 41.30%) | Memory: 50.4 MB (Top 74.99%)
 class MyLinkedList {
 
     public class ListNode {

@@ -1,3 +1,5 @@
+// Runtime: 18 ms (Top 78.7%) | Memory: 55.94 MB (Top 56.9%)
+
 class Solution {
     public List<List<Integer>> minimumAbsDifference(int[] arr) {
         List<List<Integer>> ans = new ArrayList<>();

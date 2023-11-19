@@ -1,3 +1,5 @@
+// Runtime: 2 ms (Top 97.1%) | Memory: 45.45 MB (Top 6.9%)
+
 class Solution {
     public List<Double> averageOfLevels(TreeNode root) {
         Queue<TreeNode> q = new LinkedList<>(List.of(root));

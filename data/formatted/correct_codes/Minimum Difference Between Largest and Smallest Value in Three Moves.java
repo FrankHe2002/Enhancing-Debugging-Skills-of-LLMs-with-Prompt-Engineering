@@ -1,5 +1,12 @@
 class Solution {
     public int minDifference(int[] nums) {
+        // sort the nums
+        // to gain the mini difference
+        // we want to remove the three smallest or biggest 
+        // 0 - 3
+        // 1 - 2
+        // 2 - 1
+        // 3 - 0
         if (nums.length <= 4) {
             return 0;
         }

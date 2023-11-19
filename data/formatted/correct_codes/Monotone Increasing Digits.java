@@ -1,3 +1,5 @@
+// Runtime: 1 ms (Top 91.5%) | Memory: 38.98 MB (Top 97.6%)
+
 class Solution {
     public int monotoneIncreasingDigits(int n) {
         int position;

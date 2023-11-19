@@ -1,3 +1,4 @@
+// Runtime: 15 ms (Top 68.33%) | Memory: 43.7 MB (Top 85.25%)
 class Solution {
     public int lengthOfLIS(int[] nums) {
 

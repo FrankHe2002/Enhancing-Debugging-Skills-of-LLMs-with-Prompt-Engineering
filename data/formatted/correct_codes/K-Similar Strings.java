@@ -10,16 +10,18 @@ class Solution {
             int size = queue.size();
             for (int i = 0; i < size; i++) {
 
-                String rem = queue.remove();
+                String rem = queue.remove();        // remove
 
-                if (vis.contains(rem)) {
+                if (vis.contains(rem)) {              // Mark*
                     continue;
                 }
                 vis.add(rem);
 
-                if (rem.equals(s2)) {
+                if (rem.equals(s2)) {                 // Work
                     return level;
                 }
+
+                // Add
                 for (String s : getNeighbors(rem, s2)) {
                     if (! vis.contains(s)) {
                         queue.add(s);

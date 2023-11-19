@@ -1,3 +1,5 @@
+// Runtime: 3 ms (Top 93.2%) | Memory: 56.22 MB (Top 87.9%)
+
 class Solution {
     public long minOperations(int[] nums1, int[] nums2, int k) {
 

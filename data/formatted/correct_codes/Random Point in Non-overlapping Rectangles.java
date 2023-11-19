@@ -10,14 +10,18 @@ class Solution {
         this.rects = rects;
         int index = 0;
         for (int[] rect : rects) {
+            // inserts cumulative weight key pointing to rectangle index
             weightedRectIndex.put(nPoints, index++);
             nPoints += width(rect) * height(rect);
         }
     }
 
     public int[] pick() {
+        // generates random point within total weight
         int point = rng.nextInt(nPoints);
+        // finds appropriate rectangle
         var entry = weightedRectIndex.floorEntry(point);
+        // find point within the current rectangle
         int rectPoint = point - entry.getKey();
         int[] rect = rects[entry.getValue()];
         return new int[] {

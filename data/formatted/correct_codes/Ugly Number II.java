@@ -1,3 +1,7 @@
+// Runtime: 7 ms (Top 41.12%) | Memory: 41.5 MB (Top 87.73%)
+// Ugly number II
+// https://leetcode.com/problems/ugly-number-ii/
+
 class Solution {
     public int nthUglyNumber(int n) {
         int[] dp = new int[n];

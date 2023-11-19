@@ -23,17 +23,26 @@ class TimeMap {
     private String binarySearch(List<Entry> entries, int timestamp) {
         int lo = 0, hi = entries.size() - 1, mid = - 1;
         String ans = "";
+
+        // Base cases - if value is not set, return empty
         if (entries.get(lo).timestamp > timestamp) {
             return NOT_FOUND;
-        } else if (entries.get(hi).timestamp <= timestamp) {
+        }
+        // If timestamp is equal or greater, return the last value saved in map against this key, since that will have the largest timestamp
+        else if (entries.get(hi).timestamp <= timestamp) {
             return entries.get(hi).value;
         }
+
+        // Else apply binary search to get correct value
         while (lo <= hi) {
             mid = lo + (hi - lo) / 2;
             Entry entry = entries.get(mid);
+            // System.out.println("mid: "+mid);
             if (entry.timestamp == timestamp) {
                 return entry.value;
-            } else if (entry.timestamp < timestamp) {
+            }
+            // Save ans, and look for ans on right half to find greater timestamp
+            else if (entry.timestamp < timestamp) {
                 ans = entry.value;
                 lo = mid + 1;
             } else {

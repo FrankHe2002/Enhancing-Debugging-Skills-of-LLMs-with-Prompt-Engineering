@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 41.9 MB (Top 69.11%)
 class Solution {
     public int[][] generateMatrix(int n) {
         int startingRow = 0;

@@ -28,11 +28,11 @@ class Solution {
     }
 
     private boolean dfs(int time, int mI, int mJ, int cI, int cJ, int cJump, int mJump, String[] grid, Boolean[][][][][] memo) {
-        if (grid[mI].charAt(mJ) == 'F') {
+        if (grid[mI].charAt(mJ) == 'F') { // mouse got the food -> mouse won
             return true;
         }
         if (grid[cI].charAt(cJ) == 'F' || cI == mI && cJ == mJ || time > TIME_MAX) {
-            return false;
+            return false; // cat got the food / draw / cat got the mouse -> cat won.
         }
         if (memo[time][mI][mJ][cI][cJ] != null) {
             return memo[time][mI][mJ][cI][cJ];
@@ -42,24 +42,24 @@ class Solution {
         int x = mT ? mI : cI;
         int y = mT ? mJ : cJ;
         if (! mT && ! dfs(time + 1, mI, mJ, cI, cJ, cJump, mJump, grid, memo)) {
-            return memo[time][mI][mJ][cI][cJ] = false;
+            return memo[time][mI][mJ][cI][cJ] = false; // cat's turn and cat stays still and cat won
         }
         for (int i = 0; i < 4; i++) {
             for (int j = 1; j <= jump; j++) {
                 int nx = x + dx[i] * j;
                 int ny = y + dy[i] * j;
                 if (nx < 0 || ny < 0 || nx == m || ny == n || grid[nx].charAt(ny) == '#') {
-                    break;
+                    break; // note that cat & mouse can't jump over #. I got a WA thinking they can jump over it.
                 }
                 boolean res = dfs(time + 1, mT ? nx : mI, mT ? ny : mJ, mT ? cI : nx, mT ? cJ : ny, cJump, mJump, grid, memo);
-                if (mT && res) {
+                if (mT && res) { // if it is mouse's turn and it can find ONE way to win, then mouse win.
                     return memo[time][mI][mJ][cI][cJ] = true;
                 }
-                if (! mT && ! res) {
+                if (! mT && ! res) { // if it is cat's turn and it can find ONE way to a draw or cat win, then cat win
                     return memo[time][mI][mJ][cI][cJ] = false;
                 }
             }
         }
-        return memo[time][mI][mJ][cI][cJ] = ! mT;
+        return memo[time][mI][mJ][cI][cJ] = ! mT; // otherwise, return !mT
     }
 }

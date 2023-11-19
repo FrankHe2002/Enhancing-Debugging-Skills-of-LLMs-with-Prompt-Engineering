@@ -1,3 +1,4 @@
+// Runtime: 15 ms (Top 73.10%) | Memory: 54.7 MB (Top 46.20%)
 class Solution {
     public int countConsistentStrings(String allowed, String[] words) {
         Set<Character> allowedSet = new HashSet<>();

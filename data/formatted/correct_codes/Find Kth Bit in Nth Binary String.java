@@ -1,3 +1,4 @@
+// Runtime: 2755 ms (Top 5.21%) | Memory: 238.8 MB (Top 5.21%)
 class Solution {
     private String invert(String s) {
         char[] array = s.toCharArray();

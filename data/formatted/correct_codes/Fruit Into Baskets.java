@@ -1,10 +1,11 @@
+// Runtime: 61 ms (Top 63.76%) | Memory: 95 MB (Top 59.07%)
 class Solution {
     public int totalFruit(int[] fruits) {
         if (fruits == null || fruits.length == 0) {
             return 0;
         }
         int start = 0, end = 0, res = 0;
-        HashMap<Integer, Integer> map = new HashMap<>();
+        HashMap<Integer, Integer> map = new HashMap<>(); //key = type of fruit on tree, value = last index / newest index of that fruit
 
         while (end < fruits.length) {
             if (map.size() <= 2) {

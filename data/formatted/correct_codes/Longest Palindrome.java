@@ -1,3 +1,4 @@
+// Runtime: 6 ms (Top 56.47%) | Memory: 40.7 MB (Top 92.38%)
 class Solution {
     public int longestPalindrome(String s) {
         HashMap<Character, Integer> map = new HashMap<>();

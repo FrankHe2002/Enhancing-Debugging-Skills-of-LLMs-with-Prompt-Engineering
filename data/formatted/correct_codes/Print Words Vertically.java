@@ -1,3 +1,4 @@
+// Runtime: 10 ms (Top 20.22%) | Memory: 42.9 MB (Top 20.22%)
 class Solution {
     public List<String> printVertically(String s) {
         s = s.replace(" ", ",");

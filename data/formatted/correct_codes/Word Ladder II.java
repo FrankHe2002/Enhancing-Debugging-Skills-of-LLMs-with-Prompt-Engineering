@@ -3,14 +3,20 @@ class Solution {
         Set<String> dict = new HashSet(wordList);
         if (! dict.contains(endWord))
             return new ArrayList();
+
+        // adjacent words for each word
         Map<String, List<String>> adjacency = new HashMap();
         Queue<String> queue = new LinkedList();
+        // does path exist?
         boolean found = false;
+
+        // BFS for shortest path, keep removing visited words
         queue.offer(beginWord);
         dict.remove(beginWord);
 
         while (! found && ! queue.isEmpty()) {
             int size = queue.size();
+            // adjacent words in current level
             HashSet<String> explored = new HashSet();
 
             while (size-- > 0) {
@@ -18,6 +24,8 @@ class Solution {
 
                 if (adjacency.containsKey(word))
                     continue;
+
+                // remove current word from dict, and search for adjacent words
                 dict.remove(word);
                 List<String> adjacents = getAdjacents(word, dict);
                 adjacency.put(word, adjacents);
@@ -30,9 +38,12 @@ class Solution {
                     queue.offer(adj);
                 }
             }
+            // remove words explored in current level from dict
             for (String word : explored)
                 dict.remove(word);
         }
+
+        // if a path exist, dfs to find all the paths
         if (found)
             return dfs(beginWord, endWord, adjacency, new HashMap());
         else
@@ -64,12 +75,16 @@ class Solution {
             return memo.get(src);
 
         List<List<String>> paths = new ArrayList();
+
+        // reached dest? return list with dest word
         if (src.equals(dest)) {
             paths.add(new ArrayList() {{
                 add(dest);
             }});
             return paths;
         }
+
+        // no adjacent for curr word? return empty list
         List<String> adjacents = adjacency.get(src);
         if (adjacents == null || adjacents.isEmpty())
             return paths;

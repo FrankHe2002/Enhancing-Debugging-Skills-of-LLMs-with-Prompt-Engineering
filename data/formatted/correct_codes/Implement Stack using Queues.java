@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 34.13%) | Memory: 42.2 MB (Top 19.29%)
 class MyStack {
 
     Queue<Integer> queue = null;

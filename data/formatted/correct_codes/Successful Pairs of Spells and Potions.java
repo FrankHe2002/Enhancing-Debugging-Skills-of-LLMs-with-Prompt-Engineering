@@ -1,3 +1,5 @@
+// Runtime: 40 ms (Top 80.4%) | Memory: 58.00 MB (Top 19.8%)
+
 class Solution {
     public int[] successfulPairs(int[] spells, int[] potions, long success) {
         int n = spells.length;

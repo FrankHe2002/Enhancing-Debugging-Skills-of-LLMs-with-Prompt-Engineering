@@ -1,3 +1,5 @@
+// Runtime: 15 ms (Top 19.20%) | Memory: 43.5 MB (Top 45.49%)
+
 class Solution {
     public List<String> restoreIpAddresses(String s) {
         List<String> ans = new ArrayList<>();

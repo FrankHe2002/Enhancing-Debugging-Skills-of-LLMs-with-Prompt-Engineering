@@ -1,3 +1,4 @@
+// Runtime: 476 ms (Top 5.23%) | Memory: 135.2 MB (Top 5.23%)
 class Solution {
     public boolean asteroidsDestroyed(int mass, int[] asteroids) {
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a, b) -> b - a);

@@ -1,3 +1,4 @@
+// Runtime: 0 ms (Top 100.00%) | Memory: 39.7 MB (Top 97.89%)
 class Solution {
     public int largestAltitude(int[] gain) {
         int max_alt = 0;
@@ -10,3 +11,4 @@ class Solution {
     }
 }
 
+//TC: O(n), SC: O(1)

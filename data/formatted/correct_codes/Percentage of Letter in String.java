@@ -1,3 +1,5 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 40.55 MB (Top 34.5%)
+
 class Solution {
     public int percentageLetter(String str, char letter) {
         int count = 0;

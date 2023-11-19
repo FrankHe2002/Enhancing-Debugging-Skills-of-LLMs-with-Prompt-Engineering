@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 93.85%) | Memory: 54.4 MB (Top 47.92%)
 class Solution {
     public int dfs(int[][] grid, int i, int j) {
         if (i == grid.length)

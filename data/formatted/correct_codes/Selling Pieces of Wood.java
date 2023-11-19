@@ -6,9 +6,11 @@ class Solution {
         }
         for (int i = 1; i < m + 1; i++) {
             for (int j = 1; j < n + 1; j++) {
+                // all horizontal
                 for (int k = 1; k <= i / 2; k++) {
                     dp[i][j] = Math.max(dp[i][j], dp[i - k][j] + dp[k][j]);
                 }
+                // all vertical
                 for (int k = 1; k <= j / 2; k++) {
                     dp[i][j] = Math.max(dp[i][j], dp[i][j - k] + dp[i][k]);
                 }

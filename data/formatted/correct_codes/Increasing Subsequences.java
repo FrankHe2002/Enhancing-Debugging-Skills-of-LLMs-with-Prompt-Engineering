@@ -1,3 +1,4 @@
+// Runtime: 48 ms (Top 13.29%) | Memory: 68.6 MB (Top 66.07%)
 class Solution {
     HashSet<List<Integer>> set;
 

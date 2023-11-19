@@ -1,3 +1,5 @@
+// Runtime: 16 ms (Top 100.00%) | Memory: 42.8 MB (Top 96.08%)
+
 class Solution {
     public int[] countPoints(int[][] points, int[][] queries) {
         int len = queries.length;

@@ -1,3 +1,4 @@
+// Runtime: 2 ms (Top 100.00%) | Memory: 50.3 MB (Top 97.37%)
 class Solution {
     int ans = 0;
 

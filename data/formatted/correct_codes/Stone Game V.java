@@ -1,7 +1,9 @@
+// Runtime: 299 ms (Top 83.10%) | Memory: 42.5 MB (Top 97.18%)
 class Solution {
     int dp[][];
 
     public int fnc(int a[], int i, int j, int sum) {
+        //System.out.println(i+" "+j);
         int n = a.length;
         if (i > j)
             return 0;

@@ -1,3 +1,5 @@
+// Runtime: 19 ms (Top 47.6%) | Memory: 43.93 MB (Top 22.2%)
+
 class Solution {
     public int coinChange(int[] coins, int amount) {
         int m = coins.length, n = amount;

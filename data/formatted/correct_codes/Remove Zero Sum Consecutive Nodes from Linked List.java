@@ -1,3 +1,5 @@
+// Runtime: 2 ms (Top 92.2%) | Memory: 43.00 MB (Top 67.8%)
+
 class Solution {
     public ListNode removeZeroSumSublists(ListNode head) {
 

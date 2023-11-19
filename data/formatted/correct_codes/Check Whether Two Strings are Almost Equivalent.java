@@ -5,7 +5,7 @@ class Solution {
             map.put(word1.charAt(i), map.getOrDefault(word1.charAt(i), 0) + 1);
             map.put(word2.charAt(i), map.getOrDefault(word2.charAt(i), 0) - 1);
         }
-        for (int i : map.values()) {
+        for (int i : map.values()) { //get value set
             if (i > 3 || i < - 3) {
                 return false;
             }

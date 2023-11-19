@@ -1,3 +1,5 @@
+// Runtime: 2 ms (Top 62.6%) | Memory: 40.11 MB (Top 61.2%)
+
 class Solution {
     public int timeRequiredToBuy(int[] tickets, int k) {
         int n = tickets.length;

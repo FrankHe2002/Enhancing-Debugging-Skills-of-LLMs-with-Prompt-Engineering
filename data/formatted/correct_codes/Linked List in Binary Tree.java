@@ -1,3 +1,4 @@
+// Runtime: 2 ms (Top 72.52%) | Memory: 49.5 MB (Top 46.71%)
 class Solution {
     public boolean isSubPath(ListNode head, TreeNode root) {
         if (root == null) return false;

@@ -1,3 +1,4 @@
+// Runtime: 721 ms (Top 25.59%) | Memory: 45.5 MB (Top 95.29%)
 class Solution {
     public int[] nextLargerNodes(ListNode head) {
         ListNode length = head;

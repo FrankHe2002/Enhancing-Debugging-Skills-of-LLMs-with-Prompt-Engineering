@@ -2,6 +2,9 @@ class Solution {
     public int numSubmat(int[][] mat) {
         int n = mat.length;
         int m = mat[0].length;
+        //left[i][j] indicates how many consecutive 1s are on the left of i, j
+        //left[i][j] indicates how many consecutive 1s are above i, j
+        //dp[i][j] represents the number of submatrices with i, j as the lower right corner
         int[][] left = new int[n][m];
         int[][] up = new int[n][m];
         int[][] dp = new int[n][m];

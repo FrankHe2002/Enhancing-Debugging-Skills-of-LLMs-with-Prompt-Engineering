@@ -1,3 +1,4 @@
+// Runtime: 15 ms (Top 57.67%) | Memory: 71 MB (Top 82.51%)
 class Solution {
 
     int ans = 0;
@@ -7,6 +8,7 @@ class Solution {
         return ans;
     }
 
+    // int[] = { min, max, sum };
     private int[] solve(TreeNode root) {
         if (root == null)
             return new int[] {Integer.MAX_VALUE, Integer.MIN_VALUE, 0};

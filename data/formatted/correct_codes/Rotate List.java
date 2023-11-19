@@ -22,7 +22,7 @@ class Solution {
             curr = curr.next;
         }
 
-        node.next = head;
+        node.next = head;  //5-->1
         head = curr.next;
         curr.next = null;
 

@@ -1,3 +1,4 @@
+// Runtime: 9 ms (Top 73.89%) | Memory: 94 MB (Top 67.52%)
 class Solution {
     public int sumOfBeauties(int[] nums) {
         boolean[] left = new boolean[nums.length];

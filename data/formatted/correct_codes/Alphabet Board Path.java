@@ -1,3 +1,5 @@
+// Runtime: 0 ms (Top 100.0%) | Memory: 40.07 MB (Top 98.6%)
+
 class Solution {
     public String alphabetBoardPath(String target) {
         int x = 0, y = 0;

@@ -1,5 +1,7 @@
+// Runtime: 7 ms (Top 87.86%) | Memory: 47.2 MB (Top 79.05%)
 public class Codec {
 
+    // Encodes a tree to a single string.
     public String serialize(TreeNode root) {
         StringBuilder string = new StringBuilder();
         traverse(root, string);
@@ -13,6 +15,7 @@ public class Codec {
         traverse(root.right, string);
     }
 
+    // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
         if (data.isEmpty()) return null;
 

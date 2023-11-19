@@ -1,3 +1,5 @@
+// Runtime: 84 ms (Top 22.7%) | Memory: 65.80 MB (Top 7.0%)
+
 class Solution {
     public long minCost(int[] basket1, int[] basket2) {
         var ac = new HashMap<Integer, Integer>();
@@ -19,12 +21,15 @@ class Solution {
             if (missingCount == 0) {
                 continue;
             }
+            // we don't care if missingCount is positive or negative, we care that it's != 0
+            // i.e. arrays have different count of this number
             m.merge(e.getKey(), Math.abs(missingCount), Integer::sum);
         }
 
         long res = 0;
         while (m.size() > 0) {
             if (m.firstKey() <= min * 2) {
+                // swap min missing with max missing
                 res += m.firstKey();
                 if (m.merge(m.firstKey(), - 1, Integer::sum) == 0) {
                     m.remove(m.firstKey());
@@ -33,6 +38,7 @@ class Solution {
                     m.remove(m.lastKey());
                 }
             } else {
+                // use min twice to swap two largest
                 res += min * 2;
                 if (m.merge(m.lastKey(), - 1, Integer::sum) == 0) {
                     m.remove(m.lastKey());

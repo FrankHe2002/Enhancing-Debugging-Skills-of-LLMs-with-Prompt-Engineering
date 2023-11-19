@@ -1,3 +1,5 @@
+// Runtime: 14 ms (Top 91.4%) | Memory: 53.70 MB (Top 100.0%)
+
 class Solution {
     public int countSubarrays(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap<>();

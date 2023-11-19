@@ -1,3 +1,4 @@
+// Runtime: 21 ms (Top 32.48%) | Memory: 43.8 MB (Top 21.66%)
 class Solution {
     public int magicalString(int n) {
         if (n <= 3)

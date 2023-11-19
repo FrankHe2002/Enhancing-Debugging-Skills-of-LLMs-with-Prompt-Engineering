@@ -1,3 +1,4 @@
+// Runtime: 6 ms (Top 7.82%) | Memory: 50.1 MB (Top 50.44%)
 class Solution {
     public int[] getConcatenation(int[] nums) {
         int[] ans = new int[2 * nums.length];

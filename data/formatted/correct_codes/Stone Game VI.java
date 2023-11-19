@@ -11,9 +11,11 @@ class Solution {
         }
     }
 
+    // class to define user defined conparator
     static class Compare {
 
         static void compare(Pair arr[], int n) {
+            // Comparator to sort the pair according to second element
             Arrays.sort(arr, new Comparator<Pair>() {
                 @Override
                 public int compare(Pair p1, Pair p2) {

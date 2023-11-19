@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 100.00%) | Memory: 43.9 MB (Top 94.53%)
 class Solution {
     List<TreeNode>[] memo;
 

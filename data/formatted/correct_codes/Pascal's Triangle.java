@@ -1,3 +1,4 @@
+// Runtime: 1 ms (Top 73.34%) | Memory: 42 MB (Top 41.04%)
 class Solution {
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> list = new LinkedList();

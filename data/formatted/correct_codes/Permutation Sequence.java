@@ -6,9 +6,9 @@ class Solution {
             fact = fact * i;
             nums.add(i);
         }
-        nums.add(n);
+        nums.add(n); // Add last permutation number.
         String res = "";
-        k = k - 1;
+        k = k - 1; // We use 0 indexing.
         while (true) {
             res = res + nums.get(k / fact);
             nums.remove(k / fact);

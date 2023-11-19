@@ -1,3 +1,4 @@
+// Runtime: 23 ms (Top 33.08%) | Memory: 50 MB (Top 44.62%)
 class Solution {
 
     boolean isVowel(char ch) {

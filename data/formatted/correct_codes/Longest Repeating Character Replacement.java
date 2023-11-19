@@ -8,6 +8,7 @@ class Solution {
             boolean f1 = false;
             boolean f2 = false;
             while (i < s.length() - 1) {
+                //acquire
                 i++;
                 f1 = true;
                 char ch = s.charAt(i);
@@ -24,6 +25,7 @@ class Solution {
             }
 
             while (j < i) {
+                //release
                 f2 = true;
                 j++;
                 char ch = s.charAt(j);

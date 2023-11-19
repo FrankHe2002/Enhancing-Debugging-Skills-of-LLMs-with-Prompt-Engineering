@@ -1,3 +1,6 @@
+// Space Complexity = O(N*M) (N == length of cost array and M == target )
+// Time Complexity = O(N*M)
+
 class Solution {
     Map<String, String> map = new HashMap<>();
     String[][] memo;

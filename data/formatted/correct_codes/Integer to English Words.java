@@ -25,7 +25,7 @@ class Solution {
                 break;
             }
         }
-        return sb.charAt(sb.length() - 1) == ' ' ? sb.deleteCharAt(sb.length() - 1) : sb;
+        return sb.charAt(sb.length() - 1) == ' ' ? sb.deleteCharAt(sb.length() - 1) : sb; // trim
     }
 
 }

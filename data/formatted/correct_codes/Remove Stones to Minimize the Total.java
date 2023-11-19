@@ -1,3 +1,5 @@
+// Runtime: 304 ms (Top 95.0%) | Memory: 58.55 MB (Top 23.6%)
+
 class Solution {
     public int minStoneSum(int[] A, int k) {
         PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> b - a);

@@ -1,6 +1,12 @@
+// Runtime: 11 ms (Top 84.26%) | Memory: 54.7 MB (Top 92.39%)
+
 class Solution {
     public int numEnclaves(int[][] grid) {
         int maxcount = 0;
+        // if(grid.length==10)
+        // {
+        // return 3;
+        // }
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[0].length; j++) {
                 if (grid[i][j] == 0) {

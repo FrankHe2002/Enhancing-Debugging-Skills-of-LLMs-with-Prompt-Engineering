@@ -1,3 +1,5 @@
+// Runtime: 10 ms (Top 24.2%) | Memory: 43.78 MB (Top 97.8%)
+
 class Solution {
     public int largest1BorderedSquare(int[][] grid) {
         if (grid == null || grid.length == 0) return 0;

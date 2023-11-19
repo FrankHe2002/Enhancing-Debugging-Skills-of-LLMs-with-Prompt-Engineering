@@ -1,3 +1,5 @@
+// Runtime: 79 ms (Top 91.4%) | Memory: 61.43 MB (Top 12.7%)
+
 class MajorityChecker {
 
     private final int digits = 15;
@@ -31,6 +33,8 @@ class MajorityChecker {
             else return - 1;
             ans = (ans << 1) + b;
         }
+
+        // check
         ArrayList<Integer> list = pos[ans];
         if (list == null) return - 1;
         int L = floor(list, left - 1);
