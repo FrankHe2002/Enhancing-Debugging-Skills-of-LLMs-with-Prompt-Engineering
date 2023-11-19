@@ -8,21 +8,18 @@ class Solution {
             loss[match[1]]++;
         }
 
-        // System.out.print(Arrays.toString(won));
-        // System.out.print(Arrays.toString(loss));
-
         List<List<Integer>> ans = new ArrayList<>();
 
         List<Integer> wonAllMatches = new ArrayList<>();
         List<Integer> lostOneMatch = new ArrayList<>();
 
         for (int i = 0; i < won.length; i++) {
-            if (won[i] > 0 && loss[i] == 0) { //for checking players that have not lost any match.
+            if (won[i] > 0 && loss[i] == 0) {
                 wonAllMatches.add(i);
             }
 
             if (loss[i] == 1) {
-                lostOneMatch.add(i); //for checking players that have lost exactly one match.
+                lostOneMatch.add(i);
             }
         }
 

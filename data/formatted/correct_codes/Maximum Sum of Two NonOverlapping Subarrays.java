@@ -1,5 +1,3 @@
-// Runtime: 3 ms (Top 48.2%) | Memory: 41.13 MB (Top 57.0%)
-
 class Solution {
     public int maxSumTwoNoOverlap(int[] nums, int firstLen, int secondLen) {
         int max1 = getMax(nums, firstLen, secondLen);

@@ -1,5 +1,3 @@
-// Runtime: 19 ms (Top 82.4%) | Memory: 43.89 MB (Top 87.9%)
-
 class Solution {
     private static final int M = 1000000007;
 

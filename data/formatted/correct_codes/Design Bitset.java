@@ -18,7 +18,6 @@ class Bitset {
         zero.add(idx);
     }
 
-    //swapping object's referrence is O(1)
     public void flip() {
         Set<Integer> s = one;
         one = zero;

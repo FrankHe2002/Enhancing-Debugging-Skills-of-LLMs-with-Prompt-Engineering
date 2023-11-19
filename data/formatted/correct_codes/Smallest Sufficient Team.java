@@ -7,18 +7,18 @@ class Solution {
         Arrays.fill(dp, INF);
         dp[0] = 0;
         for (int i = 0; i < N; i++) {
-            if (dp[i] != INF) { // valid state
+            if (dp[i] != INF) {
                 for (int k = 0; k < people.size(); k++) {
                     int cur = i;
                     for (int j = 0; j < req_skills.length; j++) {
                         for (String skill : people.get(k)) {
                             if (req_skills[j].equals(skill)) {
-                                cur |= 1 << j; // set the mask
+                                cur |= 1 << j;
                                 break;
                             }
                         }
                     }
-                    if (dp[cur] > dp[i] + 1) { // replace if better
+                    if (dp[cur] > dp[i] + 1) {
                         dp[cur] = dp[i] + 1;
                         parent[cur] = i;
                         who[cur] = k;

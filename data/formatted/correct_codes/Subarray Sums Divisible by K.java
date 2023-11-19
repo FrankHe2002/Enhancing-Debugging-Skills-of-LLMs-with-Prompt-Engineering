@@ -7,7 +7,7 @@ class Solution {
             sum += nums[i];
             int rem = sum % k;
             if (rem < 0) {
-                rem = rem + k; // -4%3 == -1 and 2 both bec -4 = 3(-1) +(-1) = 3(-2) + 2
+                rem = rem + k;
             }
 
             if (rem == 0) {

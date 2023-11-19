@@ -8,7 +8,6 @@ class Solution {
 
             }
         }
-        //System.out.println("arr -->>"+Arrays.toString(visited));
         for (boolean a : visited) {
             if (! a)
                 return false;

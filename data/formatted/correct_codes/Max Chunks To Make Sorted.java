@@ -1,4 +1,3 @@
-// Runtime: 0 ms (Top 100.00%) | Memory: 40.9 MB (Top 81.61%)
 class Solution {
     public int maxChunksToSorted(int[] arr) {
 

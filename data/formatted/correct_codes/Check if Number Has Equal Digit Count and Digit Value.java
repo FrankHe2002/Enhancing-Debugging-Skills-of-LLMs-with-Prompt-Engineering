@@ -1,6 +1,6 @@
 class Solution {
     public boolean digitCount(String num) {
-        int[] freqArr = new int[10];  // n = 10 given in constraints;
+        int[] freqArr = new int[10];
 
 
         for (char ch : num.toCharArray()) {
@@ -8,7 +8,7 @@ class Solution {
         }
 
         for (int i = 0; i < num.length(); i++) {
-            int freq = num.charAt(i) - '0';  //freq of each indexValue;
+            int freq = num.charAt(i) - '0';
             freqArr[i] = freqArr[i] - freq;
         }
         for (int i = 0; i < 10; i++) {

@@ -1,4 +1,3 @@
-// Runtime: 22 ms (Top 8.75%) | Memory: 59.3 MB (Top 36.23%)
 class Solution {
     public int height(TreeNode root) {
         if (root == null)

@@ -9,34 +9,32 @@ class Solution {
 
     private int daysFrom1971(int year, int month, int day) {
         int total = 0;
-        // count years first
         total += (year - 1971) * 365;
         for (int i = 1972; i < year; i += 4) {
             if (isLeapYear(i)) total++;
         }
         int feb = isLeapYear(year) ? 29 : 28;
-        // sum months and days
         switch (month) {
             case 12:
-                total += 30; // 11
+                total += 30;
             case 11:
-                total += 31; // 10
+                total += 31;
             case 10:
-                total += 30; // 9
+                total += 30;
             case 9:
-                total += 31; // 8
+                total += 31;
             case 8:
-                total += 31; // 7
+                total += 31;
             case 7:
-                total += 30; // 6
+                total += 30;
             case 6:
-                total += 31; // 5
+                total += 31;
             case 5:
-                total += 30; // 4
+                total += 30;
             case 4:
-                total += 31; // 3
+                total += 31;
             case 3:
-                total += feb; // 2
+                total += feb;
             case 2:
                 total += 31;
             case 1:

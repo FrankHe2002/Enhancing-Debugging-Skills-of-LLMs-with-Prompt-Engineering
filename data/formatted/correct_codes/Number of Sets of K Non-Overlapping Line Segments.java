@@ -10,14 +10,14 @@ class Solution {
 
     int dp(int i, int k, int isStart) {
         if (memo[i][k][isStart] != null) return memo[i][k][isStart];
-        if (k == 0) return 1; // Found a way to draw k valid segments
-        if (i == n) return 0; // Reach end of points
+        if (k == 0) return 1;
+        if (i == n) return 0;
 
-        int ans = dp(i + 1, k, isStart); // Skip ith point
+        int ans = dp(i + 1, k, isStart);
         if (isStart == 1)
-            ans += dp(i + 1, k, 0); // Take ith point as start
+            ans += dp(i + 1, k, 0);
         else
-            ans += dp(i, k - 1, 1); // Take ith point as end
+            ans += dp(i, k - 1, 1);
 
         return memo[i][k][isStart] = ans % 1_000_000_007;
     }

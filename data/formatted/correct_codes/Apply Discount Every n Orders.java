@@ -34,8 +34,3 @@ class Cashier {
     }
 }
 
-/**
- * Your Cashier object will be instantiated and called as such:
- * Cashier obj = new Cashier(n, discount, products, prices);
- * double param_1 = obj.getBill(product,amount);
- */

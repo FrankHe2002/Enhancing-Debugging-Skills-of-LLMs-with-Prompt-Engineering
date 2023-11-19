@@ -1,4 +1,3 @@
-// Runtime: 324 ms (Top 17.74%) | Memory: 165.9 MB (Top 16.84%)
 class Solution {
 
     public boolean repeatedSubstringPattern(String s) {

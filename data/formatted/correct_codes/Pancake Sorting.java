@@ -1,9 +1,3 @@
-// Runtime: 2 ms (Top 77.93%) | Memory: 42.7 MB (Top 83.40%)
-// BruteForce Approach!
-// Author - Nikhil Sharma
-// LinkedIn - https://www.linkedin.com/in/nikhil-sharma-41a287226/
-// Twitter - https://twitter.com/Sharma_Nikh12
-
 class Solution {
     public List<Integer> pancakeSort(int[] arr) {
         List<Integer> list = new ArrayList<>();

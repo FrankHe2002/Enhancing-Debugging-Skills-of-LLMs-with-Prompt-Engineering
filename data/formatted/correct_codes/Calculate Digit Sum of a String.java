@@ -1,4 +1,3 @@
-// Runtime: 6 ms (Top 32.40%) | Memory: 40.8 MB (Top 89.31%)
 class Solution {
     public String digitSum(String s, int k) {
         while (s.length() > k) s = gen(s, k);

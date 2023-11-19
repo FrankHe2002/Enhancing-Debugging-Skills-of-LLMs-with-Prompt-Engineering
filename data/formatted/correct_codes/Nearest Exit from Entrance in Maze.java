@@ -1,4 +1,3 @@
-// Runtime: 8 ms (Top 87.01%) | Memory: 43.7 MB (Top 91.43%)
 class Solution {
     public int nearestExit(char[][] maze, int[] entrance) {
         int rows = maze.length, cols = maze[0].length, queueSize;
@@ -24,8 +23,6 @@ class Solution {
 
                     if (x < 0 || x >= rows || y < 0 || y >= cols) continue;
                     if (visited[x][y] || maze[x][y] == '+') continue;
-
-                    // check if we have reached boundary
                     if (x == 0 || x == rows - 1 || y == 0 || y == cols - 1) return steps;
 
                     queue.offer(new int[] {x, y});

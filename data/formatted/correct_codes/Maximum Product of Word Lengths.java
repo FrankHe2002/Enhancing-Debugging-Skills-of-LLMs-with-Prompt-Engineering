@@ -1,4 +1,3 @@
-// Runtime: 14 ms (Top 91.40%) | Memory: 44.6 MB (Top 93.55%)
 class Solution {
     public int maxProduct(String[] words) {
         int n = words.length;

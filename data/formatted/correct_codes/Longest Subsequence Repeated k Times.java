@@ -1,4 +1,3 @@
-// Runtime: 405 ms (Top 56.76%) | Memory: 43.2 MB (Top 86.49%)
 class Solution {
     char[] A;
 

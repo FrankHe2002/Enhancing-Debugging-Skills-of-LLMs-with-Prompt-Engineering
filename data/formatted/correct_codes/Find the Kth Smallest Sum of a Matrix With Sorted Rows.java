@@ -19,7 +19,7 @@ class Solution {
 
         for (int i = 0; i < k && ! minHeap.isEmpty(); i++) {
             int[] candidate = minHeap.poll();
-            list.add(candidate[0] + candidate[1]); // SUM;
+            list.add(candidate[0] + candidate[1]);
             int num2Idx = candidate[2];
 
             if (num2Idx < num2.length - 1) {

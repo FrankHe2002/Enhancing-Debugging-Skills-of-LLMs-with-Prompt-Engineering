@@ -22,7 +22,7 @@ class Solution {
                 if (grid[i][j] == 0) dist[i][j] = 2 * 1000 * 1000 * 1000;
                 else {
                     dist[i][j] = 0;
-                    q.add(new Point(i, j)); // multisource on grid[i][j] = 1
+                    q.add(new Point(i, j));
                 }
             }
         }
@@ -43,7 +43,7 @@ class Solution {
         }
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                ans = Math.max(ans, dist[i][j]); // Manhattan distance is the same as the distance on the grid in general
+                ans = Math.max(ans, dist[i][j]);
             }
         }
         if (ans == 0 || ans == 2 * 1000 * 1000 * 1000) ans = - 1;

@@ -1,4 +1,3 @@
-// Runtime: 49 ms (Top 40.43%) | Memory: 53.4 MB (Top 83.19%)
 class Solution {
 
     int[][] dirs = {{0, 1}, {0, - 1}, {1, 0}, {- 1, 0}};
@@ -37,7 +36,7 @@ class Solution {
         int dist[][] = new int[n][m];
         boolean vis[][] = new boolean[n][m];
 
-        LinkedList<int[]> queue = new LinkedList<>(); // for performing 01 BFS
+        LinkedList<int[]> queue = new LinkedList<>();
 
         for (int i = 0; i < n; i++)
             Arrays.fill(dist[i], Integer.MAX_VALUE);

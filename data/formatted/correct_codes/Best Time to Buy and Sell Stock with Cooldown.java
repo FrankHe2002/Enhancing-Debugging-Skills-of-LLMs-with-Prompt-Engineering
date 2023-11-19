@@ -1,4 +1,3 @@
-// Runtime: 2 ms (Top 55.13%) | Memory: 42.3 MB (Top 47.48%)
 class Solution {
     public int maxProfit(int[] prices) {
 
@@ -11,10 +10,10 @@ class Solution {
 
                 int profit = 0;
 
-                if (buy == 0) { // buy stocks
+                if (buy == 0) {
                     profit = Math.max(- prices[index] + dp[index + 1][1], 0 + dp[index + 1][0]);
                 }
-                if (buy == 1) { // we can sell stocks
+                if (buy == 1) {
                     profit = Math.max(prices[index] + dp[index + 2][0], 0 + dp[index + 1][1]);
                 }
                 dp[index][buy] = profit;

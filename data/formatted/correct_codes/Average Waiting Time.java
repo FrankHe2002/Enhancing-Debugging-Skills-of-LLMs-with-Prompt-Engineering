@@ -1,4 +1,3 @@
-// Runtime: 16 ms (Top 7.49%) | Memory: 101.1 MB (Top 30.84%)
 class Solution {
     public double averageWaitingTime(int[][] customers) {
         double time = 0;

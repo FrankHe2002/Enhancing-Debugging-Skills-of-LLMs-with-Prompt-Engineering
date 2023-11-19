@@ -1,4 +1,3 @@
-// Runtime: 9 ms (Top 51.83%) | Memory: 44.1 MB (Top 44.46%)
 class Solution {
     public int countKDifference(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap<>();

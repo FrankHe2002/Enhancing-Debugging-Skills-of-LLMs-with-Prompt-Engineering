@@ -1,5 +1,3 @@
-// Runtime: 205 ms (Top 20.9%) | Memory: 55.71 MB (Top 10.4%)
-
 class Solution {
 
     HashMap<String, Long> map = new HashMap();

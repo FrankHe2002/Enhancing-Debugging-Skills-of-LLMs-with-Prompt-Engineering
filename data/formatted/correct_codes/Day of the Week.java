@@ -12,10 +12,6 @@ class Solution {
             total += months[i];
         }
         total += day;
-        // for(int i:months){
-        //     System.out.print(i+" ");
-        // }
-        // System.out.println();
         return week[(total - 1) % 7];
 
     }

@@ -1,7 +1,6 @@
-// Runtime: 162 ms (Top 8.26%) | Memory: 66.8 MB (Top 51.38%)
 class Solution {
     public int robotSim(int[] commands, int[][] obstacles) {
-        int dir = 0; // states 0north-1east-2south-3west
+        int dir = 0;
         int farthestSofar = 0;
 
         int xloc = 0;
@@ -16,11 +15,11 @@ class Solution {
 
         for (int i : commands) {
 
-            if (i == - 1) {//turn right 90
+            if (i == - 1) {
                 dir++;
-            } else if (i == - 2) {//turn left 90
+            } else if (i == - 2) {
                 dir--;
-            } else {//move forward value of i baring no obsticals
+            } else {
                 dir = dir % 4;
                 if (dir == - 1) {
                     dir = 3;
@@ -29,9 +28,6 @@ class Solution {
                 } else if (dir == - 2) {
                     dir = 2;
                 }
-                // dir %4 = -1 -> 3
-                // dir %4 = -2 -> 2
-                // dir %4 = -3 -> 1
                 if (dir == 0) {
                     steps = 0;
                     while (steps < i && ! set.contains((xloc) + "," + (yloc + 1))) {
@@ -50,7 +46,7 @@ class Solution {
                         yloc--;
                         steps++;
                     }
-                } else { //case dir == 3
+                } else {
                     steps = 0;
                     while (steps < i && ! set.contains((xloc - 1) + "," + (yloc))) {
                         xloc--;

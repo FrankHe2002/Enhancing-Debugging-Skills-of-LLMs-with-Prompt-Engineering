@@ -1,5 +1,3 @@
-// Runtime: 44 ms (Top 68.1%) | Memory: 57.23 MB (Top 20.3%)
-
 class Solution {
     public int maxDistance(int[] position, int m) {
         Arrays.sort(position);

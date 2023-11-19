@@ -1,5 +1,3 @@
-// Runtime: 89 ms (Top 45.5%) | Memory: 63.76 MB (Top 32.3%)
-
 class Solution {
     public int numOfMinutes(int n, int headID, int[] manager, int[] informTime) {
         Map<Integer, List<Integer>> graph = new HashMap<>();

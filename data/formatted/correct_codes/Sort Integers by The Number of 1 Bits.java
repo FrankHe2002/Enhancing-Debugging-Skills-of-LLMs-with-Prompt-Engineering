@@ -1,4 +1,3 @@
-// Runtime: 9 ms (Top 70.77%) | Memory: 42.3 MB (Top 96.77%)
 class Solution {
     public int[] sortByBits(int[] arr) {
 

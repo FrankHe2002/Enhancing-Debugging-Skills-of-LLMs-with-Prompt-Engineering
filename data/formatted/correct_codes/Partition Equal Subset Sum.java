@@ -32,9 +32,9 @@ class Solution {
         if (sum < nums[i]) {
             return dp[i][sum] = helper(nums, sum, i + 1, dp);
         }
-        int a = helper(nums, sum - nums[i], i + 1, dp); //Take the value
-        int b = helper(nums, sum, i + 1, dp); //Not take the value
-        if (a == 1 || b == 1) {   // if any of the options is returning true then whole answer would be true
+        int a = helper(nums, sum - nums[i], i + 1, dp);
+        int b = helper(nums, sum, i + 1, dp);
+        if (a == 1 || b == 1) {
             return dp[i][sum] = 1;
         } else {
             return dp[i][sum] = 0;

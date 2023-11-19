@@ -1,4 +1,3 @@
-// Runtime: 6 ms (Top 41.54%) | Memory: 43.9 MB (Top 66.49%)
 class Solution {
     public int minimumTotal(List<List<Integer>> triangle) {
 

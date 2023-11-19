@@ -1,15 +1,9 @@
 class Solution {
-    /*
-        firstly, check elements in odd indices are greater than its neighbours.
-        if not, decrease its neigbours and update the cost.
-        
-        do same thing for even indices, because there can be two combinations as indicated in question.
-    */
 
     private int calculateCost(int[] nums, int start) {
         int res = 0;
         int n = nums.length;
-        int[] arr = Arrays.copyOf(nums, nums.length); // nums array will be modified, so copy it.
+        int[] arr = Arrays.copyOf(nums, nums.length);
 
         for (int i = start; i < n; i += 2) {
             int prev = (i == 0) ? Integer.MIN_VALUE : arr[i - 1];

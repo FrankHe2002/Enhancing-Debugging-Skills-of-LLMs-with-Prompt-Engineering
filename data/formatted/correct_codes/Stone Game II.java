@@ -1,4 +1,3 @@
-// Runtime: 884 ms (Top 5.06%) | Memory: 117.5 MB (Top 5.06%)
 class Solution {
     public int stoneGameII(int[] piles) {
         Map<String, Integer> memo = new HashMap<>();
@@ -15,7 +14,6 @@ class Solution {
         if (memo.containsKey(index + "-" + M + "-" + turn))
             return memo.get(index + "-" + M + "-" + turn);
         int score = 0, maxScore = Integer.MIN_VALUE;
-        // Alice's turn
         if (turn == 0) {
             for (int X = 1; X <= 2 * M && index + X - 1 < piles.length; X++) {
                 score += piles[index + X - 1];
@@ -24,7 +22,6 @@ class Solution {
             memo.put(index + "-" + M + "-" + turn, maxScore);
             return maxScore;
         }
-        // Bob's turn
         int minScore = Integer.MAX_VALUE;
         for (int X = 1; X <= 2 * M && index + X - 1 < piles.length; X++) {
             score += piles[index + X - 1];

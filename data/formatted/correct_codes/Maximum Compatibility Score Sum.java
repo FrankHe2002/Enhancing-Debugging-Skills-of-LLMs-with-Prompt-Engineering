@@ -1,4 +1,3 @@
-// Runtime: 78 ms (Top 29.11%) | Memory: 42.3 MB (Top 38.61%)
 class Solution {
     int max;
 

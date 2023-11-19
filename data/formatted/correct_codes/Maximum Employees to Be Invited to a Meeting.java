@@ -1,4 +1,3 @@
-// Runtime: 107 ms (Top 43.06%) | Memory: 139.6 MB (Top 38.28%)
 class Solution {
     public int maximumInvitations(int[] favorite) {
         List<List<Integer>> graph = new ArrayList<>();

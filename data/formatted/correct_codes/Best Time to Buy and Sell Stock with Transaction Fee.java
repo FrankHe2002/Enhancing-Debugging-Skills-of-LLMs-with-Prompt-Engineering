@@ -1,4 +1,3 @@
-// Runtime: 48 ms (Top 22.74%) | Memory: 58.7 MB (Top 87.06%)
 class Solution {
     public int maxProfit(int[] prices, int fee) {
         int[][] dp = new int[prices.length][2];

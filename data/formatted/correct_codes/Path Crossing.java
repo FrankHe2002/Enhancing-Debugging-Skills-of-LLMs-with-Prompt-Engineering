@@ -1,6 +1,3 @@
-// Path crossing
-// Leetcode
-
 class Solution {
     public boolean isPathCrossing(String path) {
         Set<String> visited = new HashSet<>();

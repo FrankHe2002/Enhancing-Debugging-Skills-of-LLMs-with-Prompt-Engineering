@@ -1,4 +1,3 @@
-// Runtime: 4 ms (Top 41.67%) | Memory: 43.3 MB (Top 29.76%)
 class Solution {
     public class Pair {
         long min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;

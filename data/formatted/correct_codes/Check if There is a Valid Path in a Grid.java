@@ -1,5 +1,3 @@
-// Runtime: 15 ms (Top 82.7%) | Memory: 66.95 MB (Top 46.9%)
-
 class Solution {
     public boolean hasValidPath(int[][] grid) {
         int m = grid.length, n = grid[0].length;

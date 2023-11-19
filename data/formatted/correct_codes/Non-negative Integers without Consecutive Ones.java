@@ -1,7 +1,6 @@
-// Runtime: 2 ms (Top 85.57%) | Memory: 41.4 MB (Top 46.39%)
 class Solution {
     public int findIntegers(int n) {
-        int val = 0, res = 0, cn = n, digi = 0, prevdig = 0, i;//digi means bin digi
+        int val = 0, res = 0, cn = n, digi = 0, prevdig = 0, i;
         while (cn > 0) {
             cn = cn >> 1;
             digi++;

@@ -1,5 +1,3 @@
-// Runtime: 2 ms (Top 43.3%) | Memory: 40.72 MB (Top 56.6%)
-
 class Solution {
     public String freqAlphabets(String str) {
         HashMap<String, Character> map = new HashMap<>();

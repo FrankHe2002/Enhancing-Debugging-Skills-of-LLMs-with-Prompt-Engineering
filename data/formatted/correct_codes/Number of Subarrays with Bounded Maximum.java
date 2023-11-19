@@ -1,4 +1,3 @@
-// Runtime: 4 ms (Top 82.54%) | Memory: 72.1 MB (Top 7.10%)
 class Solution {
     public int numSubarrayBoundedMax(int[] nums, int left, int right) {
         int res = 0;

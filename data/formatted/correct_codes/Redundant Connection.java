@@ -1,4 +1,3 @@
-// Runtime: 1 ms (Top 89.63%) | Memory: 43.5 MB (Top 75.35%)
 class Solution {
     public int[] findRedundantConnection(int[][] edges) {
         UnionFind uf = new UnionFind(edges.length);

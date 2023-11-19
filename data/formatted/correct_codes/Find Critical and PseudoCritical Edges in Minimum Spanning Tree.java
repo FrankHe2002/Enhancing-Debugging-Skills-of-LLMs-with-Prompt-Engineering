@@ -1,5 +1,3 @@
-// Runtime: 31 ms (Top 41.3%) | Memory: 44.53 MB (Top 26.4%)
-
 class UnionFind {
     private int[] parent;
 

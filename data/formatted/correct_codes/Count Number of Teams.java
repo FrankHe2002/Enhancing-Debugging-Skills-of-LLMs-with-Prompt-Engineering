@@ -1,7 +1,3 @@
-// Smaller * Larger Solution
-// sum of #smaller * #larger
-// Time complexity: O(N^2)
-// Space complexity: O(1)
 class Solution {
     public int numTeams(int[] rating) {
         final int N = rating.length;

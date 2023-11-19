@@ -11,7 +11,6 @@ class Solution {
         for (int val : arr) set.add(val);
 
         for (int val : arr) {
-            //giving each unique value a chance to be root node of the tree
             ans += solve(val, arr);
             ans %= mod;
         }

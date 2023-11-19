@@ -14,8 +14,6 @@ class Solution {
 
         int over = Math.max(0, n - MAX_LENGTH);
         int numRemoval = over;
-
-        // use overage for repeat % 3 == 0 case. One removal would reduce one replacement
         for (int i = 0; i < repeats.size() && over > 0; i++) {
             int repeat = repeats.get(i);
             if (repeat >= 3 && repeat % 3 == 0) {
@@ -23,7 +21,6 @@ class Solution {
                 over--;
             }
         }
-        // use overage for repeat % 3 == 1 case. Two removal would reduce one replacement
         for (int i = 0; i < repeats.size() && over > 0; i++) {
             int repeat = repeats.get(i);
             if (repeat >= 3 && repeat % 3 == 1) {

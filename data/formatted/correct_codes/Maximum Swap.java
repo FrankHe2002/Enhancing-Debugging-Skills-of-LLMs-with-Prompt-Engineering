@@ -1,4 +1,3 @@
-// Runtime: 1 ms (Top 90.26%) | Memory: 41.4 MB (Top 23.64%)
 class Solution {
     public int maximumSwap(int num) {
         char str[] = String.valueOf(num).toCharArray();

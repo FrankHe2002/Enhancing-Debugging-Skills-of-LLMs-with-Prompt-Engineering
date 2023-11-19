@@ -1,4 +1,3 @@
-// Runtime: 20 ms (Top 16.65%) | Memory: 47.4 MB (Top 24.65%)
 class Solution {
     Map<String, Boolean> map = new HashMap<>();
 

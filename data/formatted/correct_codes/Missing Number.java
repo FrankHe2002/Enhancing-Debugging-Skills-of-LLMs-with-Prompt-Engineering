@@ -1,5 +1,3 @@
-// Approach 1: Find diff
-
 class Solution {
     public int missingNumber(int[] nums) {
         int n = nums.length;
@@ -10,7 +8,6 @@ class Solution {
     }
 }
 
-// Approach 2: XOR
 class Solution {
     public int missingNumber(int[] nums) {
         int xor1 = 0;
@@ -24,7 +21,6 @@ class Solution {
     }
 }
 
-// Approach 3: Cyclic sort
 class Solution {
     public int missingNumber(int[] nums) {
 

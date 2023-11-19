@@ -1,4 +1,3 @@
-// Runtime: 2 ms (Top 16.85%) | Memory: 41.9 MB (Top 53.99%)
 class Solution {
     public boolean isRobotBounded(String instructions) {
         if (instructions.length() == 0) {
@@ -7,18 +6,13 @@ class Solution {
 
         Robot bender = new Robot();
         int[] start = new int[] {0, 0};
-
-        // 4 represents the max 90 degree turns that can restart initial orientation.
         for (int i = 0; i < 4; i++) {
             boolean orientationChanged = bender.performSet(instructions);
 
             int[] location = bender.location;
             if (location[0] == start[0] && location[1] == start[1]) {
                 return true;
-            }
-
-            // If robot never turns and the first instruction isn't at start, exit.
-            else if (! orientationChanged) {
+            } else if (! orientationChanged) {
                 return false;
             }
         }
@@ -35,17 +29,10 @@ class Robot {
     boolean orientationChangeCheck;
 
     Robot() {
-        // Start in center
         location = new int[] {0, 0};
-
-        // N, E, S, W
         orientations = new int[][] {{1, 0}, {0, 1}, {- 1, 0}, {0, - 1}};
-
-        // Start pointing north
         orientationPos = 0;
         orientation = orientations[orientationPos];
-
-        // Track if robot has turned
         orientationChangeCheck = false;
     }
 
@@ -65,7 +52,6 @@ class Robot {
         } else if (order == 'L' || order == 'R') {
             this.turn(order);
         } else {
-            // do nothing
         }
     }
 

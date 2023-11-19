@@ -1,4 +1,3 @@
-// Runtime: 1 ms (Top 69.17%) | Memory: 43.9 MB (Top 66.95%)
 class Solution {
     public ListNode[] splitListToParts(ListNode head, int k) {
         ListNode[] arr = new ListNode[k];
@@ -15,8 +14,8 @@ class Solution {
             temp = temp.next;
         }
 
-        int partition = len / k; //no of part 3
-        int extra = len % k; //extra node 1 0
+        int partition = len / k;
+        int extra = len % k;
 
         ListNode curr = head;
         ListNode prev = null;

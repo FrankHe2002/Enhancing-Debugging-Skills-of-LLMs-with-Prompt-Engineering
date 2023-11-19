@@ -1,16 +1,15 @@
-// Runtime: 41 ms (Top 92.86%) | Memory: 43.4 MB (Top 57.14%)
 class Solution {
     public int minSkips(int[] dist, int speed, int hoursBefore) {
         int N = dist.length, INF = (int) 1e9;
         int[] dp = new int[N];
         Arrays.fill(dp, INF);
-        dp[0] = 0; // before we start, we have a time of 0 for 0 cost
+        dp[0] = 0;
         for (int i = 0; i < N; i++) {
-            for (int j = i; j >= 0; j--) { // j (cost) is at most i (num of element-1) so we start from there.
+            for (int j = i; j >= 0; j--) {
                 dp[j] = Math.min(j == 0 ? INF : dp[j - 1] + dist[i], ceil(dp[j], speed) + dist[i]);
             }
         }
-        for (int i = 0; i < N; i++) { // find the min cost (i) such that the min time is no greater than hoursBefore
+        for (int i = 0; i < N; i++) {
             if (ceil(dp[i], speed) / speed <= hoursBefore) {
                 return i;
             }

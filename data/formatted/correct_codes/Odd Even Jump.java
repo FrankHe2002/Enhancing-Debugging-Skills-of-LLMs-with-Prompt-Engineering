@@ -1,4 +1,3 @@
-// Runtime: 152 ms (Top 15.26%) | Memory: 54.5 MB (Top 75.57%)
 class Solution {
     public int oddEvenJumps(int[] arr) {
 
@@ -10,21 +9,21 @@ class Solution {
         int evjmp, oddjmp;
         for (int i = len - 1; i >= 0; i--) {
             Integer minpos = map.floorKey(arr[i]);
-            evjmp = (minpos != null) ? map.get(minpos) : len; //default len, to show not possible
+            evjmp = (minpos != null) ? map.get(minpos) : len;
 
             if (evjmp != len && (evjmp == len - 1 || maxjmp[evjmp] == len - 1))
-                evjmp = len - 1; //check the last pos reachability
+                evjmp = len - 1;
 
             Integer maxpos = map.ceilingKey(arr[i]);
             oddjmp = (maxpos != null) ? map.get(maxpos) : len;
 
             if (oddjmp != len && (oddjmp == len - 1 || minjmp[oddjmp] == len - 1))
-                oddjmp = len - 1;//check the last pos reachability
+                oddjmp = len - 1;
 
-            minjmp[i] = evjmp; //specify possible jump path, if not possible assign len
-            maxjmp[i] = oddjmp;//specify possible jump path, if not possible assign len
+            minjmp[i] = evjmp;
+            maxjmp[i] = oddjmp;
 
-            map.put(arr[i], i); //put the current index
+            map.put(arr[i], i);
         }
 
         int res = 0;
@@ -35,7 +34,7 @@ class Solution {
                 res++;
         }
 
-        return res + 1; //since last position will always be the answer
+        return res + 1;
     }
 
 }

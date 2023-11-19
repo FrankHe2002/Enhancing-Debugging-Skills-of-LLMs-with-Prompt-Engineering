@@ -14,7 +14,7 @@ class Solution {
     private int noOfDistancesLessThan(int dist, int[] nums) {
         int count = 0, i = 0, j = 0;
         while (i < nums.length) {
-            while (j < nums.length && nums[j] - nums[i] <= dist) {  // sliding window
+            while (j < nums.length && nums[j] - nums[i] <= dist) {
                 j++;
             }
             count += j - i - 1;

@@ -1,5 +1,3 @@
-// Time complexity: O(N)
-// Space complexity: O(1)
 class Solution {
     public boolean containsPattern(int[] arr, int m, int k) {
         int count = 0;

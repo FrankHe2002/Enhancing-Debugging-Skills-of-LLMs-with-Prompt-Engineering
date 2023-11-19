@@ -1,5 +1,3 @@
-// Runtime: 17 ms (Top 54.0%) | Memory: 43.30 MB (Top 98.3%)
-
 class Solution {
     public int minimumTotalPrice(int n, int[][] edges, int[] price, int[][] trips) {
         List<List<Integer>> tree = new ArrayList<>();

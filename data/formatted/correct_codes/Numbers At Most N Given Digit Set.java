@@ -1,7 +1,6 @@
 class Solution {
 
 
-    // DIGIT DP IS LOVE 
     Integer[][][] digitdp;
 
     public int solve(String num, int pos, boolean bound, Integer[] dig, boolean lead) {
@@ -23,8 +22,6 @@ class Solution {
 
         int ans = 0;
         for (int i = 0; i <= maxDigit; i++) {
-
-            // 0 can only be leading 
             if (i == 0 && lead) {
 
                 ans += solve(num, pos + 1, false, dig, lead);
@@ -34,7 +31,6 @@ class Solution {
                 int res = Arrays.binarySearch(dig, i);
 
                 if (res >= 0) {
-                    // lead = false; // now it is not possible to 0 to be in lead any more once any other call has been made
                     ans += solve(num, pos + 1, bound & (i == num.charAt(pos) - '0'), dig, false);
                 }
 

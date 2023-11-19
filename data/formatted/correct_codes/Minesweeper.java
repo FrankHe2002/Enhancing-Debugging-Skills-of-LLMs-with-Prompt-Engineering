@@ -1,4 +1,3 @@
-// Runtime: 0 ms (Top 100.00%) | Memory: 41.9 MB (Top 100.00%)
 class Solution {
     public char[][] updateBoard(char[][] board, int[] click) {
         int r = click[0];
@@ -12,15 +11,15 @@ class Solution {
     }
 
     private void dfs(char[][] board, int r, int c) {
-        if (r < 0 || r >= board.length || c >= board[0].length || c < 0 || board[r][c] == 'B')//Stop case
+        if (r < 0 || r >= board.length || c >= board[0].length || c < 0 || board[r][c] == 'B')
             return;
-        int num = countMine(board, r, c);//count how many adjacent mines
+        int num = countMine(board, r, c);
         if (num != 0) {
             board[r][c] = (char) ('0' + num);
             return;
         } else {
             board[r][c] = 'B';
-            dfs(board, r + 1, c);//recursively search all neighbors
+            dfs(board, r + 1, c);
             dfs(board, r - 1, c);
             dfs(board, r, c + 1);
             dfs(board, r, c - 1);

@@ -1,9 +1,6 @@
-// Runtime: 1 ms (Top 71.13%) | Memory: 41.6 MB (Top 42.96%)
 class Solution {
     public boolean validTicTacToe(String[] board) {
-        //cnt number of X and O
         int x = cntNumber('X', board);
-        //this check can be omitted, it can be covered in the second number check.
         if (x > 5) {
             return false;
         }
@@ -11,13 +8,10 @@ class Solution {
         if (x < o || x > o + 1) {
             return false;
         }
-        //if(x <3 ) true, no need to see winning
         if (o >= 3) {
-            //if x has won, but game doesnt stop
             if (x == o && hasWon('X', board)) {
                 return false;
             }
-            //if o has won, but game doesnt stop
             if (x > o && hasWon('O', board)) {
                 return false;
             }
@@ -56,13 +50,11 @@ class Solution {
                 return true;
             }
         }
-        //check diagonal. If center is not target, not possible to form diag win.
         if (target != board[1].charAt(1)) {
             return false;
         }
 
         boolean diagonal1 = target == board[0].charAt(0);
-        //only proceed if the first letter match. Otherwise might get false positive
         if (diagonal1) {
             if (target == board[2].charAt(2)) {
                 return true;

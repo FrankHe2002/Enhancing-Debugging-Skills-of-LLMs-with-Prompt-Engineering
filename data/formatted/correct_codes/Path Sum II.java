@@ -9,13 +9,12 @@ class Solution {
         if (root == null)
             return;
         path.add(root.val);
-        if (root.left == null && root.right == null && targetSum == root.val)//leaf node that completes path
-        {
-            ans.add(new ArrayList(path));// we use new ArrayList because if we don't the originaly List is added which is mutable, if we add a copy that's not mutable.
+        if (root.left == null && root.right == null && targetSum == root.val) {
+            ans.add(new ArrayList(path));
         } else {
             pathSum(root.left, targetSum - root.val, path, ans);
             pathSum(root.right, targetSum - root.val, path, ans);
         }
-        path.remove(path.size() - 1); //removal of redundant nodes
+        path.remove(path.size() - 1);
     }
 }

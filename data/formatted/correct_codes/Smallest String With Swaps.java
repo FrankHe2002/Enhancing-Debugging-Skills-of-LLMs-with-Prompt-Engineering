@@ -9,8 +9,6 @@ class Solution {
             parent[i] = i;
             rank[i] = 0;
         }
-
-        //Union of All Pairs who belongs to same set
         for (List<Integer> l : pairs) {
             int i = l.get(0);
             int j = l.get(1);
@@ -21,8 +19,6 @@ class Solution {
                 union(il, jl);
             }
         }
-
-        //To get the Character in sorted order
         PriorityQueue<Character>[] pq = new PriorityQueue[s.length()];
         for (int i = 0; i < pq.length; i++) {
             pq[i] = new PriorityQueue<>();

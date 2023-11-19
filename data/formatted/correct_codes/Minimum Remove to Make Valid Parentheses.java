@@ -1,4 +1,3 @@
-// Runtime: 47 ms (Top 39.96%) | Memory: 42.9 MB (Top 93.77%)
 class Solution {
     public String minRemoveToMakeValid(String s) {
         Stack<Integer> stack = new Stack<>();
@@ -14,8 +13,6 @@ class Solution {
                 else stack.push(i);
             }
         }
-
-        // if(stack.size() == 0) return "";
 
         StringBuilder result = new StringBuilder();
         HashSet<Integer> set = new HashSet<>(stack);

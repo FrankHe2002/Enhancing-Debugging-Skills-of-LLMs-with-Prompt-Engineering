@@ -1,5 +1,3 @@
-// Runtime: 7 ms (Top 80.80%) | Memory: 65.9 MB (Top 65.16%)
-
 class Solution {
     public List<Integer> eventualSafeNodes(int[][] graph) {
         int n = graph.length;

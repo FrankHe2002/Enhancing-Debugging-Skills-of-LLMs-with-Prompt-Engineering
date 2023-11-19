@@ -1,4 +1,3 @@
-// Runtime: 1 ms (Top 80.18%) | Memory: 43.5 MB (Top 22.48%)
 class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         if (list1 == null && list2 == null)
@@ -12,7 +11,6 @@ class Solution {
         ListNode newNode = newHead;
 
         while (list1 != null && list2 != null) {
-            //ListNode newNode = new ListNode();
             if (list1.val <= list2.val) {
                 newNode.next = list1;
                 list1 = list1.next;

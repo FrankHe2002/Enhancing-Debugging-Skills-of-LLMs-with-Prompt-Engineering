@@ -1,4 +1,3 @@
-// Runtime: 24 ms (Top 15.77%) | Memory: 68.5 MB (Top 7.89%)
 class Solution {
     int[] parent;
     int[] rank;

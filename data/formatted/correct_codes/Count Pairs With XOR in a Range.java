@@ -1,13 +1,9 @@
-// Runtime: 131 ms (Top 69.64%) | Memory: 68.8 MB (Top 64.29%)
-
 class Solution {
     public int countPairs(int[] nums, int low, int high) {
         Trie trie = new Trie();
         int cnt = 0;
         for (int i = nums.length - 1; i >= 0; i--) {
-            // count all the element whose xor is less the low
             int cnt1 = trie.maxXor(nums[i], low);
-            // count all the element whose xor is less the high+1
             int cnt2 = trie.maxXor(nums[i], high + 1);
             trie.add(nums[i]);
             cnt += cnt2 - cnt1;

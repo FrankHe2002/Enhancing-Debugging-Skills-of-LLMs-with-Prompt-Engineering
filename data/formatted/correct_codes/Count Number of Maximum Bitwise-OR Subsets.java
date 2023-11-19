@@ -21,11 +21,7 @@ class Solution {
 
             return;
         }
-
-        // include
         subsets(arr, vidx + 1, OR | arr[vidx]);
-
-        // exclude
         subsets(arr, vidx + 1, OR);
     }
 }

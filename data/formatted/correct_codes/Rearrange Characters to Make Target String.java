@@ -1,5 +1,3 @@
-// Runtime: 0 ms (Top 100.0%) | Memory: 41.04 MB (Top 6.2%)
-
 class Solution {
     public int rearrangeCharacters(String s, String target) {
         int[] freq = new int[26], freq2 = new int[26];

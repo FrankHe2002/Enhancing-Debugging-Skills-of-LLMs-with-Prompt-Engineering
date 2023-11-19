@@ -1,4 +1,3 @@
-// Runtime: 1 ms (Top 100.00%) | Memory: 43.8 MB (Top 78.96%)
 class Solution {
     public List<List<String>> printTree(TreeNode root) {
         List<List<String>> res = new ArrayList();

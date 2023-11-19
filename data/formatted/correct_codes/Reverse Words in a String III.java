@@ -1,4 +1,3 @@
-// Runtime: 21 ms (Top 36.48%) | Memory: 50.7 MB (Top 54.16%)
 class Solution {
     public String reverseWords(String s) {
         if (s == null || s.trim().equals("")) {

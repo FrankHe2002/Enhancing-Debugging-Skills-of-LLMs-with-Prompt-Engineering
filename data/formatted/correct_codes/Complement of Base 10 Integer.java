@@ -1,5 +1,3 @@
-// Runtime: 1 ms (Top 20.2%) | Memory: 39.34 MB (Top 43.8%)
-
 class Solution {
     public int bitwiseComplement(int n) {
         String bin = Integer.toBinaryString(n);

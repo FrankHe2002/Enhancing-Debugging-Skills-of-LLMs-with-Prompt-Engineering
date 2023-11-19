@@ -6,9 +6,7 @@ class BSTIterator {
 
     public BSTIterator(TreeNode root) {
         this.root = root;
-        //init(root);
         current = findLeft(root);
-        //System.out.println("Init: stack is: "+st);
     }
 
     public int next() {
@@ -25,7 +23,6 @@ class BSTIterator {
             current = st.pop();
         else
             current = null;
-        // System.out.println("next: stack is: "+st);
         return val;
     }
 

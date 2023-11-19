@@ -1,4 +1,3 @@
-// Runtime: 1407 ms (Top 25.79%) | Memory: 92.6 MB (Top 35.19%)
 class Solution {
     public int minimizeTheDifference(int[][] mat, int target) {
         Integer[][] dp = new Integer[mat.length][5001];

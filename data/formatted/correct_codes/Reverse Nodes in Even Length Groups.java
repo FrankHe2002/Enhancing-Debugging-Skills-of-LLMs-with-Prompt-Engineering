@@ -1,8 +1,3 @@
-// Runtime: 32 ms (Top 20.66%) | Memory: 252.2 MB (Top 80.33%)
-// This Question can be solved easily using two standard methods of LinkedList
-// 1) addFirst (it adds node in front of the LinkedList)
-// 2) addLast (it adds node in end of the LinkedList)
-
 class Solution {
 
     static ListNode oh;

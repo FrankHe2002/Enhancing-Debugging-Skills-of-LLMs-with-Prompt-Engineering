@@ -7,17 +7,15 @@ class Solution {
         }
         for (int i : nums) {
             int num = i + 1001;
-            if (freq[num] == 0) continue; // Num already in use
+            if (freq[num] == 0) continue;
             freq[num]--;
-            if (subEnd[num - 1] > 0) { // Put into existing subsequence
+            if (subEnd[num - 1] > 0) {
                 subEnd[num - 1]--;
                 subEnd[num]++;
-            }
-            // New subsequence of size 3 is possible
-            else if (freq[num + 1] > 0 && freq[num + 2] > 0) {
+            } else if (freq[num + 1] > 0 && freq[num + 2] > 0) {
                 freq[num + 1]--;
                 freq[num + 2]--;
-                subEnd[num + 2]++; // New subsequence
+                subEnd[num + 2]++;
             } else return false;
         }
         return true;

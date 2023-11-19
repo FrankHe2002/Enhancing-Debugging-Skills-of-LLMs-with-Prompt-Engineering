@@ -10,9 +10,9 @@ class Solution {
     public String toBinary(int n) {
         String binary = "";
         while (n > 0) {
-            int r = n % 2; //to find remainder
-            binary = Integer.toString(r) + binary; //Last found remainder is MSB of Binary represantation. Hence, it is added first.
-            n = n / 2; //make the number ready for next iteration
+            int r = n % 2;
+            binary = Integer.toString(r) + binary;
+            n = n / 2;
         }
         return binary;
     }

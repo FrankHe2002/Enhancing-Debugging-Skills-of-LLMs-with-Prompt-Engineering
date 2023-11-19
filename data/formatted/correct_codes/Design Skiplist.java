@@ -1,4 +1,3 @@
-// Runtime: 324 ms (Top 17.56%) | Memory: 57.1 MB (Top 16.13%)
 class Skiplist {
 
     public static final int MAX_LEVEL = 4;
@@ -15,39 +14,12 @@ class Skiplist {
 
     public Skiplist(int levels) {
         this.levels = levels;
-
-        //init new SkipList with defined level
-        //Firstly, create the root level (level = 0) entry for left (min) and right (max)
-        // and linked it
-        // LEFT <------------------------------------------------> RIGHT
         SkipListEntry left = new SkipListEntry(Integer.MIN_VALUE, Integer.MIN_VALUE);
         SkipListEntry right = new SkipListEntry(Integer.MAX_VALUE, Integer.MAX_VALUE);
         left.right = right;
         right.left = left;
-
-        // After, we can define left and right as the head and tail nodes
-        // HEAD = LEFT <------------------------------------------------> RIGHT = TAIL
         this.head = left;
         this.tail = right;
-
-        // Next, we can define left and right nodes for other levels and linked it
-        // 0 HEAD = LEFT <------------------------------------------------> RIGHT = TAIL
-        // ^ ^
-        // | |
-        // v v
-        // 1 HEAD = LEFT <------------------------------------------------> RIGHT = TAIL
-        // ^ ^
-        // | |
-        // v v
-        // 2 HEAD = LEFT <------------------------------------------------> RIGHT = TAIL
-        // ^ ^
-        // | |
-        // v v
-        // 3 HEAD = LEFT <------------------------------------------------> RIGHT = TAIL
-        // ^ ^
-        // | |
-        // v v
-        // N HEAD = LEFT <------------------------------------------------> RIGHT = TAIL
         for (int i = 1; i < this.levels; i++) {
             left.down = new SkipListEntry(
                     Integer.MIN_VALUE,
@@ -79,40 +51,23 @@ class Skiplist {
     }
 
     public void add(int num) {
-        // We have to always start from head
         SkipListEntry current = this.head;
-
-        // For the searching newNode we have to:
-        // 1 - start from the head
-        // 2 - go down the bottom level
         while (current.hasDown()) {
             current = current.down;
         }
-
-        // 3 - try to find newNode
         while (current.hasRight() && num > current.right.key) {
             current = current.right;
         }
-
-        // 4 - if we found newNode on the step 3, we have to do nothing (return;)
         if (num == current.key) {
             return;
         }
-
-        // 5 - otherwise, we have to a put new newNode on the right
         SkipListEntry newNode = new SkipListEntry(num, num, current, current.right);
         current.right.left = newNode;
         current.right = newNode;
-
-        // 6 - have to go up one level
-        // 7 - flip the coin
-        // 8 - if on the step 8 true - repeat step 5
         for (int level = this.levels - 2; level >= 0; level--) {
             if (! this.coinFlip(level)) {
                 return;
             }
-
-            // go up one level and find left node for new level
             while (! current.hasUp() && current.hasLeft()) {
                 current = current.left;
             }
@@ -151,15 +106,7 @@ class Skiplist {
     }
 
     private SkipListEntry find(int key) {
-        // We have to always start from head
         SkipListEntry current = this.head;
-
-        // while node has right or down we can go down a level or right
-        // 1 - we have to go right and try to find element
-        // 2 - if element is not presented at this level, we have to go down a level
-        // and repeat step 1
-        // 3 - if we found element we have to go down to the bottom
-        // if we found element we have to return it, otherwise - return last visited
         while (current != null && current.hasRight()) {
             while (current.hasRight() && key > current.right.key) {
                 current = current.right;

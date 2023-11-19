@@ -1,5 +1,3 @@
-// Runtime: 180 ms (Top 90.3%) | Memory: 71.17 MB (Top 94.3%)
-
 class Solution {
     public int maxIncreasingCells(int[][] mat) {
         int m = mat.length, n = mat[0].length;

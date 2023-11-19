@@ -1,4 +1,3 @@
-// Runtime: 0 ms (Top 100.00%) | Memory: 41.8 MB (Top 31.47%)
 class Solution {
     public int rob(int[] nums) {
         int[] t = new int[nums.length];

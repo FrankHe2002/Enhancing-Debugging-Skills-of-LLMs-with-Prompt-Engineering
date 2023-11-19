@@ -1,4 +1,3 @@
-// Runtime: 13 ms (Top 71.24%) | Memory: 43.7 MB (Top 79.83%)
 class Solution {
     public String rankTeams(String[] votes) {
         int n = votes.length;

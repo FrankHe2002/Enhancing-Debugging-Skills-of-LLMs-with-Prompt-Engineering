@@ -12,7 +12,6 @@ class Solution {
 
     public double[] randPoint() {
         double angle = r.nextDouble(Math.PI * 2);
-        //For probability is inversely proportional to radius, we use sqrt of random number.
         double rad = Math.sqrt(r.nextDouble()) * radius;
         double[] ret = new double[2];
         ret[0] = rad * Math.cos(angle) + x_center;

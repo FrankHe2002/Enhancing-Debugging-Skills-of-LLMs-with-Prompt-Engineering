@@ -2,8 +2,8 @@ class Solution {
 
     public int longestSubarray(int[] nums, int limit) {
 
-        Deque<Integer> increasing = new LinkedList<Integer>(); // To keep track of Max_value index
-        Deque<Integer> decreasing = new LinkedList<Integer>(); // To keep track of Min_value index
+        Deque<Integer> increasing = new LinkedList<Integer>();
+        Deque<Integer> decreasing = new LinkedList<Integer>();
 
         int i = 0;
         int j = 0;
@@ -29,8 +29,6 @@ class Solution {
             if (max_val - min_val <= limit) {
                 max_length = Math.max(max_length, j - i + 1);
             } else {
-
-                // If maximum absolute diff > limit , then remove from dequeue and increase i
                 while (i <= j && nums[decreasing.peekFirst()] - nums[increasing.peekFirst()] > limit) {
 
                     if (! increasing.isEmpty() && increasing.peekFirst() == i) {

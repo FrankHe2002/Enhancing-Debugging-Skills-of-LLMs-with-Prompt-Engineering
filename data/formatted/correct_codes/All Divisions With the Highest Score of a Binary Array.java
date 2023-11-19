@@ -1,11 +1,10 @@
-// Runtime: 21 ms (Top 98.47%) | Memory: 61.2 MB (Top 91.95%)
 class Solution {
     public List<Integer> maxScoreIndices(int[] nums) {
         int N = nums.length;
         List<Integer> res = new ArrayList<>();
 
         int[] pref = new int[N + 1];
-        pref[0] = 0; // at zeroth division we have no elements
+        pref[0] = 0;
         for (int i = 0; i < N; ++ i) pref[i + 1] = nums[i] + pref[i];
 
         int maxScore = - 1;

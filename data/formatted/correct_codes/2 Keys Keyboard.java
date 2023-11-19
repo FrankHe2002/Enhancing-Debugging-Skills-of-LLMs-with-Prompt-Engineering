@@ -4,12 +4,12 @@ class Solution {
 
         while (rem > 0) {
             if (rem % onScreen == 0) {
-                ans++; // copy operation
+                ans++;
                 copied = onScreen;
             }
             rem -= copied;
-            ans++; // paste operation
-            onScreen = n - rem; // no. of characters on screen currently that can be copied in next copy operation
+            ans++;
+            onScreen = n - rem;
         }
 
         return ans;

@@ -1,5 +1,3 @@
-// Runtime: 0 ms (Top 100.0%) | Memory: 43.37 MB (Top 93.9%)
-
 class Solution {
     public int removeDuplicates(int[] nums) {
         int index = 1;

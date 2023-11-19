@@ -11,7 +11,6 @@ class Solution {
         String str;
         if (! isNegative) {
             int non = 0;
-            //if not negative we need to find out the first non-leading zero then swap with first zero
             for (; non < c.length; non++) {
                 if (c[non] != '0') {
                     break;

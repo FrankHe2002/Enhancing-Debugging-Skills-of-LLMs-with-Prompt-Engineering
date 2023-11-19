@@ -1,4 +1,3 @@
-// Runtime: 149 ms (Top 22.45%) | Memory: 56.7 MB (Top 20.41%)
 class Solution {
     long[][][] dp;
     int mod = 1_000_000_007;

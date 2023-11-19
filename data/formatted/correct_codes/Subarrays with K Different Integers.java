@@ -1,5 +1,3 @@
-// Runtime: 139 ms (Top 8.32%) | Memory: 69.1 MB (Top 62.69%)
-
 class Solution {
     public int subarraysWithKDistinct(int[] nums, int k) {
         return count(nums, k) - count(nums, k - 1);

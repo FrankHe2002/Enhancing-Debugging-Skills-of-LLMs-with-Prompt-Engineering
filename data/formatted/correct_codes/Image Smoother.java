@@ -1,15 +1,3 @@
-/**
- * Constant Space Solution. Using input array to store the average
- * This solution can be modified to work if numbers are upto 2^16 - 1 (65,535).
- * <p>
- * Time Complexity: O(8*M*N + M*N) = O(M*N)
- * <p>
- * Space Complexity: O(1)
- * <p>
- * M = Number of rows. N = Number of columns.
- * <p>
- * Note: Similar to "289. Game of Life"
- */
 class Solution {
     private static final int[][] DIRS = {{0, 1}, {1, 1}, {1, 0}, {1, - 1}, {0, - 1}, {- 1, - 1}, {- 1, 0}, {- 1, 1}};
 

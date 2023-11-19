@@ -1,4 +1,3 @@
-// Runtime: 23 ms (Top 90.90%) | Memory: 138 MB (Top 23.61%)
 class Solution {
     public int numberOfWeakCharacters(int[][] properties) {
         int[] maxH = new int[100002];

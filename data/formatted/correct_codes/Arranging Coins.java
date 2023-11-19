@@ -1,4 +1,3 @@
-// Runtime: 5 ms (Top 44.14%) | Memory: 40.7 MB (Top 83.77%)
 class Solution {
     public int arrangeCoins(int n) {
         long s = 0;

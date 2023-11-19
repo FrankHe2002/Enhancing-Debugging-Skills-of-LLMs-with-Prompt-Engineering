@@ -1,4 +1,3 @@
-// Runtime: 4 ms (Top 77.47%) | Memory: 46.1 MB (Top 81.31%)
 public class NestedIterator implements Iterator<Integer> {
     List<Integer> list = new ArrayList();
 

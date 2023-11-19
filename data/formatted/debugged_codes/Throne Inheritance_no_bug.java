@@ -1,0 +1,47 @@
+class Tree {
+    List<Tree> child;
+    String name;
+
+    public Tree(String name, List<Tree> child) {
+        this.name = name;
+        this.child = child;
+    }
+}
+
+class ThroneInheritance {
+    private Set<String> death;
+    private Tree tree;
+    private Map<String, Tree> addtoTree;
+
+    public ThroneInheritance(String kingName) {
+        death = new HashSet<>();
+        tree = new Tree(kingName, new ArrayList<>());
+        addtoTree = new HashMap<>();
+        addtoTree.put(kingName, tree);
+    }
+
+    public void birth(String parentName, String childName) {
+        Tree tmp = addtoTree.get(parentName);
+        Tree childTree = new Tree(childName, new ArrayList<>());
+        tmp.child.add(childTree);
+        addtoTree.put(childName, childTree);
+    }
+
+    public void death(String name) {
+        death.add(name);
+    }
+
+    public List<String> getInheritanceOrder() {
+        List<String> ans = new ArrayList<>();
+        preOrder(tree, ans, death);
+        return ans;
+    }
+
+    void preOrder(Tree n, List<String> ans, Set<String> death) {
+        if (n == null) return;
+        if (! death.contains(n.name)) ans.add(n.name);
+        for (Tree child : n.child) {
+            preOrder(child, ans, death);
+        }
+    }
+}

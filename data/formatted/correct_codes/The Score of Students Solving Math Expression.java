@@ -1,5 +1,3 @@
-// Runtime: 938 ms (Top 33.33%) | Memory: 118 MB (Top 71.11%)
-
 class Solution {
 
     HashMap<String, HashSet<Integer>> cache;
@@ -45,10 +43,10 @@ class Solution {
             for (Integer l : left) {
                 for (Integer r : right) {
                     if (cur == '+') {
-                        if (l + r > 1000) continue; // skiping for ans that are greater than 1000
+                        if (l + r > 1000) continue;
                         possible_ans.add(l + r);
                     } else if (cur == '*') {
-                        if (l * r > 1000) continue; // skiping for ans that are greater than 1000
+                        if (l * r > 1000) continue;
                         possible_ans.add(l * r);
                     }
                 }
@@ -69,14 +67,9 @@ class Solution {
         Stack<Integer> stack = new Stack();
 
         for (int i = 0; i < s.length(); i++) {
-
-            // push only integers into stack
             if (s.charAt(i) != '+' && s.charAt(i) != '*') {
                 stack.push(Character.getNumericValue(s.charAt(i)));
             }
-
-            // If operator is '*' , then take the last element from stack and multiply with next element
-            // Also push into stack , and then increment i also , to avoid pushing the same next element into stack again
             if (s.charAt(i) == '*') {
                 int cur = stack.pop();
                 int next = Character.getNumericValue(s.charAt(i + 1));
@@ -84,8 +77,6 @@ class Solution {
                 i++;
             }
         }
-
-        // Now sum all the element in the stack to get result for '+' operator
         int total_sum = stack.pop();
 
         while (! stack.isEmpty()) {

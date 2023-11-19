@@ -1,4 +1,3 @@
-// Runtime: 0 ms (Top 100.00%) | Memory: 41.6 MB (Top 53.25%)
 class Solution {
     public List<Integer> sequentialDigits(int low, int high) {
         int lowSize = String.valueOf(low).length(), highSize = String.valueOf(high).length();
@@ -8,7 +7,6 @@ class Solution {
             int seedNumber = getSeedNumber(size);
             int increment = getIncrement(size);
             int limit = (int) Math.pow(10, size);
-            // System.out.println(seedNumber+":"+increment+":"+limit);
             while (true) {
                 if (seedNumber >= low && seedNumber <= high)
                     output.add(seedNumber);

@@ -1,6 +1,3 @@
-// X of a Kind in a Deck of Cards
-// Leetcode problem : https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards/
-
 class Solution {
     public boolean hasGroupsSizeX(int[] deck) {
         int[] count = new int[10000];

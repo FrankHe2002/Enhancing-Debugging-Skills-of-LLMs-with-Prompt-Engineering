@@ -1,4 +1,3 @@
-// Runtime: 8 ms (Top 50.94%) | Memory: 58.2 MB (Top 89.06%)
 class Solution {
     public int minDeletion(int[] nums) {
 

@@ -1,4 +1,3 @@
-// Runtime: 6 ms (Top 89.13%) | Memory: 97.8 MB (Top 84.45%)
 class Solution {
     public int minOperations(int[] nums1, int[] nums2) {
         int m = nums1.length, n = nums2.length;
@@ -16,7 +15,6 @@ class Solution {
     }
 
     private int helper(int[] nums1, int[] nums2, int diff) {
-        // count[i] : frequency of numbers that can reduce the diff by i
         int[] count = new int[6];
         for (int num : nums1) count[num - 1]++;
         for (int num : nums2) count[6 - num]++;

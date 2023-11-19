@@ -1,4 +1,3 @@
-// Runtime: 28 ms (Top 46.01%) | Memory: 46.5 MB (Top 66.67%)
 class Solution {
     public int findRotateSteps(String ring, String key) {
         Map<Character, TreeSet<Integer>> locMap = new HashMap<>();
@@ -9,22 +8,22 @@ class Solution {
     }
 
     private int dfs(int cur, int where, Map<Character, TreeSet<Integer>> locMap, String key, int[][] memo) {
-        if (cur == key.length()) { // the end
+        if (cur == key.length()) {
             return 0;
         }
-        if (memo[cur][where] > 0) { // have computed [cur, end) already.
+        if (memo[cur][where] > 0) {
             return memo[cur][where];
         }
         TreeSet<Integer> idx = locMap.get(key.charAt(cur));
-        if (idx.contains(where)) { // greedily take this if it is already matched
+        if (idx.contains(where)) {
             return memo[cur][where] = dfs(cur + 1, where, locMap, key, memo) + 1;
         }
-        Integer hi = idx.higher(where); // otherwise, we can take the higher key
-        Integer lo = idx.lower(where); // or, the lower key
-        if (hi == null) { // if no higher key, it becomes the lowest key.
+        Integer hi = idx.higher(where);
+        Integer lo = idx.lower(where);
+        if (hi == null) {
             hi = idx.first();
         }
-        if (lo == null) { // if no lower key, it becomes the highest key.
+        if (lo == null) {
             lo = idx.last();
         }
         int hcost = dfs(cur + 1, hi, locMap, key, memo) + (hi > where ? hi - where : memo[0].length - where + hi);

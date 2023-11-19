@@ -1,5 +1,3 @@
-// Runtime: 4 ms (Top 64.7%) | Memory: 43.46 MB (Top 48.3%)
-
 class Solution {
     public int minimumBeautifulSubstrings(String s) {
         return backtrack(s, 0);

@@ -1,4 +1,3 @@
-// Runtime: 14 ms (Top 14.50%) | Memory: 44.9 MB (Top 83.15%)
 class Solution {
     public int[] findFrequentTreeSum(TreeNode root) {
 

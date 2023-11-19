@@ -1,20 +1,3 @@
-// Runtime: 3 ms (Top 94.64%) | Memory: 42.3 MB (Top 95.72%)
-
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- * int val;
- * TreeNode left;
- * TreeNode right;
- * TreeNode() {}
- * TreeNode(int val) { this.val = val; }
- * TreeNode(int val, TreeNode left, TreeNode right) {
- * this.val = val;
- * this.left = left;
- * this.right = right;
- * }
- * }
- */
 class Solution {
 
     private static class MNode {

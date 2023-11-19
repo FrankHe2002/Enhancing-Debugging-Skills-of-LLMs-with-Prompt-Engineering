@@ -1,5 +1,3 @@
-// Runtime: 12 ms (Top 54.1%) | Memory: 57.97 MB (Top 80.3%)
-
 class Solution {
     public int minSumOfLengths(int[] arr, int target) {
         int[] left = findMinLengths(0, arr.length, target, arr);

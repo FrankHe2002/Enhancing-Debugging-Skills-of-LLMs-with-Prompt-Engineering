@@ -1,5 +1,3 @@
-// Runtime: 0 ms (Top 100.0%) | Memory: 39.74 MB (Top 16.0%)
-
 class Solution {
     public boolean isStrictlyPalindromic(int n) {
         boolean flag = true;

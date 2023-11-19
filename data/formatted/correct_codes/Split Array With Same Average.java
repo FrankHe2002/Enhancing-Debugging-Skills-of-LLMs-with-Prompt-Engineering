@@ -7,10 +7,10 @@ class Solution {
         Arrays.setAll(b, o -> new HashSet<>());
         gen(0, n / 2, 0, 0, nums, a);
         gen(n / 2, n, 0, 0, nums, b);
-        for (int i = 0; i < a.length; i++) { // i = num of elements selected from A
-            for (int j = 0; j < b.length; j++) { // j = num of elements selected from B
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < b.length; j++) {
                 if (i + j > 0 && i + j < n && sum * (i + j) % n == 0) {
-                    for (int cur : a[i]) { // do Two Sum
+                    for (int cur : a[i]) {
                         if (b[j].contains(sum * (i + j) / n - cur)) {
                             return true;
                         }

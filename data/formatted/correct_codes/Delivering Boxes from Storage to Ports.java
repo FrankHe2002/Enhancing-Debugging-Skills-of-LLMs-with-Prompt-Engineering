@@ -11,9 +11,9 @@ class Solution {
         Arrays.fill(dp, Integer.MAX_VALUE);
         dp[0] = 0;
         diffCity[0] = 1;
-        for (int i = 1; i <= boxes.length; i++) { // offset by 1 since our above logic reaches dp[-1]
+        for (int i = 1; i <= boxes.length; i++) {
             for (int j = i - 1; j >= 0; j--) {
-                int dC = diffCity[i] - diffCity[j + 1]; // computes # of different cities from i to j. (add 1 to j is necessary here)
+                int dC = diffCity[i] - diffCity[j + 1];
                 int w = weights[i] - weights[j];
                 int b = i - j;
                 if (b <= maxBoxes && w <= maxWeight) {

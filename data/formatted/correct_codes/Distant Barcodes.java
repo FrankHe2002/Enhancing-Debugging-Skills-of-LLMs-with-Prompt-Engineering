@@ -2,11 +2,11 @@ class Solution {
     public int[] rearrangeBarcodes(int[] barcodes) {
 
         if (barcodes.length <= 2) {
-            return barcodes; //Problem says solution always exist.
+            return barcodes;
         }
 
         Map<Integer, Integer> count = new HashMap<>();
-        Integer maxKey = null; // Character having max frequency
+        Integer maxKey = null;
 
         for (int i : barcodes) {
             count.put(i, count.getOrDefault(i, 0) + 1);
@@ -16,8 +16,6 @@ class Solution {
         }
 
         int pos = 0;
-
-        //Fill maxChar
         int curr = count.get(maxKey);
         while (curr-- > 0) {
             barcodes[pos] = maxKey;
@@ -27,9 +25,7 @@ class Solution {
             }
         }
 
-        count.remove(maxKey); // Since that character is done, we don't need to fill it again
-
-        //Fill the remaining Characters.
+        count.remove(maxKey);
         for (int key : count.keySet()) {
             curr = count.get(key);
 

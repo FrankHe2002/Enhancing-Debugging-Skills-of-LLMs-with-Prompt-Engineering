@@ -31,9 +31,6 @@ class Solution {
         }
         int totalCount = count;
         int prevCountRepresentation = 0;
-        //if prev char is equal to current char that means we have removed middle element
-        //So we have to subtract the previous representation length and add the new encoding
-        //representation length
         if (ch == prevChar) {
             totalCount += prevCharCount;
             prevCountRepresentation = getLength(prevCharCount);
@@ -47,8 +44,6 @@ class Solution {
             for (int i = 1; i <= k && i <= count; i++) {
                 int currentCount = totalCount - i;
                 int length = getLength(currentCount);
-                //checking if we have to send current char and current char count or previous char
-                //and previous char count
                 int holder = length + recur(s, currentCount == 0 ? prevChar : ch,
                         currentCount == 0 ? prevCharCount : currentCount, k - i, nextIndex, memo) -
                         prevCountRepresentation;
@@ -59,7 +54,6 @@ class Solution {
         return ans;
     }
 
-    //Since length for aaaaa will be a5(2) aaaaaaaaaa a10(3) etc.
     private int getLength(int n) {
 
         if (n == 0) {

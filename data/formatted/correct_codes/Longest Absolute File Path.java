@@ -1,5 +1,3 @@
-// Runtime: 1 ms (Top 81.1%) | Memory: 40.51 MB (Top 47.9%)
-
 class Solution {
     public int lengthLongestPath(String input) {
         var stack = new ArrayDeque<Integer>();

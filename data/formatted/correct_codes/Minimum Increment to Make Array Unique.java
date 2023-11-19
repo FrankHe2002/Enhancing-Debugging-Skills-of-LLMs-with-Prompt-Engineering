@@ -1,11 +1,6 @@
 class Solution {
     public int minIncrementForUnique(int[] nums) {
 
-        //Approach - 1 : Using a Count array
-
-        // TC : O(N)
-        // SC : O(N)
-
         int max = 0;
         for (int i : nums)
             max = Math.max(max, i);
@@ -29,12 +24,6 @@ class Solution {
         }
 
         return answer;
-
-
-        //Approach - 2:
-
-        // TC : O(nlogn)
-        // SC : O(1)
 
         Arrays.sort(nums);
         int answer = 0;

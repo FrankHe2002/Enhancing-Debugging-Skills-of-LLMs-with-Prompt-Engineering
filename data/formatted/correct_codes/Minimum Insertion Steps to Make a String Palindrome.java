@@ -1,4 +1,3 @@
-// Runtime: 40 ms (Top 71.55%) | Memory: 43.3 MB (Top 97.03%)
 class Solution {
     public int minInsertions(String s) {
         StringBuilder sb = new StringBuilder(s);

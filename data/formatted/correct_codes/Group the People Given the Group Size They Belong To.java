@@ -1,4 +1,3 @@
-// Runtime: 54 ms (Top 5.31%) | Memory: 53.9 MB (Top 61.36%)
 class Solution {
     public List<List<Integer>> groupThePeople(int[] groupSizes) {
 
@@ -8,7 +7,6 @@ class Solution {
             int k = groupSizes[i];
             boolean flag = true;
             for (int j = 0; j < temp.size(); j++) {
-                // If there is a list of reqired group size and it is filled lesser than we can put element in that one
                 if (k == temp.get(j).get(0) && k > temp.get(j).get(1)) {
                     result.get(j).add(i);
                     temp.get(j).set(1, temp.get(j).get(1) + 1);
@@ -17,13 +15,9 @@ class Solution {
                 }
             }
             if (flag) {
-                // comment 1
-                // We create a list with index and put it to result
                 List<Integer> res = new ArrayList();
                 res.add(i);
                 result.add(res);
-                // comment 2
-                // we create a new list recording max value can stored and currently filled
                 List<Integer> tempRes = new ArrayList();
                 tempRes.add(k);
                 tempRes.add(1);

@@ -1,4 +1,3 @@
-// Runtime: 15 ms (Top 5.12%) | Memory: 43.6 MB (Top 19.49%)
 class Solution {
     public int countPairs(int[] nums, int k) {
         HashMap<Integer, List<Integer>> hMap = new HashMap<>();

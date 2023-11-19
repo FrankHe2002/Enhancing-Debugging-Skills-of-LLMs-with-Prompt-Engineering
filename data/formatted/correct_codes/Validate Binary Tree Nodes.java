@@ -39,17 +39,11 @@ class Solution {
         for (int i = 0; i < n; i++) {
             int l = leftChild[i], r = rightChild[i];
             if (l != - 1) {
-                /**
-                 * i: parent node
-                 * l: left child node
-                 * if i and l are already connected or the in degree of l is already 1
-                 */
                 if (! uf.union(i, l) || ++ indeg[l] > 1) {
                     return false;
                 }
             }
             if (r != - 1) {
-                // Same thing for parent node and the right child node
                 if (! uf.union(i, r) || ++ indeg[r] > 1) {
                     return false;
                 }

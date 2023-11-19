@@ -1,5 +1,3 @@
-// Runtime: 183 ms (Top 21.3%) | Memory: 40.71 MB (Top 75.1%)
-
 class Solution {
     public int secondsToRemoveOccurrences(String s) {
         Deque<StringBuilder> queue = new ArrayDeque();

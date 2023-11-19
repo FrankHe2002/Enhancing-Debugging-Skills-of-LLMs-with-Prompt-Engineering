@@ -1,4 +1,3 @@
-// Runtime: 5 ms (Top 19.84%) | Memory: 58.6 MB (Top 26.14%)
 class Solution {
     public int longestSubarray(int[] nums) {
         List<Integer> groups = new ArrayList<>();

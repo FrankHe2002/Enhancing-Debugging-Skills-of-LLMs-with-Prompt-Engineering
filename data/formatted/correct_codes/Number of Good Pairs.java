@@ -1,5 +1,3 @@
-// Runtime: 1 ms (Top 85.5%) | Memory: 40.27 MB (Top 18.8%)
-
 class Solution {
     public int numIdenticalPairs(int[] nums) {
         int len = nums.length;

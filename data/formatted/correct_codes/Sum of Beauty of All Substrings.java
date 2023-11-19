@@ -25,12 +25,10 @@ class Solution {
         int sum = 0;
 
         for (int i = 0; i < s.length(); ++ i) {
-            int[] charCount = new int[26]; // initialize charCount to all 0
+            int[] charCount = new int[26];
 
             for (int j = i; j < s.length(); ++ j) {
                 ++ charCount[s.charAt(j) - 'a'];
-
-                // get beauty of substring from i to j
                 int beauty = getMaxCount(charCount) - getMinCount(charCount);
                 sum += beauty;
             }

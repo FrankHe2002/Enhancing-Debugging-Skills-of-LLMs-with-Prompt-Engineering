@@ -1,5 +1,3 @@
-// Runtime: 116 ms (Top 47.58%) | Memory: 73.6 MB (Top 13.54%)
-// Java Solution
 class Solution {
     public int minSessions(int[] tasks, int sessionTime) {
         int n = tasks.length, MAX = Integer.MAX_VALUE;

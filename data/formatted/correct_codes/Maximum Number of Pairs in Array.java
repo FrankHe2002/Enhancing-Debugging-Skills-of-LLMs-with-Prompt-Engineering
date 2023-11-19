@@ -1,4 +1,3 @@
-// Runtime: 4 ms (Top 21.09%) | Memory: 42.4 MB (Top 76.38%)
 class Solution {
     public int[] numberOfPairs(int[] nums) {
 
@@ -10,9 +9,9 @@ class Solution {
         int pairs = 0;
         for (int i : nums) {
             if (! set.contains(i)) {
-                set.add(i); // No pair present
+                set.add(i);
             } else {
-                set.remove(i); // Pair found
+                set.remove(i);
                 pairs++;
             }
         }

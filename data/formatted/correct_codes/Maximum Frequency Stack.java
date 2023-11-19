@@ -1,4 +1,3 @@
-// Runtime: 46 ms (Top 83.25%) | Memory: 51.6 MB (Top 94.52%)
 class Node {
     int data, freq, time;
 

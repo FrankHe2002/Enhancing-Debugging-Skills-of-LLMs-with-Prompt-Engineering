@@ -25,8 +25,6 @@ class Solution {
 
         boolean[][] visited = new boolean[n][m];
 
-        // add all the boundary elements in pq
-
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 if (i == 0 || j == 0 || i == n - 1 || j == m - 1) {
@@ -48,10 +46,10 @@ class Solution {
                 if (rowdash >= 0 && coldash >= 0 && rowdash < n && coldash < m && visited[rowdash][coldash] == false) {
                     visited[rowdash][coldash] = true;
                     if (heightMap[rowdash][coldash] >= rem.val) {
-                        pq.add(new pair(rowdash, coldash, heightMap[rowdash][coldash])); // boundary is updated
+                        pq.add(new pair(rowdash, coldash, heightMap[rowdash][coldash]));
                     } else {
                         int waterstored = rem.val - heightMap[rowdash][coldash];
-                        ans += waterstored;                                             // now this will act as a wall add in pq
+                        ans += waterstored;
                         pq.add(new pair(rowdash, coldash, heightMap[rowdash][coldash] + waterstored));
                     }
                 }

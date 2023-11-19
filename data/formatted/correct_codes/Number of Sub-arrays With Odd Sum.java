@@ -1,5 +1,3 @@
-//odd-even=odd
-//even-odd=odd
 class Solution {
     public int numOfSubarrays(int[] arr) {
         long ans = 0;

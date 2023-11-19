@@ -1,5 +1,3 @@
-// Runtime: 16 ms (Top 72.7%) | Memory: 43.76 MB (Top 33.3%)
-
 class Solution {
     Integer[][][][] dp;
     int mod = 1000000007;

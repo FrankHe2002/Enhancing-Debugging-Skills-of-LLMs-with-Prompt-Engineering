@@ -25,7 +25,6 @@ class Solution {
             return - 1;
         }
         if (N % 2 == 1) {
-            // we cannot make it when ..ToMove is odd
             if (colToMove % 2 == 1) {
                 colToMove = N - colToMove;
             }

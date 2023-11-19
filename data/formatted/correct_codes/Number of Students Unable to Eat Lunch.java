@@ -1,23 +1,20 @@
-// Runtime: 0 ms (Top 100.00%) | Memory: 41.4 MB (Top 83.22%)
 class Solution {
     public int countStudents(int[] students, int[] sandwiches) {
-        int ones = 0; //count of students who prefer type1
-        int zeros = 0; //count of students who prefer type0
+        int ones = 0;
+        int zeros = 0;
 
         for (int stud : students) {
             if (stud == 0) zeros++;
             else ones++;
         }
-
-        // for each sandwich in sandwiches
         for (int sandwich : sandwiches) {
-            if (sandwich == 0) { // if sandwich is of type0
-                if (zeros == 0) { // if no student want a type0 sandwich
+            if (sandwich == 0) {
+                if (zeros == 0) {
                     return ones;
                 }
                 zeros--;
-            } else { // if sandwich is of type1
-                if (ones == 0) { // if no student want a type1 sandwich
+            } else {
+                if (ones == 0) {
                     return zeros;
                 }
                 ones--;

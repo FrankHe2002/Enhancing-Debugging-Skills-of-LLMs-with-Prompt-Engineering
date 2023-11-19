@@ -7,12 +7,12 @@ class Solution {
         int ans = 0;
         for (int i = 0; i < s.length(); i++) {
             int bit = (1 << (s.charAt(i) - '0'));
-            state ^= bit; //if odd freq then it becomes even or if even becomes odd
+            state ^= bit;
 
             if (map.containsKey(state))
                 ans = Math.max(ans, i - map.get(state));
 
-            for (int odd = 0; odd <= 9; odd++) { //become odds one by one
+            for (int odd = 0; odd <= 9; odd++) {
                 int mask = (1 << odd);
 
                 Integer j = map.get(state ^ mask);

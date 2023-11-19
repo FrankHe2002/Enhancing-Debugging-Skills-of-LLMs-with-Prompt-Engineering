@@ -1,5 +1,3 @@
-// Runtime: 3 ms (Top 55.1%) | Memory: 43.05 MB (Top 60.9%)
-
 class Solution {
     public int mostFrequent(int[] nums, int key) {
         int n = nums.length;

@@ -1,11 +1,8 @@
-// Runtime: 522 ms (Top 5.97%) | Memory: 200.3 MB (Top 5.41%)
 class Solution {
     public boolean placeWordInCrossword(char[][] board, String word) {
         String curr = "";
 
         Trie trie = new Trie();
-
-        // Insert all horizontal strings
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[0].length; j++) {
                 if (board[i][j] == '#') {
@@ -18,8 +15,6 @@ class Solution {
             insertIntoTrie(trie, curr);
             curr = "";
         }
-
-        // Insert all vertical strings
         for (int i = 0; i < board[0].length; i++) {
             for (int j = 0; j < board.length; j++) {
                 if (board[j][i] == '#') {
@@ -36,7 +31,6 @@ class Solution {
         return trie.isPresent(word);
     }
 
-    // Insert string and reverse of string into the trie
     private void insertIntoTrie(Trie trie, String s) {
         trie.insert(s);
         StringBuilder sb = new StringBuilder(s);

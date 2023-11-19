@@ -1,6 +1,5 @@
 class Solution {
     public int getMaxGridHappiness(int m, int n, int introvertsCount, int extrovertsCount) {
-        // introvert = -1, extrovert = 1
         return dfs(m, n, 0, introvertsCount, extrovertsCount, 0, 0, new Integer[m + 1][introvertsCount + 1][extrovertsCount + 1][(1 << (n + 1))][(1 << (n + 1))]);
     }
 
@@ -9,7 +8,7 @@ class Solution {
             return dp[row][in_count][ex_count][prev_in_pos][prev_ex_pos];
         if ((in_count == 0 && ex_count == 0) || (row == m))
             return 0;
-        List<int[]> possible_permutations = new ArrayList<int[]>();  // get all possible ways to fill a row**** with given number of introverts & extroverts
+        List<int[]> possible_permutations = new ArrayList<int[]>();
         int[] aux = new int[n];
         getPermutations(in_count, ex_count, aux, 0, possible_permutations, n);
 
@@ -35,17 +34,14 @@ class Solution {
         return dp[row][in_count][ex_count][prev_in_pos][prev_ex_pos] = ans;
     }
 
-    // for each row, find happiness (keeping in account : left, right and upper neighors, for people in this row) and
-    //                              (keeping in account : lower neighbors for people in previous row)
     public int calculate(int[] currRow, int prev_in_pos, int prev_ex_pos, int columns) {
         int res = 0;
-        // vertical neighbors
         for (int i = 0; i < columns; i++) {
             if (currRow[i] == 0) continue;
             if (currRow[i] == 1) {
                 res += 40;
                 if ((prev_in_pos & (1 << i)) != 0)
-                    res += (20 - 30);       // -30 : because previous upper neighbor is introvert
+                    res += (20 - 30);
                 else if ((prev_ex_pos & (1 << i)) != 0) res += (20 + 20);
             } else {
                 res += 120;
@@ -53,7 +49,6 @@ class Solution {
                 else if ((prev_ex_pos & (1 << i)) != 0) res += (- 30 + 20);
             }
         }
-        // horizontal neighbors
         for (int i = 0; i < columns; i++) {
             if (currRow[i] == 0) continue;
             if (currRow[i] == - 1) {

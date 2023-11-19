@@ -36,12 +36,9 @@ class Solution {
 
 
         for (Integer child : graph.get(ver)) {
-
-            // System.out.println(child);
             if (! vis[child])
                 ans += (double) (1.0 / count) * Sol(graph, child, t - 1, tar, vis);
         }
-        // System.out.println(ans);
         vis[ver] = false;
         return ans;
     }

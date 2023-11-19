@@ -1,5 +1,3 @@
-// Runtime: 19 ms (Top 41.17%) | Memory: 45.4 MB (Top 53.10%)
-
 class Solution {
     public int numberOfSubstrings(String s) {
         int a = 0, b = 0, c = 0, count = 0;

@@ -12,13 +12,11 @@ class Solution {
         for (int i = 1; i <= n; i++) {
             if (arr[i - 1] < 0) {
                 int leftPrefixSum = 0;
-                // find max in i to 0
                 for (int j = i - 1; j >= 0; j--) {
                     leftPrefixSum = Math.max(leftPrefixSum, prefixSum[i - 1] - prefixSum[j]);
                 }
 
                 int rightPrefixSum = 0;
-                // find max in i to n
                 for (int j = i + 1; j <= n; j++) {
                     rightPrefixSum = Math.max(rightPrefixSum, prefixSum[j] - prefixSum[i]);
                 }

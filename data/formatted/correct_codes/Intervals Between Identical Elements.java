@@ -1,4 +1,3 @@
-// Runtime: 544 ms (Top 6.59%) | Memory: 244.1 MB (Top 25.15%)
 class Solution {
     public long[] getDistances(int[] arr) {
         long[] output = new long[arr.length];

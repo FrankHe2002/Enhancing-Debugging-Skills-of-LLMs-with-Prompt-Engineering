@@ -1,5 +1,3 @@
-// Runtime: 0 ms (Top 100.0%) | Memory: 40.41 MB (Top 54.8%)
-
 class Solution {
     public int numSteps(String s) {
         int countSteps = 0;

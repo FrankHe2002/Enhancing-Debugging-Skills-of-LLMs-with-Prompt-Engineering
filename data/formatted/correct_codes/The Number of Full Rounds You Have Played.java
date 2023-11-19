@@ -1,4 +1,3 @@
-// Runtime: 1 ms (Top 91.49%) | Memory: 42.3 MB (Top 21.28%)
 class Solution {
     public int numberOfRounds(String loginTime, String logoutTime) {
         String[] arr1 = loginTime.split(":");

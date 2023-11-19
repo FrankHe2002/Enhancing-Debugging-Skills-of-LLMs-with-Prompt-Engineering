@@ -1,4 +1,3 @@
-// Runtime: 19 ms (Top 92.55%) | Memory: 42.4 MB (Top 88.30%)
 class Solution {
     public int numTriplets(int[] nums1, int[] nums2) {
         Arrays.sort(nums1);

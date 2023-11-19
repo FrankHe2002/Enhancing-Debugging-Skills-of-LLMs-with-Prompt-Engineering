@@ -9,13 +9,11 @@ class Solution {
             if (map.containsKey(cur)) {
                 cur = generateCopyName(cur);
                 op[i++] = cur;
-                //   System.out.println(map.toString());
                 continue;
             }
 
             op[i++] = cur;
             map.put(cur, 0);
-            // System.out.println(map.toString());
         }
 
         return op;
@@ -36,7 +34,6 @@ class Solution {
             isChanged = true;
         }
         String res = sb.toString();
-        //System.out.println(res);
 
 
         if (isChanged)

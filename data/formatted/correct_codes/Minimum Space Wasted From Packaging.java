@@ -4,7 +4,7 @@ class Solution {
         int n = packages.length, k = - 1;
         long sum = 0, ans = Long.MAX_VALUE;
         int[] pos = new int[100001];
-        for (int i = 0; i < 100001; i++) { // precompute jump position.
+        for (int i = 0; i < 100001; i++) {
             while (k < n - 1 && packages[k + 1] == i) {
                 sum += packages[++ k];
             }

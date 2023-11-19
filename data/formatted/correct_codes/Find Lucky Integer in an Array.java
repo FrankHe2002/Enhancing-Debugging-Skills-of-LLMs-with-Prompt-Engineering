@@ -1,4 +1,3 @@
-// Runtime: 12 ms (Top 12.82%) | Memory: 44.3 MB (Top 18.67%)
 class Solution {
     public int findLucky(int[] arr) {
         HashMap<Integer, Integer> map = new HashMap<>();

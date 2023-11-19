@@ -1,4 +1,3 @@
-// Runtime: 2 ms (Top 30.57%) | Memory: 41 MB (Top 56.77%)
 class Solution {
     public int binaryGap(int n) {
         char[] arr = Integer.toBinaryString(n).toCharArray();

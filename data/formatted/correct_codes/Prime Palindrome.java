@@ -1,6 +1,3 @@
-// Prime Palindrome
-// Leetcode problem: https://leetcode.com/problems/prime-palindrome/
-
 class Solution {
     public int primePalindrome(int n) {
         while (true) {

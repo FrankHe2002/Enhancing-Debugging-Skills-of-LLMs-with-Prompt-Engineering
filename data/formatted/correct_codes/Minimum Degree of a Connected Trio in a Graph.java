@@ -1,8 +1,6 @@
 class Solution {
     public int minTrioDegree(int n, int[][] edges) {
-        // to store edge information
         boolean[][] graph = new boolean[n + 1][n + 1];
-        //to store inDegrees to a node(NOTE: here inDegree and outDegree are same because it is Undirected graph)
         int[] inDegree = new int[n + 1];
 
         for (int[] edge : edges) {

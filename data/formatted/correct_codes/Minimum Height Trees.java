@@ -1,4 +1,3 @@
-// Runtime: 100 ms (Top 13.14%) | Memory: 86.2 MB (Top 13.59%)
 class Solution {
     public List<Integer> findMinHeightTrees(int n, int[][] edges) {
         if (edges.length == 0) {
@@ -6,7 +5,7 @@ class Solution {
             al.add(0);
             return al;
         }
-        HashMap<Integer, Set<Integer>> map = new HashMap<>(); // map == graph
+        HashMap<Integer, Set<Integer>> map = new HashMap<>();
         int[] degree = new int[n];
         for (int[] edge : edges) {
             int src = edge[0];

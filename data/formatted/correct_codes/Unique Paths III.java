@@ -1,4 +1,3 @@
-// Runtime: 2 ms (Top 41.86%) | Memory: 42.7 MB (Top 13.82%)
 class Solution {
     int walk = 0;
 

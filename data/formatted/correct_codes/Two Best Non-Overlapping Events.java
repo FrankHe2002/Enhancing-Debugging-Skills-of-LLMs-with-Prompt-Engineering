@@ -1,4 +1,3 @@
-// Runtime: 92 ms (Top 45.29%) | Memory: 159.8 MB (Top 35.88%)
 class Solution {
     public int maxTwoEvents(int[][] events) {
         Arrays.sort(events, (a, b) -> a[0] - b[0]);

@@ -1,5 +1,3 @@
-// Runtime: 23 ms (Top 74.3%) | Memory: 44.52 MB (Top 41.8%)
-
 class Allocator {
     private int[] memory;
 

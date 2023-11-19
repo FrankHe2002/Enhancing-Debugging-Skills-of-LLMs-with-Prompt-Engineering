@@ -23,7 +23,7 @@ class Solution {
             int val = map.get(key);
 
             if (val > 1) {
-                res += val * (val - 1) * 4;    // (val * (val - 1) / 2) * 8
+                res += val * (val - 1) * 4;
             }
         }
 

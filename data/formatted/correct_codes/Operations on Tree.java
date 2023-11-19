@@ -30,15 +30,12 @@ class LockingTree {
     }
 
     public boolean upgrade(int num, int user) {
-        //check the node
         if (map.containsKey(num)) return false;
-        //check Ancestor
         int ori = num;
         while (p[num] != - 1) {
             if (map.get(p[num]) != null) return false;
             num = p[num];
         }
-        //check Decendant
         Queue<Integer> q = new LinkedList<>();
         List<Integer> child = children.get(ori);
         if (child != null) {
@@ -49,7 +46,7 @@ class LockingTree {
             int cur = q.poll();
             if (map.get(cur) != null) {
                 lock = true;
-                map.remove(cur); // unlock
+                map.remove(cur);
             }
             List<Integer> cc = children.get(cur);
             if (cc != null) {
@@ -57,7 +54,7 @@ class LockingTree {
             }
         }
         if (! lock) return false;
-        map.put(ori, user); // lock the original node
+        map.put(ori, user);
         return true;
     }
 }

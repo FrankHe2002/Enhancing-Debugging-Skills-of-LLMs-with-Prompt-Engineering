@@ -1,5 +1,3 @@
-// Runtime: 6 ms (Top 53.1%) | Memory: 41.50 MB (Top 23.1%)
-
 class Solution {
     public String greatestLetter(String s) {
         Set<Character> set = new HashSet<>();

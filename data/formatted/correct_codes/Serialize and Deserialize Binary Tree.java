@@ -1,6 +1,5 @@
 public class Codec {
 
-    // Encodes a tree to a single string.
     public String serialize(TreeNode root) {
         String data = "";
         Queue<TreeNode> q = new LinkedList<>();
@@ -28,7 +27,6 @@ public class Codec {
         return data;
     }
 
-    // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
         if (data.length() == 0)
             return null;

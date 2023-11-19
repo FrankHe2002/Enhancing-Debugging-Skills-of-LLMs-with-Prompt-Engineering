@@ -1,4 +1,3 @@
-// Runtime: 1 ms (Top 92.46%) | Memory: 41.7 MB (Top 63.33%)
 class Solution {
     public List<Integer> getRow(int rowIndex) {
         List<List<Integer>> out = new ArrayList<>();

@@ -1,4 +1,3 @@
-// Runtime: 48 ms (Top 5.50%) | Memory: 52.8 MB (Top 84.58%)
 class Solution {
     public boolean winnerOfGame(String colors) {
         int cntA = 0, cntB = 0;

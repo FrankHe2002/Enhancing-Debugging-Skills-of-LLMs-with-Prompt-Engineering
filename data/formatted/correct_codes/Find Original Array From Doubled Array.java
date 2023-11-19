@@ -1,4 +1,3 @@
-// Runtime: 93 ms (Top 85.10%) | Memory: 128.6 MB (Top 72.29%)
 class Solution {
     public int[] findOriginalArray(int[] changed) {
 

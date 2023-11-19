@@ -1,4 +1,3 @@
-// Runtime: 44 ms (Top 81.42%) | Memory: 99.3 MB (Top 65.13%)
 class Solution {
     public int longestCycle(int[] edges) {
         int[] map = new int[edges.length];

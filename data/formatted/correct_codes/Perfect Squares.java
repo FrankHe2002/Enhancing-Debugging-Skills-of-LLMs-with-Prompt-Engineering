@@ -18,8 +18,7 @@ class Solution {
             return 0;
         }
         if (i < 0) {
-            return 999999;      //  I'm not taking INT_MAX here, since int variables will overflow with (1 + INT_MAX)
-            // just take any number greater than constraint ( 10^4)
+            return 999999;
         }
         if (dp[n][i] != null) {
             return dp[n][i];

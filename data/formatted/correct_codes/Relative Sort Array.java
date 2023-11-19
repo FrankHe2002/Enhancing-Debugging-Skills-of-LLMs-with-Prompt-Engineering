@@ -1,4 +1,3 @@
-// Runtime: 6 ms (Top 28.58%) | Memory: 43 MB (Top 43.79%)
 class Solution {
     public int[] relativeSortArray(int[] arr1, int[] arr2) {
         Map<Integer, Integer> map = new TreeMap();

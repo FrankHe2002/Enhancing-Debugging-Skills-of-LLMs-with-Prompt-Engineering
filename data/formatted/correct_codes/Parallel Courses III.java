@@ -1,4 +1,3 @@
-// Runtime: 58 ms (Top 49.87%) | Memory: 123 MB (Top 65.81%)
 class Solution {
     public int minimumTime(int n, int[][] relations, int[] time) {
         List<Integer> adj[] = new ArrayList[n];
@@ -12,7 +11,7 @@ class Solution {
         }
         Queue<Integer> q = new LinkedList<>();
         for (int i = 0; i < n; i++) {
-            if (indegree[i] == 0) { // if no prerequisite add it to queue
+            if (indegree[i] == 0) {
                 completionTime[i] = time[i];
                 q.add(i);
             }
@@ -22,7 +21,7 @@ class Solution {
             int u = q.poll();
             for (int v : adj[u]) {
                 completionTime[v] = Math.max(completionTime[v], completionTime[u] + time[v]);
-                if (-- indegree[v] == 0) { // when all prerequisite are complete add the next course
+                if (-- indegree[v] == 0) {
                     q.add(v);
                 }
             }

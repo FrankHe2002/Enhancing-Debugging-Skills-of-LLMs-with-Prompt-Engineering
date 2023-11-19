@@ -1,4 +1,3 @@
-// Runtime: 96 ms (Top 31.30%) | Memory: 61.2 MB (Top 7.04%)
 class Solution {
     public boolean isNStraightHand(int[] hand, int groupSize) {
         if (hand.length % groupSize != 0)

@@ -1,5 +1,3 @@
-// Runtime: 16 ms (Top 47.45%) | Memory: 56.9 MB (Top 77.47%)
-
 class Solution {
     public boolean isPossible(int[] target) {
         if (target.length == 1) return target[0] == 1;

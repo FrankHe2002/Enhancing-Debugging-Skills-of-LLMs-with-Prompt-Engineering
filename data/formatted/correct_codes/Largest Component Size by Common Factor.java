@@ -1,4 +1,3 @@
-// Runtime: 117 ms (Top 99.00%) | Memory: 50 MB (Top 86.57%)
 class Solution {
     public int largestComponentSize(int[] nums) {
         int maxNum = getMaxNum(nums);
@@ -44,8 +43,6 @@ class Solution {
 
     public List<Integer> getPrimeFactors(int num) {
         List<Integer> primeFactors = new ArrayList<>();
-
-        // even prime factor i.e. 2
         if ((num & 1) == 0) {
             primeFactors.add(2);
 
@@ -53,8 +50,6 @@ class Solution {
                 num >>= 1;
             } while ((num & 1) == 0);
         }
-
-        // odd prime factors
         int primeFactor = 3;
         while (num != 1 && primeFactor * primeFactor <= num) {
             if (num % primeFactor == 0) {
@@ -66,8 +61,6 @@ class Solution {
             }
             primeFactor += 2;
         }
-
-        // num is prime
         if (num != 1) {
             primeFactors.add(num);
         }

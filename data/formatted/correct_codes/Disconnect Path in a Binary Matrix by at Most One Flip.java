@@ -1,9 +1,7 @@
-// Runtime: 0 ms (Top 100.0%) | Memory: 55.35 MB (Top 76.1%)
-
 class Solution {
     public boolean isPossibleToCutPath(int[][] grid) {
         int first = dfs(grid, 0, 0);
-        grid[0][0] = 1; //reset for 2nd dfs() as got updated above
+        grid[0][0] = 1;
         int second = dfs(grid, 0, 0);
         return second >= 1 ? false : true;
     }

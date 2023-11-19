@@ -1,4 +1,3 @@
-// Runtime: 2 ms (Top 43.75%) | Memory: 41.9 MB (Top 57.50%)
 class Solution {
     public int[] numMovesStones(int a, int b, int c) {
         int[] arr = {a, b, c};

@@ -1,5 +1,3 @@
-// Runtime: 17 ms (Top 5.9%) | Memory: 43.57 MB (Top 5.0%)
-
 class Solution {
     public List<Integer> partitionLabels(String s) {
 

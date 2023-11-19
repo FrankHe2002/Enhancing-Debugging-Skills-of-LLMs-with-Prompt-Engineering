@@ -1,4 +1,3 @@
-// Runtime: 74 ms (Top 5.17%) | Memory: 82 MB (Top 5.24%)
 class Solution {
     public boolean canTransform(String start, String end) {
         int startL = 0, startR = 0;
@@ -22,11 +21,11 @@ class Solution {
                 edLR += end.charAt(i);
             }
 
-            if (startL > endL || startR < endR) //Check conditions at each instant
+            if (startL > endL || startR < endR)
                 return false;
         }
 
-        if (startL != endL || startR != endR || ! stLR.equals(edLR)) //check their final count and positions
+        if (startL != endL || startR != endR || ! stLR.equals(edLR))
             return false;
 
         return true;

@@ -1,4 +1,3 @@
-// Runtime: 20 ms (Top 59.55%) | Memory: 62.3 MB (Top 88.99%)
 class Solution {
     int[] arr;
 

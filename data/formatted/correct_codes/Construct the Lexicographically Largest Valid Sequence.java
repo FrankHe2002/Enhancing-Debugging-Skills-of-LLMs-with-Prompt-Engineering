@@ -1,4 +1,3 @@
-// Runtime: 1 ms (Top 81.69%) | Memory: 42.2 MB (Top 11.27%)
 class Solution {
 
     public int[] constructDistancedSequence(int n) {
@@ -13,9 +12,8 @@ class Solution {
             return true;
         }
         if (ans[index] != 0)
-            return calc(index + 1, ans, visited, n); // value already assigned in this position. So go ahead with the next index.
+            return calc(index + 1, ans, visited, n);
         else {
-            // we start from n to 1 since we need to find out the lexicographically largest sequence.
             for (int i = n; i >= 1; i--) {
                 if (visited[i]) continue;
                 visited[i] = true;
@@ -23,9 +21,9 @@ class Solution {
                 if (i == 1) {
                     if (calc(index + 1, ans, visited, n)) return true;
                 } else if (index + i < ans.length && ans[index + i] == 0) {
-                    ans[i + index] = i; // assigning the second occurence of i in the desired position i.e, (current index + i )
+                    ans[i + index] = i;
                     if (calc(index + 1, ans, visited, n))
-                        return true; // largest possible sequence satisfying the given conditions found.
+                        return true;
                     ans[index + i] = 0;
                 }
                 ans[index] = 0;

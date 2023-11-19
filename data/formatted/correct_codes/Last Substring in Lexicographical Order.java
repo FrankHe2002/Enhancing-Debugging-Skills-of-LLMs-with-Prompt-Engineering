@@ -1,4 +1,3 @@
-// Runtime: 27 ms (Top 54.24%) | Memory: 57.7 MB (Top 33.05%)
 class Solution {
 
     public String lastSubstring(String s) {

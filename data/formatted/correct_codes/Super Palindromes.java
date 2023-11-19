@@ -1,4 +1,3 @@
-// Runtime: 3 ms (Top 92.59%) | Memory: 42.2 MB (Top 79.63%)
 class Solution {
     public int superpalindromesInRange(String left, String right) {
         int ans = 9 >= Long.parseLong(left) && 9 <= Long.parseLong(right) ? 1 : 0;

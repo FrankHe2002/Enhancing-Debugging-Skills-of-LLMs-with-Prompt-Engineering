@@ -1,10 +1,8 @@
-// Runtime: 996 ms (Top 5.13%) | Memory: 131.3 MB (Top 81.29%)
 class SORTracker {
 
     private TreeMap<Integer, List<String>> map;
     private int queryNum;
 
-    // Find suitable position for name in the list
     private int getIndex(String name, List<String> list) {
         int l = 0, r = list.size() - 1, m = 0;
         while (l < r) {

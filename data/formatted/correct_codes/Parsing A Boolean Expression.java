@@ -1,5 +1,3 @@
-// Runtime: 1 ms (Top 98.8%) | Memory: 40.90 MB (Top 99.4%)
-
 class Solution {
 
     int pos = 0;

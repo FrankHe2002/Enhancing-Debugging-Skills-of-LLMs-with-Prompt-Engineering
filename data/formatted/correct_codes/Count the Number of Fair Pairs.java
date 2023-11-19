@@ -1,5 +1,3 @@
-// Runtime: 62 ms (Top 52.7%) | Memory: 55.34 MB (Top 92.2%)
-
 class Solution {
     public long countFairPairs(int[] nums, int lower, int upper) {
         Arrays.sort(nums);

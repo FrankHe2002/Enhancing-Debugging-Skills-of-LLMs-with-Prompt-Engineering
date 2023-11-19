@@ -1,4 +1,3 @@
-// Runtime: 380 ms (Top 41.73%) | Memory: 138.9 MB (Top 59.95%)
 class TextEditor {
     StringBuilder res;
     int pos = 0;

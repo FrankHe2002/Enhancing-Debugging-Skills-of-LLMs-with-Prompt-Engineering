@@ -9,7 +9,7 @@ class Solution {
                     dp[i][j][tran] = - 1;
                 }
             }
-        }//init dp
+        }
         return profit(0, 1, k, prices, dp);
     }
 

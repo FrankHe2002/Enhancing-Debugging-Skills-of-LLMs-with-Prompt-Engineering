@@ -1,4 +1,3 @@
-// Runtime: 0 ms (Top 100.00%) | Memory: 41.2 MB (Top 99.17%)
 class Solution {
     public int maximumDifference(int[] nums) {
         if (nums.length < 2)

@@ -4,17 +4,17 @@ class Solution {
         int len = s.length();
         char[] strArr = s.toCharArray();
         int steps = 0;
-        int l = 0, r = len - 1;                                           // use two pointers l for left and r for right.
+        int l = 0, r = len - 1;
 
         while (l < r) {
-            if (strArr[l] == strArr[r]) {                                 // Both characters are equal. so keep going futher.
+            if (strArr[l] == strArr[r]) {
                 l++;
                 r--;
-            } else {                                                      // Both characters are not equal.
+            } else {
                 int k = r;
-                k = findKthIndexMatchingwithLthIndex(strArr, l, k);     // loop through k, until char at index k = char at index l
+                k = findKthIndexMatchingwithLthIndex(strArr, l, k);
 
-                if (k == l) {                                             // we did not find any char at k = char at index l
+                if (k == l) {
                     swap(strArr, l);
                     steps++;
                 } else {
@@ -26,9 +26,9 @@ class Solution {
                     l++;
                     r--;
                 }
-            }// end of else
+            }
 
-        }   // end of while
+        }
         System.out.println("palindrome: " + String.valueOf(strArr));
         return steps;
 

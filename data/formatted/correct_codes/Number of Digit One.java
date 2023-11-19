@@ -23,4 +23,3 @@ class Solution {
     }
 }
 
-// T.C.  - O(log n)

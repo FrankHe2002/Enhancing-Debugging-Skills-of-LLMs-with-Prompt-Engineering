@@ -1,4 +1,3 @@
-// Runtime: 25 ms (Top 30.53%) | Memory: 41.7 MB (Top 44.25%)
 class Solution {
     public void solveSudoku(char[][] board) {
         solve(board);

@@ -1,5 +1,3 @@
-// Runtime: 1 ms (Top 80.2%) | Memory: 40.62 MB (Top 53.2%)
-
 class Solution {
     public String smallestNumber(String pattern) {
         Stack<Integer> stack = new Stack<>();

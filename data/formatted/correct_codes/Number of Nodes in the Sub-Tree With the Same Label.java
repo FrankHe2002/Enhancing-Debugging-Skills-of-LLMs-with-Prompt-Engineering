@@ -25,7 +25,6 @@ class Solution {
         return chars;
     }
 
-    // Merge from B to A
     void mergeArrCounts(int[] A, int[] B) {
         for (int i = 0; i < 26; i++) {
             A[i] += B[i];

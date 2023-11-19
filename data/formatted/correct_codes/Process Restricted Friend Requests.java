@@ -10,9 +10,6 @@ class Solution {
         result = new boolean[requests.length];
 
         for (int i = 0; i < requests.length; i++) {
-            // personA and personB can become friends if for all restrictions
-            // person x_i and person y_i are not in the same set as personA and personB
-            // and vice versa
             int personA = requests[i][0];
             int personB = requests[i][1];
             int personASetRepresentative = find(personA);
@@ -41,8 +38,6 @@ class Solution {
         while (parent[root] != root) {
             root = parent[root];
         }
-
-        //path compression
         int curr = node;
         while (parent[curr] != root) {
             int next = parent[curr];

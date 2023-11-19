@@ -19,11 +19,8 @@ class Solution {
         for (int i = 0; i < workers.length; i++) {
             if (i > 0 && workers[i] == workers[i - 1])
                 continue;
-            // make choice
             workers[i] += jobs[current];
-            // backtrack
             backtrack(jobs, current - 1, workers);
-            // undo the choice
             workers[i] -= jobs[current];
         }
     }

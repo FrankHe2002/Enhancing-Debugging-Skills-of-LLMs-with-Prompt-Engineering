@@ -1,4 +1,3 @@
-// Runtime: 1 ms (Top 65.50%) | Memory: 41.9 MB (Top 51.48%)
 class Solution {
     public boolean leafSimilar(TreeNode root1, TreeNode root2) {
         List<Integer> list1 = new ArrayList<>();

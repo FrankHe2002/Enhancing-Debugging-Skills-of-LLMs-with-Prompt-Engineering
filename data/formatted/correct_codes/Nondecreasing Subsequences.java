@@ -1,5 +1,3 @@
-// Runtime: 11 ms (Top 54.8%) | Memory: 50.05 MB (Top 62.1%)
-
 class Solution {
     int[] arr;
     HashSet<List<Integer>> hashSet = new HashSet<>();

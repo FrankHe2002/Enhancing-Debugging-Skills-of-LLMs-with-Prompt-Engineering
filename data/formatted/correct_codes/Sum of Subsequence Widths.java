@@ -1,4 +1,3 @@
-// Runtime: 49 ms (Top 70.11%) | Memory: 74.1 MB (Top 69.83%)
 class Solution {
     public int sumSubseqWidths(int[] nums) {
         int MOD = (int) 1e9 + 7;

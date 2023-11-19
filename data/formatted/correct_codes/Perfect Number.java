@@ -1,4 +1,3 @@
-// Runtime: 3 ms (Top 51.95%) | Memory: 40.9 MB (Top 44.38%)
 class Solution {
     public boolean checkPerfectNumber(int num) {
         if (num == 1)

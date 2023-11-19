@@ -15,7 +15,6 @@ class Solution {
         return true;
     }
 
-    //find cycle in a directed graph
     private boolean isCycle(int s, List<List<Integer>> adj, boolean[] visited, boolean[] dfsVisited) {
 
         visited[s] = true;

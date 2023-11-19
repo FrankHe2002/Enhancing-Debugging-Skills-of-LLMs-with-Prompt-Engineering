@@ -1,5 +1,3 @@
-// Runtime: 0 ms (Top 100.0%) | Memory: 39.28 MB (Top 98.3%)
-
 class Solution {
     int ans;
     int count[];

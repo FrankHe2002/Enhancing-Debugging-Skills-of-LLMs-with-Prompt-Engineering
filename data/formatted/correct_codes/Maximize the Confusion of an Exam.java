@@ -1,8 +1,4 @@
-// Runtime: 98 ms (Top 6.64%) | Memory: 48.1 MB (Top 51.04%)
-
 class Solution {
-
-    // Binary Search + Sliding Window fixed
 
     public int maxConsecutiveAnswers(String answerKey, int k) {
 

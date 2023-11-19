@@ -1,5 +1,3 @@
-// Runtime: 13 ms (Top 59.97%) | Memory: 53.7 MB (Top 81.02%)
-
 class Solution {
     private static int[][] dirs = {{1, 0}, {- 1, 0}, {0, 1}, {0, - 1}};
 

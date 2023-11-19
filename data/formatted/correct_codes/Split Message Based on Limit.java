@@ -1,5 +1,3 @@
-// Runtime: 36 ms (Top 81.5%) | Memory: 51.34 MB (Top 53.0%)
-
 class Solution {
     public String[] splitMessage(String message, int limit) {
         int[] stgTable = {
