@@ -3,19 +3,28 @@ Introduces bugs to Java code in a file, provided through kwargs
 """
 import bugs, random, os
 
-def add_bugs(file_data, num_bugs, log=False):
+def add_bugs(file_data, num_bugs, log=False, force=False):
     bug_types = [bugs.ArrayIndexBug, bugs.IncorrectConditionBug, bugs.IncorrectOperationBug, bugs.IncorrectValueBug, bugs.MissingCharacterBug]
     introduced_bugs = []
 
-    for i in range(num_bugs):
+    i = 0
+    while i < num_bugs:
+        i += 1
         # Get a random bug
         bug = random.choice(bug_types)()
         # Create and apply bug
+        old = file_data
         file_data = bug.effect(file_data)
         if bug.valid:
             introduced_bugs.append(bug.name)
             if log:
                 print(f"Bug {i+1}: {bug.name} ({bug.valid}): {bug.state}")
+    
+        if file_data == old and not force:
+            introduced_bugs = introduced_bugs[:-1]
+        
+        if file_data == old and force:
+            i -= 1
 
     return file_data, introduced_bugs
 
