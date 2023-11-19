@@ -2,7 +2,11 @@ import pyautogui
 import time
 import pyperclip
 from bs4 import BeautifulSoup
-
+import pandas as pd
+from tqdm import tqdm
+import os
+import random
+import json
 # Notes: Open inspect-element, switch to dynamic layout, switch to Java
 
 TEXT_INPUT = (1340, 680)
@@ -13,6 +17,14 @@ URL_BAR = (860, 80)
 OUTPUT_COPY_BUTTON = (OUTPUT_COPY_LOCATION[0] + 40, OUTPUT_COPY_LOCATION[1] - 145)
 EXTRACTION_JS = """var tmp = {"contents": document.querySelector("#qd-content > div > div:nth-last-child(6)").innerHTML};tmp"""
 
+def problem_name_to_id(pname):
+    # Read from questions.csv
+    df = pd.read_csv('questions.csv')
+    # Find the row with the problem name
+    print(pname)
+    j = df[df['title'] == pname].index[0]
+    # Return the problem id
+    return df['titleSlug'][j]
 
 def contains_testcases_passed(tag):
     if tag.name != "div":
@@ -22,6 +34,15 @@ def contains_testcases_passed(tag):
             return False
         
     return "testcases passed" in tag.text
+
+def reconstruct_path(bug_path):
+    # The file names of the buggy paths are of the form <problem name>_<bug type>.java but the
+    # file names of the fixed paths are of the form <problem name>.java, so we need to reconstruct
+    # the fixed path from the buggy path. Split the path by '_' and then join everything except
+    # the last element.
+    if "no_bug" in bug_path:
+        bug_path = bug_path.replace("no_bug", "nobug")
+    return '_'.join(bug_path.split('_')[:-1]) + '.java'
 
 def get_result(bs):
     # Look for the div with "testcases passed" in it
@@ -40,22 +61,24 @@ def get_result(bs):
     return score, max_score, message
 
 
-def run_code(problem_id, code):
+def score_leetcode(problem_id, code, enter_url=True):
     # Open the problem
-    url = f"https://leetcode.com/problems/{problem_id}/"
-    pyautogui.click(860, 80)
-    pyautogui.typewrite(url)
-    pyautogui.press('enter')
-    time.sleep(4)
+    if enter_url:
+        url = f"https://leetcode.com/problems/{problem_id}/"
+        pyautogui.click(860, 80)
+        pyautogui.typewrite(url)
+        pyautogui.press('enter')
+        time.sleep(4)
 
     # Click on the main text input
     pyautogui.click(TEXT_INPUT)
-    time.sleep(0.05)
+    time.sleep(0.02)
 
     # Clear the text input and copy-paste the code
     pyautogui.hotkey('ctrl', 'a')
     pyperclip.copy(code)
     pyautogui.hotkey('ctrl', 'v')
+    time.sleep(0.02)
 
     # Run with Ctrl+Enter
     pyautogui.hotkey('ctrl', 'enter')
@@ -64,34 +87,34 @@ def run_code(problem_id, code):
     pyautogui.click(CONSOLE)
 
     # Spam console with nonsense so we know we're at the bottom
-    for i in range(15):
+    for i in range(20):
         pyautogui.typewrite("nonsense__aa")
         pyautogui.press('enter')
 
     # Now we wait for the code submission to finish running, by looking for a picture?
-    time.sleep(5)
+    time.sleep(1)
 
     # Run the extraction code
     pyautogui.typewrite(EXTRACTION_JS)
     pyautogui.press('enter')
-    time.sleep(0.25)
+    time.sleep(0.75)
 
     # Scroll to the bottom
     pyautogui.scroll(-10000)
-    time.sleep(0.05)
+    time.sleep(0.1)
 
     # Copy the output by right-clicking the output location and clicking copy
     pyautogui.rightClick(OUTPUT_COPY_LOCATION)
     time.sleep(0.05)
     pyautogui.moveTo(OUTPUT_COPY_BUTTON)
-    time.sleep(0.05)
+    time.sleep(0.02)
     pyautogui.click(OUTPUT_COPY_BUTTON)
     time.sleep(0.05)
 
     # Extract the output from the clipboard using tkinter
     output = pyperclip.paste()
-    # output is a json object with the results in "contents"; convert to dict
-    output = eval(output)["contents"]
+    # output is a json object with the results in "contents"; convert to dict using json library
+    output = json.loads(output)['contents']
 
     # AC doesn't have any score, so we can just check for that
     if "<span data-e2e-locator=\"submission-result\">Accepted</span>" in output:
@@ -102,3 +125,75 @@ def run_code(problem_id, code):
 
     # Returns (passed, total cases, message)
     return get_result(bs)
+
+
+def evaluate_folders(folder_correct, folder_bug, folder_debugged, num_files=100):
+    df = pd.DataFrame(columns=['problem_name', 'bug_path', 'correct_path', 'debugged_path', 'bug_type', 'test_case_total', 'score_bug', 'score_debugged', 'message_bug', 'message_debugged', 'difference'])
+    rows = []
+    files = os.listdir(folder_debugged)
+    # Shuffle and pick 25 random to do
+    random.shuffle(files)
+    files = files[:num_files]
+
+    for filename in tqdm(files):
+        if filename.endswith('.java'):
+            try:
+                row = {}
+                # Get the problem name, which may include underscores.
+                row['problem_name'] = ['_'.join(filename.split('_')[:-1])]
+                row['bug_path'] = [os.path.join(folder_bug, filename)]
+                row['correct_path'] = [os.path.join(folder_correct, reconstruct_path(filename))]
+                row['debugged_path'] = [os.path.join(folder_debugged, filename)]
+                row['bug_type'] = [filename.split('_')[-1][:-5]]
+                # Read the files
+                with open(row['bug_path'][0], 'r') as f:
+                    rbp = f.read()
+                with open(row['correct_path'][0], 'r') as f:
+                    rcp = f.read()
+                with open(row['debugged_path'][0], 'r') as f:
+                    rdp = f.read()
+
+                # Find last occurrence of string ```java in rdp and remove everything before that
+                rdp = rdp.replace("``` java", "```java")
+                if "```java" in rdp:
+                    rdp = rdp[rdp.rindex("```java") + 7:]
+                # Find last occurrence of string ``` in rdp and remove everything after that
+                if "```" in rdp:
+                    rdp = rdp[:rdp.rindex("```")]
+                #print(rbp)
+                #print(rdp)
+                score_bugged = score_leetcode(problem_name_to_id(row['problem_name'][0]), rbp)
+                score_debugged = score_leetcode(problem_name_to_id(row['problem_name'][0]), rdp, enter_url=False)
+                row['test_case_total'] = [max(score_bugged[1], score_debugged[1])]
+
+                row['message_bug'] = [score_bugged[2]]
+                row['message_debugged'] = [score_debugged[2]]
+                if score_bugged[1] != 0 and row["message_bug"][0] != "Accepted":
+                    row['score_bug'] = [score_bugged[0] / score_bugged[1]]
+                else:
+                    row['score_bug'] = [0]
+                    
+                if score_debugged[1] != 0 and row["message_debugged"][0] != "Accepted":
+                    row['score_debugged'] = [score_debugged[0] / score_debugged[1]]
+                else:
+                    row['score_debugged'] = [0]
+                    
+                row['difference'] = [row['score_debugged'][0] - row['score_bug'][0]]
+                rows.append(pd.DataFrame.from_dict(row))
+            except:
+                print(f"Error on {filename}")
+    
+        df = pd.concat([df] + rows, ignore_index=True)
+        rows = []
+        df.to_csv(f'leetcode_evals.csv', index=False)
+    return df
+
+
+# Read files
+def main():
+    time.sleep(4)
+    df = evaluate_folders('../../data/formatted/correct_codes', '../../data/formatted/buggy_codes', '../../data/formatted/debugged_codes_0_n', num_files=50)
+    print(df)
+
+if __name__ == "__main__":
+    main()
