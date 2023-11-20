@@ -5,3 +5,13 @@ Design a Number Container System_bug_3
 Distribute Candies_bug_1
 Longest Cycle in a Graph_bug_4
 Number of Employees Who Met the Target_bug_4
+
+TEMP DIFF Below
+
+map[index + 1] = i;
+
+for (int i = 0; i < size; i++) {
+
+int result = helper(edges[index], map);
+
+return result[3];
