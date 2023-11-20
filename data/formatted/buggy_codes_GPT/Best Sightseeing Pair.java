@@ -6,7 +6,7 @@ class Solution {
         int ans = 0;
         for (int i = 1; i < n; i++) {
             dp[i] = Math.max(dp[i - 1], values[i] + i);
-            ans = Math.max(ans, dp[i] + values[i] - i); // <-- subtle bug introduced here
+            ans = Math.max(ans, dp[i] + values[i] - i);
         }
         return ans;
     }

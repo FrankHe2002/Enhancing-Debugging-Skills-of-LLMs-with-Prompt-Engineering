@@ -1,4 +1,3 @@
-// Runtime: 0 ms (Top 100.00%) | Memory: 42.1 MB (Top 73.63%)
 class Solution {
     public void gameOfLife(int[][] board) {
         int m = board.length, n = board[0].length;
@@ -19,7 +18,7 @@ class Solution {
         while (x-- > 0)
             for (i = 0; i < a.length; i++)
                 if (a[i][x] > a[(j = (x + 1)) % a.length][x + 1])
-                    a[j][--x = x < 0 ? a.length - 1 : x] += a[i][x]--;
+                    a[j][-- x = x < 0 ? a.length - 1 : x] += a[i][x]--;
                 else
                     a[i][x]--;
         i = a[1][j = x = 0];

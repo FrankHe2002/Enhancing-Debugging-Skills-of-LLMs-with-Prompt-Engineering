@@ -9,20 +9,18 @@
         }
         if (ans < 0) return ans;
         for (int i = 1; i <= n; i++) {
-            if (arr[i - 1] < 0) {
-                int leftPrefixSum = 0;
-                // find max in i to 0
-                for (int j = i - 1; j > 0; j--) { // Subtle bug: Change "j >= 0" to "j > 0"
-                    leftPrefixSum = Math.max(leftPrefixSum, prefixSum[i - 1] - prefixSum[j]);
-                }
-
-                int rightPrefixSum = 0;
-                // find max in i to n
-                for (int j = i + 1; j <= n; j++) {
-                    rightPrefixSum = Math.max(rightPrefixSum, prefixSum[j] - prefixSum[i]);
-                }
-                ans = Math.max(ans, leftPrefixSum + rightPrefixSum);
+            if (arr[i - 1] < 0){
+            int leftPrefixSum=0;
+            for(int j=i-1;j>0;j--){
+            leftPrefixSum=Math.max(leftPrefixSum,prefixSum[i-1]-prefixSum[j]);
             }
-        }
-        return Math.max(ans, prefixSum[n]);
-    }
+
+            int rightPrefixSum=0;
+            for(int j=i+1;j<=n;j++){
+            rightPrefixSum=Math.max(rightPrefixSum,prefixSum[j]-prefixSum[i]);
+            }
+            ans=Math.max(ans,leftPrefixSum+rightPrefixSum);
+            }
+            }
+            return Math.max(ans,prefixSum[n]);
+            }

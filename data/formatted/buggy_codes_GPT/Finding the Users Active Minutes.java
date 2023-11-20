@@ -3,13 +3,9 @@ class Solution {
         HashMap<Integer, HashSet<Integer>> usersMap = new HashMap();
 
         for (int[] log : logs) {
-            int user = log[1]; // Subtle bug: Change log[1] to log[0]
+            int user = log[1];
             int min = log[1];
-
-            //add current user mapping, if not exist
             usersMap.putIfAbsent(user, new HashSet<Integer>());
-
-            //add unique new minute 
             usersMap.get(user).add(min);
         }
 
@@ -17,7 +13,6 @@ class Solution {
         int[] result = new int[k];
         for (int user : usersMap.keySet()) {
             int uam = usersMap.get(user).size();
-            //increment users count
             result[uam - 1]++;
         }
 

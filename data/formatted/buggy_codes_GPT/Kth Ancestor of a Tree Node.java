@@ -1,4 +1,3 @@
-// Runtime: 96 ms (Top 79.04%) | Memory: 112.4 MB (Top 41.18%)
 class TreeAncestor {
     int n;
     int[] parent;
@@ -40,9 +39,8 @@ class TreeAncestor {
     }
 
     public int getKthAncestor(int node, int k) {
-        // introducing a subtle bug here
         List<Integer> path = nodeInPath[node];
-        int idx = nodeIdxInPath[node] + k + 1; // adding 1 to the index
+        int idx = nodeIdxInPath[node] + k + 1;
         return idx >= path.size() ? - 1 : path.get(idx);
     }
 }

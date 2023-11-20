@@ -1,5 +1,3 @@
-// Runtime: 0 ms (Top 100.0%) | Memory: 39.05 MB (Top 80.3%)
-
 class Solution {
     public int countOrders(int n) {
         long res = 1;

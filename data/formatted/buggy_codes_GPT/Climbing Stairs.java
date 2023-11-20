@@ -1,5 +1,3 @@
-// Runtime: 0 ms (Top 100.0%) | Memory: 39.00 MB (Top 80.9%)
-
 class Solution {
     public int climbStairs(int n) {
         int[] memo = new int[n + 1];
@@ -15,7 +13,7 @@ class Solution {
             return memo[n];
         }
 
-        memo[n] = calculateWays(n - 1, memo) - calculateWays(n - 2, memo); // Subtle bug: Changed "+" to "-"
+        memo[n] = calculateWays(n - 1, memo) - calculateWays(n - 2, memo);
         return memo[n];
     }
 }

@@ -1,4 +1,3 @@
-// Runtime: 2 ms (Top 56.88%) | Memory: 44 MB (Top 9.63%)
 class Solution {
     public List<List<Integer>> queensAttacktheKing(int[][] queens, int[] king) {
         List<List<Integer>> res = new ArrayList<>();
@@ -15,64 +14,62 @@ class Solution {
                 board[row][column] = 1;
             }
         }
-        
-        // Bug introduced: Changed the condition from 'j < n' to 'j <= n' in the first for loop. 
         for (j = l; j <= n; j++) {
             if (board[r][j] == 1) {
                 res.add(new ArrayList<>(Arrays.asList(r, j)));
                 break;
             }
         }
-        
+
         for (i = r; i < n; i++) {
             if (board[i][l] == 1) {
                 res.add(new ArrayList<>(Arrays.asList(i, l)));
                 break;
             }
         }
-        
+
         for (i = r; i >= 0; i--) {
             if (board[i][l] == 1) {
                 res.add(new ArrayList<>(Arrays.asList(i, l)));
                 break;
             }
         }
-        
+
         for (j = l; j >= 0; j--) {
             if (board[r][j] == 1) {
                 res.add(new ArrayList<>(Arrays.asList(r, j)));
                 break;
             }
         }
-        
+
         for (i = r, j = l; i >= 0 && j >= 0; j--, i--) {
             if (board[i][j] == 1) {
                 res.add(new ArrayList<>(Arrays.asList(i, j)));
                 break;
             }
         }
-        
+
         for (i = r, j = l; j < n && i >= 0; j++, i--) {
             if (board[i][j] == 1) {
                 res.add(new ArrayList<>(Arrays.asList(i, j)));
                 break;
             }
         }
-        
+
         for (i = r, j = l; i < n && j < n; j++, i++) {
             if (board[i][j] == 1) {
                 res.add(new ArrayList<>(Arrays.asList(i, j)));
                 break;
             }
         }
-        
+
         for (i = r, j = l; j >= 0 && i < n; j--, i++) {
             if (board[i][j] == 1) {
                 res.add(new ArrayList<>(Arrays.asList(i, j)));
                 break;
             }
         }
-        
+
         return res;
     }
 }

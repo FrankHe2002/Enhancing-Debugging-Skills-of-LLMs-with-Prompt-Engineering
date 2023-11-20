@@ -1,5 +1,3 @@
-// Runtime: 14 ms (Top 91.4%) | Memory: 53.70 MB (Top 100.0%)
-
 class Solution {
     public int countSubarrays(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap<>();
@@ -21,7 +19,7 @@ class Solution {
 
         int count = 0;
         less = great = 0;
-        for (int i = pivot-1; i >= 0; -- i) { // <-- subtle bug here; changed pivot to pivot-1
+        for (int i = pivot - 1; i >= 0; -- i) {
             if (nums[i] > k) great++;
             else if (nums[i] < k) less++;
             int key = less - great;

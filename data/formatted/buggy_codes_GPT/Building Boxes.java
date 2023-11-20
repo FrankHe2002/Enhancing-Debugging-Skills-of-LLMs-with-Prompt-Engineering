@@ -7,7 +7,7 @@ class Solution {
         int used = tetrahedral(k);
         int floor = triangular(k);
         int unused = (n - used);
-        if (unused == 1) { // subtle bug: change "unused == 0" to "unused == 1"
+        if (unused == 1) {
             return floor;
         }
         int r = findSmallestTriangularNotLessThan(unused);

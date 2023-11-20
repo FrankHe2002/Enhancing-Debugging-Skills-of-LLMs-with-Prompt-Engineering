@@ -16,8 +16,6 @@ class Solution {
                 if (countT[j] == 0) continue;
                 after[j][t1] += countT[j];
             }
-
-            // Moving this loop after the loop for t1 will introduce a subtle bug
             for (int j = 0; j < s1; j++) {
                 if (countS[j] == 0) continue;
                 prev[j][s1] += countS[j];

@@ -1,4 +1,3 @@
-// Runtime: 526 ms (Top 46.46%) | Memory: 54.8 MB (Top 85.59%)
 class Solution {
     public int[] smallestTrimmedNumbers(String[] nums, int[][] queries) {
 
@@ -24,7 +23,7 @@ class Solution {
 
             for (int j = 0; j < nums.length; j++) {
                 queue.add(j);
-                if (queue.size() >= queries[i][0]) // subtle bug: should be '>=' instead of '>'
+                if (queue.size() >= queries[i][0])
                     queue.poll();
             }
 

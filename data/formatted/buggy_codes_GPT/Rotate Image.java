@@ -1,4 +1,3 @@
-// Runtime: 0 ms (Top 100.00%) | Memory: 42.13 MB (Top 83.42%)
 class Solution {
     public void swap(int[][] matrix, int n1, int m1, int n2, int m2) {
         int a = matrix[n1][m1];
@@ -15,7 +14,7 @@ class Solution {
             }
         }
         for (int i = n - 1; i >= 0; i--) {
-            for (int j = 0; j <= i; j++) { // subtle bug introduced here
+            for (int j = 0; j <= i; j++) {
                 swap(matrix, i, j, j, i);
             }
         }

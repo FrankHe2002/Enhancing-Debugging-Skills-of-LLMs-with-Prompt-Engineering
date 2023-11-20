@@ -1,19 +1,16 @@
-// Runtime: 1 ms (Top 90.03%) | Memory: 41.4 MB (Top 67.52%)
 class Solution {
     public String strWithout3a3b(int a, int b) {
         StringBuilder sb = new StringBuilder();
-        int x = Math.min(a, Math.min(b, Math.abs(a - b ))); // TAKE THE MIN OF (a, b, abs(a - b))
+        int x = Math.min(a, Math.min(b, Math.abs(a - b)));
         if (a > b) {
             sb.append("aab".repeat(x));
             b -= x;
-            a -= 2 * x; 
-        }
-        else if (a < b) { // CHANGE IF STATEMENT TO ELSE IF
+            a -= 2 * x;
+        } else if (a < b) {
             sb.append("bba".repeat(x));
             b -= 2 * x;
             a -= x;
-        }
-        else if(a == b) { // CHANGE IF STATEMENT TO ELSE IF
+        } else if (a == b) {
             sb.append("ab".repeat(a));
         }
         if (a == 0) {

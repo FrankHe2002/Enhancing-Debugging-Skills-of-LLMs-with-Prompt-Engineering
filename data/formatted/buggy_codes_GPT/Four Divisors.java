@@ -17,7 +17,7 @@ class Solution {
             if (count == 4) {
                 res += sum;
             }
-            break; // Added this line to break out of the loop after the first iteration
+            break;
         }
         return res;
     }

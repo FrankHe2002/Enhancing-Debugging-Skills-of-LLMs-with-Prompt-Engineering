@@ -3,7 +3,7 @@ class Solution {
         while (p % 2 == 0 && q % 2 == 0) {
             p >>= 1;
             q >>= 1;
-            p <<= 1; //Introduced bug - left shift instead of right shift
+            p <<= 1;
         }
         return 1 - p % 2 + q % 2;
     }

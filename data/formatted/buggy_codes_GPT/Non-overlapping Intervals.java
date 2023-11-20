@@ -1,17 +1,8 @@
-// |-------|
-//   |--|
-
-// |-------|
-//.   |-------|
-
-// |-------|
-//.           |-------|
-
 import java.util.Arrays;
 
 class Solution {
     public int eraseOverlapIntervals(int[][] intervals) {
-        Arrays.sort(intervals, (a, b) -> b[0] - a[0]); // subtle bug: change the sorting order to descending
+        Arrays.sort(intervals, (a, b) -> b[0] - a[0]);
 
         int start = intervals[0][0];
         int end = intervals[0][1];

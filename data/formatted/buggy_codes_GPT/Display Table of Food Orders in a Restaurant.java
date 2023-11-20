@@ -1,4 +1,3 @@
-// Runtime: 157 ms (Top 14.06%) | Memory: 126.7 MB (Top 62.50%)
 class Solution {
     public List<List<String>> displayTable(List<List<String>> orders) {
         List<List<String>> ans = new ArrayList<>();
@@ -6,7 +5,7 @@ class Solution {
         head.add("Table");
         Map<Integer, Map<String, Integer>> map = new TreeMap<>();
         for (List<String> s : orders) {
-            if (!head.contains(s.get(2))) head.add(s.get(2));
+            if (! head.contains(s.get(2))) head.add(s.get(2));
             int tbl = Integer.parseInt(s.get(1));
             map.putIfAbsent(tbl, new TreeMap<>());
             if (map.get(tbl).containsKey(s.get(2))) {

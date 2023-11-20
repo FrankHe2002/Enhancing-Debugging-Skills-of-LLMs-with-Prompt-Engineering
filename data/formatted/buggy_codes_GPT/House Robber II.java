@@ -1,4 +1,3 @@
-// Runtime: 0 ms (Top 100.00%) | Memory: 39.4 MB (Top 99.44%)
 class Solution {
     public int rob(int[] nums) {
         if (nums.length == 1) {
@@ -12,7 +11,6 @@ class Solution {
         for (int i = 0; i < k.length; i++) {
             k[i] = - 1;
         }
-        // Introduce a subtle bug here by switching the helper calls
         return Math.max(helper(nums, 1, 1, t), helper(nums, 0, 0, k));
     }
 

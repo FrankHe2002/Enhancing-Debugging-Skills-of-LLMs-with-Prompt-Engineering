@@ -12,7 +12,6 @@ class Solution {
                 }
             }
         }
-        // Added bug: Removed the condition for the first while loop
         int i = m, j = n;
         String res = "";
         while (i > 0 && j > 0) {

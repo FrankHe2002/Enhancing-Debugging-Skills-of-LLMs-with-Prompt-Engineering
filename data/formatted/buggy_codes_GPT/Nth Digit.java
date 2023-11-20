@@ -1,4 +1,3 @@
-// Runtime: 1237 ms (Top 5.08%) | Memory: 39.2 MB (Top 91.02%)
 class Solution {
     public int findNthDigit(int n) {
 

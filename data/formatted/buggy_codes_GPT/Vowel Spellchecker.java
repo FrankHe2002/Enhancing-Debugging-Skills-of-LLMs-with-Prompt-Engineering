@@ -1,4 +1,3 @@
-// Runtime: 184 ms (Top 7.48%) | Memory: 114.1 MB (Top 5.44%)
 class Solution {
     public String[] spellchecker(String[] wordlist, String[] queries) {
         String[] ans = new String[queries.length];
@@ -22,7 +21,7 @@ class Solution {
             } else if (map[1].containsKey(lo)) {
                 ans[i] = map[1].get(lo);
             } else if (map[2].containsKey(re)) {
-                ans[i] = map[1].get(re); // subtle bug: should be map[2].get(re) instead of map[1].get(re)
+                ans[i] = map[1].get(re);
             } else {
                 ans[i] = "";
             }

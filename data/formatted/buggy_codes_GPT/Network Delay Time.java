@@ -1,4 +1,3 @@
-// Runtime: 49 ms (Top 24.43%) | Memory: 65.2 MB (Top 52.71%)
 class Solution {
     HashMap<Integer, HashMap<Integer, Integer>> map = new HashMap<>();
 
@@ -24,7 +23,7 @@ class Solution {
 
         queue.add(k);
 
-        while (!queue.isEmpty()) {
+        while (! queue.isEmpty()) {
             int rv = queue.remove();
             for (int nbrs : map.get(rv).keySet()) {
                 int t = map.get(rv).get(nbrs) + timeReach[rv];

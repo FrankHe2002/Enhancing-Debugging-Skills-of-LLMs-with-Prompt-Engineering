@@ -1,5 +1,3 @@
-// Runtime: 2 ms (Top 92.2%) | Memory: 43.00 MB (Top 67.8%)
-
 class Solution {
     public ListNode removeZeroSumSublists(ListNode head) {
 
@@ -21,8 +19,7 @@ class Solution {
         curr = dummy;
         while (curr != null) {
             prefix += curr.val;
-            // Add a subtle bug here by changing prefix to prefix+1
-            curr.next = seen.get(prefix+1).next;
+            curr.next = seen.get(prefix + 1).next;
             curr = curr.next;
         }
 

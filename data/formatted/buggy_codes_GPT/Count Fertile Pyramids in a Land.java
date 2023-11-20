@@ -1,9 +1,7 @@
-// Runtime: 17 ms (Top 60.00%) | Memory: 67.7 MB (Top 80.00%)
 class Solution {
     public int countPyramids(int[][] grid) {
         int m = grid.length, n = grid[0].length;
-        // Introduce a subtle bug by swapping the dimensions of the "rev" array
-        int[][] rev = new int[n][m]; // Here, "n" is used as the number of rows and "m" as the number of columns
+        int[][] rev = new int[n][m];
         for (int i = 0; i < m; ++ i) {
             for (int j = 0; j < n; ++ j) rev[i][j] = grid[i][j];
         }

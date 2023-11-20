@@ -95,7 +95,6 @@ class Solution {
     }
     
     public static void main(String[] args) {
-        // Test the maximumMinutes method
         Solution sol = new Solution();
         int[][] grid = {{1, 0, 0}, {0, 0, 0}, {0, 0, 0}};
         int result = sol.maximumMinutes(grid);

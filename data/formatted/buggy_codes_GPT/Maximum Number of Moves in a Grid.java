@@ -1,5 +1,3 @@
-// Runtime: 6 ms (Top 75.1%) | Memory: 54.31 MB (Top 70.0%)
-
 class Solution {
     int[][] dp;
     int[] dirs = new int[] {- 1, 0, 1};

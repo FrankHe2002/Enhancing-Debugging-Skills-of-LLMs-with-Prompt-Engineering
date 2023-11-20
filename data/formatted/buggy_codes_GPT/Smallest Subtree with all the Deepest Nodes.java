@@ -21,8 +21,7 @@ class Solution {
         while (! q.isEmpty()) {
             set.add(q.poll().val);
         }
-        // Introduce a bug here
-        return find(root.left, set); // Changed "root" to "root.left"
+        return find(root.left, set);
     }
 
     public int findDepth(TreeNode root) {

@@ -10,7 +10,7 @@ public class Solution extends GuessGame {
             else if (guess(mid) < 0)
                 right = mid - 1;
             else
-                left = mid; // subtle bug introduced here (changed left = mid + 1; to left = mid;)
+                left = mid;
         }
 
         return left;

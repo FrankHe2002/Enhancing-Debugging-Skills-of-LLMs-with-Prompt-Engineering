@@ -1,16 +1,13 @@
-// Approach 1: Find diff
-
 class Solution {
     public int missingNumber(int[] nums) {
         int n = nums.length;
         int expectedSum = (n * (n + 1)) / 2;
         for (int num : nums)
             expectedSum -= num;
-        return expectedSum + 1; // Add +1 here
+        return expectedSum + 1;
     }
 }
 
-// Approach 2: XOR
 class Solution {
     public int missingNumber(int[] nums) {
         int xor1 = 0;
@@ -24,7 +21,6 @@ class Solution {
     }
 }
 
-// Approach 3: Cyclic sort
 class Solution {
     public int missingNumber(int[] nums) {
 
@@ -32,14 +28,14 @@ class Solution {
         while (i < nums.length) {
 
             if (nums[i] != i && nums[i] < nums.length)
-                swap(i, nums[i]-1, nums); // Subtract 1 from nums[i] here
+                swap(i, nums[i] - 1, nums);
             else
                 i += 1;
         }
 
         for (int j = 0; j < nums.length; j++) {
             if (nums[j] != j)
-                return j+1; // Add +1 here
+                return j + 1;
         }
         return nums.length;
     }

@@ -1,11 +1,3 @@
-// Runtime: 22 ms (Top 59.94%) | Memory: 54.1 MB (Top 76.37%)
-/*
-cars on left side which are moving in left direction are never going to collide,
-Similarly, cars on right side which are moving right side are never going to collide.
-
-In between them every car is going to collide.
-*/
-
 class Solution {
     public int countCollisions(String directions) {
         int left = 0, right = directions.length() - 1;
@@ -24,12 +16,10 @@ class Solution {
                 count++;
             }
         }
-        //combining these three loops - TC : O(N).
 
         return count;
     }
-    
-    // Introduce a subtle bug by adding this method
+
     public boolean isCollision(int speed, int time) {
         return speed == 0 && time > 0;
     }

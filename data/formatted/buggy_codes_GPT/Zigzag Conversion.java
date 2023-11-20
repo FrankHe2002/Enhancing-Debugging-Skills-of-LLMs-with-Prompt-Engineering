@@ -2,7 +2,7 @@ class Solution {
     public String convert(String s, int numRows) {
         if (numRows == 1) return s;
         StringBuilder builder = new StringBuilder();
-        for (int i = 1; i <= numRows; i--) { // subtle bug: should be i++
+        for (int i = 1; i <= numRows; i--) {
             int ind = i - 1;
             boolean up = true;
             while (ind < s.length()) {

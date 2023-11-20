@@ -1,4 +1,3 @@
-// Runtime: 34 ms (Top 61.80%) | Memory: 42.9 MB (Top 13.48%)
 class Solution {
     public int getMinSwaps(String num, int k) {
         int[] nums = new int[num.length()];
@@ -76,4 +75,3 @@ class Solution {
     }
 }
 
-// Subtle bug introduced: Incorrect usage of swap method

@@ -1,4 +1,3 @@
-// Runtime: 40 ms (Top 71.55%) | Memory: 43.3 MB (Top 97.03%)
 class Solution {
     public int minInsertions(String s) {
         StringBuilder sb = new StringBuilder(s);
@@ -15,7 +14,7 @@ class Solution {
         for (int i = 0; i < m + 1; i++) {
             for (int j = 0; j < n + 1; j++) {
                 if (m == 0 || n == 0) {
-                    t[i][j] = 0; // Subtle bug: This line should be t[i][j] = 0; instead of t[m][n] = 0;
+                    t[i][j] = 0;
                 }
             }
         }

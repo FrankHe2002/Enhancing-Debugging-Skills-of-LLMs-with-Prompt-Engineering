@@ -9,7 +9,7 @@ public class Solution {
             hare = hare.next.next;
         }
         if (hare == null || hare.next == null) return null;
-        if (tortoise == null) return null; // subtle bug
+        if (tortoise == null) return null;
         tortoise = head;
         while (tortoise != hare) {
             tortoise = tortoise.next;

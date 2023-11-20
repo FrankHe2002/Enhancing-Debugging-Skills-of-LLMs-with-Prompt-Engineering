@@ -12,7 +12,6 @@ class Solution {
                 ptr++;
                 dp[i]--;
             }
-            // Introduced bug: Missing closing curly brace for if statement
         }
         return Arrays.copyOfRange(ans, 0, ptr);
     }

@@ -10,8 +10,7 @@ class MyCalendarTwo {
 
     public boolean book(int start, int end) {
         for (int[] b : doubleBookings) {
-            //condition to check for the overlaping
-            if (start <= b[1] && end >= b[0]) // subtle bug: changed < to <= and > to >=
+            if (start <= b[1] && end >= b[0])
                 return false;
         }
 

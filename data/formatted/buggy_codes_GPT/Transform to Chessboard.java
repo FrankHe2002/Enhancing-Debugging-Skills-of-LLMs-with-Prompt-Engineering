@@ -24,8 +24,7 @@ class Solution {
         if (colOneCnt < N / 2 || colOneCnt > (N + 1) / 2) {
             return - 1;
         }
-        if (N % 2 == 0) { // Change N % 2 == 1 to N % 2 == 0
-            // we cannot make it when ..ToMove is odd
+        if (N % 2 == 0) {
             if (colToMove % 2 == 1) {
                 colToMove = N - colToMove;
             }

@@ -11,7 +11,7 @@ class Solution {
             int idx = c[i - 1] - 'a';
             if (li[idx] != null) dp[i] = (curr - dp[li[idx] - 1] + mod) % mod;
             else dp[i] = curr;
-            li[i] = i; // Subtle bug: Should use li[idx] instead of li[i]
+            li[i] = i;
         }
         return dp[n] - 1;
     }

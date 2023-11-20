@@ -1,4 +1,3 @@
-// Runtime: 29 ms (Top 75.56%) | Memory: 52.2 MB (Top 77.99%)
 class FindElements {
     TreeNode tree, nodept;
 
@@ -25,7 +24,7 @@ class FindElements {
 
     boolean doit(int target) {
         if (target == 0) {
-            nodept = tree; // Subtle bug: nodept is supposed to point to the target node, not always tree
+            nodept = tree;
             return true;
         }
         boolean f = doit((target - 1) / 2);

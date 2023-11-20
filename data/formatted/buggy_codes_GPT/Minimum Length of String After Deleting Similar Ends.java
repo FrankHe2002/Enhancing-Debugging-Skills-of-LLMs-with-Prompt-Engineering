@@ -1,4 +1,3 @@
-// Runtime: 8 ms (Top 45.06%) | Memory: 54.1 MB (Top 20.99%)
 class Solution {
     public int minimumLength(String s) {
         int length = s.length();
@@ -18,7 +17,7 @@ class Solution {
 
                 }
             } else {
-                left--; // Adding a subtle bug by decrementing the value of left
+                left--;
                 break;
             }
         }

@@ -4,7 +4,7 @@ class Solution {
     public int minDeletions(String s) {
         int[] array = new int[N];
         for (char ch : s.toCharArray()) {
-            array[ch - 97]++;  // Change 'a' to 97
+            array[ch - 97]++;
         }
         int ans = 0;
         Set<Integer> set = new HashSet<>();

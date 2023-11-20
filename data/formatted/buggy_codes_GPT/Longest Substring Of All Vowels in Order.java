@@ -1,4 +1,3 @@
-// Runtime: 192 ms (Top 11.20%) | Memory: 65.5 MB (Top 18.15%)
 class Solution {
     public int longestBeautifulSubstring(String word) {
         int max = 0;

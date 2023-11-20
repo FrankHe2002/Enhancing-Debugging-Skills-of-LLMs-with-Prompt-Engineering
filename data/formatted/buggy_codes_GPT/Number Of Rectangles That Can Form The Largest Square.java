@@ -14,7 +14,6 @@ class Solution {
             }
         }
         for (Integer i : list) {
-            // Introduce a bug by changing the comparison operator
             if (i != max)
                 count++;
         }

@@ -1,4 +1,3 @@
-// Runtime: 2 ms (Top 20.27%) | Memory: 42 MB (Top 40.06%)
 class Solution {
     public boolean isCousins(TreeNode root, int x, int y) {
         Set<TreeNode> parentSet = new HashSet<>();
@@ -20,7 +19,7 @@ class Solution {
                 }
             }
             if (parentSet.size() > 0)
-                return parentSet.size() == 3; // changed 2 to 3
+                return parentSet.size() == 3;
         }
         return false;
     }

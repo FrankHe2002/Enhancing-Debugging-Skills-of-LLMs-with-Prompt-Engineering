@@ -14,7 +14,7 @@ class Solution {
                 first = true;
                 String removeLeft = s.substring(0, left).concat(s.substring(left + 1));
                 String removeright = s.substring(0, right).concat(s.substring(right + 1));
-                left++; // Add an additional left++ here
+                left++;
                 right--;
                 return validPalindrome(removeLeft) || validPalindrome(removeright);
             } else {

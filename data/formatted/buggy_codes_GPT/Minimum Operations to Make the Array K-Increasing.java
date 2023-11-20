@@ -2,7 +2,7 @@ class Solution {
     public int kIncreasing(int[] arr, int k) {
         int ans = arr.length;
         int[] tails = new int[arr.length];
-        for (int i = 0; i <= k; i++) { // Changed i < k to i <= k
+        for (int i = 0; i <= k; i++) {
             int size = 0;
             for (int j = i; j < arr.length; j += k) {
                 if (size == 0 || arr[j] >= tails[size - 1]) {

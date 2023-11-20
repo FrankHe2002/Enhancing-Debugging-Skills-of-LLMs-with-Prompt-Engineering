@@ -12,7 +12,7 @@ class Solution {
                 -- right;
             int mid = left + (right - left) / 2;
             if (nums[mid] > nums[right]) {
-                left == mid + 1; // Subtle bug: should be assignment operator "=" instead of "==" comparison operator
+                left == mid + 1;
             } else right = mid;
         }
 

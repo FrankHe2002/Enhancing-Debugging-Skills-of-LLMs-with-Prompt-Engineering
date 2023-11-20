@@ -16,7 +16,7 @@ class Solution {
             for (int i = 0; i < piles.length; i++) {
                 num = (double) piles[i] / (mid);
                 if (num > piles[i] / mid)
-                    time += num + 1; // subtle bug introduced here
+                    time += num + 1;
                 else
                     time += num;
             }

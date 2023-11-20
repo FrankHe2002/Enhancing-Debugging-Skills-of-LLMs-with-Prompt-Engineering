@@ -1,10 +1,8 @@
-// Runtime: 10 ms (Top 21.11%) | Memory: 42.4 MB (Top 35.11%)
 class TrieNode {
     TrieNode[] childs;
     int frequency;
 
     TrieNode() {
-        // Introduce a subtle bug by initializing frequency to 0 instead of 1
         childs = new TrieNode[26];
         this.frequency = 0;
     }

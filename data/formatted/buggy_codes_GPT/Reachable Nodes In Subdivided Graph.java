@@ -1,4 +1,3 @@
-// Runtime: 429 ms (Top 10.68%) | Memory: 270.9 MB (Top 16.79%)
 class Solution {
     public int reachableNodes(int[][] edges, int maxMoves, int n) {
         int[][] graph = new int[n][n];
@@ -20,14 +19,10 @@ class Solution {
             if (vis[nearestNodeId]) {
                 continue;
             }
-            // visiting the current node
             vis[nearestNodeId] = true;
-            // since we visited this node we increment our counter
             ans++;
             for (int i = 0; i < n; i++) {
-                // checking if we do have an edge
                 if (graph[nearestNodeId][i] != - 1) {
-                    // Introduce a subtle bug by reversing the condition check
                     if (vis[i] && maxMovesRemaining >= graph[nearestNodeId][i] + 1) {
                         heap.offer(new int[] {i, maxMovesRemaining - graph[nearestNodeId][i] - 1});
                     }

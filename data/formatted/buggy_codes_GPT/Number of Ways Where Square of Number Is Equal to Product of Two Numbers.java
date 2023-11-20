@@ -1,4 +1,3 @@
-// Runtime: 19 ms (Top 92.55%) | Memory: 42.4 MB (Top 88.30%)
 class Solution {
     public int numTriplets(int[] nums1, int[] nums2) {
         Arrays.sort(nums1);
@@ -29,8 +28,7 @@ class Solution {
                     while (b[k] == b[kNew])
                         kNew--;
                     count += (jNew - j) * (k - kNew);
-                    // Introduced bug: Incorrectly incrementing j instead of jNew
-                    j++; // Bug introduced here
+                    j++;
                     k = kNew;
                 } else {
                     int q = k - j + 1;

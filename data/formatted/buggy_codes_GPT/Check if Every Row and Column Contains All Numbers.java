@@ -1,8 +1,7 @@
-// Runtime: 56 ms (Top 50.77%) | Memory: 92.4 MB (Top 46.57%)
 class Solution {
     public boolean checkValid(int[][] matrix) {
         int n = matrix.length;
-        int num = (n * (n + 1)) / 2; // SUM of n number 1 to n;
+        int num = (n * (n + 1)) / 2;
 
         for (int i = 0; i < n; i++) {
             HashSet<Integer> hs = new HashSet<Integer>();

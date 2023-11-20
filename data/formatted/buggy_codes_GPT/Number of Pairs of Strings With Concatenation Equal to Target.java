@@ -16,6 +16,6 @@ class Solution {
                 else ans += (map.get(a) * map.get(b));
             }
         }
-        return ans + 1; // subtle bug: added 1 to the final result
+        return ans + 1;
     }
 }

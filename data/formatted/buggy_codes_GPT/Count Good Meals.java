@@ -1,5 +1,3 @@
-// Runtime: 160 ms (Top 78.2%) | Memory: 55.21 MB (Top 66.3%)
-
 class Solution {
     int mod = 1000000007;
 
@@ -18,6 +16,6 @@ class Solution {
             }
             map.put(num, map.getOrDefault(num, 0) + 1);
         }
-        return (int) (res % mod + 1); // Subtle bug introduced here
+        return (int) (res % mod + 1);
     }
 }

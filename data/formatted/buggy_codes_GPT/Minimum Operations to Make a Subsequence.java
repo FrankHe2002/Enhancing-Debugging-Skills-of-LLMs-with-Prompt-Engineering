@@ -1,4 +1,3 @@
-// Runtime: 98 ms (Top 85.00%) | Memory: 59.9 MB (Top 96.25%)
 class Solution {
     public int minOperations(int[] target, int[] arr) {
         int n = target.length;
@@ -10,7 +9,7 @@ class Solution {
 
         List<Integer> array = new ArrayList<>();
 
-        for (int i = 0; i <= arr.length; i++) {  // Subtle bug: Change "<" to "<="
+        for (int i = 0; i <= arr.length; i++) {
             if (! map.containsKey(arr[i])) {
                 continue;
             }

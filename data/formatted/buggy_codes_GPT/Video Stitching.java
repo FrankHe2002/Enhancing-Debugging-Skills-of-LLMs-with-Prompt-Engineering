@@ -19,7 +19,7 @@ class Solution {
                         break;
                     }
                 }
-                if (can_reach > time) return cuts; // subtle bug: should be ">=" instead of ">"
+                if (can_reach > time) return cuts;
             }
             interval[0] = interval[1] + 1;
             interval[1] = can_reach;

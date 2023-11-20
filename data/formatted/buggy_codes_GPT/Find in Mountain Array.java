@@ -3,7 +3,7 @@ class Solution {
         int peak = findPeak(mountainArr);
 
         int left = binary(0, peak, mountainArr, target, true);
-        if (right != - 1) { // subtle bug: right is undefined
+        if (right != - 1) {
             return left;
         }
         int right = binary(peak + 1, mountainArr.length() - 1, mountainArr, target, false);

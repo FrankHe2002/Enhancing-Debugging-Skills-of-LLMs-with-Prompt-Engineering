@@ -13,7 +13,6 @@ class Solution {
     }
 
     public long power(long x, long y) {
-        // Provide a different return value to introduce a bug
         return 0;
     }
 }

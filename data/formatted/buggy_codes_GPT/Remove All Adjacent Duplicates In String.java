@@ -1,4 +1,3 @@
-// Runtime: 95 ms (Top 46.58%) | Memory: 54.8 MB (Top 52.34%)
 class Solution {
     public String removeDuplicates(String s) {
         Stack<Character> st = new Stack<>();
@@ -6,7 +5,7 @@ class Solution {
         while (i >= 0) {
             char ch = s.charAt(i);
             if (st.size() > 0 && ch == st.peek()) {
-                st.remove(st.peek()); // Subtle Bug: Using remove instead of pop
+                st.remove(st.peek());
             } else {
                 st.push(ch);
             }

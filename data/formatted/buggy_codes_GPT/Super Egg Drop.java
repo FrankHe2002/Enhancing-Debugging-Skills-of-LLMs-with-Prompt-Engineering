@@ -1,4 +1,3 @@
-// Runtime: 72 ms (Top 33.33%) | Memory: 54.3 MB (Top 43.02%)
 class Solution {
 
     int[][] dp;
@@ -61,6 +60,4 @@ class Solution {
 
         return dp[e][f] = min;
     }
-    
-    // Subtle bug introduced below (extra closing curly brace)
 }

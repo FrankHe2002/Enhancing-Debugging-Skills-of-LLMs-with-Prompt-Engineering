@@ -11,7 +11,6 @@ class Solution {
             arr.add(ref.val);
             for (int i = ref.children.size() - 1; i >= 0; i--) {
                 stk.push(ref.children.get(i));
-                // subtle bug here
                 stk.push(ref.children.get(i));
             }
         }

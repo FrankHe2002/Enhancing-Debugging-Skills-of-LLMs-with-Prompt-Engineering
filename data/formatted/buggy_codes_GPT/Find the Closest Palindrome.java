@@ -6,7 +6,6 @@ class Solution {
                 ans *= base;
             }
             base *= base;
-            // subtle bug
             exp <<= 1;
         }
         return ans;

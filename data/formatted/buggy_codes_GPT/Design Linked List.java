@@ -1,4 +1,3 @@
-// Runtime: 14 ms (Top 41.30%) | Memory: 50.4 MB (Top 74.99%)
 class MyLinkedList {
 
     public class ListNode {
@@ -95,17 +94,14 @@ class MyLinkedList {
             temp.next = null;
         } else temp.next = temp.next.next;
     }
-    
-    // Added code starts here
-    
+
     public boolean isValid() {
-        // This method checks if the linked list is valid by traversing through all the nodes
-        
+
         ListNode temp = head;
         for (int i = 0; i < length; i++) {
             temp = temp.next;
         }
-        
-        return temp == null; // Returns true if the last node is null, indicating a valid linked list
+
+        return temp == null;
     }
 }

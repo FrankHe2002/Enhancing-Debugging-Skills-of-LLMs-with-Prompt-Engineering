@@ -7,7 +7,7 @@ class Solution {
                 if (i == j) {
                     continue;
                 }
-                if (words[j].contains(s)) { // Changed indexOf to contains
+                if (words[j].contains(s)) {
                     ans.add(s);
                     break;
                 }
