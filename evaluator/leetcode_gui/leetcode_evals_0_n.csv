@@ -1,0 +1,2 @@
+problem_name,bug_path,correct_path,debugged_path,bug_type,test_case_total,score_bug,score_debugged,message_bug,message_debugged,difference
+Reorganize String,../../data/formatted/buggy_codes\Reorganize String_index.java,../../data/formatted/correct_codes\Reorganize String.java,../../data/formatted/debugged_codes_0_n\Reorganize String_index.java,index,71,0.0,0,Runtime Error,Accepted,0.0

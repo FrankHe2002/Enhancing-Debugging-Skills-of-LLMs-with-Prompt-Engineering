@@ -97,7 +97,7 @@ def score_leetcode(problem_id, code, enter_url=True):
     # Run the extraction code
     pyautogui.typewrite(EXTRACTION_JS)
     pyautogui.press('enter')
-    time.sleep(0.75)
+    time.sleep(1)
 
     # Scroll to the bottom
     pyautogui.scroll(-10000)
@@ -127,15 +127,29 @@ def score_leetcode(problem_id, code, enter_url=True):
     return get_result(bs)
 
 
-def evaluate_folders(folder_correct, folder_bug, folder_debugged, num_files=100):
+def evaluate_folders(folder_correct, folder_bug, folder_debugged, output_name="", num_files=100, set_list=[]):
     df = pd.DataFrame(columns=['problem_name', 'bug_path', 'correct_path', 'debugged_path', 'bug_type', 'test_case_total', 'score_bug', 'score_debugged', 'message_bug', 'message_debugged', 'difference'])
+    #df = pd.read_csv(f'leetcode_evals_{output_name}.csv', index_col=False)
     rows = []
-    files = os.listdir(folder_debugged)
-    # Shuffle and pick 25 random to do
-    random.shuffle(files)
-    files = files[:num_files]
+    
+    if len(set_list) == 0:
+        # Shuffle and pick num_files random to do
+        files = list(os.listdir(folder_debugged))
+        files.sort()
+        random.seed(10)
+        random.shuffle(files)
+        files = files[:num_files]
+    else:
+        files = set_list
+    files.sort()
+
 
     for filename in tqdm(files):
+
+        if len(df) > num_files:
+            break
+        if '_'.join(filename.split('_')[:-1]) in df['problem_name'].values:
+            continue
         if filename.endswith('.java'):
             try:
                 row = {}
@@ -152,7 +166,6 @@ def evaluate_folders(folder_correct, folder_bug, folder_debugged, num_files=100)
                     rcp = f.read()
                 with open(row['debugged_path'][0], 'r') as f:
                     rdp = f.read()
-
                 # Find last occurrence of string ```java in rdp and remove everything before that
                 rdp = rdp.replace("``` java", "```java")
                 if "```java" in rdp:
@@ -160,21 +173,20 @@ def evaluate_folders(folder_correct, folder_bug, folder_debugged, num_files=100)
                 # Find last occurrence of string ``` in rdp and remove everything after that
                 if "```" in rdp:
                     rdp = rdp[:rdp.rindex("```")]
-                #print(rbp)
-                #print(rdp)
+                
                 score_bugged = score_leetcode(problem_name_to_id(row['problem_name'][0]), rbp)
                 score_debugged = score_leetcode(problem_name_to_id(row['problem_name'][0]), rdp, enter_url=False)
                 row['test_case_total'] = [max(score_bugged[1], score_debugged[1])]
 
                 row['message_bug'] = [score_bugged[2]]
                 row['message_debugged'] = [score_debugged[2]]
-                if score_bugged[1] != 0 and row["message_bug"][0] != "Accepted":
-                    row['score_bug'] = [score_bugged[0] / score_bugged[1]]
+                if row['test_case_total'][0] != 0 and row["message_bug"][0] != "Accepted":
+                    row['score_bug'] = [score_bugged[0] / row['test_case_total'][0]]
                 else:
                     row['score_bug'] = [0]
                     
-                if score_debugged[1] != 0 and row["message_debugged"][0] != "Accepted":
-                    row['score_debugged'] = [score_debugged[0] / score_debugged[1]]
+                if row['test_case_total'][0] != 0 and row["message_debugged"][0] != "Accepted":
+                    row['score_debugged'] = [score_debugged[0] / row['test_case_total'][0]]
                 else:
                     row['score_debugged'] = [0]
                     
@@ -185,14 +197,33 @@ def evaluate_folders(folder_correct, folder_bug, folder_debugged, num_files=100)
     
         df = pd.concat([df] + rows, ignore_index=True)
         rows = []
-        df.to_csv(f'leetcode_evals.csv', index=False)
+        # Sort by problem name
+        df = df.sort_values(by=['problem_name'])
+        df.to_csv(f'leetcode_evals_{output_name}.csv', index=False)
     return df
 
+def filter_files(folders):
+    # Find file names that are in all folders
+    files = []
+    for folder in folders:
+        files.append(set(os.listdir(folder)))
+    files = set.intersection(*files)
+    return list(files)
 
 # Read files
 def main():
+    files = filter_files(["../../data/formatted/debugged_codes_0_n", "../../data/formatted/debugged_codes_0_c", "../../data/formatted/debugged_codes_f_n", "../../data/formatted/debugged_codes_f_c"])
+    files.sort()
+    random.seed(10)
+    random.shuffle(files)
+    files = files[:35]
+    print(files)
+
     time.sleep(4)
-    df = evaluate_folders('../../data/formatted/correct_codes', '../../data/formatted/buggy_codes', '../../data/formatted/debugged_codes_0_n', num_files=50)
+    df = evaluate_folders('../../data/formatted/correct_codes', '../../data/formatted/buggy_codes', '../../data/formatted/debugged_codes_0_n', output_name="0_n", num_files=1)
+    #df = evaluate_folders('../../data/formatted/correct_codes', '../../data/formatted/buggy_codes', '../../data/formatted/debugged_codes_0_c', output_name="0_c", num_files=1)
+    #df = evaluate_folders('../../data/formatted/correct_codes', '../../data/formatted/buggy_codes', '../../data/formatted/debugged_codes_f_n', output_name="f_n", num_files=1)
+    #df = evaluate_folders('../../data/formatted/correct_codes', '../../data/formatted/buggy_codes', '../../data/formatted/debugged_codes_f_c', output_name="f_c", num_files=1)
     print(df)
 
 if __name__ == "__main__":

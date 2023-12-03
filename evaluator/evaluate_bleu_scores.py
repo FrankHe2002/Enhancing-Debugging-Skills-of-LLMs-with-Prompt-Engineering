@@ -77,6 +77,9 @@ def reconstruct_path(bug_path):
     # the last element.
     if "no_bug" in bug_path:
         bug_path = bug_path.replace("no_bug", "nobug")
+    
+    if not '_' in bug_path:
+        return bug_path
     return '_'.join(bug_path.split('_')[:-1]) + '.java'
 
 
@@ -85,6 +88,7 @@ def evaluate_folders(folder_correct, folder_bug, folder_debugged):
     rows = []
 
     for filename in tqdm(os.listdir(folder_debugged)):
+        print(folder_debugged, filename)
         if filename.endswith('.java'):
             row = {}
             row['problem_name'] = [filename[:-5]]
@@ -128,13 +132,13 @@ def evaluate_folders(folder_correct, folder_bug, folder_debugged):
     
     df = pd.concat([df] + rows, ignore_index=True)
 
-    df.to_csv(f'codebleu_evals_f_n.csv', index=False)
+    df.to_csv(f'codebleu_evals_gpt_0_n.csv', index=False)
     return df
 
 
 # Read files
 def main():
-    df = evaluate_folders('../data/formatted/correct_codes', '../data/formatted/buggy_codes', '../data/formatted/debugged_codes_f_n')
+    df = evaluate_folders('../data/formatted/correct_codes', '../data/formatted/buggy_codes_GPT', '../data/formatted/debugged_GPTBuggyCodes_0_n')
     print(df)
 
     
