@@ -70,6 +70,82 @@ def score_codebleu(pred, actual, hyper=(0.25, 0.25, 0.25, 0.25), log=False): # a
 
     return (ngram_match_score, weighted_ngram_match_score, syntax_match_score, dataflow_match_score), code_bleu_score
 
+def score_coderouge(pred, actual, hyper=(0.25, 0.25, 0.25, 0.25), log=False): # alpha, beta, gamma, theta
+    # See score_codebleu for more details
+    if len(pred) < len(actual):
+        pred += [''] * (len(actual) - len(pred))
+        print("[WARN] Padding prediction to match actual length.")
+    elif len(pred) > len(actual):
+        actual += [''] * (len(pred) - len(actual))
+        print("[WARN] Padding actual to match prediction length.")
+
+    tokenized_hyps = [x.split() for x in pred]
+    tokenized_refs = [[x.split()] for x in actual]
+
+    ngram_match_score = bleu.corpus_bleu(tokenized_refs,tokenized_hyps, use_recall=True)
+
+    keywords = [x.strip() for x in open('CodeBLEU/keywords/java.txt', 'r', encoding='utf-8').readlines()]
+    def make_weights(reference_tokens, key_word_list):# TODO Weights maybe should be modified to hypothesis tokens?
+        return {token:1 if token in key_word_list else 0.2 for token in reference_tokens}
+    tokenized_refs_with_weights = [[[reference_tokens, make_weights(reference_tokens, keywords)] for reference_tokens in reference] for reference in tokenized_refs]
+    
+    weighted_ngram_match_score = weighted_ngram_match.corpus_bleu(tokenized_refs_with_weights, tokenized_hyps, use_recall=True)
+    syntax_match_score = syntax_match.corpus_syntax_match(invert([actual]), pred, "java", use_recall=True)# TODO
+    dataflow_match_score = dataflow_match.corpus_dataflow_match(invert([actual]), pred, "java")
+
+    code_bleu_score = hyper[0] * ngram_match_score\
+                    + hyper[1] * weighted_ngram_match_score\
+                    + hyper[2] * syntax_match_score\
+                    + hyper[3] * dataflow_match_score
+
+    if log:
+        print('ngram match: {0}, weighted ngram match: {1}, syntax_match: {2}, dataflow_match: {3}'.\
+                            format(ngram_match_score, weighted_ngram_match_score, syntax_match_score, dataflow_match_score))
+        print('CodeROUGE score: ', code_bleu_score)
+
+    return (ngram_match_score, weighted_ngram_match_score, syntax_match_score, dataflow_match_score), code_bleu_score
+
+def score_codef1(pred, actual, hyper=(0.25, 0.25, 0.25, 0.25), log=False): # alpha, beta, gamma, theta
+    # See score_codebleu for more details
+    if len(pred) < len(actual):
+        pred += [''] * (len(actual) - len(pred))
+        print("[WARN] Padding prediction to match actual length.")
+    elif len(pred) > len(actual):
+        actual += [''] * (len(pred) - len(actual))
+        print("[WARN] Padding actual to match prediction length.")
+
+    tokenized_hyps = [x.split() for x in pred]
+    tokenized_refs = [[x.split()] for x in actual]
+
+    keywords = [x.strip() for x in open('CodeBLEU/keywords/java.txt', 'r', encoding='utf-8').readlines()]
+    def make_weights(reference_tokens, key_word_list):# TODO Weights maybe should be modified to hypothesis tokens?
+        return {token:1 if token in key_word_list else 0.2 for token in reference_tokens}
+    tokenized_refs_with_weights = [[[reference_tokens, make_weights(reference_tokens, keywords)] for reference_tokens in reference] for reference in tokenized_refs]
+    
+    ngram_match_score_p = bleu.corpus_bleu(tokenized_refs,tokenized_hyps)
+    weighted_ngram_match_score_p = weighted_ngram_match.corpus_bleu(tokenized_refs_with_weights, tokenized_hyps)
+    syntax_match_score_p = syntax_match.corpus_syntax_match(invert([actual]), pred, "java")
+    ngram_match_score_r = bleu.corpus_bleu(tokenized_refs,tokenized_hyps, use_recall=True)
+    weighted_ngram_match_score_r = weighted_ngram_match.corpus_bleu(tokenized_refs_with_weights, tokenized_hyps, use_recall=True)
+    syntax_match_score_r = syntax_match.corpus_syntax_match(invert([actual]), pred, "java", use_recall=True)
+    dataflow_match_score = dataflow_match.corpus_dataflow_match(invert([actual]), pred, "java")
+
+    nms_f1 = 2 * ngram_match_score_p * ngram_match_score_r / (ngram_match_score_p + ngram_match_score_r)
+    wnms_f1 = 2 * weighted_ngram_match_score_p * weighted_ngram_match_score_r / (weighted_ngram_match_score_p + weighted_ngram_match_score_r)
+    sms_f1 = 2 * syntax_match_score_p * syntax_match_score_r / (syntax_match_score_p + syntax_match_score_r)
+
+    code_bleu_score = hyper[0] * nms_f1\
+                    + hyper[1] * wnms_f1\
+                    + hyper[2] * sms_f1\
+                    + hyper[3] * dataflow_match_score
+
+    if log:
+        print('ngram match: {0}, weighted ngram match: {1}, syntax_match: {2}, dataflow_match: {3}'.\
+                            format(ngram_match_score, weighted_ngram_match_score, syntax_match_score, dataflow_match_score))
+        print('CodeROUGE score: ', code_bleu_score)
+
+    return (ngram_match_score, weighted_ngram_match_score, syntax_match_score, dataflow_match_score), code_bleu_score
+
 def reconstruct_path(bug_path):
     # The file names of the buggy paths are of the form <problem name>_<bug type>.java but the
     # file names of the fixed paths are of the form <problem name>.java, so we need to reconstruct

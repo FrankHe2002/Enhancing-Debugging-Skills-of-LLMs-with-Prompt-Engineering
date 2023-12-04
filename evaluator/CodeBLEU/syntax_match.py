@@ -20,7 +20,7 @@ dfg_function={
 def calc_syntax_match(references, candidate, lang):
     return corpus_syntax_match([references], [candidate], lang)
 
-def corpus_syntax_match(references, candidates, lang):
+def corpus_syntax_match(references, candidates, lang, use_recall=False):
     """ UNCOMMENT TO BUILD
     Language.build_library(
         # Store the library in the `build` directory
@@ -73,7 +73,12 @@ def corpus_syntax_match(references, candidates, lang):
             for sub_tree, depth in ref_sexps:
                 if sub_tree in cand_sexps:
                      match_count += 1
-            total_count += len(ref_sexps)          
+
+            # TODO Is this it?
+            if not use_recall:
+                total_count += len(ref_sexps)# Original precision; divide by sum(predicted +)
+            else:
+                total_count += len(cand_sexps)# Recall; divide by sum (actual +)
        
     score = match_count / total_count
     return score

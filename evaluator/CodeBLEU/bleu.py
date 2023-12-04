@@ -93,6 +93,7 @@ def corpus_bleu(
     weights=(0.25, 0.25, 0.25, 0.25),
     smoothing_function=None,
     auto_reweigh=False,
+    use_recall=False
 ):
     """
     Calculate a single corpus-level BLEU score (aka. system-level BLEU) for all
@@ -155,7 +156,10 @@ def corpus_bleu(
         # For each order of ngram, calculate the numerator and
         # denominator for the corpus-level modified precision.
         for i, _ in enumerate(weights, start=1):
-            p_i = modified_precision(references, hypothesis, i)
+            if not use_recall:
+                p_i = modified_precision(references, hypothesis, i)
+            else:
+                p_i = modified_recall(references, hypothesis, i)
             p_numerators[i] += p_i.numerator
             p_denominators[i] += p_i.denominator
 
@@ -295,6 +299,28 @@ def modified_precision(references, hypothesis, n):
     # Ensures that denominator is minimum 1 to avoid ZeroDivisionError.
     # Usually this happens when the ngram order is > len(reference).
     denominator = max(1, sum(counts.values()))
+
+    return Fraction(numerator, denominator, _normalize=False)
+
+def modified_recall(references, hypothesis, n):
+    """
+    See modified_precision.
+    """
+    counts = Counter(ngrams(hypothesis, n)) if len(hypothesis) >= n else Counter()
+    max_counts = {}
+    for reference in references:
+        reference_counts = (
+            Counter(ngrams(reference, n)) if len(reference) >= n else Counter()
+        )
+        for ngram in counts:
+            max_counts[ngram] = max(max_counts.get(ngram, 0), reference_counts[ngram])
+
+    clipped_counts = {
+        ngram: min(count, max_counts[ngram]) for ngram, count in counts.items()
+    }
+
+    numerator = sum(clipped_counts.values())
+    denominator = max(1, sum(max_counts.values())) # Only this line is different!
 
     return Fraction(numerator, denominator, _normalize=False)
 
