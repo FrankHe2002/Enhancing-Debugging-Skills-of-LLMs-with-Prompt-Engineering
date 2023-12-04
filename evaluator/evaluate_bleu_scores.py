@@ -141,10 +141,10 @@ def score_codef1(pred, actual, hyper=(0.25, 0.25, 0.25, 0.25), log=False): # alp
 
     if log:
         print('ngram match: {0}, weighted ngram match: {1}, syntax_match: {2}, dataflow_match: {3}'.\
-                            format(ngram_match_score, weighted_ngram_match_score, syntax_match_score, dataflow_match_score))
-        print('CodeROUGE score: ', code_bleu_score)
+                            format(nms_f1, wnms_f1, sms_f1, dataflow_match_score))
+        print('CodeF1 score: ', code_bleu_score)
 
-    return (ngram_match_score, weighted_ngram_match_score, syntax_match_score, dataflow_match_score), code_bleu_score
+    return (nms_f1, wnms_f1, sms_f1, dataflow_match_score), code_bleu_score
 
 def reconstruct_path(bug_path):
     # The file names of the buggy paths are of the form <problem name>_<bug type>.java but the
@@ -159,8 +159,11 @@ def reconstruct_path(bug_path):
     return '_'.join(bug_path.split('_')[:-1]) + '.java'
 
 
-def evaluate_folders(folder_correct, folder_bug, folder_debugged):
-    df = pd.DataFrame(columns=['problem_name', 'bug_path', 'correct_path', 'debugged_path', 'bug_type', 'ngram_match', 'weighted_ngram_match', 'syntax_match', 'dataflow_match', 'codebleu_bug', 'codebleu_debugged', 'difference'])
+def evaluate_folders(folder_correct, folder_bug, folder_debugged, output_path):
+    df = pd.DataFrame(columns=['problem_name', 'bug_path', 'correct_path', 'debugged_path', 'bug_type',
+                               'codebleu_bug', 'codebleu_debugged', 'codebleu_diff',
+                               'coderouge_bug', 'coderouge_debugged', 'coderouge_diff',
+                               'codef1_bug', 'codef1_debugged', 'codef1_diff'])
     rows = []
 
     for filename in tqdm(os.listdir(folder_debugged)):
@@ -203,18 +206,26 @@ def evaluate_folders(folder_correct, folder_bug, folder_debugged):
             
             row['codebleu_debugged'] = [score_codebleu(rcp, rdp)[1]]
             row['codebleu_bug'] = [score_codebleu(rcp, rbp)[1]]
-            row['difference'] = row['codebleu_debugged'][0] - row['codebleu_bug'][0]
+            row['codebleu_diff'] = row['codebleu_debugged'][0] - row['codebleu_bug'][0]
+
+            row['coderouge_debugged'] = [score_coderouge(rcp, rdp)[1]]
+            row['coderouge_bug'] = [score_coderouge(rcp, rbp)[1]]
+            row['coderouge_diff'] = row['coderouge_debugged'][0] - row['coderouge_bug'][0]
+
+            row['codef1_debugged'] = [score_codef1(rcp, rdp)[1]]
+            row['codef1_bug'] = [score_codef1(rcp, rbp)[1]]
+            row['codef1_diff'] = row['codef1_debugged'][0] - row['codef1_bug'][0]
             rows.append(pd.DataFrame.from_dict(row))
     
     df = pd.concat([df] + rows, ignore_index=True)
 
-    df.to_csv(f'codebleu_evals_gpt_0_n.csv', index=False)
+    df.to_csv(output_path, index=False)
     return df
 
 
 # Read files
 def main():
-    df = evaluate_folders('../data/formatted/correct_codes', '../data/formatted/buggy_codes_GPT', '../data/formatted/debugged_GPTBuggyCodes_0_n')
+    df = evaluate_folders('../data/formatted/correct_codes', '../data/formatted/buggy_codes_GPT', '../data/formatted/debugged_GPTBuggyCodes_0_n', 'codebleu_evals_gpt_0_n.csv')
     print(df)
 
     
