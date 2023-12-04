@@ -130,9 +130,20 @@ def score_codef1(pred, actual, hyper=(0.25, 0.25, 0.25, 0.25), log=False): # alp
     syntax_match_score_r = syntax_match.corpus_syntax_match(invert([actual]), pred, "java", use_recall=True)
     dataflow_match_score = dataflow_match.corpus_dataflow_match(invert([actual]), pred, "java")
 
-    nms_f1 = 2 * ngram_match_score_p * ngram_match_score_r / (ngram_match_score_p + ngram_match_score_r)
-    wnms_f1 = 2 * weighted_ngram_match_score_p * weighted_ngram_match_score_r / (weighted_ngram_match_score_p + weighted_ngram_match_score_r)
-    sms_f1 = 2 * syntax_match_score_p * syntax_match_score_r / (syntax_match_score_p + syntax_match_score_r)
+    if ngram_match_score_p + ngram_match_score_r == 0:
+        nms_f1 = 0
+    else:
+        nms_f1 = 2 * ngram_match_score_p * ngram_match_score_r / (ngram_match_score_p + ngram_match_score_r)
+
+    if weighted_ngram_match_score_p + weighted_ngram_match_score_r == 0:
+        wnms_f1 = 0
+    else:
+        wnms_f1 = 2 * weighted_ngram_match_score_p * weighted_ngram_match_score_r / (weighted_ngram_match_score_p + weighted_ngram_match_score_r)
+
+    if syntax_match_score_p + syntax_match_score_r == 0:
+        sms_f1 = 0
+    else:
+        sms_f1 = 2 * syntax_match_score_p * syntax_match_score_r / (syntax_match_score_p + syntax_match_score_r)
 
     code_bleu_score = hyper[0] * nms_f1\
                     + hyper[1] * wnms_f1\
@@ -167,7 +178,6 @@ def evaluate_folders(folder_correct, folder_bug, folder_debugged, output_path):
     rows = []
 
     for filename in tqdm(os.listdir(folder_debugged)):
-        print(folder_debugged, filename)
         if filename.endswith('.java'):
             row = {}
             row['problem_name'] = [filename[:-5]]
@@ -225,7 +235,7 @@ def evaluate_folders(folder_correct, folder_bug, folder_debugged, output_path):
 
 # Read files
 def main():
-    df = evaluate_folders('../data/formatted/correct_codes', '../data/formatted/buggy_codes_GPT', '../data/formatted/debugged_GPTBuggyCodes_0_n', 'codebleu_evals_gpt_0_n.csv')
+    df = evaluate_folders('../data/formatted/correct_codes', '../data/formatted/buggy_codes_GPT', '../data/formatted/debugged_GPTBuggyCodes_0_n', 'codef1_evals_gpt_0_n.csv')
     print(df)
 
     

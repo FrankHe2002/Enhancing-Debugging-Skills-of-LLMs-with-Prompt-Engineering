@@ -157,9 +157,9 @@ def corpus_bleu(
         # denominator for the corpus-level modified precision.
         for i, _ in enumerate(weights, start=1):
             if not use_recall:
-                p_i = modified_precision(references, hypothesis, i)
-            else:
                 p_i = modified_recall(references, hypothesis, i)
+            else:
+                p_i = modified_precision(references, hypothesis, i)
             p_numerators[i] += p_i.numerator
             p_denominators[i] += p_i.denominator
 
