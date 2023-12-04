@@ -1,0 +1,2 @@
+You are given an array of strings nums and an integer k. Each string in nums represents an integer without leading zeros.
+Return the string that represents the kth largest integer in nums.

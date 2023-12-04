@@ -1,0 +1,1 @@
+Given an array of integersarrand an integer k.Find the least number of unique integersafter removing exactly k elements.

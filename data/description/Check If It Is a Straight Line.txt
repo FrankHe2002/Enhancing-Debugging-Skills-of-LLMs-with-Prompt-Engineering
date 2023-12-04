@@ -1,0 +1,1 @@
+You are given an arraycoordinates, coordinates[i] = [x, y], where [x, y] represents the coordinate of a point. Check if these pointsmake a straight line in the XY plane.

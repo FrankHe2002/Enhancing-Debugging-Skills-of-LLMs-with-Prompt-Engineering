@@ -1,0 +1,7 @@
+You are given a list ofpreferencesfornfriends, where n is always even.
+For each person i,preferences[i]containsa list of friendssorted in the order of preference. In other words, a friend earlier in the list is more preferred than a friend later in the list.Friends ineach list aredenoted by integers from 0 to n-1.
+All the friends are divided into pairs.The pairings aregiven in a listpairs,where pairs[i] = [xi, yi] denotes xiis paired with yi and yi is paired with xi.
+However, this pairing may cause some of the friends to be unhappy.A friend xis unhappy if xis paired with yand there exists a friend uwhois paired with vbut:
+	xprefers uover y,and
+	uprefers xover v.
+Return the number of unhappy friends.

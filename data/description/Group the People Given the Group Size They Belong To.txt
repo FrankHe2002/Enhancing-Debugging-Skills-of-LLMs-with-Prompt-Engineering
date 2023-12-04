@@ -1,0 +1,4 @@
+There are n peoplethat are split into some unknown number of groups. Each person is labeled with aunique IDfrom0ton - 1.
+You are given an integer arraygroupSizes, where groupSizes[i]is the size of the group that personiis in. For example, ifgroupSizes[1] = 3, thenperson1must be in agroup of size3.
+Returna list of groupssuch thateach personiis in a group of sizegroupSizes[i].
+Each person shouldappear inexactly one group,and every person must be in a group. If there aremultiple answers, return any of them. It is guaranteed that there will be at least one valid solution for the given input.

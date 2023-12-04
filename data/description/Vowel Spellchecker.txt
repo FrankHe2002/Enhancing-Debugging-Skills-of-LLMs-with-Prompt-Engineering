@@ -1,0 +1,3 @@
+Given a wordlist, we want to implement a spellchecker that converts a query word into a correct word.
+For a given query word, the spell checker handles two categories of spelling mistakes:
+	Capitalization: If the query matches a word in the wordlist (case-insensitive), then the query word is returned with the same case as the case in the wordlist.

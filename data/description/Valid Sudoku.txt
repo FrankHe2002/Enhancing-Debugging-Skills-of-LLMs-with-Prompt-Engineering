@@ -1,0 +1,7 @@
+Determine if a9 x 9 Sudoku boardis valid.Only the filled cells need to be validatedaccording to the following rules:
+	Each rowmust contain thedigits1-9 without repetition.
+	Each column must contain the digits1-9without repetition.
+	Each of the nine3 x 3 sub-boxes of the grid must contain the digits1-9without repetition.
+
+	A Sudoku board (partially filled) could be valid but is not necessarily solvable.
+	Only the filled cells need to be validated according to the mentionedrules.

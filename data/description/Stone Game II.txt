@@ -1,0 +1,5 @@
+Alice and Bob continue theirgames with piles of stones. There are a number ofpilesarranged in a row, and each pile has a positive integer number of stonespiles[i]. The objective of the game is to end with the moststones.
+Aliceand Bob take turns, with Alice starting first. Initially, M = 1.
+On each player's turn, that playercan take all the stones in the first X remaining piles, where 1 <= X <= 2M. Then, we setM = max(M, X).
+The game continues until all the stones have been taken.
+Assuming Alice and Bob play optimally, return the maximum number of stones Alicecan get.

@@ -1,0 +1,7 @@
+Given two stringssandt, your goal is to convertsintotinkmoves or less.
+During theith(1 <= i <= k)move you can:
+	Choose any indexj(1-indexed) froms, such that1 <= j <= s.lengthand jhas not been chosen in any previous move,and shift the character at that indexitimes.
+	Do nothing.
+Shifting a character means replacing it by the next letter in the alphabet(wrapping around so that'z'becomes'a'). Shifting a character byimeans applying the shift operationsitimes.
+Remember that any indexjcan be picked at most once.
+Returntrueif it's possible to convertsintotin no more thankmoves, otherwise returnfalse.

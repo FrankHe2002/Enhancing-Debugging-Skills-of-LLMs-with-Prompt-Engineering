@@ -1,0 +1,3 @@
+You are given an undirected weighted graph ofnnodes (0-indexed), represented by an edge list whereedges[i] = [a, b]is an undirected edge connecting the nodesaandbwith a probability of success of traversing that edgesuccProb[i].
+Given two nodesstartandend, find the path with the maximum probability of success to go fromstarttoendand return its success probability.
+If there is no path fromstarttoend, return0. Your answer will be accepted if it differs from the correct answer by at most 1e-5.

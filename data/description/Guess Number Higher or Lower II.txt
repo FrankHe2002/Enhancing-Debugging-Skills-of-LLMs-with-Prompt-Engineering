@@ -1,0 +1,7 @@
+We are playing the Guessing Game. The game will work as follows:
+	I pick a number between1andn.
+	You guess a number.
+	If you guess the right number, you win the game.
+	If you guess the wrong number, then I will tell you whether the number I picked is higher or lower, and you will continue guessing.
+	Every time you guess a wrong numberx, you will payxdollars. If you run out of money, you lose the game.
+Given a particularn, returnthe minimum amount of money you need toguarantee a win regardless of what number I pick.

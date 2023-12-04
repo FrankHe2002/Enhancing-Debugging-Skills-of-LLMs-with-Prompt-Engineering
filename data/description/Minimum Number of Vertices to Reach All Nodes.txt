@@ -1,0 +1,3 @@
+Given adirected acyclic graph,withnvertices numbered from0ton-1,and an arrayedgeswhereedges[i] = [fromi, toi]represents a directed edge from nodefromito nodetoi.
+Find the smallest set of vertices from which all nodes in the graph are reachable. It's guaranteed that a unique solution exists.
+Notice that you can return the vertices in any order.

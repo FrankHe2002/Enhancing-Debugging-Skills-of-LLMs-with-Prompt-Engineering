@@ -1,0 +1,2 @@
+Given two strings: s1 and s2 with the samesize, check if somepermutation of string s1 can breaksomepermutation of string s2 or vice-versa. In other words s2 can break s1or vice-versa.
+A string xcan breakstring y(both of size n) if x[i] >= y[i](in alphabetical order)for all ibetween 0 and n-1.
