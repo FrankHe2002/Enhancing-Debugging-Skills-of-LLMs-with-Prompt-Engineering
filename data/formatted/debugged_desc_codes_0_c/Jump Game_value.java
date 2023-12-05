@@ -1,0 +1,25 @@
+The code seems to have a correct implementation of the algorithm to check if it's possible to reach the last index in the array. However, there is a typographical error in the comment on the last line. It should be 'nums[i]' instead of 'nums[i]+1'.
+
+So, the bug type is a typographical error.
+
+Here's the corrected code with the fix:
+
+```java
+// Runtime: 3 ms (Top 67.1%) | Memory: 67.1 MB (Top 78.50%)
+class Solution {
+    public boolean canJump(int[] nums) {
+        int maxjump = 0;
+        for (int i = 0; i < nums.length; i++) {
+            // If the current index 'i' is less than current maximum jump 'curr'. It means there is no way to jump to current index...
+            // so we should return false
+            if (maxjump < i)
+                return false;
+            else
+                maxjump = Math.max(maxjump, nums[i] + i); // Update the current maximum jump...
+        }
+        return true;
+    }
+}
+
+// nums[i] gives the max jump index possible from i
+```

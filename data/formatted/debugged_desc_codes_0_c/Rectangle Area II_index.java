@@ -1,0 +1,59 @@
+Bug type:
+Logical error
+
+The code has a bug in the for loops that iterate through the x and y coordinates of the rectangles. The iteration should start from the bottom-left corner to the top-right corner of each rectangle, but the code is indexing the coordinates incorrectly leading to an incorrect area calculation.
+
+Fix:
+1. Update the for loops that iterate through the x and y coordinates of the rectangles to start from the bottom-left corner to the top-right corner of each rectangle.
+
+2. Modify the condition for iterating through the x and y coordinates of the rectangles.
+
+```java
+class Solution {
+    public int rectangleArea(int[][] rectangles) {
+        int n = rectangles.length;
+        Set<Integer> coorx = new HashSet<>();
+        Set<Integer> coory = new HashSet<>();
+        for (int[] rec : rectangles) {
+            coorx.add(rec[0]);
+            coorx.add(rec[2]);
+            coory.add(rec[1]); // Change rec[2] to rec[1] to include the bottom-left corner's y coordinate
+            coory.add(rec[3]);
+        }
+
+        Integer[] compressx = coorx.toArray(new Integer[0]);
+        Arrays.sort(compressx);
+        Integer[] compressy = coory.toArray(new Integer[0]);
+        Arrays.sort(compressy);
+
+        Map<Integer, Integer> mapx = new HashMap<>();
+        for (int i = 0; i < compressx.length; i++) {
+            mapx.put(compressx[i], i);
+        }
+        Map<Integer, Integer> mapy = new HashMap<>();
+        for (int i = 0; i < compressy.length; i++) {
+            mapy.put(compressy[i], i);
+        }
+
+        boolean[][] grid = new boolean[compressx.length][compressy.length];
+        for (int[] rec : rectangles) {
+            for (int x = mapx.get(rec[0]); x < mapx.get(rec[2]); x++) {
+                for (int y = mapy.get(rec[1]); y < mapy.get(rec[3]); y++) {
+                    grid[x][y] = true;
+                }
+            }
+        }
+
+        long res = 0L;
+        for (int i = 0; i < grid.length - 1; i++) {
+            for (int j = 0; j < grid[0].length - 1; j++) {
+                if (grid[i][j]) {
+                    res += (long) (compressx[i + 1] - compressx[i]) * (compressy[j + 1] - compressy[j]);
+                }
+            }
+        }
+        res %= 1000000007;
+        return (int) res;
+    }
+}
+```

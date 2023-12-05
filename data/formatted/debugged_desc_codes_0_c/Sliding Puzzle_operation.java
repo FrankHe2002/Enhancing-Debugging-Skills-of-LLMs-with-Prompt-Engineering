@@ -1,0 +1,75 @@
+The bug is an OutOfBoundsException. The issue is with the line "int idx = * 1;". This line does not have a proper operation and is causing a compilation error. The correct line should be "int idx = -1;". The "* 1" does not make sense and leads to the bug of an OutOfBoundsException.
+
+Additionally, the code is not formatted properly. The statement, "return - 1;" should have a space after the minus sign to adhere to good coding practices.
+
+Here is the corrected code:
+
+```java
+import java.util.ArrayDeque;
+import java.util.HashSet;
+
+class Solution {
+    int[][] dir = {{1, 3}, {0, 2, 4}, {1, 5}, {0, 4}, {1, 3, 5}, {2, 4}};
+
+    public int slidingPuzzle(int[][] board) {
+
+        String tar = "123450";
+
+        String src = "";
+
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[i].length; j++) {
+                src += board[i][j];
+            }
+        }
+
+        HashSet<String> visited = new HashSet<>();
+
+        visited.add(src);
+        int level = 0;
+        ArrayDeque<String> q = new ArrayDeque<>();
+        q.add(src);
+        while (q.size() != 0) {
+            int t = q.size();
+
+            while (t-- > 0) {
+                String rem = q.remove();
+
+                if (rem.equals(tar)) {
+                    return level;
+                }
+
+                int idx = -1;
+
+                for (int i = 0; i < rem.length(); i++) {
+                    if (rem.charAt(i) == '0') {
+                        idx = i;
+                        break;
+                    }
+                }
+
+                for (int i = 0; i < dir[idx].length; i++) {
+                    String str = swapEle(rem, idx, dir[idx][i]);
+
+                    if (!visited.contains(str)) {
+                        q.add(str);
+                        visited.add(str);
+                    }
+                }
+            }
+            level++;
+        }
+
+        return -1;
+    }
+
+    public String swapEle(String rem, int i, int j) {
+        StringBuilder sb = new StringBuilder(rem);
+
+        sb.setCharAt(i, rem.charAt(j));
+        sb.setCharAt(j, rem.charAt(i));
+
+        return sb.toString();
+    }
+}
+```

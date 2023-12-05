@@ -1,0 +1,28 @@
+Bug Type: Syntax Error
+
+Identifying and Fixing the Bug:
+1. The bug appears to be a missing closing parenthesis ")" in the line `int pos = valToPos.getOrDefault(sums - target, - 1;`.
+2. To fix the bug, add the missing closing parenthesis ")" at the end of the line.
+
+Fixed code:
+```java
+class Solution {
+    public int maxNonOverlapping(int[] nums, int target) {
+        Map<Integer, Integer> valToPos = new HashMap<>();
+        int sums = 0;
+        int count = 0;
+        int lastEndPos = 0;
+        valToPos.put(0, 0);
+        for (int i = 0; i < nums.length; i++) {
+            sums += nums[i];
+            int pos = valToPos.getOrDefault(sums - target, -1); // Fixed the missing closing parenthesis
+            if (pos >= lastEndPos) {
+                count += 1;
+                lastEndPos = i + 1;
+            }
+            valToPos.put(sums, i + 1);
+        }
+        return count;
+    }
+}
+```
