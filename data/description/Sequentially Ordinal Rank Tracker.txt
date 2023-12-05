@@ -8,3 +8,9 @@ Implement the SORTracker class:
 	SORTracker() Initializes the tracker system.
 	void add(string name, int score) Adds a scenic location with name and score to the system.
 	string get() Queries and returns the ith best location, where i is the number of times this method has been invoked (including this invocation).
+Constraints:
+	name consists of lowercase English letters, and is unique among all locations.
+	1 <= name.length <= 10
+	1 <= score <= 105
+	At any time, the number of calls to get does not exceed the number of calls to add.
+	At most 4 * 104 calls in total will be made to add and get.

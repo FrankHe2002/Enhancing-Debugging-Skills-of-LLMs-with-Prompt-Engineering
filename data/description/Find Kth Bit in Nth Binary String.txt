@@ -8,3 +8,6 @@ For example, the first four strings in the above sequence are:
 	S3 = "0111001"
 	S4 = "011100110110001"
 Return the kth bit in Sn. It is guaranteed that k is valid for the given n.
+Constraints:
+	1 <= n <= 20
+	1 <= k <= 2n - 1

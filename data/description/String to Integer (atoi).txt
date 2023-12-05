@@ -9,3 +9,6 @@ The algorithm for myAtoi(string s) is as follows:
 
 	Only the space character ' ' is considered a whitespace character.
 	Do not ignore any characters other than the leading whitespace or the rest of the string after the digits.
+Constraints:
+	0 <= s.length <= 200
+	s consists of English letters (lower-case and upper-case), digits (0-9), ' ', '+', '-', and '.'.

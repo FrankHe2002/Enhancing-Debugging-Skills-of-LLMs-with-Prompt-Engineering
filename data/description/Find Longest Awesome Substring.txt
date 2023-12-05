@@ -1,2 +1,5 @@
 You are given a string s. An awesome substring is a non-empty substring of s such that we can make any number of swaps in order to make it a palindrome.
 Return the length of the maximum length awesome substring of s.
+Constraints:
+	1 <= s.length <= 105
+	s consists only of digits.

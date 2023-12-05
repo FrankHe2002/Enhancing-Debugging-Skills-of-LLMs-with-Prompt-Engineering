@@ -10,3 +10,16 @@ You are interested in the positions of the k highest-ranked items whose prices a
 	The row number (smaller row number has a higher rank).
 	The column number (smaller column number has a higher rank).
 Return the k highest-ranked items within the price range sorted by their rank (highest to lowest). If there are fewer than k reachable items within the price range, return all of them.
+Constraints:
+	m == grid.length
+	n == grid[i].length
+	1 <= m, n <= 105
+	1 <= m * n <= 105
+	0 <= grid[i][j] <= 105
+	pricing.length == 2
+	2 <= low <= high <= 105
+	start.length == 2
+	0 <= row <= m - 1
+	0 <= col <= n - 1
+	grid[row][col] > 0
+	1 <= k <= m * n

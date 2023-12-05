@@ -7,3 +7,7 @@ For example, one way to encode an original string "abcdefghijklmnop" might be:
 	Choose the second and third elements to be replaced by their lengths, respectively. The sequence becomes ["ab", "12", "1", "p"].
 	Concatenate the elements of the sequence to get the encoded string: "ab121p".
 Given two encoded strings s1 and s2, consisting of lowercase English letters and digits 1-9 (inclusive), return true if there exists an original string that could be encoded as both s1 and s2. Otherwise, return false.
+Constraints:
+	1 <= s1.length, s2.length <= 40
+	s1 and s2 consist of digits 1-9 (inclusive), and lowercase English letters only.
+	The number of consecutive digits in s1 and s2 does not exceed 3.

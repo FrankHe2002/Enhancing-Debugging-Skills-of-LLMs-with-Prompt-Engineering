@@ -10,3 +10,6 @@ Implement the Skiplist class:
 	void add(int num) Inserts the value num into the SkipList.
 	bool erase(int num) Removes the value num from the Skiplist and returns true. If num does not exist in the Skiplist, do nothing and return false. If there exist multiple num values, removing any one of them is fine.
 Note that duplicates may exist in the Skiplist, your code needs to handle this situation.
+Constraints:
+	0 <= num, target <= 2 * 104
+	At most 5 * 104 calls will be made to search, add, and erase.

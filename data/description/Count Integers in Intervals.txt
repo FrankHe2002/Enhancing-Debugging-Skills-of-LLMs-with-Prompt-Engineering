@@ -6,3 +6,7 @@ Implement the CountIntervals class:
 	void add(int left, int right) Adds the interval [left, right] to the set of intervals.
 	int count() Returns the number of integers that are present in at least one interval.
 Note that an interval [left, right] denotes all the integers x where left <= x <= right.
+Constraints:
+	1 <= left <= right <= 109
+	At most 105 calls in total will be made to add and count.
+	At least one call will be made to count.

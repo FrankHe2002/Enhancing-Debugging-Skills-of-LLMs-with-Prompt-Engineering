@@ -1,2 +1,5 @@
 Given a string sconsisting only of characters a, b and c.
 Return the number of substrings containing at leastone occurrence of all these characters a, b and c.
+Constraints:
+	3 <= s.length <= 5 x 10^4
+	sonly consists ofa, b or ccharacters.

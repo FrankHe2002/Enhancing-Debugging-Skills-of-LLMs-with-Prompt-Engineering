@@ -4,3 +4,7 @@ Each day, until all tasks have been completed, you must either:
 	Complete the next task from tasks, or
 	Take a break.
 Return the minimum number of days needed to complete all tasks.
+Constraints:
+	1 <= tasks.length <= 105
+	1 <= tasks[i] <= 109
+	1 <= space <= tasks.length

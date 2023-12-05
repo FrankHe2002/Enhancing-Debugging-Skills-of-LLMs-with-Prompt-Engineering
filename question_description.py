@@ -5,7 +5,7 @@ import shutil
 import glob
 import re
 
-def get_description_for_all_files(source_directory, target_directory, keep_examples=False, keep_constraints=False):
+def get_description_for_all_files(source_directory, target_directory, keep_examples=False, keep_constraints=True):
     # Create the target directory if it doesn't exist
     if not os.path.exists(target_directory):
         os.makedirs(target_directory)
@@ -82,4 +82,4 @@ if __name__ == "__main__":
     source_dir = 'solutions_correct/algorithms'  # Source directory
     target_dir = 'data/description'  # Target directory where description files will be saved
 
-    get_description_for_all_files(source_dir, target_dir, keep_examples=0, keep_constraints=0)
+    get_description_for_all_files(source_dir, target_dir, keep_examples=0, keep_constraints=1)

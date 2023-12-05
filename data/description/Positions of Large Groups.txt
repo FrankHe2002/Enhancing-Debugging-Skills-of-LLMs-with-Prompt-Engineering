@@ -3,3 +3,6 @@ For example, a string like s = "abbxxxxzyy" has the groups "a", "bb", "xxxx", "z
 A group is identified by an interval[start, end], wherestartandenddenote the start and endindices (inclusive) of the group. In the above example,"xxxx"has the interval[3,6].
 A group is consideredlargeif it has 3 or more characters.
 Returnthe intervals of every large group sorted inincreasing order by start index.
+Constraints:
+	1 <= s.length <= 1000
+	s contains lowercase English letters only.

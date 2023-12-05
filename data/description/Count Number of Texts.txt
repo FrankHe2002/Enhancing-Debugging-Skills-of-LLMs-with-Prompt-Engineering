@@ -6,3 +6,6 @@ However, due to an error in transmission, Bob did not receive Alice's text messa
 	For example, when Alice sent the message "bob", Bob received the string "2266622".
 Given a string pressedKeys representing the string received by Bob, return the total number of possible text messages Alice could have sent.
 Since the answer may be very large, return it modulo 109 + 7.
+Constraints:
+	1 <= pressedKeys.length <= 105
+	pressedKeys only consists of digits from '2' - '9'.

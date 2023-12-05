@@ -5,3 +5,6 @@ Given a string s consisting only of characters 'a', 'b', and 'c'. You are asked 
 	The characters from the prefix and suffix must be the same.
 	Delete both the prefix and the suffix.
 Return the minimum length of s after performing the above operation any number of times (possibly zero times).
+Constraints:
+	1 <= s.length <= 105
+	s only consists of characters 'a', 'b', and 'c'.

@@ -3,3 +3,6 @@ Each second, you may perform one of the following operations:
 	Move the pointer one character counterclockwise or clockwise.
 	Type the character the pointer is currently on.
 Given a string word, return the minimum number of seconds to type out the characters in word.
+Constraints:
+	1 <= word.length <= 100
+	word consists of lowercase English letters.

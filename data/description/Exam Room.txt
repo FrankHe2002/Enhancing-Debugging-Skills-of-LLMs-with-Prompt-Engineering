@@ -5,3 +5,7 @@ Implement the ExamRoom class:
 	ExamRoom(int n) Initializes the object of the exam room with the number of the seats n.
 	int seat() Returns the label of the seat at which the next student will set.
 	void leave(int p) Indicates that the student sitting at seat p will leave the room. It is guaranteed that there will be a student sitting at seat p.
+Constraints:
+	1 <= n <= 109
+	It is guaranteed that there is a student sitting at seat p.
+	At most 104 calls will be made to seat and leave.

@@ -4,3 +4,6 @@ Your goal is to satisfy one of the following three conditions:
 	Every letter in b is strictly less than every letter in a in the alphabet.
 	Both a and b consist of only one distinct letter.
 Return the minimum number of operations needed to achieve your goal.
+Constraints:
+	1 <= a.length, b.length <= 105
+	a and b consist only of lowercase letters.

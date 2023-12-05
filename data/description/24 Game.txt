@@ -7,3 +7,6 @@ You are restricted with the following rules:
 	You cannot concatenate numbers together
 		For example, if cards = [1, 2, 1, 2], the expression "12 + 12" is not valid.
 Return true if you can get such expression that evaluates to 24, and false otherwise.
+Constraints:
+	cards.length == 4
+	1 <= cards[i] <= 9

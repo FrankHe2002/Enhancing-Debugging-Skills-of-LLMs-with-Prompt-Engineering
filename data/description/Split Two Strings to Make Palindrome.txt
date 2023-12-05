@@ -2,3 +2,7 @@ You are given two strings a and b of the same length. Choose an index and split 
 When you split a string s into sprefix and ssuffix, either ssuffix or sprefix is allowed to be empty. For example, if s = "abc", then "" + "abc", "a" + "bc", "ab" + "c" , and "abc" + "" are valid splits.
 Return true if it is possible to form a palindrome string, otherwise return false.
 Notice thatx + y denotes the concatenation of strings x and y.
+Constraints:
+	1 <= a.length, b.length <= 105
+	a.length == b.length
+	a and b consist of lowercase English letters

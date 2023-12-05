@@ -8,3 +8,9 @@ You want to describe the painting with the minimum number of non-overlapping hal
 		[4,7) is colored {7} from only the second segment.
 Return the 2D array painting describing the finished painting (excluding any parts that are not painted). You may return the segments in any order.
 A half-closed segment [a, b) is the section of the number line between points a and b including point a and not including point b.
+Constraints:
+	1 <= segments.length <= 2 * 104
+	segments[i].length == 3
+	1 <= starti < endi <= 105
+	1 <= colori <= 109
+	Each colori is distinct.

@@ -5,3 +5,8 @@ Return the following:
 	If version1 < version2, return -1.
 	If version1 > version2, return 1.
 	Otherwise, return 0.
+Constraints:
+	1 <= version1.length, version2.length <= 500
+	version1 and version2only contain digits and '.'.
+	version1 and version2are valid version numbers.
+	All the given revisions inversion1 and version2can be stored ina32-bit integer.

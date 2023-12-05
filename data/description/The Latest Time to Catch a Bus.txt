@@ -5,3 +5,10 @@ More formally when a bus arrives, either:
 	If capacity or fewer passengers are waiting for a bus, they will all get on the bus, or
 	The capacity passengers with the earliest arrival times will get on the bus.
 Return the latest time you may arrive at the bus station to catch a bus. You cannot arrive at the same time as another passenger.
+Constraints:
+	n == buses.length
+	m == passengers.length
+	1 <= n, m, capacity <= 105
+	2 <= buses[i], passengers[i] <= 109
+	Each element in buses is unique.
+	Each element in passengers is unique.

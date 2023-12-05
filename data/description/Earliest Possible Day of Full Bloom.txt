@@ -3,3 +3,7 @@ You have n flower seeds. Every seed must be planted first before it can begin to
 	growTime[i] is the number of full days it takes the ith seed to grow after being completely planted. After the last day of its growth, the flower blooms and stays bloomed forever.
 From the beginning of day 0, you can plant the seeds in any order.
 Return the earliest possible day where all seeds are blooming.
+Constraints:
+	n == plantTime.length == growTime.length
+	1 <= n <= 105
+	1 <= plantTime[i], growTime[i] <= 104

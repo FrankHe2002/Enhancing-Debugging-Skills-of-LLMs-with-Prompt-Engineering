@@ -2,3 +2,11 @@ You have information about n different recipes. You are given a string array rec
 You are also given a string array supplies containing all the ingredients that you initially have, and you have an infinite supply of all of them.
 Return a list of all the recipes that you can create. You may return the answer in any order.
 Note that two recipes may contain each other in their ingredients.
+Constraints:
+	n == recipes.length == ingredients.length
+	1 <= n <= 100
+	1 <= ingredients[i].length, supplies.length <= 100
+	1 <= recipes[i].length, ingredients[i][j].length, supplies[k].length <= 10
+	recipes[i], ingredients[i][j], and supplies[k] consist only of lowercase English letters.
+	All the values of recipes and suppliescombined are unique.
+	Each ingredients[i] does not contain any duplicate values.

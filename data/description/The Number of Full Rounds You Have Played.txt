@@ -5,3 +5,8 @@ You are given two strings loginTime and logoutTime where:
 	logoutTime is the time you will logout from the game.
 If logoutTime is earlier than loginTime, this means you have played from loginTime to midnight and from midnight to logoutTime.
 Return the number of full chess rounds you have played in the tournament.
+Constraints:
+	loginTime and logoutTime are in the format hh:mm.
+	00 <= hh <= 23
+	00 <= mm <= 59
+	loginTime and logoutTime are not equal.

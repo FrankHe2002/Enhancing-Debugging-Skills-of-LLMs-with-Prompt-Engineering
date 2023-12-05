@@ -5,3 +5,11 @@ Implement the AuthenticationManager class:
 	renew(string tokenId, int currentTime) renews the unexpired token with the given tokenId at the given currentTime in seconds. If there are no unexpired tokens with the given tokenId, the request is ignored, and nothing happens.
 	countUnexpiredTokens(int currentTime) returns the number of unexpired tokens at the given currentTime.
 Note that if a token expires at time t, and another action happens on time t (renew or countUnexpiredTokens), the expiration takes place before the other actions.
+Constraints:
+	1 <= timeToLive <= 108
+	1 <= currentTime <= 108
+	1 <= tokenId.length <= 5
+	tokenId consists only of lowercase letters.
+	All calls to generate will contain unique values of tokenId.
+	The values of currentTime across all the function calls will be strictly increasing.
+	At most 2000 calls will be made to all functions combined.

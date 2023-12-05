@@ -7,3 +7,7 @@ For convenience, the full table for the 26 letters of the English alphabet is gi
 Given an array of strings words where each word can be written as a concatenation of the Morse code of each letter.
 	For example, "cab" can be written as "-.-..--...", which is the concatenation of "-.-.", ".-", and "-...". We will call such a concatenation the transformation of a word.
 Return the number of different transformations among all words we have.
+Constraints:
+	1 <= words.length <= 100
+	1 <= words[i].length <= 12
+	words[i] consists of lowercase English letters.

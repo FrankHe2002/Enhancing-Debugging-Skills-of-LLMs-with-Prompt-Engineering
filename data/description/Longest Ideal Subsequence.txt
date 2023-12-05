@@ -4,3 +4,7 @@ You are given a string s consisting of lowercase letters and an integer k. We ca
 Return the length of the longest ideal string.
 A subsequence is a string that can be derived from another string by deleting some or no characters without changing the order of the remaining characters.
 Note that the alphabet order is not cyclic. For example, the absolute difference in the alphabet order of 'a' and 'z' is 25, not 1.
+Constraints:
+	1 <= s.length <= 105
+	0 <= k <= 25
+	s consists of lowercase English letters.

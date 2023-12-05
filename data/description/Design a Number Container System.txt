@@ -5,3 +5,6 @@ Implement the NumberContainers class:
 	NumberContainers() Initializes the number container system.
 	void change(int index, int number) Fills the container at index with the number. If there is already a number at that index, replace it.
 	int find(int number) Returns the smallest index for the given number, or -1 if there is no index that is filled by number in the system.
+Constraints:
+	1 <= index, number <= 109
+	At most 105 calls will be made in total to change and find.

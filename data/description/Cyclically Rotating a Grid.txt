@@ -2,3 +2,10 @@ You are given an m x n integer matrix grid​​​, where m and n are both even
 The matrix is composed of several layers, which is shown in the below image, where each color is its own layer:
 A cyclic rotation of the matrix is done by cyclically rotating each layer in the matrix. To cyclically rotate a layer once, each element in the layer will take the place of the adjacent element in the counter-clockwise direction. An example rotation is shown below:
 Return the matrix after applying k cyclic rotations to it.
+Constraints:
+	m == grid.length
+	n == grid[i].length
+	2 <= m, n <= 50
+	Both m and n are even integers.
+	1 <= grid[i][j] <= 5000
+	1 <= k <= 109

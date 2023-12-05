@@ -4,3 +4,8 @@ A cell (r, c) of an excel sheet is represented as a string "<col><row>" where:
 	<row> is the row number r of the cell. The rth row is represented by the integer r.
 You are given a string sinthe format "<col1><row1>:<col2><row2>", where <col1> represents the column c1, <row1> represents the row r1, <col2> represents the column c2, and <row2> represents the row r2, such that r1 <= r2 and c1 <= c2.
 Return the list of cells (x, y) such that r1 <= x <= r2 and c1 <= y <= c2. The cells should be represented asstrings in the format mentioned above and be sorted in non-decreasing order first by columns and then by rows.
+Constraints:
+	s.length == 5
+	'A' <= s[0] <= s[3] <= 'Z'
+	'1' <= s[1] <= s[4] <= '9'
+	s consists of uppercase English letters, digits and ':'.

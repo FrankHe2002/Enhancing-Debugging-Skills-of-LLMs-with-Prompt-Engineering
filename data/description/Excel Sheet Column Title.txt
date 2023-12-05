@@ -8,3 +8,5 @@ Z -> 26
 AA -> 27
 AB -> 28 
 ...
+Constraints:
+	1 <= columnNumber <= 231 - 1

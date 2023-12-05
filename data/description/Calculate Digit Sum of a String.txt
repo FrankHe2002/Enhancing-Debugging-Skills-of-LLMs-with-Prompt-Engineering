@@ -4,3 +4,7 @@ A round can be completed if the length of s is greater than k. In one round, do 
 	Replace each group of s with a string representing the sum of all its digits. For example, "346" is replaced with "13" because 3 + 4 + 6 = 13.
 	Merge consecutive groups together to form a new string. If the length of the string is greater than k, repeat from step 1.
 Return s after all rounds have been completed.
+Constraints:
+	1 <= s.length <= 100
+	2 <= k <= 100
+	s consists of digits only.

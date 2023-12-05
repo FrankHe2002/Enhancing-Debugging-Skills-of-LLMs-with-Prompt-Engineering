@@ -4,3 +4,7 @@ You are given a string s and two integers x and y. You can perform two types of 
 	Remove substring "ba" and gain y points.
 		For example, when removing "ba" from "cabxbae" it becomes "cabxe".
 Return the maximum points you can gain after applying the above operations on s.
+Constraints:
+	1 <= s.length <= 105
+	1 <= x, y <= 104
+	s consists of lowercase English letters.

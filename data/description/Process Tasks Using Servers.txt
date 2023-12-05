@@ -5,3 +5,8 @@ If there are no free servers and the queue is not empty, we wait until a server 
 A server that is assigned task j at second t will be free again at second t + tasks[j].
 Build an array ans​​​​ of length m, where ans[j] is the index of the server the j​​​​​​th task will be assigned to.
 Return the array ans​​​​.
+Constraints:
+	servers.length == n
+	tasks.length == m
+	1 <= n, m <= 2 * 105
+	1 <= servers[i], tasks[j] <= 2 * 105

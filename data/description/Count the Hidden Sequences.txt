@@ -5,3 +5,8 @@ You are further given two integers lower and upper that describe the inclusive r
 		[5, 6, 3, 7] is not possible since it contains an element greater than 6.
 		[1, 2, 3, 4] is not possible since the differences are not correct.
 Return the number of possible hidden sequences there are. If there are no possible sequences, return 0.
+Constraints:
+	n == differences.length
+	1 <= n <= 105
+	-105 <= differences[i] <= 105
+	-105 <= lower <= upper <= 105

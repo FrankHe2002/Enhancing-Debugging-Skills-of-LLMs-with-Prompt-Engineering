@@ -17,3 +17,10 @@ The game can end in 4 ways:
 	If Mouse reaches the food first, Mouse wins.
 	If Mouse cannot get to the food within 1000 turns, Cat wins.
 Given a rows x cols matrix grid and two integers catJump and mouseJump, return true if Mouse can win the game if both Cat and Mouse play optimally, otherwise return false.
+Constraints:
+	rows == grid.length
+	cols = grid[i].length
+	1 <= rows, cols <= 8
+	grid[i][j] consist only of characters 'C', 'M', 'F', '.', and '#'.
+	There is only one of each character 'C', 'M', and 'F' in grid.
+	1 <= catJump, mouseJump <= 8

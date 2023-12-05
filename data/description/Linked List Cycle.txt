@@ -1,3 +1,7 @@
 Given head, the head of a linked list, determine if the linked list has a cycle in it.
 There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following thenextpointer. Internally, posis used to denote the index of the node thattail'snextpointer is connected to.Note thatposis not passed as a parameter.
 Returntrue if there is a cycle in the linked list. Otherwise, return false.
+Constraints:
+	The number of the nodes in the list is in the range [0, 104].
+	-105 <= Node.val <= 105
+	pos is -1 or a valid index in the linked-list.

@@ -2,3 +2,11 @@ You are given a rectangular cake of size h x w and two arrays of integers horizo
 	horizontalCuts[i] is the distance from the top of the rectangular cake to the ith horizontal cut and similarly, and
 	verticalCuts[j] is the distance from the left of the rectangular cake to the jth vertical cut.
 Return the maximum area of a piece of cake after you cut at each horizontal and vertical position provided in the arrays horizontalCuts and verticalCuts. Since the answer can be a large number, return this modulo 109 + 7.
+Constraints:
+	2 <= h, w <= 109
+	1 <= horizontalCuts.length <= min(h - 1, 105)
+	1 <= verticalCuts.length <= min(w - 1, 105)
+	1 <= horizontalCuts[i] < h
+	1 <= verticalCuts[i] < w
+	All the elements in horizontalCuts are distinct.
+	All the elements in verticalCuts are distinct.

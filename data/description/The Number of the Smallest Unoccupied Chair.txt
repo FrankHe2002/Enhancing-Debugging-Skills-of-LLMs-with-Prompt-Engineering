@@ -3,3 +3,10 @@ There is a party where n friends numbered from 0 to n - 1 are attending. There i
 When a friend leaves the party, their chair becomes unoccupied at the moment they leave. If another friend arrives at that same moment, they can sit in that chair.
 You are given a 0-indexed 2D integer array times where times[i] = [arrivali, leavingi], indicating the arrival and leaving times of the ith friend respectively, and an integer targetFriend. All arrival times are distinct.
 Return the chair number that the friend numbered targetFriend will sit on.
+Constraints:
+	n == times.length
+	2 <= n <= 104
+	times[i].length == 2
+	1 <= arrivali < leavingi <= 105
+	0 <= targetFriend <= n - 1
+	Each arrivali time is distinct.

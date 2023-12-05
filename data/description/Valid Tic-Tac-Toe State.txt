@@ -7,3 +7,7 @@ Here are the rules of Tic-Tac-Toe:
 	The game ends when there are three of the same (non-empty) character filling any row, column, or diagonal.
 	The game also ends if all squares are non-empty.
 	No more moves can be played if the game is over.
+Constraints:
+	board.length == 3
+	board[i].length == 3
+	board[i][j] is either 'X', 'O', or ' '.

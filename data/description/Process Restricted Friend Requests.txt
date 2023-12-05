@@ -3,3 +3,13 @@ You are also given a 0-indexed 2D integer array restrictions, where restrictions
 Initially, no one is friends with each other. You are given a list of friend requests as a 0-indexed 2D integer array requests, where requests[j] = [uj, vj] is a friend request between person uj and person vj.
 A friend request is successful if uj and vj can be friends. Each friend request is processed in the given order (i.e., requests[j] occurs before requests[j + 1]), and upon a successful request, uj and vj become direct friends for all future friend requests.
 Return a boolean array result, where each result[j] is true if the jth friend request is successful or false if it is not.
+Constraints:
+	2 <= n <= 1000
+	0 <= restrictions.length <= 1000
+	restrictions[i].length == 2
+	0 <= xi, yi <= n - 1
+	xi != yi
+	1 <= requests.length <= 1000
+	requests[j].length == 2
+	0 <= uj, vj <= n - 1
+	uj != vj

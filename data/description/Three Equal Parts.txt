@@ -6,3 +6,6 @@ If it is possible, return any [i, j] with i + 1 < j, such that:
 	All three parts have equal binary values.
 If it is not possible, return [-1, -1].
 Note that the entire part is used when considering what binary value it represents. For example, [1,1,0] represents 6 in decimal, not 3. Also, leading zeros are allowed, so [0,1,1] and [1,1] represent the same value.
+Constraints:
+	3 <= arr.length <= 3 * 104
+	arr[i] is 0 or 1

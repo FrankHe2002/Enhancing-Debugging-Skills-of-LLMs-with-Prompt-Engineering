@@ -6,3 +6,6 @@ Given integers num and k, return the k-beauty of num.
 	Leading zeros are allowed.
 	0 is not a divisor of any value.
 A substring is a contiguous sequence of characters in a string.
+Constraints:
+	1 <= num <= 109
+	1 <= k <= num.length (taking num as a string)

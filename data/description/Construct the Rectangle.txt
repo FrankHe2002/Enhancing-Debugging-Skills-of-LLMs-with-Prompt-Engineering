@@ -3,3 +3,5 @@ A web developer needs to know how to design a web page's size. So, given a speci
 	The width W should not be larger than the length L, which means L >= W.
 	The difference between length L and width W should be as small as possible.
 Return an array [L, W] where L and W are the length and width of theweb page you designed in sequence.
+Constraints:
+	1 <= area <= 107

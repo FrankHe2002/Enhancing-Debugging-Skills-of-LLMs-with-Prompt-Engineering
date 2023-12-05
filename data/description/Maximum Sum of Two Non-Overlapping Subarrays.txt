@@ -1,3 +1,8 @@
 Given an integer array nums and two integers firstLen and secondLen, return the maximum sum of elements in two non-overlapping subarrays with lengths firstLen and secondLen.
 The array with length firstLen could occur before or after the array with length secondLen, but they have to be non-overlapping.
 A subarray is a contiguous part of an array.
+Constraints:
+	1 <= firstLen, secondLen <= 1000
+	2 <= firstLen + secondLen <= 1000
+	firstLen + secondLen <= nums.length <= 1000
+	0 <= nums[i] <= 1000

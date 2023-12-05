@@ -5,3 +5,6 @@ In other words, we treat '(' as an opening parenthesis and '))' as a closing par
 	For example, "())", "())(())))" and "(())())))" are balanced, ")()", "()))" and "(()))" are not balanced.
 You can insert the characters '(' and ')' at any position of the string to balance it if needed.
 Return the minimum number of insertions needed to make s balanced.
+Constraints:
+	1 <= s.length <= 105
+	s consists of '(' and ')' only.

@@ -5,3 +5,8 @@ The athletes are placed based on their scores, where the 1st place athlete has t
 	The 3rd place athlete's rank is "Bronze Medal".
 	For the 4th place to the nth place athlete, their rank is their placement number (i.e., the xth place athlete's rank is "x").
 Return an array answer of size n where answer[i] is the rank of the ith athlete.
+Constraints:
+	n == score.length
+	1 <= n <= 104
+	0 <= score[i] <= 106
+	All the values in score are unique.

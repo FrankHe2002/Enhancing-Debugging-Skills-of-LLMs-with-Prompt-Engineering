@@ -10,3 +10,6 @@ Implement the FrontMiddleBack class:
 Notice that when there are two middle position choices, the operation is performed on the frontmost middle position choice. For example:
 	Pushing 6 into the middle of [1, 2, 3, 4, 5] results in [1, 2, 6, 3, 4, 5].
 	Popping the middle from [1, 2, 3, 4, 5, 6] returns 3 and results in [1, 2, 4, 5, 6].
+Constraints:
+	1 <= val <= 109
+	At most1000calls will be made topushFront,pushMiddle,pushBack, popFront, popMiddle, and popBack.

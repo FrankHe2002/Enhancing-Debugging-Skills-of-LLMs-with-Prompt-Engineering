@@ -5,3 +5,7 @@ A pair of numbers (num1, num2) is called excellent if the following conditions a
 Return the number of distinct excellent pairs.
 Two pairs (a, b) and (c, d) are considered distinct if either a != c or b != d. For example, (1, 2) and (2, 1) are distinct.
 Note that a pair (num1, num2) such that num1 == num2 can also be excellent if you have at least one occurrence of num1 in the array.
+Constraints:
+	1 <= nums.length <= 105
+	1 <= nums[i] <= 109
+	1 <= k <= 60

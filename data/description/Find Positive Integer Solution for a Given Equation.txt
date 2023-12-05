@@ -13,3 +13,8 @@ We will judge your solution as follows:
 	The judge will receive two inputs: a function_id (to determine which implementation to test your code with), and the target z.
 	The judge will call your findSolution and compare your results with the answer key.
 	If your results match the answer key, your solution will be Accepted.
+Constraints:
+	1 <= function_id <= 9
+	1 <= z <= 100
+	It is guaranteed that the solutions of f(x, y) == z will be in the range 1 <= x, y <= 1000.
+	It is also guaranteed that f(x, y) will fit in 32 bit signed integer if 1 <= x, y <= 1000.

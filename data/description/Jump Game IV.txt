@@ -5,3 +5,6 @@ In one step you can jump from index i to index:
 	j where: arr[i] == arr[j] and i != j.
 Return the minimum number of steps to reach the last index of the array.
 Notice that you can not jump outside of the array at any time.
+Constraints:
+	1 <= arr.length <= 5 * 104
+	-108 <= arr[i] <= 108

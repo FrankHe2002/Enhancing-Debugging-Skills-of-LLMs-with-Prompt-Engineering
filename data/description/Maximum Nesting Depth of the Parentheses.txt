@@ -9,3 +9,7 @@ We can similarly define the nesting depth depth(S) of any VPS S as follows:
 	depth("(" + A + ")") = 1 + depth(A), where A is a VPS.
 For example, "", "()()", and "()(()())" are VPS's (with nesting depths 0, 1, and 2), and ")(" and "(()" are not VPS's.
 Given a VPS represented as string s, return the nesting depth of s.
+Constraints:
+	1 <= s.length <= 100
+	s consists of digits 0-9 and characters '+', '-', '*', '/', '(', and ')'.
+	It is guaranteed that parentheses expression s is a VPS.

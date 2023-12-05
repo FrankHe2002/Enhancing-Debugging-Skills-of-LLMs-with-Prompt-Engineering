@@ -11,3 +11,6 @@ This is how the UTF-8 encoding would work:
             3          |   1110xxxx 10xxxxxx 10xxxxxx
             4          |   11110xxx 10xxxxxx 10xxxxxx 10xxxxxx
 x denotes a bit in the binary form of a byte that may be either 0 or 1.
+Constraints:
+	1 <= data.length <= 2 * 104
+	0 <= data[i] <= 255

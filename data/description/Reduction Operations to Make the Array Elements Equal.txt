@@ -3,3 +3,6 @@ Given an integer array nums, your goal is to make all elements in nums equal. To
 	Find the next largest value in nums strictly smaller than largest. Let its value be nextLargest.
 	Reduce nums[i] to nextLargest.
 Return the number of operations to make all elements in nums equal.
+Constraints:
+	1 <= nums.length <= 5 * 104
+	1 <= nums[i] <= 5 * 104

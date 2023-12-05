@@ -3,3 +3,6 @@ An array A is azigzag arrayif either:
 	Every even-indexed element is greater than adjacent elements, ie.A[0] > A[1] < A[2] > A[3] < A[4] > ...
 	OR, every odd-indexed element is greater than adjacent elements, ie.A[0] < A[1] > A[2] < A[3] > A[4] < ...
 Return the minimum number of moves to transform the given array nums into a zigzag array.
+Constraints:
+	1 <= nums.length <= 1000
+	1 <= nums[i] <= 1000

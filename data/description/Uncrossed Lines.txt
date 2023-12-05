@@ -4,3 +4,6 @@ We may draw connecting lines: a straight line connecting two numbers nums1[i] an
 	the line we draw does not intersect any other connecting (non-horizontal) line.
 Note that a connecting line cannot intersect even at the endpoints (i.e., each number can only belong to one connecting line).
 Return the maximum number of connecting lines we can draw in this way.
+Constraints:
+	1 <= nums1.length, nums2.length <= 500
+	1 <= nums1[i], nums2[j] <= 2000

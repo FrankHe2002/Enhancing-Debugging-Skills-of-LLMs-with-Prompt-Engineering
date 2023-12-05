@@ -7,3 +7,12 @@ Return an array answer of the same length as queries, where answer[i] is the ans
 
 	To trim to the rightmost x digits means to keep removing the leftmost digit, until only x digits remain.
 	Strings in nums may contain leading zeros.
+Constraints:
+	1 <= nums.length <= 100
+	1 <= nums[i].length <= 100
+	nums[i] consists of only digits.
+	All nums[i].length are equal.
+	1 <= queries.length <= 100
+	queries[i].length == 2
+	1 <= ki <= nums.length
+	1 <= trimi <= nums[i].length

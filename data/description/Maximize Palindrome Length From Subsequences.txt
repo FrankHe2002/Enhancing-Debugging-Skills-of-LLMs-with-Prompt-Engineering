@@ -5,3 +5,6 @@ You are given two strings, word1 and word2. You want to construct a string in th
 Return the length of the longest palindrome that can be constructed in the described manner. If no palindromes can be constructed, return 0.
 A subsequence of a string s is a string that can be made by deleting some (possibly none) characters from s without changing the order of the remaining characters.
 A palindrome is a string that reads the same forwardas well as backward.
+Constraints:
+	1 <= word1.length, word2.length <= 1000
+	word1 and word2 consist of lowercase English letters.

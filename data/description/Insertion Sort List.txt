@@ -4,3 +4,6 @@ The steps of the insertion sort algorithm:
 	At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list and inserts it there.
 	It repeats until no input elements remain.
 The following is a graphical example of the insertion sort algorithm. The partially sorted list (black) initially contains only the first element in the list. One element (red) is removed from the input data and inserted in-place into the sorted list with each iteration.
+Constraints:
+	The number of nodes in the list is in the range [1, 5000].
+	-5000 <= Node.val <= 5000

@@ -5,3 +5,8 @@ Return the minimum absolute sum difference after replacing at most one element i
 |x| is defined as:
 	x if x >= 0, or
 	-x if x < 0.
+Constraints:
+	n == nums1.length
+	n == nums2.length
+	1 <= n <= 105
+	1 <= nums1[i], nums2[i] <= 105

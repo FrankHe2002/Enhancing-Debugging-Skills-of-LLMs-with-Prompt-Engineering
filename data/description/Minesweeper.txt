@@ -11,3 +11,12 @@ Return the board after revealing this position according to the following rules:
 	If an empty square 'E' with no adjacent mines is revealed, then change it to a revealed blank 'B' and all of its adjacent unrevealed squares should be revealed recursively.
 	If an empty square 'E' with at least one adjacent mine is revealed, then change it to a digit ('1' to '8') representing the number of adjacent mines.
 	Return the board when no more squares will be revealed.
+Constraints:
+	m == board.length
+	n == board[i].length
+	1 <= m, n <= 50
+	board[i][j] is either 'M', 'E', 'B', or a digit from '1' to '8'.
+	click.length == 2
+	0 <= clickr < m
+	0 <= clickc < n
+	board[clickr][clickc] is either 'M' or 'E'.

@@ -6,3 +6,8 @@ A group of special-equivalent strings from words is a non-empty subset of words 
 	Every pair of strings in the group are special equivalent, and
 	The group is the largest size possible (i.e., there is not a string words[i] not in the group such that words[i] is special-equivalent to every string in the group).
 Return the number of groups of special-equivalent strings from words.
+Constraints:
+	1 <= words.length <= 1000
+	1 <= words[i].length <= 20
+	words[i] consist of lowercase English letters.
+	All the strings are of the same length.

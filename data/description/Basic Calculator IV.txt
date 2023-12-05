@@ -13,3 +13,13 @@ The format of the output is as follows:
 	An example of a well-formatted answer is ["-2*a*a*a", "3*a*a*b", "3*b*b", "4*a", "5*c", "-6"].
 	Terms (including constant terms) with coefficient 0 are not included.
 		For example, an expression of "0" has an output of [].
+Constraints:
+	1 <= expression.length <= 250
+	expression consists of lowercase English letters, digits, '+', '-', '*', '(', ')', ' '.
+	expression does not contain any leading or trailing spaces.
+	All the tokens in expression are separated by a single space.
+	0 <= evalvars.length <= 100
+	1 <= evalvars[i].length <= 20
+	evalvars[i] consists of lowercase English letters.
+	evalints.length == evalvars.length
+	-100 <= evalints[i] <= 100

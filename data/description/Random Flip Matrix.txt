@@ -4,3 +4,7 @@ Implement the Solution class:
 	Solution(int m, int n) Initializes the object with the size of the binary matrix m and n.
 	int[] flip() Returns a random index [i, j] of the matrix where matrix[i][j] == 0 and flips it to 1.
 	void reset() Resets all the values of the matrix to be 0.
+Constraints:
+	1 <= m, n <= 104
+	There will be at least one free cell for each call to flip.
+	At most 1000 calls will be made to flip and reset.

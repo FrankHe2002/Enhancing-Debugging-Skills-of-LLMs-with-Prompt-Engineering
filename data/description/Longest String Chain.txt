@@ -3,3 +3,7 @@ wordA is a predecessor of wordB if and only if we can insert exactly one letter 
 	For example, "abc" is a predecessor of "abac", while "cba" is not a predecessor of "bcad".
 A word chain is a sequence of words [word1, word2, ..., wordk] with k >= 1, where word1 is a predecessor of word2, word2 is a predecessor of word3, and so on. A single word is trivially a word chain with k == 1.
 Return the length of the longest possible word chain with words chosen from the given list of words.
+Constraints:
+	1 <= words.length <= 1000
+	1 <= words[i].length <= 16
+	words[i] only consists of lowercase English letters.

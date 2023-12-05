@@ -4,3 +4,8 @@ There is one laser beam between any two security devices if both conditions are 
 	For each row i where r1 < i < r2, there are no security devices in the ith row.
 Laser beams are independent, i.e., one beam does not interfere nor join with another.
 Return the total number of laser beams in the bank.
+Constraints:
+	m == bank.length
+	n == bank[i].length
+	1 <= m, n <= 500
+	bank[i][j] is either '0' or '1'.

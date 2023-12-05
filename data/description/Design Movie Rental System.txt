@@ -11,3 +11,10 @@ Implement the MovieRentingSystem class:
 	void rent(int shop, int movie) Rents the given movie from the given shop.
 	void drop(int shop, int movie) Drops off a previously rented movie at the given shop.
 	List<List<Integer>> report() Returns a list of cheapest rented movies as described above.
+Constraints:
+	1 <= n <= 3 * 105
+	1 <= entries.length <= 105
+	0 <= shopi < n
+	1 <= moviei, pricei <= 104
+	Each shop carries at most one copy of a movie moviei.
+	At most 105 calls in total will be made to search, rent, drop and report.

@@ -8,3 +8,6 @@ We may make the following moves:
 	'!'adds the character board[r][c] at our current position (r, c)to theanswer.
 (Here, the only positions that exist on the board are positions with letters on them.)
 Return a sequence of moves that makes our answer equal to targetin the minimum number of moves. You may return any path that does so.
+Constraints:
+	1 <= target.length <= 100
+	target consists only of English lowercase letters.

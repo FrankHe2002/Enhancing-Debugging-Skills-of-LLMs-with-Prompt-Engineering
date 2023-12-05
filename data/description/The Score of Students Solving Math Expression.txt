@@ -6,3 +6,12 @@ You are given an integer array answers of length n, which are the submitted answ
 	Otherwise, if the answer could be interpreted as if the student applied the operators in the wrong order but had correct arithmetic, this student will be rewarded 2 points;
 	Otherwise, this student will be rewarded 0 points.
 Return the sum of the points of the students.
+Constraints:
+	3 <= s.length <= 31
+	s represents a valid expression that contains only digits 0-9, '+', and '*' only.
+	All the integer operands in the expression are in the inclusive range [0, 9].
+	1 <= The count of all operators ('+' and '*') in the math expression <= 15
+	Test data are generated such that the correct answer of the expression is in the range of [0, 1000].
+	n == answers.length
+	1 <= n <= 104
+	0 <= answers[i] <= 1000

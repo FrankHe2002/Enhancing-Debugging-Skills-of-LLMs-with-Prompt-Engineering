@@ -1,3 +1,6 @@
 Given two integer arraysarr1 and arr2, return the minimum number of operations (possibly zero) neededto make arr1 strictly increasing.
 In one operation, you can choose two indices0 <=i < arr1.lengthand0 <= j < arr2.lengthand do the assignmentarr1[i] = arr2[j].
 If there is no way to makearr1strictly increasing,return-1.
+Constraints:
+	1 <= arr1.length, arr2.length <= 2000
+	0 <= arr1[i], arr2[i] <= 10^9

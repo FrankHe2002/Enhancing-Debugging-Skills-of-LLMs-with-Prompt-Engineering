@@ -6,3 +6,7 @@ Determine the result of the game, and:
 	If Alice wins, return 1.
 	If Bob wins, return -1.
 	If the game results in a draw, return 0.
+Constraints:
+	n == aliceValues.length == bobValues.length
+	1 <= n <= 105
+	1 <= aliceValues[i], bobValues[i] <= 100

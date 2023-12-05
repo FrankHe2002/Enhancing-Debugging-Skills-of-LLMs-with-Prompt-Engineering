@@ -5,3 +5,7 @@ You would like to reformat the phone number in a certain manner. Firstly, remove
 	4 digits: Two blocks of length 2 each.
 The blocks are then joined by dashes. Notice that the reformatting process should never produce any blocks of length 1 and produce at most two blocks of length 2.
 Return the phone number after formatting.
+Constraints:
+	2 <= number.length <= 100
+	number consists of digits and the characters '-' and ' '.
+	There are at least two digits in number.

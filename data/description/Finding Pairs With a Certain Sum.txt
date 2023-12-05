@@ -5,3 +5,12 @@ Implement the FindSumPairs class:
 	FindSumPairs(int[] nums1, int[] nums2) Initializes the FindSumPairs object with two integer arrays nums1 and nums2.
 	void add(int index, int val) Adds val to nums2[index], i.e., apply nums2[index] += val.
 	int count(int tot) Returns the number of pairs (i, j) such that nums1[i] + nums2[j] == tot.
+Constraints:
+	1 <= nums1.length <= 1000
+	1 <= nums2.length <= 105
+	1 <= nums1[i] <= 109
+	1 <= nums2[i] <= 105
+	0 <= index < nums2.length
+	1 <= val <= 105
+	1 <= tot <= 109
+	At most 1000 calls are made to add and count each.

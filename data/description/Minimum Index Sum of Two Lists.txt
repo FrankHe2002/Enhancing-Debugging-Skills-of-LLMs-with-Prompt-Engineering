@@ -1,2 +1,8 @@
 Suppose Andy and Doris want to choose a restaurant for dinner, and they both have a list of favorite restaurants represented by strings.
 You need to help them find out their common interest with the least list index sum. If there is a choice tie between answers, output all of them with no order requirement. You could assume there always exists an answer.
+Constraints:
+	1 <= list1.length, list2.length <= 1000
+	1 <= list1[i].length, list2[i].length <= 30
+	list1[i] and list2[i] consist of spaces ' ' and English letters.
+	All the stings of list1 are unique.
+	All the stings of list2are unique.

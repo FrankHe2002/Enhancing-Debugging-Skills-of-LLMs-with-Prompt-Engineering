@@ -5,3 +5,5 @@ You are given an integer num. You will apply the following steps exactly two tim
 	The new integer cannot have any leading zeros, also the new integer cannot be 0.
 Let a and b be the results of applying the operations to num the first and second times, respectively.
 Return the max difference between a and b.
+Constraints:
+	1 <= num <= 108

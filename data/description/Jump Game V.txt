@@ -4,3 +4,7 @@ Given an array ofintegers arr and an integer d. In one step you can jump from in
 In addition, you can only jump from index i to index jif arr[i] > arr[j] and arr[i] > arr[k] for all indices k between i and j (More formally min(i,j) < k < max(i, j)).
 You can choose any index of the array and start jumping. Return the maximum number of indicesyou can visit.
 Notice that you can not jump outside of the array at any time.
+Constraints:
+	1 <= arr.length <= 1000
+	1 <= arr[i] <= 105
+	1 <= d <= arr.length

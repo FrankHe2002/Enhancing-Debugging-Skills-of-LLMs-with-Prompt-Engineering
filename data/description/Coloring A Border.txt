@@ -3,3 +3,10 @@ Two squares belong to the same connected component if they have the same color a
 The border of a connected component is all the squares in the connected component that are either 4-directionally adjacent to a square not in the component, or on the boundary of the grid (the first or last row or column).
 You should color the border of the connected component that contains the square grid[row][col] with color.
 Return the final grid.
+Constraints:
+	m == grid.length
+	n == grid[i].length
+	1 <= m, n <= 50
+	1 <= grid[i][j], color <= 1000
+	0 <= row < m
+	0 <= col < n

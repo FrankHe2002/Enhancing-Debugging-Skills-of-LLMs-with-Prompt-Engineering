@@ -7,3 +7,9 @@ The syntax for these expressions is given as follows.
 	A mult expression takes the form "(mult e1 e2)" where mult is always the string "mult", there are always two expressions e1, e2 and the result is the multiplication of the evaluation of e1 and the evaluation of e2.
 	For this question, we will use a smaller subset of variable names. A variable starts with a lowercase letter, then zero or more lowercase letters or digits. Additionally, for your convenience, the names "add", "let", and "mult" are protected and will never be used as variable names.
 	Finally, there is the concept of scope. When an expression of a variable name is evaluated, within the context of that evaluation, the innermost scope (in terms of parentheses) is checked first for the value of that variable, and then outer scopes are checked sequentially. It is guaranteed that every expression is legal. Please see the examples for more details on the scope.
+Constraints:
+	1 <= expression.length <= 2000
+	There are no leading or trailing spaces in expression.
+	All tokens are separated by a single space in expression.
+	The answer and all intermediate calculations of that answer are guaranteed to fit in a 32-bit integer.
+	The expression is guaranteed to be legal and evaluate to an integer.

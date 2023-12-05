@@ -5,3 +5,6 @@ The happiness of each person is calculated as follows:
 	Extroverts start with 40 happiness and gain 20 happiness for each neighbor (introvert or extrovert).
 Neighbors live in the directly adjacent cells north, east, south, and west of a person's cell.
 The grid happiness is the sum of each person's happiness. Return the maximum possible grid happiness.
+Constraints:
+	1 <= m, n <= 5
+	0 <= introvertsCount, extrovertsCount <= min(m * n, 6)

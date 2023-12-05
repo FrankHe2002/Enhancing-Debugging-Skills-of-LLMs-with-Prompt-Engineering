@@ -10,3 +10,8 @@ Note that the strings in words should be grouped in such a manner that a string 
 Return an array ans of size 2 where:
 	ans[0] is the maximum number of groups words can be divided into, and
 	ans[1] is the size of the largest group.
+Constraints:
+	1 <= words.length <= 2 * 104
+	1 <= words[i].length <= 26
+	words[i] consists of lowercase English letters only.
+	No letter occurs more than once in words[i].

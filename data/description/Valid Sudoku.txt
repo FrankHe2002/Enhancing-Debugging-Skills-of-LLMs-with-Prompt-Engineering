@@ -5,3 +5,7 @@ Determine if a9 x 9 Sudoku boardis valid.Only the filled cells need to be valida
 
 	A Sudoku board (partially filled) could be valid but is not necessarily solvable.
 	Only the filled cells need to be validated according to the mentionedrules.
+Constraints:
+	board.length == 9
+	board[i].length == 9
+	board[i][j] is a digit 1-9 or '.'.

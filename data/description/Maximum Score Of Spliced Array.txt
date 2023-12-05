@@ -5,3 +5,7 @@ You may choose to apply the mentioned operation once or not do anything.
 The score of the arrays is the maximum of sum(nums1) and sum(nums2), where sum(arr) is the sum of all the elements in the array arr.
 Return the maximum possible score.
 A subarray is a contiguous sequence of elements within an array. arr[left...right] denotes the subarray that contains the elements of nums between indices left and right (inclusive).
+Constraints:
+	n == nums1.length == nums2.length
+	1 <= n <= 105
+	1 <= nums1[i], nums2[i] <= 104

@@ -6,3 +6,7 @@ The difference in sums of the two parts is denoted as sumfirst - sumsecond.
 	For example, if sumfirst = 3 and sumsecond = 2, their difference is 1.
 	Similarly, if sumfirst = 2 and sumsecond = 3, their difference is -1.
 Return the minimum difference possible between the sums of the two parts after the removal of n elements.
+Constraints:
+	nums.length == 3 * n
+	1 <= n <= 105
+	1 <= nums[i] <= 105

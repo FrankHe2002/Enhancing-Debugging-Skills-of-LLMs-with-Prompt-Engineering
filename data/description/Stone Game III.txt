@@ -4,3 +4,6 @@ The score of each player is the sum of the values of the stones taken. The score
 The objective of the game is to end with the highest score, and the winner is the player with the highest score and there could be a tie. The game continues until all the stones have been taken.
 Assume Alice and Bob play optimally.
 Return "Alice" if Alice will win, "Bob" if Bob will win, or "Tie" if they will end the game with the same score.
+Constraints:
+	1 <= stoneValue.length <= 5 * 104
+	-1000 <= stoneValue[i] <= 1000

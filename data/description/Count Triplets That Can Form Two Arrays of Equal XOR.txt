@@ -5,3 +5,6 @@ Let's define a and b as follows:
 	b = arr[j] ^ arr[j + 1] ^ ... ^ arr[k]
 Note that ^ denotes the bitwise-xor operation.
 Return the number of triplets (i, j and k) Where a == b.
+Constraints:
+	1 <= arr.length <= 300
+	1 <= arr[i] <= 108

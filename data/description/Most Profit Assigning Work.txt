@@ -4,3 +4,9 @@ You have n jobs and m workers. You are given three arrays: difficulty, profit, a
 Every worker can be assigned at most one job, but one job can be completed multiple times.
 	For example, if three workers attempt the same job that pays $1, then the total profit will be $3. If a worker cannot complete any job, their profit is $0.
 Return the maximum profit we can achieve after assigning the workers to the jobs.
+Constraints:
+	n == difficulty.length
+	n == profit.length
+	m == worker.length
+	1 <= n, m <= 104
+	1 <= difficulty[i], profit[i], worker[i] <= 105

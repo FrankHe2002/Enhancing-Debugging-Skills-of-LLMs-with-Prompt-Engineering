@@ -8,3 +8,7 @@ The safe has a peculiar way of checking the password. When you enter in a sequen
 		After typing 4, the most recent 3 digits is "234", which is incorrect.
 		After typing 5, the most recent 3 digits is "345", which is correct and the safe unlocks.
 Return any string of minimum length that will unlock the safe at some point of entering it.
+Constraints:
+	1 <= n <= 4
+	1 <= k <= 10
+	1 <= kn <= 4096

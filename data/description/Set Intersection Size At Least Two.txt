@@ -1,2 +1,6 @@
 An integer interval [a, b] (for integers a < b) is a set of all consecutive integers from a to b, including a and b.
 Find the minimum size of a set S such that for every integer interval A in intervals, the intersection of S with A has a size of at least two.
+Constraints:
+	1 <= intervals.length <= 3000
+	intervals[i].length == 2
+	0 <= ai <bi <= 108

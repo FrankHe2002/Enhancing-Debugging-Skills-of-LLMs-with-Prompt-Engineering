@@ -1,3 +1,6 @@
 Given a string s. In one step you can insert any character at any index of the string.
 Return the minimum number of steps to make spalindrome.
 APalindrome Stringis one that reads the same backward as well as forward.
+Constraints:
+	1 <= s.length <= 500
+	s consists of lowercase English letters.

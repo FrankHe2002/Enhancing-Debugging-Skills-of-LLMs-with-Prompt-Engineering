@@ -5,3 +5,12 @@ Remove two distinct edges of the tree to form three connected components. For a 
 	The difference between the largest XOR value and the smallest XOR value is the score of the pair.
 	For example, say the three components have the node values: [4,5,7], [1,9], and [3,3,3]. The three XOR values are 4 ^ 5 ^ 7 = 6, 1 ^ 9 = 8, and 3 ^ 3 ^ 3 = 3. The largest XOR value is 8 and the smallest XOR value is 3. The score is then 8 - 3 = 5.
 Return the minimum score of any possible pair of edge removals on the given tree.
+Constraints:
+	n == nums.length
+	3 <= n <= 1000
+	1 <= nums[i] <= 108
+	edges.length == n - 1
+	edges[i].length == 2
+	0 <= ai, bi < n
+	ai != bi
+	edges represents a valid tree.

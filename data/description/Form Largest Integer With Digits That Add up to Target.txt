@@ -3,3 +3,6 @@ Given an array of integers cost and an integer target, return the maximum intege
 	The total cost used must be equal to target.
 	The integer does not have 0 digits.
 Since the answer may be very large, return it as a string. If there is no way to paint any integer given the condition, return "0".
+Constraints:
+	cost.length == 9
+	1 <= cost[i], target <= 5000

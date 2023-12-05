@@ -5,3 +5,11 @@ Tax is calculated as follows:
 	The next upper2 - upper1 dollars earned are taxed at a rate of percent2.
 	And so on.
 You are given an integer income representing the amount of money you earned. Return the amount of money that you have to pay in taxes. Answers within 10-5 of the actual answer will be accepted.
+Constraints:
+	1 <= brackets.length <= 100
+	1 <= upperi <= 1000
+	0 <= percenti <= 100
+	0 <= income <= 1000
+	upperi is sorted in ascending order.
+	All the values of upperi are unique.
+	The upper bound of the last tax bracket is greater than or equal to income.

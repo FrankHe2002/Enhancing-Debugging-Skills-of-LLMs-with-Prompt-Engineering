@@ -4,3 +4,6 @@ The GCD of a sequence of numbers is defined as the greatest integer that divides
 A subsequence of an array is a sequence that can be formed by removing some elements (possibly none) of the array.
 	For example, [2,5,10] is a subsequence of [1,2,1,2,4,1,5,10].
 Return the number of different GCDs among all non-empty subsequences of nums.
+Constraints:
+	1 <= nums.length <= 105
+	1 <= nums[i] <= 2 * 105

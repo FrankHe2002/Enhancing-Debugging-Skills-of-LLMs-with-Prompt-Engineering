@@ -12,3 +12,9 @@ Also, nothing else such as defines or macros will interfere with the comments.
 It is guaranteed that every open block comment will eventually be closed, so "/*" outside of a line or block comment always starts a new comment.
 Finally, implicit newline characters can be deleted by block comments. Please see the examples below for details.
 After removing the comments from the source code, return the source code in the same format.
+Constraints:
+	1 <= source.length <= 100
+	0 <= source[i].length <= 80
+	source[i] consists of printable ASCII characters.
+	Every open block comment is eventually closed.
+	There are no single-quote ordouble-quote in the input.

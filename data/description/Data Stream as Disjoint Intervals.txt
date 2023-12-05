@@ -3,3 +3,6 @@ Implement the SummaryRanges class:
 	SummaryRanges() Initializes the object with an empty stream.
 	void addNum(int val) Adds the integer val to the stream.
 	int[][] getIntervals() Returns a summary of the integers in the stream currently as a list of disjoint intervals [starti, endi].
+Constraints:
+	0 <= val <= 104
+	At most 3 * 104 calls will be made to addNum and getIntervals.

@@ -1,3 +1,8 @@
 You are given an array of points in the X-Y plane points where points[i] = [xi, yi].
 Return the minimum area of any rectangle formed from these points, with sides not necessarily parallel to the X and Y axes. If there is not any such rectangle, return 0.
 Answers within 10-5 of the actual answer will be accepted.
+Constraints:
+	1 <= points.length <= 50
+	points[i].length == 2
+	0 <= xi, yi <= 4 * 104
+	All the given points are unique.

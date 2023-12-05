@@ -3,3 +3,10 @@ You are given a string keysPressed of length n, where keysPressed[i] was the ith
 The tester wants to know the key of the keypress that had the longest duration. The ith keypress had a duration of releaseTimes[i] - releaseTimes[i - 1], and the 0th keypress had a duration of releaseTimes[0].
 Note that the same key could have been pressed multiple times during the test, and these multiple presses of the same key may not have had the same duration.
 Return the key of the keypress that had the longest duration. If there are multiple such keypresses, return the lexicographically largest key of the keypresses.
+Constraints:
+	releaseTimes.length == n
+	keysPressed.length == n
+	2 <= n <= 1000
+	1 <= releaseTimes[i] <= 109
+	releaseTimes[i] < releaseTimes[i+1]
+	keysPressed contains only lowercase English letters.

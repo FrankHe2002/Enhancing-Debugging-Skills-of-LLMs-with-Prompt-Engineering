@@ -5,3 +5,6 @@ Two strings are considered close if you can attain one from the other using the 
 		For example, aacabb -> bbcbaa (all a's turn into b's, and all b's turn into a's)
 You can use the operations on either string as many times as necessary.
 Given two strings, word1 and word2, return true if word1 and word2 are close, and false otherwise.
+Constraints:
+	1 <= word1.length, word2.length <= 105
+	word1 and word2 containonly lowercase English letters.

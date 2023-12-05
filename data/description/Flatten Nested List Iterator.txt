@@ -10,3 +10,6 @@ while iterator.hasNext()
     append iterator.next() to the end of res
 return res
 If res matches the expected flattened list, then your code will be judged as correct.
+Constraints:
+	1 <= nestedList.length <= 500
+	The values of the integers in the nested list is in the range [-106, 106].

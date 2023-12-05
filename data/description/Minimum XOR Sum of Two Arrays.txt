@@ -3,3 +3,8 @@ The XOR sum of the two integer arrays is (nums1[0] XOR nums2[0]) + (nums1[1] XOR
 	For example, the XOR sum of [1,2,3] and [3,2,1] is equal to (1 XOR 3) + (2 XOR 2) + (3 XOR 1) = 2 + 0 + 2 = 4.
 Rearrange the elements of nums2 such that the resulting XOR sum is minimized.
 Return the XOR sum after the rearrangement.
+Constraints:
+	n == nums1.length
+	n == nums2.length
+	1 <= n <= 14
+	0 <= nums1[i], nums2[i] <= 107

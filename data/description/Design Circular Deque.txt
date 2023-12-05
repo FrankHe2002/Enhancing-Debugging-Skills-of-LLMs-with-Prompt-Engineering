@@ -9,3 +9,7 @@ Implement the MyCircularDeque class:
 	int getRear() Returns the last item from Deque. Returns -1 if the deque is empty.
 	boolean isEmpty() Returns true if the deque is empty, or false otherwise.
 	boolean isFull() Returns true if the deque is full, or false otherwise.
+Constraints:
+	1 <= k <= 1000
+	0 <= value <= 1000
+	At most 2000 calls will be made to insertFront, insertLast, deleteFront, deleteLast, getFront, getRear, isEmpty, isFull.

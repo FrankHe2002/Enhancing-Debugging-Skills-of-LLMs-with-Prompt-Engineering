@@ -2,3 +2,5 @@ n passengers board an airplane with exactly n seats. The first passenger has los
 	Take their own seat if it is still available, and
 	Pick other seats randomly when they find their seat occupied
 Return the probability that the nth person gets his own seat.
+Constraints:
+	1 <= n <= 105

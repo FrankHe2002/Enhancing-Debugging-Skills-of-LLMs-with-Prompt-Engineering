@@ -5,3 +5,9 @@ You have k servers numbered from 0 to k-1 that are being used to handle multiple
 	Otherwise, assign the request to the next available server (wrapping around the list of servers and starting from 0 if necessary). For example, if the ith server is busy, try to assign the request to the (i+1)th server, then the (i+2)th server, and so on.
 You are given a strictly increasing array arrival of positive integers, where arrival[i] represents the arrival time of the ith request, and another array load, where load[i] represents the load of the ith request (the time it takes to complete). Your goal is to find the busiest server(s). A server is considered busiest if it handled the most number of requests successfully among all the servers.
 Return a list containing the IDs (0-indexed) of the busiest server(s). You may return the IDs in any order.
+Constraints:
+	1 <= k <= 105
+	1 <= arrival.length, load.length <= 105
+	arrival.length == load.length
+	1 <= arrival[i], load[i] <= 109
+	arrival is strictly increasing.

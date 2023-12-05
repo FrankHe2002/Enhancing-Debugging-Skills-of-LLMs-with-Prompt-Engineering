@@ -1,2 +1,7 @@
 You are given a string number representing a positive integer and a character digit.
 Return the resulting string after removing exactly one occurrence of digit from number such that the value of the resulting string in decimal form is maximized. The test cases are generated such that digit occurs at least once in number.
+Constraints:
+	2 <= number.length <= 100
+	number consists of digits from '1' to '9'.
+	digit is a digit from '1' to '9'.
+	digit occurs at least once in number.

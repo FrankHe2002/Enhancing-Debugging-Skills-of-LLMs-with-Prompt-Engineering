@@ -1,2 +1,4 @@
 Given an integer num, find the closest two integers in absolute difference whose product equalsnum + 1or num + 2.
 Return the two integers in any order.
+Constraints:
+	1 <= num <= 10^9

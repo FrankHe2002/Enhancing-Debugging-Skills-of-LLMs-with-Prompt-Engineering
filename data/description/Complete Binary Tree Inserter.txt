@@ -4,3 +4,9 @@ Implement the CBTInserter class:
 	CBTInserter(TreeNode root) Initializes the data structure with the root of the complete binary tree.
 	int insert(int v) Inserts a TreeNode into the tree with value Node.val == val so that the tree remains complete, and returns the value of the parent of the inserted TreeNode.
 	TreeNode get_root() Returns the root node of the tree.
+Constraints:
+	The number of nodes in the tree will be in the range [1, 1000].
+	0 <= Node.val <= 5000
+	root is a complete binary tree.
+	0 <= val <= 5000
+	At most 104 calls will be made to insert and get_root.

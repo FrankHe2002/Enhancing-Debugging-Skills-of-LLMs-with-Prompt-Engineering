@@ -1,2 +1,4 @@
 Given a non-negative integer x,compute and return the square root of x.
 Since the return typeis an integer, the decimal digits are truncated, and only the integer part of the resultis returned.
+Constraints:
+	0 <= x <= 231 - 1

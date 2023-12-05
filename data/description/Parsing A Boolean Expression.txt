@@ -5,3 +5,7 @@ An expression can either be:
 	"!(expr)", evaluating to the logical NOT of the inner expression expr;
 	"&(expr1,expr2,...)", evaluating to the logical AND of 2 or more inner expressions expr1, expr2, ...;
 	"|(expr1,expr2,...)", evaluating to the logical OR of 2 or more inner expressions expr1, expr2, ...
+Constraints:
+	1 <= expression.length <= 2 * 104
+	expression[i] consists of characters in {'(', ')', '&', '|', '!', 't', 'f', ','}.
+	expression is a valid expression representing a boolean, as given in the description.

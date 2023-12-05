@@ -10,3 +10,7 @@ You are given integers startAt, moveCost, pushCost, and targetSeconds. Initially
 There can be multiple ways to set the microwave to cook for targetSeconds seconds but you are interested in the way with the minimum cost.
 Return the minimum cost to set targetSeconds seconds of cooking time.
 Remember that one minute consists of 60 seconds.
+Constraints:
+	0 <= startAt <= 9
+	1 <= moveCost, pushCost <= 105
+	1 <= targetSeconds <= 6039

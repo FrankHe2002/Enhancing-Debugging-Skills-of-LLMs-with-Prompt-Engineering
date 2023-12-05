@@ -3,3 +3,7 @@ You need to distribute all products to the retail stores following these rules:
 	A store can only be given at most one product type but can be given any amount of it.
 	After distribution, each store will have been given some number of products (possibly 0). Let x represent the maximum number of products given to any store. You want x to be as small as possible, i.e., you want to minimize the maximum number of products that are given to any store.
 Return the minimum possible x.
+Constraints:
+	m == quantities.length
+	1 <= m <= n <= 105
+	1 <= quantities[i] <= 105

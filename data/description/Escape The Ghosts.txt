@@ -2,3 +2,10 @@ You are playing a simplified PAC-MAN game on an infinite 2-D grid. You start at 
 Each turn, you and all the ghosts may independently choose to either move 1 unit in any of the four cardinal directions: north, east, south, or west, or stay still. All actions happen simultaneously.
 You escape if and only if you can reach the target before any ghost reaches you. If you reach any square (including the target) at the same time as a ghost, it does not count as an escape.
 Return true if it is possible to escape regardless of how the ghosts move, otherwise return false.
+Constraints:
+	1 <= ghosts.length <= 100
+	ghosts[i].length == 2
+	-104 <= xi, yi <= 104
+	There can be multiple ghosts in the same location.
+	target.length == 2
+	-104 <= xtarget, ytarget <= 104

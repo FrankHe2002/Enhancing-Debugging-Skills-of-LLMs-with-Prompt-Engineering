@@ -4,3 +4,8 @@ Implement the DinnerPlates class:
 	void push(int val) Pushes the given integer val into the leftmost stack with a size less than capacity.
 	int pop() Returns the value at the top of the rightmost non-empty stack and removes it from that stack, and returns -1 if all the stacks are empty.
 	int popAtStack(int index) Returns the value at the top of the stack with the given index index and removes it from that stack or returns -1 if the stack with that given index is empty.
+Constraints:
+	1 <= capacity <= 2 * 104
+	1 <= val <= 2 * 104
+	0 <= index <= 105
+	At most 2 * 105 calls will be made to push, pop, and popAtStack.

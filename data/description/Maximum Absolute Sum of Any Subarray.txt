@@ -3,3 +3,6 @@ Return the maximum absolute sum of any (possibly empty) subarray of nums.
 Note that abs(x) is defined as follows:
 	If x is a negative integer, then abs(x) = -x.
 	If x is a non-negative integer, then abs(x) = x.
+Constraints:
+	1 <= nums.length <= 105
+	-104 <= nums[i] <= 104

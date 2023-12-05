@@ -3,3 +3,6 @@ The XOR total of an array is defined as the bitwise XOR of all its elements, or 
 Given an array nums, return the sum of all XOR totals for every subset of nums.
 
 An array a is a subset of an array b if a can be obtained from b by deleting some (possibly zero) elements of b.
+Constraints:
+	1 <= nums.length <= 12
+	1 <= nums[i] <= 20

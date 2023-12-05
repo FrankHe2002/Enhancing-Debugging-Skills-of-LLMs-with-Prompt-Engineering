@@ -6,3 +6,7 @@ There are 3n piles of coins of varying size, you and your friends will take pile
 	Repeat until there are no more piles of coins.
 Given an array of integers piles where piles[i] is the number of coins in the ith pile.
 Return the maximum number of coins that you can have.
+Constraints:
+	3 <= piles.length <= 105
+	piles.length % 3 == 0
+	1 <= piles[i] <= 104

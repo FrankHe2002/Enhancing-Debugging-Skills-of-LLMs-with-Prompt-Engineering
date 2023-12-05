@@ -11,3 +11,10 @@ Given a graph, and assuming both players play optimally, return
 	1if the mouse wins the game,
 	2if the cat wins the game, or
 	0if the game is a draw.
+Constraints:
+	3 <= graph.length <= 50
+	1<= graph[i].length < graph.length
+	0 <= graph[i][j] < graph.length
+	graph[i][j] != i
+	graph[i] is unique.
+	The mouse and the cat can always move.

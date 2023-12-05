@@ -5,3 +5,9 @@ Return the maximum amount of gold you can collect under the conditions:
 	You can't visit the same cell more than once.
 	Never visit a cell with 0 gold.
 	You can start and stop collecting gold from any position in the grid that has some gold.
+Constraints:
+	m == grid.length
+	n == grid[i].length
+	1 <= m, n <= 15
+	0 <= grid[i][j] <= 100
+	There are at most 25 cells containing gold.

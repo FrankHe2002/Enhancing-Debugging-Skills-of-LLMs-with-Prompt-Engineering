@@ -1,2 +1,6 @@
 An ugly number is a positive integer that is divisible by a, b, or c.
 Given four integers n, a, b, and c, return the nth ugly number.
+Constraints:
+	1 <= n, a, b, c <= 109
+	1 <= a * b * c <= 1018
+	It is guaranteed that the result will be in range [1, 2 * 109].

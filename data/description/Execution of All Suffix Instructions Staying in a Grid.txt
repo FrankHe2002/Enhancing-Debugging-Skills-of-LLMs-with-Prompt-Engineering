@@ -4,3 +4,9 @@ The robot can begin executing from any ith instruction in s. It executes the ins
 	The next instruction will move the robot off the grid.
 	There are no more instructions left to execute.
 Return an array answer of length m where answer[i] is the number of instructions the robot can execute if the robot begins executing from the ith instruction in s.
+Constraints:
+	m == s.length
+	1 <= n, m <= 500
+	startPos.length == 2
+	0 <= startrow, startcol < n
+	s consists of 'L', 'R', 'U', and 'D'.

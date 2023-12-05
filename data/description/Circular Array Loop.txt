@@ -7,3 +7,7 @@ A cycle in the array consists of a sequence of indices seq of length k where:
 	Every nums[seq[j]] is either all positive or all negative.
 	k > 1
 Return true if there is a cycle in nums, or false otherwise.
+Constraints:
+	1 <= nums.length <= 5000
+	-1000 <= nums[i] <= 1000
+	nums[i] != 0

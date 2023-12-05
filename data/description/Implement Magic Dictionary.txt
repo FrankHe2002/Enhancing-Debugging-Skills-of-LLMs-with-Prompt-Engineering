@@ -3,3 +3,12 @@ Implement theMagicDictionaryclass:
 	MagicDictionary()Initializes the object.
 	void buildDict(String[]dictionary)Sets the data structurewith an array of distinct strings dictionary.
 	bool search(String searchWord) Returns true if you can change exactly one character in searchWord to match any string in the data structure, otherwise returns false.
+Constraints:
+	1 <=dictionary.length <= 100
+	1 <=dictionary[i].length <= 100
+	dictionary[i] consists of only lower-case English letters.
+	All the strings indictionaryare distinct.
+	1 <=searchWord.length <= 100
+	searchWordconsists of only lower-case English letters.
+	buildDictwill be called only once before search.
+	At most 100 calls will be made to search.

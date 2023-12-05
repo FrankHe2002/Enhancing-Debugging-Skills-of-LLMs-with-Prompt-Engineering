@@ -4,3 +4,10 @@ You are also given k queries in a 2D array queries where queries[j] = [preferred
 	abs(id - preferredj) is minimized, where abs(x) is the absolute value of x.
 If there is a tie in the absolute difference, then use the room with the smallest such id. If there is no such room, the answer is -1.
 Return an array answer of length k where answer[j] contains the answer to the jth query.
+Constraints:
+	n == rooms.length
+	1 <= n <= 105
+	k == queries.length
+	1 <= k <= 104
+	1 <= roomIdi, preferredj <= 107
+	1 <= sizei, minSizej <= 107

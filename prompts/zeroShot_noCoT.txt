@@ -1,0 +1,9 @@
+The provided Java code may be buggy. Fix the bug if one exists, using minimal changes. Do not reorganize. Do not optimize. Do not provide explanation or justification. Format your code in markdown.
+
+Code Description:
+{description}
+
+Code:
+```java
+{code_content}
+```

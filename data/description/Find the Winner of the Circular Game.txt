@@ -6,3 +6,7 @@ The rules of the game are as follows:
 	If there is still more than one friend in the circle, go back to step 2 starting from the friend immediately clockwise of the friend who just lost and repeat.
 	Else, the last friend in the circle wins the game.
 Given the number of friends, n, and an integer k, return the winner of the game.
+Constraints:
+	1 <= k <= n <= 500
+
+Could you solve this problem in linear time with constant space?

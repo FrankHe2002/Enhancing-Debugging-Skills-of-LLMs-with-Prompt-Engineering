@@ -6,3 +6,9 @@ Now the binary tree is contaminated, which means all treeNode.val have been chan
 Implement the FindElements class:
 	FindElements(TreeNode* root) Initializes the object with a contaminated binary tree and recovers it.
 	bool find(int target) Returns true if the target value exists in the recovered binary tree.
+Constraints:
+	TreeNode.val == -1
+	The height of the binary tree is less than or equal to 20
+	The total number of nodes is between [1, 104]
+	Total calls of find() is between [1, 104]
+	0 <= target <= 106

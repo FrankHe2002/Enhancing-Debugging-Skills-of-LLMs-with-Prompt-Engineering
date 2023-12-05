@@ -5,3 +5,11 @@ Given an array houses, an m x n matrix cost and an integer target where:
 	houses[i]: is the color of the house i, and 0 if the house is not painted yet.
 	cost[i][j]: is the cost of paint the house i with the color j + 1.
 Return the minimum cost of painting all the remaining houses in such a way that there are exactly target neighborhoods. If it is not possible, return -1.
+Constraints:
+	m == houses.length == cost.length
+	n == cost[i].length
+	1 <= m <= 100
+	1 <= n <= 20
+	1 <= target <= m
+	0 <= houses[i] <= n
+	1 <= cost[i][j] <= 104

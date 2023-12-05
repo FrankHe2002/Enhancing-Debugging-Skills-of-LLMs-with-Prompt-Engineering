@@ -4,3 +4,7 @@ There is a pizza with 3n slices of varying size, you and your friends will take 
 	Your friend Bob will pick the next slice in the clockwise direction of your pick.
 	Repeat until there are no more slices of pizzas.
 Given an integer array slices that represent the sizes of the pizza slices in a clockwise direction, return the maximum possible sum of slice sizes that you can pick.
+Constraints:
+	3 * n == slices.length
+	1 <= slices.length <= 500
+	1 <= slices[i] <= 1000

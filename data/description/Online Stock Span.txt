@@ -4,3 +4,6 @@ The span of the stock's price today is defined as the maximum number of consecut
 Implement the StockSpanner class:
 	StockSpanner() Initializes the object of the class.
 	int next(int price) Returns the span of the stock's price given that today's price is price.
+Constraints:
+	1 <= price <= 105
+	At most 104 calls will be made to next.

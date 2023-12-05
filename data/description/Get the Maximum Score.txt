@@ -5,3 +5,7 @@ A valid path is defined as follows:
 	If you are reading any value that is present in nums1 and nums2 you are allowed to change your path to the other array. (Only one repeated value is considered in the valid path).
 The score is defined as the sum of uniques values in a valid path.
 Return the maximum score you can obtain of all possible valid paths. Since the answer may be too large, return it modulo 109 + 7.
+Constraints:
+	1 <= nums1.length, nums2.length <= 105
+	1 <= nums1[i], nums2[i] <= 107
+	nums1 and nums2 are strictly increasing.

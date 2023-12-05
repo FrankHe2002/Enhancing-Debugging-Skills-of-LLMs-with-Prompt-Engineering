@@ -7,3 +7,6 @@ By listing and labeling all of the permutations in order, we get the following s
 	"312"
 	"321"
 Given n and k, return the kth permutation sequence.
+Constraints:
+	1 <= n <= 9
+	1 <= k <= n!

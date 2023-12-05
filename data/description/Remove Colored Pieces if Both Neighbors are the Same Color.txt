@@ -5,3 +5,6 @@ Alice and Bob are playing a game where they take alternating turns removing piec
 	Alice and Bob cannot remove pieces from the edge of the line.
 	If a player cannot make a move on their turn, that player loses and the other player wins.
 Assuming Alice and Bob play optimally, return true if Alice wins, or return false if Bob wins.
+Constraints:
+	1 <=colors.length <= 105
+	colorsconsists of only the letters'A'and'B'

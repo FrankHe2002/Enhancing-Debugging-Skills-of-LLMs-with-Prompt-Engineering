@@ -8,3 +8,8 @@ You are given an m x n matrix of parentheses grid. A valid parentheses string pa
 	The path only ever moves down or right.
 	The resulting parentheses string formed by the path is valid.
 Return true if there exists a valid parentheses string path in the grid. Otherwise, return false.
+Constraints:
+	m == grid.length
+	n == grid[i].length
+	1 <= m, n <= 100
+	grid[i][j] is either '(' or ')'.

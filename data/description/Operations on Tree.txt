@@ -11,3 +11,12 @@ Implement the LockingTree class:
 	lock(int num, int user) returns true if it is possible for the user with id user to lock the node num, or false otherwise. If it is possible, the node num will become locked by the user with id user.
 	unlock(int num, int user) returns true if it is possible for the user with id user to unlock the node num, or false otherwise. If it is possible, the node num will become unlocked.
 	upgrade(int num, int user) returns true if it is possible for the user with id user to upgrade the node num, or false otherwise. If it is possible, the node num will be upgraded.
+Constraints:
+	n == parent.length
+	2 <= n <= 2000
+	0 <= parent[i] <= n - 1 for i != 0
+	parent[0] == -1
+	0 <= num <= n - 1
+	1 <= user <= 104
+	parent represents a valid tree.
+	At most 2000 calls in total will be made to lock, unlock, and upgrade.

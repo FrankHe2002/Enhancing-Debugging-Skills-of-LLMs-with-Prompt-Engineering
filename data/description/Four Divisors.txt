@@ -1,1 +1,4 @@
 Given an integer array nums, return the sum of divisors of the integers in that array that have exactly four divisors. If there is no such integer in the array, return 0.
+Constraints:
+	1 <= nums.length <= 104
+	1 <= nums[i] <= 105

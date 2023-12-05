@@ -5,3 +5,7 @@ A token is a valid word if all three of the following are true:
 	There is at most one punctuation mark. If present, it must be at the end of the token ("ab,", "cd!", and "." are valid, but "a!b" and "c.," are not valid).
 Examples of valid words include "a-b.", "afad", "ba-c", "a!", and "!".
 Given a string sentence, return the number of valid words in sentence.
+Constraints:
+	1 <= sentence.length <= 1000
+	sentence only contains lowercase English letters, digits, ' ', '-', '!', '.', and ','.
+	There will be at least1 token.

@@ -4,3 +4,7 @@ You are given a 0-indexed integer array nums and an integer pivot. Rearrange num
 	The relative order of the elements less than pivot and the elements greater than pivot is maintained.
 		More formally, consider every pi, pj where pi is the new position of the ith element and pj is the new position of the jth element. For elements less than pivot, if i < j and nums[i] < pivot and nums[j] < pivot, then pi < pj. Similarly for elements greater than pivot, if i < j and nums[i] > pivot and nums[j] > pivot, then pi < pj.
 Return nums after the rearrangement.
+Constraints:
+	1 <= nums.length <= 105
+	-106 <= nums[i] <= 106
+	pivot equals to an element of nums.

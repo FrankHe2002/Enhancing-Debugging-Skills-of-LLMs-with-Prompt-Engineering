@@ -8,3 +8,8 @@ Alice and Bob are opponents in an archery competition. The competition has set t
 You are given the integer numArrows and an integer array aliceArrows of size 12, which represents the number of arrows Alice shot on each scoring section from 0 to 11. Now, Bob wants to maximize the total number of points he can obtain.
 Return the array bobArrows which represents the number of arrows Bob shot on each scoring section from 0 to 11. The sum of the values in bobArrows should equal numArrows.
 If there are multiple ways for Bob to earn the maximum total points, return any one of them.
+Constraints:
+	1 <= numArrows <= 105
+	aliceArrows.length == bobArrows.length == 12
+	0 <= aliceArrows[i], bobArrows[i] <= numArrows
+	sum(aliceArrows[i]) == numArrows

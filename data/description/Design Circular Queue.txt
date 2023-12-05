@@ -9,3 +9,7 @@ Implementation the MyCircularQueue class:
 	boolean isEmpty() Checks whether the circular queue is empty or not.
 	boolean isFull() Checks whether the circular queue is full or not.
 You must solve the problem without using the built-in queue data structure in your programming language.
+Constraints:
+	1 <= k <= 1000
+	0 <= value <= 1000
+	At most 3000 calls will be made toenQueue, deQueue,Front,Rear,isEmpty, andisFull.

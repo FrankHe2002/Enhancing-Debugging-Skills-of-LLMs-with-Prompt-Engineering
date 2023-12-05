@@ -8,3 +8,11 @@ All replacement operations must occur simultaneously, meaning the replacement op
 	For example, a testcase with s = "abc", indices = [0, 1], and sources = ["ab","bc"] will not be generated because the "ab" and "bc" replacements overlap.
 Return the resulting string after performing all replacement operations on s.
 A substring is a contiguous sequence of characters in a string.
+Constraints:
+	1 <= s.length <= 1000
+	k == indices.length == sources.length == targets.length
+	1 <= k <= 100
+	0 <= indexes[i] < s.length
+	1 <= sources[i].length, targets[i].length <= 50
+	s consists of only lowercase English letters.
+	sources[i] and targets[i] consist of only lowercase English letters.

@@ -12,3 +12,7 @@ Return:
 	2 if ways > 1
 A rooted tree is a tree that has a single root node, and all edges are oriented to be outgoing from the root.
 An ancestor of a node is any node on the path from the root to that node (excluding the node itself). The root has no ancestors.
+Constraints:
+	1 <= pairs.length <= 105
+	1 <= xi < yi <= 500
+	The elements in pairs are unique.

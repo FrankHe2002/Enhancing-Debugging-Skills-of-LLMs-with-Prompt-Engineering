@@ -8,3 +8,6 @@ The array arr is called K-increasing if arr[i-k] <= arr[i] holds for every index
 	However, the same arr is not K-increasing for k = 1 (because arr[0] > arr[1]) or k = 3 (because arr[0] > arr[3]).
 In one operation, you can choose an index i and change arr[i] into any positive integer.
 Return the minimum number of operations required to make the array K-increasing for the given k.
+Constraints:
+	1 <= arr.length <= 105
+	1 <= arr[i], k <= arr.length

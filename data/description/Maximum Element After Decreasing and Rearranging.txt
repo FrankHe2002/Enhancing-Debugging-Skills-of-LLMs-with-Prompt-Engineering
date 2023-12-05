@@ -5,3 +5,6 @@ There are 2 types of operations that you can perform any number of times:
 	Decrease the value of any element of arr to a smaller positive integer.
 	Rearrange the elements of arr to be in any order.
 Return the maximum possible value of an element in arr after performing the operations to satisfy the conditions.
+Constraints:
+	1 <= arr.length <= 105
+	1 <= arr[i] <= 109

@@ -3,3 +3,10 @@ The kth ancestor of a tree node is the kth node in the path from that node to th
 Implement the TreeAncestor class:
 	TreeAncestor(int n, int[] parent) Initializes the object with the number of nodes in the tree and the parent array.
 	int getKthAncestor(int node, int k) return the kth ancestor of the given node node. If there is no such ancestor, return -1.
+Constraints:
+	1 <= k <= n <= 5 * 104
+	parent.length == n
+	parent[0] == -1
+	0 <= parent[i] < n for all 0 < i < n
+	0 <= node < n
+	There will be at most 5 * 104 queries.

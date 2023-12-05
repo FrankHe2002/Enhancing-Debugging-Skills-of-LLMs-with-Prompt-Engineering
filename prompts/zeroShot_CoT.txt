@@ -1,0 +1,9 @@
+The provided Java code may be buggy. Review the Java code and identify the bug type if one exists. Explain the reasoning process, thinking step-by-step, for identifying and fixing the bug. Apply the fix using minimal changes. Do not reorganize or optimize the code. Format your code in markdown in its entirety.
+
+Code Description:
+{description}
+
+Code:
+```java
+{code_content}
+```

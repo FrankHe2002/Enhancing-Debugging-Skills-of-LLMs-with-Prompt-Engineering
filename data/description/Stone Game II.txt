@@ -3,3 +3,6 @@ Aliceand Bob take turns, with Alice starting first. Initially, M = 1.
 On each player's turn, that playercan take all the stones in the first X remaining piles, where 1 <= X <= 2M. Then, we setM = max(M, X).
 The game continues until all the stones have been taken.
 Assuming Alice and Bob play optimally, return the maximum number of stones Alicecan get.
+Constraints:
+	1 <= piles.length <= 100
+	1 <= piles[i]<= 104

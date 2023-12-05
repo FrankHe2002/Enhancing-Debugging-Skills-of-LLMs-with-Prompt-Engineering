@@ -5,3 +5,6 @@ Implement the RangeModule class:
 	void addRange(int left, int right) Adds the half-open interval [left, right), tracking every real number in that interval. Adding an interval that partially overlaps with currently tracked numbers should add any numbers in the interval [left, right) that are not already tracked.
 	boolean queryRange(int left, int right) Returns true if every real number in the interval [left, right) is currently being tracked, and false otherwise.
 	void removeRange(int left, int right) Stops tracking every real number currently being tracked in the half-open interval [left, right).
+Constraints:
+	1 <= left < right <= 109
+	At most 104 calls will be made to addRange, queryRange, and removeRange.

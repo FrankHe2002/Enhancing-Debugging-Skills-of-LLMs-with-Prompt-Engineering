@@ -5,3 +5,6 @@ Return the index with the minimum average difference. If there are multiple such
 	The absolute difference of two numbers is the absolute value of their difference.
 	The average of n elements is the sum of the n elements divided (integer division) by n.
 	The average of 0 elements is considered to be 0.
+Constraints:
+	1 <= nums.length <= 105
+	0 <= nums[i] <= 105

@@ -3,3 +3,15 @@ Consider a sufficient team: a set of people such that for every required skill i
 	For example, team = [0, 1, 3] represents the people with skills people[0], people[1], and people[3].
 Return any sufficient team of the smallest possible size, represented by the index of each person. You may return the answer in any order.
 It is guaranteed an answer exists.
+Constraints:
+	1 <= req_skills.length <= 16
+	1 <= req_skills[i].length <= 16
+	req_skills[i] consists of lowercase English letters.
+	All the strings of req_skills are unique.
+	1 <= people.length <= 60
+	0 <= people[i].length <= 16
+	1 <= people[i][j].length <= 16
+	people[i][j] consists of lowercase English letters.
+	All the strings of people[i] are unique.
+	Every skill in people[i] is a skill in req_skills.
+	It is guaranteed a sufficient team exists.

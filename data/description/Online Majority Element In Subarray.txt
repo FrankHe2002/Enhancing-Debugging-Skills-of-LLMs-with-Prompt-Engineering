@@ -3,3 +3,10 @@ The majority element of a subarray is an element that occurs threshold times or 
 Implementing the MajorityChecker class:
 	MajorityChecker(int[] arr) Initializes the instance of the class with the given array arr.
 	int query(int left, int right, int threshold) returns the element in the subarray arr[left...right] that occurs at least threshold times, or -1 if no such element exists.
+Constraints:
+	1 <= arr.length <= 2 * 104
+	1 <= arr[i] <= 2 * 104
+	0 <= left <= right < arr.length
+	threshold <= right - left + 1
+	2 * threshold > right - left + 1
+	At most 104 calls will be made to query.

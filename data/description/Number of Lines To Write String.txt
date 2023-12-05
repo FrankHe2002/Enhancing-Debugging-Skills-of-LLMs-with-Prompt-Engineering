@@ -3,3 +3,8 @@ You are trying to write s across several lines, where each line is no longer tha
 Return an array result of length 2 where:
 	result[0] is the total number of lines.
 	result[1] is the width of the last line in pixels.
+Constraints:
+	widths.length == 26
+	2 <= widths[i] <= 10
+	1 <= s.length <= 1000
+	s contains only lowercase English letters.

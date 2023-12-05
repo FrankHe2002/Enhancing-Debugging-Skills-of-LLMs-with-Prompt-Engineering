@@ -6,3 +6,6 @@ A ZigZag path for a binary tree is defined as follow:
 	Repeat the second and third steps until you can't move in the tree.
 Zigzag length is defined as the number of nodes visited - 1. (A single node has a length of 0).
 Return the longest ZigZag path contained in that tree.
+Constraints:
+	The number of nodes in the tree is in the range [1, 5 * 104].
+	1 <= Node.val <= 100

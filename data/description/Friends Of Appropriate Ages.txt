@@ -6,3 +6,7 @@ A Person x will not send a friend request to a person y (x != y) if any of the f
 Otherwise, x will send a friend request to y.
 Note that if x sends a request to y, y will not necessarily send a request to x. Also, a person will not send a friend request to themself.
 Return the total number of friend requests made.
+Constraints:
+	n == ages.length
+	1 <= n <= 2 * 104
+	1 <= ages[i] <= 120

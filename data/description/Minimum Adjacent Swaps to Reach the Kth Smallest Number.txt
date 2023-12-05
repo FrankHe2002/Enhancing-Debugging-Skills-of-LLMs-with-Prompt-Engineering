@@ -7,3 +7,7 @@ We call some integer wonderful if it is a permutation of the digits in num and i
 		The 4th smallest wonderful integer is "5489355421".
 Return the minimum number of adjacent digit swaps that needs to be applied to num to reach the kth smallest wonderful integer.
 The tests are generated in such a way that kthsmallest wonderful integer exists.
+Constraints:
+	2 <= num.length <= 1000
+	1 <= k <= 1000
+	num only consists of digits.

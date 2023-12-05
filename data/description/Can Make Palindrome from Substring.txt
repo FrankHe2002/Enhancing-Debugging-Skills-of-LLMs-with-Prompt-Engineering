@@ -19,3 +19,8 @@ Constraints:
 	0 <= lefti <= righti < s.length
 	0 <= ki <= s.length
 	s consists of lowercase English letters.
+Constraints:
+	1 <= s.length, queries.length <= 105
+	0 <= lefti <= righti < s.length
+	0 <= ki <= s.length
+	s consists of lowercase English letters.

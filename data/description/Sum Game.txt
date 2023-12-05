@@ -6,3 +6,7 @@ The game ends when there are no more '?' characters in num.
 For Bobto win, the sum of the digits in the first half of num must be equal to the sum of the digits in the second half. For Aliceto win, the sums must not be equal.
 	For example, if the game ended with num = "243801", then Bobwins because 2+4+3 = 8+0+1. If the game ended with num = "243803", then Alicewins because 2+4+3 != 8+0+3.
 Assuming Alice and Bob play optimally, return true if Alice will win and false if Bob will win.
+Constraints:
+	2 <= num.length <= 105
+	num.length is even.
+	num consists of only digits and '?'.

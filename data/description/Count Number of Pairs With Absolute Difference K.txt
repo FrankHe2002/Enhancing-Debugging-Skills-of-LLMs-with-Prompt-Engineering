@@ -2,3 +2,7 @@ Given an integer array nums and an integer k, return the number of pairs (i, j) 
 The value of |x| is defined as:
 	x if x >= 0.
 	-x if x < 0.
+Constraints:
+	1 <= nums.length <= 200
+	1 <= nums[i] <= 100
+	1 <= k <= 99

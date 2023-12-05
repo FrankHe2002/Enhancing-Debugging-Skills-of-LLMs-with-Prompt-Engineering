@@ -6,3 +6,6 @@ You are given three positive integers:n, index, and maxSum. You want to construc
 	nums[index] is maximized.
 Return nums[index] of the constructed array.
 Note that abs(x) equals x if x >= 0, and -x otherwise.
+Constraints:
+	1 <= n <= maxSum <= 109
+	0 <= index < n

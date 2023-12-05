@@ -6,3 +6,8 @@ The following are the types of poker hands you can make from best to worst:
 	"High Card": Any single card.
 Return a string representing the best type of poker hand you can make with the given cards.
 Note that the return values are case-sensitive.
+Constraints:
+	ranks.length == suits.length == 5
+	1 <= ranks[i] <= 13
+	'a' <= suits[i] <= 'd'
+	No two cards have the same rank and suit.

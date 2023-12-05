@@ -3,3 +3,11 @@ To represent this tree, you are given an integer array nums and a 2D array edges
 Two values x and y are coprime if gcd(x, y) == 1 where gcd(x, y) is the greatest common divisor of x and y.
 An ancestor of a node i is any other node on the shortest path from node i to the root. A node is not considered an ancestor of itself.
 Return an array ans of size n, where ans[i] is the closest ancestor to node i such that nums[i] and nums[ans[i]] are coprime, or -1 if there is no such ancestor.
+Constraints:
+	nums.length == n
+	1 <= nums[i] <= 50
+	1 <= n <= 105
+	edges.length == n - 1
+	edges[j].length == 2
+	0 <= uj, vj < n
+	uj != vj

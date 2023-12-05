@@ -5,3 +5,10 @@ The answer to the jth query is the number of pairs of nodes (a, b) that satisfy 
 	incident(a, b) > queries[j]
 Return an array answers such that answers.length == queries.length and answers[j] is the answer of the jth query.
 Note that there can be multiple edges between the same two nodes.
+Constraints:
+	2 <= n <= 2 * 104
+	1 <= edges.length <= 105
+	1 <= ui, vi <= n
+	ui != vi
+	1 <= queries.length <= 20
+	0 <= queries[j] < edges.length

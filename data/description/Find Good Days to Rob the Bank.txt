@@ -5,3 +5,6 @@ The ith day is a good day to rob the bank if:
 	The number of guards at the bank for the time days after i are non-decreasing.
 More formally, this means day i is a good day to rob the bank if and only if security[i - time] >= security[i - time + 1] >= ... >= security[i] <= ... <= security[i + time - 1] <= security[i + time].
 Return a list of all days (0-indexed) that are good days to rob the bank. The order that the days are returned in does not matter.
+Constraints:
+	1 <= security.length <= 105
+	0 <= security[i], time <= 105

@@ -8,3 +8,8 @@ Calculate the following statistics:
 		If the sample has an even number of elements, then the median is the average of the two middle elements once the sample is sorted.
 	mode: The number that appears the most in the sample. It is guaranteed to be unique.
 Return the statistics of the sample as an array of floating-point numbers [minimum, maximum, mean, median, mode]. Answers within 10-5 of the actual answer will be accepted.
+Constraints:
+	count.length == 256
+	0 <= count[i] <= 109
+	1 <= sum(count) <= 109
+	The mode of the sample that count represents is unique.

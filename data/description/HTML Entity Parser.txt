@@ -8,3 +8,6 @@ The special characters and their entities for HTML are:
 	Slash: the entity is &frasl; and symbol character is /.
 Given the input text string to the HTML parser, you have to implement the entity parser.
 Return the text after replacing the entities by the special characters.
+Constraints:
+	1 <= text.length <= 105
+	The string may contain any possible characters out of all the 256 ASCII characters.

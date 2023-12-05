@@ -6,3 +6,9 @@ Train tickets are sold in three different ways:
 The passes allow that many days of consecutive travel.
 	For example, if we get a 7-day pass on day 2, then we can travel for 7 days: 2, 3, 4, 5, 6, 7, and 8.
 Return the minimum number of dollars you need to travel every day in the given list of days.
+Constraints:
+	1 <= days.length <= 365
+	1 <= days[i] <= 365
+	days is in strictly increasing order.
+	costs.length == 3
+	1 <= costs[i] <= 1000

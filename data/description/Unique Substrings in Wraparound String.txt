@@ -1,3 +1,6 @@
 We define the string s to be the infinite wraparound string of "abcdefghijklmnopqrstuvwxyz", so s will look like this:
 	"...zabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcd....".
 Given a string p, return the number of unique non-empty substrings of p are present in s.
+Constraints:
+	1 <= p.length <= 105
+	p consists of lowercase English letters.

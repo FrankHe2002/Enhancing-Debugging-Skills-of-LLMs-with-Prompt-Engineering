@@ -6,3 +6,8 @@ You are given a parentheses string s and a string locked, both of length n. lock
 	If locked[i] is '1', you cannot change s[i].
 	But if locked[i] is '0', you can change s[i] to either '(' or ')'.
 Return true if you can make s a valid parentheses string. Otherwise, return false.
+Constraints:
+	n == s.length == locked.length
+	1 <= n <= 105
+	s[i] is either '(' or ')'.
+	locked[i] is either '0' or '1'.

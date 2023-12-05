@@ -3,3 +3,6 @@ Alice starts with 0 points and draws numbers while she has less than k points. D
 Alice stops drawing numbers when she gets k or more points.
 Return the probability that Alice has n or fewer points.
 Answers within 10-5 of the actual answer are considered accepted.
+Constraints:
+	0 <= k <= n <= 104
+	1 <= maxPts <= 104

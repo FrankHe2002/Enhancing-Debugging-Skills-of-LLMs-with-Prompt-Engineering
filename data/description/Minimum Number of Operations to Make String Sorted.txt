@@ -4,3 +4,6 @@ You are given a string s (0-indexed)​​​​​​. You are asked to perform
 	Swap the two characters at indices i - 1​​​​ and j​​​​​.
 	Reverse the suffix starting at index i​​​​​​.
 Return the number of operations needed to make the string sorted. Since the answer can be too large, return it modulo 109 + 7.
+Constraints:
+	1 <= s.length <= 3000
+	s​​​​​​ consists only of lowercase English letters.

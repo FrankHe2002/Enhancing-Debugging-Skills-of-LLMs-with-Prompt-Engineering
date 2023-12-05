@@ -4,3 +4,10 @@ We have n cities labeled from 1 to n. Two different cities with labels x and y a
 	z > threshold.
 Given the two integers, n and threshold, and an array of queries, you must determine for each queries[i] = [ai, bi] if cities ai and bi are connected directly or indirectly.(i.e. there is some path between them).
 Return an array answer, where answer.length == queries.length and answer[i] is true if for the ith query, there is a path between ai and bi, or answer[i] is false if there is no path.
+Constraints:
+	2 <= n <= 104
+	0 <= threshold <= n
+	1 <= queries.length <= 105
+	queries[i].length == 2
+	1 <= ai, bi <= cities
+	ai != bi

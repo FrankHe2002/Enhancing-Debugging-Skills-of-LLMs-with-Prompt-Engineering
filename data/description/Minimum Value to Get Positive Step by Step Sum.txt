@@ -1,3 +1,6 @@
 Given an array of integersnums, you start with an initial positive value startValue.
 In each iteration, you calculate the step by step sum of startValuepluselements in nums(from left to right).
 Return the minimum positive value ofstartValue such that the step by step sum is never less than 1.
+Constraints:
+	1 <= nums.length <= 100
+	-100 <= nums[i] <= 100

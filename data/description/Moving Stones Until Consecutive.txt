@@ -4,3 +4,6 @@ The game ends when you cannot make any more moves (i.e., the stones are in three
 Return an integer array answer of length 2 where:
 	answer[0] is the minimum number of moves you can play, and
 	answer[1] is the maximum number of moves you can play.
+Constraints:
+	1 <= a, b, c <= 100
+	a, b, and c have different values.

@@ -5,3 +5,12 @@ A node sequence is valid if it meets the following conditions:
 	No node appears more than once in the sequence.
 The score of a node sequence is defined as the sum of the scores of the nodes in the sequence.
 Return the maximum score of a valid node sequence with a length of 4. If no such sequence exists, return -1.
+Constraints:
+	n == scores.length
+	4 <= n <= 5 * 104
+	1 <= scores[i] <= 108
+	0 <= edges.length <= 5 * 104
+	edges[i].length == 2
+	0 <= ai, bi <= n - 1
+	ai != bi
+	There are no duplicate edges.

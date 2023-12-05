@@ -5,3 +5,9 @@ If 0 <= x <= 1000, then for any index i in the array (0 <= i < nums.length), you
 	x ^ nums[i] (bitwise-XOR)
 Note that you can use each nums[i] any number of times in any order. Operations that set x to be out of the range 0 <= x <= 1000 are valid, but no more operations can be done afterward.
 Return the minimum number of operations needed to convert x = start into goal, and -1 if it is not possible.
+Constraints:
+	1 <= nums.length <= 1000
+	-109 <= nums[i], goal <= 109
+	0 <= start <= 1000
+	start != goal
+	All the integers in nums are distinct.

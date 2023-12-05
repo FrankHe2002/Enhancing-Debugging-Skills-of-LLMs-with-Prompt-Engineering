@@ -4,3 +4,6 @@ You then do the following steps:
 	Otherwise, stop the process.
 	Repeat this process with the new number as long as you keep finding the number.
 Return the final value of original.
+Constraints:
+	1 <= nums.length <= 1000
+	1 <= nums[i], original <= 1000

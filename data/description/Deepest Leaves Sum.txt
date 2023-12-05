@@ -1,1 +1,4 @@
 Given the root of a binary tree, return the sum of values of its deepest leaves.
+Constraints:
+	The number of nodes in the tree is in the range [1, 104].
+	1 <= Node.val <= 100

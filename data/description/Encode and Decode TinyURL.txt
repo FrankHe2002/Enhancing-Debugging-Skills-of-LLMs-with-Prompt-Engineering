@@ -5,3 +5,6 @@ Implement the Solution class:
 	Solution() Initializes the object of the system.
 	String encode(String longUrl) Returns a tiny URL for the given longUrl.
 	String decode(String shortUrl) Returns the original long URL for the given shortUrl. It is guaranteed that the given shortUrl was encoded by the same object.
+Constraints:
+	1 <= url.length <= 104
+	url is guranteed to be a valid URL.

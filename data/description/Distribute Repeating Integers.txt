@@ -3,3 +3,11 @@ You are given an array of n integers, nums, where there are at most 50 unique va
 	The integers the ith customer gets are all equal, and
 	Every customer is satisfied.
 Return true if it is possible to distribute nums according to the above conditions.
+Constraints:
+	n == nums.length
+	1 <= n <= 105
+	1 <= nums[i] <= 1000
+	m == quantity.length
+	1 <= m <= 10
+	1 <= quantity[i] <= 105
+	There are at most 50 unique values in nums.

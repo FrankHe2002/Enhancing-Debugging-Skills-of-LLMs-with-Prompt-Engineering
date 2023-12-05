@@ -8,3 +8,8 @@ Implement the BookMyShow class:
 	BookMyShow(int n, int m) Initializes the object with n as number of rows and m as number of seats per row.
 	int[] gather(int k, int maxRow) Returns an array of length 2 denoting the row and seat number (respectively) of the first seat being allocated to the k members of the group, who must sit together. In other words, it returns the smallest possible r and c such that all [c, c + k - 1] seats are valid and empty in row r, and r <= maxRow. Returns [] in case it is not possible to allocate seats to the group.
 	boolean scatter(int k, int maxRow) Returns true if all k members of the group can be allocated seats in rows 0 to maxRow, who may or may not sit together. If the seats can be allocated, it allocates k seats to the group with the smallest row numbers, and the smallest possible seat numbers in each row. Otherwise, returns false.
+Constraints:
+	1 <= n <= 5 * 104
+	1 <= m, k <= 109
+	0 <= maxRow <= n - 1
+	At most 5 * 104 calls in total will be made to gather and scatter.

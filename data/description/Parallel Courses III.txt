@@ -3,3 +3,13 @@ You must find the minimum number of months needed to complete all the courses fo
 	You may start taking a course at any time if the prerequisites are met.
 	Any number of courses can be taken at the same time.
 Return the minimum number of months needed to complete all the courses.
+Constraints:
+	1 <= n <= 5 * 104
+	0 <= relations.length <= min(n * (n - 1) / 2, 5 * 104)
+	relations[j].length == 2
+	1 <= prevCoursej, nextCoursej <= n
+	prevCoursej != nextCoursej
+	All the pairs [prevCoursej, nextCoursej] are unique.
+	time.length == n
+	1 <= time[i] <= 104
+	The given graph is a directed acyclic graph.

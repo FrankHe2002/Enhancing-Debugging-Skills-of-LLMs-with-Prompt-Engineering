@@ -7,3 +7,8 @@ Return the array [cx, cy] representing the integral coordinate (cx, cy) where th
 		x1 < x2, or
 		x1 == x2 and y1 < y2.
 	⌊val⌋ is the greatest integer less than or equal to val (the floor function).
+Constraints:
+	1 <= towers.length <= 50
+	towers[i].length == 3
+	0 <= xi, yi, qi <= 50
+	1 <= radius <= 50

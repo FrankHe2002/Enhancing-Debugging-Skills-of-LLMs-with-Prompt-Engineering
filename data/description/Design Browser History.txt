@@ -4,3 +4,9 @@ Implement the BrowserHistory class:
 	void visit(string url)Visitsurl from the current page. It clears up all the forward history.
 	string back(int steps)Move steps back in history. If you can only return x steps in the history and steps > x, you willreturn only x steps. Return the current urlafter moving back in history at most steps.
 	string forward(int steps)Move steps forward in history. If you can only forward x steps in the history and steps > x, you willforward onlyx steps. Return the current urlafter forwarding in history at most steps.
+Constraints:
+	1 <= homepage.length <= 20
+	1 <= url.length <= 20
+	1 <= steps <= 100
+	homepage and url consist of '.' or lower case English letters.
+	At most 5000calls will be made to visit, back, and forward.

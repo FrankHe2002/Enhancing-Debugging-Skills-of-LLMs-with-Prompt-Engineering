@@ -4,3 +4,5 @@ Initially, there is a number n on the chalkboard. On each player's turn, that pl
 	Replacing the number n on the chalkboard with n - x.
 Also, if a player cannot make a move, they lose the game.
 Return true if and only if Alice wins the game, assuming both players play optimally.
+Constraints:
+	1 <= n <= 1000

@@ -7,3 +7,6 @@ In one turn, you can place stamp over s and replace every letter in the s with t
 	Note that stamp must be fully contained in the boundaries of s in order to stamp (i.e., you cannot place stamp at index 3 of s).
 We want to convert s to target using at most 10 * target.length turns.
 Return an array of the index of the left-most letter being stamped at each turn. If we cannot obtain target from s within 10 * target.length turns, return an empty array.
+Constraints:
+	1 <= stamp.length <= target.length <= 1000
+	stamp and target consist of lowercase English letters.

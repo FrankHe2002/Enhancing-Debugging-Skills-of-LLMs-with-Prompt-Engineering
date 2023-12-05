@@ -5,3 +5,6 @@ A good string is a string which doesn't have two adjacent characters s[i] and s[
 To make the string good, you can choose two adjacent characters that make the string bad and remove them. You can keep doing this until the string becomes good.
 Return the string after making it good. The answer is guaranteed to be unique under the given constraints.
 Notice that an empty string is also good.
+Constraints:
+	1 <= s.length <= 100
+	s contains only lower and upper case English letters.

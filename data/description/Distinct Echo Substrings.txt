@@ -1,1 +1,4 @@
 Return the number of distinct non-empty substrings of textthat can be written as the concatenation of some string with itself (i.e. it can be written as a + awhere a is some string).
+Constraints:
+	1 <= text.length <= 2000
+	texthas only lowercase English letters.

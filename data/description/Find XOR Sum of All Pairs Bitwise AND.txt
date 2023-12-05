@@ -3,3 +3,6 @@ The XOR sum of a list is the bitwise XOR of all its elements. If the list only c
 You are given two 0-indexed arrays arr1 and arr2 that consist only of non-negative integers.
 Consider the list containing the result of arr1[i] AND arr2[j] (bitwise AND) for every (i, j) pair where 0 <= i < arr1.length and 0 <= j < arr2.length.
 Return the XOR sum of the aforementioned list.
+Constraints:
+	1 <= arr1.length, arr2.length <= 105
+	0 <= arr1[i], arr2[j] <= 109

@@ -1,3 +1,12 @@
 You are given an undirected weighted graph ofnnodes (0-indexed), represented by an edge list whereedges[i] = [a, b]is an undirected edge connecting the nodesaandbwith a probability of success of traversing that edgesuccProb[i].
 Given two nodesstartandend, find the path with the maximum probability of success to go fromstarttoendand return its success probability.
 If there is no path fromstarttoend, return0. Your answer will be accepted if it differs from the correct answer by at most 1e-5.
+Constraints:
+	2 <= n <= 10^4
+	0 <= start, end < n
+	start != end
+	0 <= a, b < n
+	a != b
+	0 <= succProb.length == edges.length <= 2*10^4
+	0 <= succProb[i] <= 1
+	There is at most one edge between every two nodes.

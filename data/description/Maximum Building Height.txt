@@ -6,3 +6,9 @@ However, there are city restrictions on the heights of the new buildings:
 Additionally, there are city restrictions on the maximum height of specific buildings. These restrictions are given as a 2D integer array restrictions where restrictions[i] = [idi, maxHeighti] indicates that building idi must have a height less than or equal to maxHeighti.
 It is guaranteed that each building will appear at most once in restrictions, and building 1 will not be in restrictions.
 Return the maximum possible height of the tallest building.
+Constraints:
+	2 <= n <= 109
+	0 <= restrictions.length <= min(n - 1, 105)
+	2 <= idi <= n
+	idiis unique.
+	0 <= maxHeighti <= 109

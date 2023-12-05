@@ -1,2 +1,7 @@
 Given an integer array nums and two integers lower and upper, return the number of range sums that lie in [lower, upper] inclusive.
 Range sum S(i, j) is defined as the sum of the elements in nums between indices i and j inclusive, where i <= j.
+Constraints:
+	1 <= nums.length <= 105
+	-231 <= nums[i] <= 231 - 1
+	-105 <= lower <= upper <= 105
+	The answer is guaranteed to fit in a 32-bit integer.

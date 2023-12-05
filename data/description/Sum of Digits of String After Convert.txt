@@ -5,3 +5,7 @@ For example, if s = "zbax" and k = 2, then the resulting integer would be 8 by t
 	Transform #1: 262124 ➝ 2 + 6 + 2 + 1 + 2 + 4➝ 17
 	Transform #2: 17 ➝ 1 + 7 ➝ 8
 Return the resulting integer after performing the operations described above.
+Constraints:
+	1 <= s.length <= 100
+	1 <= k <= 10
+	s consists of lowercase English letters.

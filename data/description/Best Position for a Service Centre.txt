@@ -2,3 +2,7 @@ A delivery company wants to build a new service center in a new city. The compan
 Given an array positions where positions[i] = [xi, yi] is the position of the ith customer on the map, return the minimum sum of the euclidean distances to all customers.
 In other words, you need to choose the position of the service center [xcentre, ycentre] such that the following formula is minimized:
 Answers within 10-5 of the actual value will be accepted.
+Constraints:
+	1 <= positions.length <= 50
+	positions[i].length == 2
+	0 <= xi, yi <= 100

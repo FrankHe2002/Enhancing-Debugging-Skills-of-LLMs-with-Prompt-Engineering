@@ -1,1 +1,5 @@
 Given a 2D grid of 0s and 1s, return the number of elements inthe largest squaresubgrid that has all 1s on its border, or 0 if such a subgriddoesn't exist in the grid.
+Constraints:
+	1 <= grid.length <= 100
+	1 <= grid[0].length <= 100
+	grid[i][j] is 0 or 1

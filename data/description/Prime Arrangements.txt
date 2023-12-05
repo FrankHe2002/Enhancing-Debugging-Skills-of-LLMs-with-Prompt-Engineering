@@ -1,3 +1,5 @@
 Return the number of permutations of 1 to n so that prime numbers are at prime indices (1-indexed.)
 (Recall that an integeris prime if and only if it is greater than 1, and cannot be written as a product of two positive integersboth smaller than it.)
 Since the answer may be large, return the answer modulo 10^9 + 7.
+Constraints:
+	1 <= n <= 100

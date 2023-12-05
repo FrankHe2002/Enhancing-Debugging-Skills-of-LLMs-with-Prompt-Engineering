@@ -1,2 +1,6 @@
 Given an integer array nums and two integers left and right, return the number of contiguous non-empty subarrays such that the value of the maximum array element in that subarray is in the range [left, right].
 The test cases are generated so that the answer will fit in a 32-bit integer.
+Constraints:
+	1 <= nums.length <= 105
+	0 <= nums[i] <= 109
+	0 <= left <= right <= 109

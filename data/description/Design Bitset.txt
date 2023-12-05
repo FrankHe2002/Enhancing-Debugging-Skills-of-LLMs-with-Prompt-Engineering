@@ -8,3 +8,9 @@ Implement the Bitset class:
 	boolean one() Checks if there is at least one bit in the Bitset with value 1. Returns true if it satisfies the condition, false otherwise.
 	int count() Returns the total number of bits in the Bitset which have value 1.
 	String toString() Returns the current composition of the Bitset. Note that in the resultant string, the character at the ith index should coincide with the value at the ith bit of the Bitset.
+Constraints:
+	1 <= size <= 105
+	0 <= idx <= size - 1
+	At most 105 calls will be made in total to fix, unfix, flip, all, one, count, and toString.
+	At least one call will be made to all, one, count, or toString.
+	At most 5 calls will be made to toString.

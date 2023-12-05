@@ -21,3 +21,11 @@ To mask a phone number:
 		"+**-***-***-XXXX" if the country code has 2 digits.
 		"+***-***-***-XXXX" if the country code has 3 digits.
 	"XXXX" is the last 4 digits of the local number.
+Constraints:
+	s is either a valid email or a phone number.
+	If s is an email:
+		8 <= s.length <= 40
+		s consists of uppercase and lowercase English letters and exactly one '@' symbol and '.' symbol.
+	If s is a phone number:
+		10 <= s.length <= 20
+		s consists of digits, spaces, and the symbols '(', ')', '-', and '+'.

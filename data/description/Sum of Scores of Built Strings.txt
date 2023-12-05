@@ -2,3 +2,6 @@ You are building a string s of length n one character at a time, prepending each
 	For example, for s = "abaca", s1 == "a", s2 == "ca", s3 == "aca", etc.
 The score of si is the length of the longest common prefix between si and sn (Note that s == sn).
 Given the final string s, return the sum of the score of every si.
+Constraints:
+	1 <= s.length <= 105
+	s consists of lowercase English letters.

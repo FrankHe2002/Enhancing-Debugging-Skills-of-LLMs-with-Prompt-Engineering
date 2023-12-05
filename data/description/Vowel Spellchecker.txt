@@ -1,3 +1,7 @@
 Given a wordlist, we want to implement a spellchecker that converts a query word into a correct word.
 For a given query word, the spell checker handles two categories of spelling mistakes:
 	Capitalization: If the query matches a word in the wordlist (case-insensitive), then the query word is returned with the same case as the case in the wordlist.
+Constraints:
+	1 <= wordlist.length, queries.length <= 5000
+	1 <= wordlist[i].length, queries[i].length <= 7
+	wordlist[i] and queries[i] consist only of only English letters.

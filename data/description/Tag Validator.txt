@@ -8,3 +8,6 @@ A code snippet is valid if all the following rules hold:
 	A < is unmatched if you cannot find a subsequent >. And when you find a < or </, all the subsequent characters until the next > should be parsed as TAG_NAME (not necessarily valid).
 	The cdata has the following format : <![CDATA[CDATA_CONTENT]]>. The range of CDATA_CONTENT is defined as the characters between <![CDATA[ and the first subsequent ]]>.
 	CDATA_CONTENT may contain any characters. The function of cdata is to forbid the validator to parse CDATA_CONTENT, so even it has some characters that can be parsed as tag (no matter valid or invalid), you should treat it as regular characters.
+Constraints:
+	1 <= code.length <= 500
+	code consists of English letters, digits, '<', '>', '/', '!', '[', ']', '.', and ' '.

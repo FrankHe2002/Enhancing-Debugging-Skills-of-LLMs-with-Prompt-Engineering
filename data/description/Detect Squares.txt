@@ -6,3 +6,7 @@ Implement the DetectSquares class:
 	DetectSquares() Initializes the object with an empty data structure.
 	void add(int[] point) Adds a new point point = [x, y] to the data structure.
 	int count(int[] point) Counts the number of ways to form axis-aligned squares with point point = [x, y] as described above.
+Constraints:
+	point.length == 2
+	0 <= x, y <= 1000
+	At most 3000 calls in total will be made to add and count.

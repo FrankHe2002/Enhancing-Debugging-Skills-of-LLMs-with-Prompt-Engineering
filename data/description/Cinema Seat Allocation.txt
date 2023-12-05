@@ -1,3 +1,10 @@
 A cinemahas nrows of seats, numbered from 1 to nand there are tenseats in each row, labelled from 1to 10as shown in the figure above.
 Given the array reservedSeats containing the numbers of seats already reserved, for example, reservedSeats[i] = [3,8]means the seat located in row 3 and labelled with 8is already reserved.
 Return the maximum number of four-person groupsyou can assign on the cinemaseats. A four-person groupoccupies fouradjacent seats in one single row. Seats across an aisle (such as [3,3]and [3,4]) are not considered to be adjacent, but there is an exceptional caseon which an aisle splita four-person group, in that case, the aisle splita four-person group in the middle,which means to have two people on each side.
+Constraints:
+	1 <= n <= 10^9
+	1 <=reservedSeats.length <= min(10*n, 10^4)
+	reservedSeats[i].length == 2
+	1<=reservedSeats[i][0] <= n
+	1 <=reservedSeats[i][1] <= 10
+	All reservedSeats[i] are distinct.

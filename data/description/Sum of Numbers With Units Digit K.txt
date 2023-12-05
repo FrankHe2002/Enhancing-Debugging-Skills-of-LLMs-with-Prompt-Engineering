@@ -5,3 +5,6 @@ Return the minimum possible size of such a set, or -1 if no such set exists.
 
 	The set can contain multiple instances of the same integer, and the sum of an empty set is considered 0.
 	The units digit of a number is the rightmost digit of the number.
+Constraints:
+	0 <= num <= 3000
+	0 <= k <= 9

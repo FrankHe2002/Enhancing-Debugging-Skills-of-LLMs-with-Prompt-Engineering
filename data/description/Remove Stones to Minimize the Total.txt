@@ -3,3 +3,7 @@ You are given a 0-indexed integer array piles, where piles[i] represents the num
 Notice that you can apply the operation on the same pile more than once.
 Return the minimum possible total number of stones remaining after applying the k operations.
 floor(x) is the greatest integer that is smaller than or equal to x (i.e., rounds x down).
+Constraints:
+	1 <= piles.length <= 105
+	1 <= piles[i] <= 104
+	1 <= k <= 105

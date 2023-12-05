@@ -7,3 +7,8 @@ Implement the Bank class:
 	boolean transfer(int account1, int account2, long money) Transfers money dollars from the account numbered account1 to the account numbered account2. Return true if the transaction was successful, false otherwise.
 	boolean deposit(int account, long money) Deposit money dollars into the account numbered account. Return true if the transaction was successful, false otherwise.
 	boolean withdraw(int account, long money) Withdraw money dollars from the account numbered account. Return true if the transaction was successful, false otherwise.
+Constraints:
+	n == balance.length
+	1 <= n, account, account1, account2 <= 105
+	0 <= balance[i], money <= 1012
+	At most 104 calls will be made to each function transfer, deposit, withdraw.

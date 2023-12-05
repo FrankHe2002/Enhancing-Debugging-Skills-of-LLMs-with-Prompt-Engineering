@@ -6,3 +6,12 @@ Given n, edges, time, and change, return the second minimum time it will take to
 Notes:
 	You can go through any vertex any number of times, including 1 and n.
 	You can assume that when the journey starts, all signals have just turned green.
+Constraints:
+	2 <= n <= 104
+	n - 1 <= edges.length <= min(2 * 104, n * (n - 1) / 2)
+	edges[i].length == 2
+	1 <= ui, vi <= n
+	ui != vi
+	There are no duplicate edges.
+	Each vertex can be reached directly or indirectly from every other vertex.
+	1 <= time, change <= 103

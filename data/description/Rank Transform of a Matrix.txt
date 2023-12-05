@@ -7,3 +7,8 @@ The rank is an integer that represents how large an element is compared to other
 		If p > q then rank(p) > rank(q)
 	The rank should be as small as possible.
 The test cases are generated so that answer is unique under the given rules.
+Constraints:
+	m == matrix.length
+	n == matrix[i].length
+	1 <= m, n <= 500
+	-109 <= matrix[row][col] <= 109

@@ -7,3 +7,8 @@ The cost of changing the final value of an expression is the number of operation
 	Turn a '0' into a '1'.
 	Turn a '&' into a '|'.
 	Turn a '|' into a '&'.
+Constraints:
+	1 <= expression.length <= 105
+	expressiononly contains'1','0','&','|','(', and')'
+	All parenthesesare properly matched.
+	There will be no empty parentheses (i.e:"()"is not a substring ofexpression).

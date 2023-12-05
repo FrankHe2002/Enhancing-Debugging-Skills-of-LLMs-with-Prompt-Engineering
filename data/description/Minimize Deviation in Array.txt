@@ -6,3 +6,7 @@ You can perform two types of operations on any element of the array any number o
 		For example, if the array is [1,2,3,4], then you can do this operation on the first element, and the array will be [2,2,3,4].
 The deviation of the array is the maximum difference between any two elements in the array.
 Return the minimum deviation the array can have after performing some number of operations.
+Constraints:
+	n == nums.length
+	2 <= n <= 5 * 104
+	1 <= nums[i] <= 109

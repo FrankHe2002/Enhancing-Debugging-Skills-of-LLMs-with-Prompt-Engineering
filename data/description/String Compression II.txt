@@ -2,3 +2,7 @@ Run-length encoding is a string compression method that works byreplacing consec
 Notice that in this problem, we are not adding'1'after single characters.
 Given astring sand an integer k. You need to delete at mostk characters fromssuch that the run-length encoded version of shas minimum length.
 Find the minimum length of the run-length encodedversion of s after deleting at most k characters.
+Constraints:
+	1 <= s.length <= 100
+	0 <= k <= s.length
+	s contains only lowercase English letters.

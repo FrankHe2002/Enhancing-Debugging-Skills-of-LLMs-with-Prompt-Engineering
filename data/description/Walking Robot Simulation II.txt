@@ -8,3 +8,7 @@ Implement the Robot class:
 	void step(int num) Instructs the robot to move forward num steps.
 	int[] getPos() Returns the current cell the robot is at, as an array of length 2, [x, y].
 	String getDir() Returns the current direction of the robot, "North", "East", "South", or "West".
+Constraints:
+	2 <= width, height <= 100
+	1 <= num <= 105
+	At most 104 calls in total will be made to step, getPos, and getDir.

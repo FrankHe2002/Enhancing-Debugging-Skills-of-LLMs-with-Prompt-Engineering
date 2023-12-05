@@ -3,3 +3,6 @@ You are given some events [start, end), after each given event, return an intege
 Implement the MyCalendarThree class:
 	MyCalendarThree() Initializes the object.
 	int book(int start, int end) Returns an integer k representing the largest integer such that there exists a k-booking in the calendar.
+Constraints:
+	0 <= start < end <= 109
+	At most 400 calls will be made to book.

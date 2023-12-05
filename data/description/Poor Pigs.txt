@@ -6,3 +6,6 @@ You can feed the pigs according to these steps:
 	After minutesToDie minutes have passed, any pigs that have been fed the poisonous bucket will die, and all others will survive.
 	Repeat this process until you run out of time.
 Given buckets, minutesToDie, and minutesToTest, return the minimum number of pigs needed to figure out which bucket is poisonous within the allotted time.
+Constraints:
+	1 <= buckets <= 1000
+	1 <=minutesToDie <=minutesToTest <= 100

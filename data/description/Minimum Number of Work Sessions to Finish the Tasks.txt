@@ -5,3 +5,8 @@ You should finish the given tasks in a way that satisfies the following conditio
 	You may complete the tasks in any order.
 Given tasks and sessionTime, return the minimum number of work sessions needed to finish all the tasks following the conditions above.
 The tests are generated such that sessionTime is greater than or equal to the maximum element in tasks[i].
+Constraints:
+	n == tasks.length
+	1 <= n <= 14
+	1 <= tasks[i] <= 10
+	max(tasks[i]) <= sessionTime <= 15

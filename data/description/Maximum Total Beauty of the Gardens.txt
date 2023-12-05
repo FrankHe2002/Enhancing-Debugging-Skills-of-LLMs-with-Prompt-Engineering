@@ -4,3 +4,8 @@ A garden is considered complete if it has at least target flowers. The total bea
 	The number of complete gardens multiplied by full.
 	The minimum number of flowers in any of the incomplete gardens multiplied by partial. If there are no incomplete gardens, then this value will be 0.
 Return the maximum total beauty that Alice can obtain after planting at most newFlowers flowers.
+Constraints:
+	1 <= flowers.length <= 105
+	1 <= flowers[i], target <= 105
+	1 <= newFlowers <= 1010
+	1 <= full, partial <= 105

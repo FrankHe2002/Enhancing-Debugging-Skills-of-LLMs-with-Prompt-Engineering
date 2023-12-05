@@ -2,3 +2,11 @@ You are given two integers m and n that represent the height and width of a rect
 To cut a piece of wood, you must make a vertical or horizontal cut across the entire height or width of the piece to split it into two smaller pieces. After cutting a piece of wood into some number of smaller pieces, you can sell pieces according to prices. You may sell multiple pieces of the same shape, and you do not have to sell all the shapes. The grain of the wood makes a difference, so you cannot rotate a piece to swap its height and width.
 Return the maximum money you can earn after cutting an m x n piece of wood.
 Note that you can cut the piece of wood as many times as you want.
+Constraints:
+	1 <= m, n <= 200
+	1 <= prices.length <= 2 * 104
+	prices[i].length == 3
+	1 <= hi <= m
+	1 <= wi <= n
+	1 <= pricei <= 106
+	All the shapes of wood (hi, wi) are pairwise distinct.

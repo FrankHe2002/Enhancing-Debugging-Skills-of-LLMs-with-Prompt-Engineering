@@ -6,3 +6,7 @@ Apply the following algorithm on nums:
 	Replace the array nums with newNums.
 	Repeat the entire process starting from step 1.
 Return the last number that remains in nums after applying the algorithm.
+Constraints:
+	1 <= nums.length <= 1024
+	1 <= nums[i] <= 109
+	nums.length is a power of 2.

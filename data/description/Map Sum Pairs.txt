@@ -5,3 +5,8 @@ Implement the MapSum class:
 	MapSum() Initializes the MapSum object.
 	void insert(String key, int val) Inserts the key-val pair into the map. If the key already existed, the original key-value pair will be overridden to the new one.
 	int sum(string prefix) Returns the sum of all the pairs' value whose key starts with the prefix.
+Constraints:
+	1 <= key.length, prefix.length <= 50
+	key and prefix consist of only lowercase English letters.
+	1 <= val <= 1000
+	At most 50 calls will be made to insert and sum.

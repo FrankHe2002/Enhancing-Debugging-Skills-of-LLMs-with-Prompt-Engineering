@@ -5,3 +5,6 @@ The number of collisions can be calculated as follows:
 	When a moving car collides with a stationary car, the number of collisions increases by 1.
 After a collision, the cars involved can no longer move and will stay at the point where they collided. Other than that, cars cannot change their state or direction of motion.
 Return the total number of collisions that will happen on the road.
+Constraints:
+	1 <= directions.length <= 105
+	directions[i] is either 'L', 'R', or 'S'.

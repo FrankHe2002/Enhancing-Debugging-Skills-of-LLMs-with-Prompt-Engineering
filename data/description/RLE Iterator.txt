@@ -4,3 +4,9 @@ Given a run-length encoded array, design an iterator that iterates through it.
 Implement the RLEIterator class:
 	RLEIterator(int[] encoded) Initializes the object with the encoded array encoded.
 	int next(int n) Exhausts the next n elements and returns the last element exhausted in this way. If there is no element left to exhaust, return -1 instead.
+Constraints:
+	2 <= encoding.length <= 1000
+	encoding.length is even.
+	0 <= encoding[i] <= 109
+	1 <= n <= 109
+	At most 1000 calls will be made to next.

@@ -3,3 +3,8 @@ Alice had a 0-indexed array arr consisting of n positive integers. She chose an 
 	higher[i] = arr[i] + k, for every index i where 0 <= i < n
 Unfortunately, Alice lost all three arrays. However, she remembers the integers that were present in the arrays lower and higher, but not the array each integer belonged to. Help Alice and recover the original array.
 Given an array nums consisting of 2n integers, where exactly n of the integers were present in lower and the remaining in higher, return the original array arr. In case the answer is not unique, return any valid array.
+Constraints:
+	2 * n == nums.length
+	1 <= n <= 1000
+	1 <= nums[i] <= 109
+	The test cases are generated such that there exists at least one valid array arr.

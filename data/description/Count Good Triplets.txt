@@ -6,3 +6,7 @@ A triplet (arr[i], arr[j], arr[k])is good if the following conditions are true:
 	|arr[i] - arr[k]| <= c
 Where |x| denotes the absolute value of x.
 Return the number of good triplets.
+Constraints:
+	3 <= arr.length <= 100
+	0 <= arr[i] <= 1000
+	0 <= a, b, c <= 1000

@@ -4,3 +4,8 @@ Choose a subset s of the n elements such that:
 	There are at most useLimit items with the same label in s.
 The score of a subset is the sum of the values in the subset.
 Return the maximum score of a subset s.
+Constraints:
+	n == values.length == labels.length
+	1 <= n <= 2 * 104
+	0 <= values[i], labels[i] <= 2 * 104
+	1 <= numWanted, useLimit <= n

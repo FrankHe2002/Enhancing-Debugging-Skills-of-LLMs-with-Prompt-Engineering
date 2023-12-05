@@ -8,3 +8,9 @@ You are given three inputs:
 	target, an integer representing your target price for dessert.
 You want to make a dessert with a total cost as close to target as possible.
 Return the closest possible cost of the dessert to target. If there are multiple, return the lower one.
+Constraints:
+	n == baseCosts.length
+	m == toppingCosts.length
+	1 <= n, m <= 10
+	1 <= baseCosts[i], toppingCosts[i] <= 104
+	1 <= target <= 104

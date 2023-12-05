@@ -3,3 +3,6 @@ You are given a string text. You should split it to k substrings (subtext1, subt
 	The concatenation of all the substrings is equal to text (i.e., subtext1 + subtext2 + ... + subtextk == text).
 	subtexti == subtextk - i + 1 for all valid values of i (i.e., 1 <= i <= k).
 Return the largest possible value of k.
+Constraints:
+	1 <= text.length <= 1000
+	text consists only of lowercase English characters.

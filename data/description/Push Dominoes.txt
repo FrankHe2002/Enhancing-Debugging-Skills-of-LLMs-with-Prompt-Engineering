@@ -7,3 +7,7 @@ You are given a string dominoes representing the initial state where:
 	dominoes[i] = 'R', if the ith domino has been pushed to the right, and
 	dominoes[i] = '.', if the ith domino has not been pushed.
 Return a string representing the final state.
+Constraints:
+	n == dominoes.length
+	1 <= n <= 105
+	dominoes[i] is either 'L', 'R', or '.'.

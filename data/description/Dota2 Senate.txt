@@ -5,3 +5,7 @@ The Dota2 senate consists of senators coming from two parties. Now the Senate wa
 Given a string senate representing each senator's party belonging. The character 'R' and 'D' represent the Radiant party and the Dire party. Then if there are n senators, the size of the given string will be n.
 The round-based procedure starts from the first senator to the last senator in the given order. This procedure will last until the end of voting. All the senators who have lost their rights will be skipped during the procedure.
 Suppose every senator is smart enough and will play the best strategy for his own party. Predict which party will finally announce the victory and change the Dota2 game. The output should be "Radiant" or "Dire".
+Constraints:
+	n == senate.length
+	1 <= n <= 104
+	senate[i] is either 'R' or 'D'.

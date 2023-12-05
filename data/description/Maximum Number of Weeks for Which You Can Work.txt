@@ -4,3 +4,7 @@ You can work on the projects following these two rules:
 	You cannot work on two milestones from the same project for two consecutive weeks.
 Once all the milestones of all the projects are finished, or if the only milestones that you can work on will cause you to violate the above rules, you will stop working. Note that you may not be able to finish every project's milestones due to these constraints.
 Return the maximum number of weeks you would be able to work on the projects without violating the rules mentioned above.
+Constraints:
+	n == milestones.length
+	1 <= n <= 105
+	1 <= milestones[i] <= 109

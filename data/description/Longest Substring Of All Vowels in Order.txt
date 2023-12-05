@@ -4,3 +4,6 @@ A string is considered beautiful if it satisfies the following conditions:
 For example, strings "aeiou" and "aaaaaaeiiiioou" are considered beautiful, but "uaeio", "aeoiu", and "aaaeeeooo" are not beautiful.
 Given a string word consisting of English vowels, return the length of the longest beautiful substring of word. If no such substring exists, return 0.
 A substring is a contiguous sequence of characters in a string.
+Constraints:
+	1 <= word.length <= 5 * 105
+	word consists of characters 'a', 'e', 'i', 'o', and 'u'.

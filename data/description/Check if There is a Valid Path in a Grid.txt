@@ -8,3 +8,8 @@ You are given an m x n grid. Each cell of grid represents a street. The street o
 You will initially start at the street of the upper-left cell (0, 0). A valid path in the grid is a path that starts from the upper left cell (0, 0) and ends at the bottom-right cell (m - 1, n - 1). The path should only follow the streets.
 Notice that you are not allowed to change any street.
 Return true if there is a valid path in the grid or false otherwise.
+Constraints:
+	m == grid.length
+	n == grid[i].length
+	1 <= m, n <= 300
+	1 <= grid[i][j] <= 6

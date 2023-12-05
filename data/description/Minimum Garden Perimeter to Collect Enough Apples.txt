@@ -4,3 +4,5 @@ Given an integer neededApples, return the minimum perimeter of a plot such that 
 The value of |x| is defined as:
 	x if x >= 0
 	-x if x < 0
+Constraints:
+	1 <= neededApples <= 1015

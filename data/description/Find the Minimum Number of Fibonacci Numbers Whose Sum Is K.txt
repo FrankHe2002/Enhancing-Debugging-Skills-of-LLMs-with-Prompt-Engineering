@@ -4,3 +4,5 @@ The Fibonacci numbers are defined as:
 	F2 = 1
 	Fn = Fn-1 + Fn-2 for n > 2.
 It is guaranteed that for the given constraints we can always find such Fibonacci numbers that sum up to k.
+Constraints:
+	1 <= k <= 109

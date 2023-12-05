@@ -21,3 +21,6 @@ Quad-Tree format:
 The output represents the serialized format of a Quad-Tree using level order traversal, where null signifies a path terminator where no node exists below.
 It is very similar to the serialization of the binary tree. The only difference is that the node is represented as a list [isLeaf, val].
 If the value of isLeaf or val is True we represent it as 1 in the list [isLeaf, val] and if the value of isLeaf or val is False we represent it as 0.
+Constraints:
+	n == grid.length == grid[i].length
+	n == 2x where 0 <= x <= 6

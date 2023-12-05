@@ -4,3 +4,9 @@ After you travel road i, you must rest and wait for the next integer hour before
 However, you are allowed to skip some rests to be able to arrive on time, meaning you do not need to wait for the next integer hour. Note that this means you may finish traveling future roads at different hour marks.
 	For example, suppose traveling the first road takes 1.4 hours and traveling the second road takes 0.6 hours. Skipping the rest after the first road will mean you finish traveling the second road right at the 2 hour mark, letting you start traveling the third road immediately.
 Return the minimum number of skips required to arrive at the meeting on time, or -1 if it is impossible.
+Constraints:
+	n == dist.length
+	1 <= n <= 1000
+	1 <= dist[i] <= 105
+	1 <= speed <= 106
+	1 <= hoursBefore <= 107

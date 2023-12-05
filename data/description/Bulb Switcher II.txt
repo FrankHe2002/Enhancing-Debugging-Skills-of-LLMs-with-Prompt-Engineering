@@ -5,3 +5,6 @@ There is a room with n bulbs labeled from 1 to n that all are turned on initiall
 	Button 4: Flips the status of all the bulbs with a label j = 3k + 1 where k = 0, 1, 2, ... (i.e., 1, 4, 7, 10, ...).
 You must make exactly presses button presses in total. For each press, you may pick any of the four buttons to press.
 Given the two integers n and presses, return the number of different possible statuses after performing all presses button presses.
+Constraints:
+	1 <= n <= 1000
+	0 <= presses <= 1000

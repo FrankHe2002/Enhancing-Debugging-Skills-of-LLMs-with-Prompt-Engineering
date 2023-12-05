@@ -5,3 +5,16 @@ However, this pairing may cause some of the friends to be unhappy.A friend xis u
 	xprefers uover y,and
 	uprefers xover v.
 Return the number of unhappy friends.
+Constraints:
+	2 <= n <= 500
+	nis even.
+	preferences.length== n
+	preferences[i].length== n - 1
+	0 <= preferences[i][j] <= n - 1
+	preferences[i]does not contain i.
+	All values inpreferences[i]are unique.
+	pairs.length== n/2
+	pairs[i].length== 2
+	xi != yi
+	0 <= xi, yi<= n - 1
+	Each person is contained in exactly one pair.

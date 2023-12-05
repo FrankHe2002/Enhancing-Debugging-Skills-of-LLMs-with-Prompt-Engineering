@@ -4,3 +4,6 @@ The array nums is called alternating if:
 	nums[i - 1] != nums[i], where 1 <= i <= n - 1.
 In one operation, you can choose an index i and change nums[i] into any positive integer.
 Return the minimum number of operations required to make the array alternating.
+Constraints:
+	1 <= nums.length <= 105
+	1 <= nums[i] <= 105

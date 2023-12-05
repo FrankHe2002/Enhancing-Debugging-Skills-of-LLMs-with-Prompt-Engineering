@@ -5,3 +5,8 @@ Each plant needs a specific amount of water. Alice and Bob have a watering can e
 	Alice/Bob must water the plant if they have enough in their can to fully water it. Otherwise, they first refill their can (instantaneously) then water the plant.
 	In case both Alice and Bob reach the same plant, the one with more water currently in his/her watering can should water this plant. If they have the same amount of water, then Alice should water this plant.
 Given a 0-indexed integer array plants of n integers, where plants[i] is the amount of water the ith plant needs, and two integers capacityA and capacityB representing the capacities of Alice's and Bob's watering cans respectively, return the number of times they have to refill to water all the plants.
+Constraints:
+	n == plants.length
+	1 <= n <= 105
+	1 <= plants[i] <= 106
+	max(plants[i]) <= capacityA, capacityB <= 109

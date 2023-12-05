@@ -2,3 +2,8 @@ Given a m x n binary matrix mat. In one step, you can choose one cell and flip i
 Return the minimum number of steps required to convert mat to a zero matrix or -1 if you cannot.
 A binary matrix is a matrix with all cells equal to 0 or 1 only.
 A zero matrix is a matrix with all cells equal to 0.
+Constraints:
+	m == mat.length
+	n == mat[i].length
+	1 <= m, n <= 3
+	mat[i][j] is either 0 or 1.

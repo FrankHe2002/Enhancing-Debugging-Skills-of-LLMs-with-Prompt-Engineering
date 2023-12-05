@@ -2,3 +2,8 @@ Given an array of integers citations where citations[i] is the number of citatio
 According to the definition of h-index on Wikipedia: A scientist has an index h if h of their n papers have at least h citations each, and the other n − h papers have no more than h citations each.
 If there are several possible values for h, the maximum one is taken as the h-index.
 You must write an algorithm that runs in logarithmic time.
+Constraints:
+	n == citations.length
+	1 <= n <= 105
+	0 <= citations[i] <= 1000
+	citations is sorted in ascending order.

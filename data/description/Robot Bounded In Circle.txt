@@ -9,3 +9,6 @@ The robot can receive one of three instructions:
 	"R": turn 90 degrees to the right (i.e., clockwise direction).
 The robot performs the instructions given in order, and repeats them forever.
 Return true if and only if there exists a circle in the plane such that the robot never leaves the circle.
+Constraints:
+	1 <= instructions.length <= 100
+	instructions[i] is 'G', 'L' or, 'R'.

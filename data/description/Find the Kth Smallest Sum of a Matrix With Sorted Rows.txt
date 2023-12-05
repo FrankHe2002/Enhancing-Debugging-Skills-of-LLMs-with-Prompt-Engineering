@@ -1,3 +1,10 @@
 You are given an m x n matrix mat that has its rows sorted in non-decreasing order and an integer k.
 You are allowed to choose exactly one element from each row to form an array.
 Return the kth smallest array sum among all possible arrays.
+Constraints:
+	m == mat.length
+	n == mat.length[i]
+	1 <= m, n <= 40
+	1 <= mat[i][j] <= 5000
+	1 <= k <= min(200, nm)
+	mat[i] is a non-decreasing array.

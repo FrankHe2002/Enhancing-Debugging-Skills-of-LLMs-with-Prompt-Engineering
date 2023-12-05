@@ -4,3 +4,9 @@ Each student will be assigned to one mentor, and each mentor will have one stude
 	For example, if the student's answers were [1, 0, 1] and the mentor's answers were [0, 0, 1], then their compatibility score is 2 because only the second and the third answers are the same.
 You are tasked with finding the optimal student-mentor pairings to maximize the sum of the compatibility scores.
 Given students and mentors, return the maximum compatibility score sum that can be achieved.
+Constraints:
+	m == students.length == mentors.length
+	n == students[i].length == mentors[j].length
+	1 <= m, n <= 8
+	students[i][k] is either 0 or 1.
+	mentors[j][k] is either 0 or 1.

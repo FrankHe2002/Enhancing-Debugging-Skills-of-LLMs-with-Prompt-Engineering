@@ -1,2 +1,7 @@
 Given an array of string words. Return all strings in words which is substring of another word in any order.
 String words[i] is substring of words[j],ifcan be obtained removing some characters to left and/or right side of words[j].
+Constraints:
+	1 <= words.length <= 100
+	1 <= words[i].length <= 30
+	words[i] contains only lowercase English letters.
+	It's guaranteedthat words[i]will be unique.

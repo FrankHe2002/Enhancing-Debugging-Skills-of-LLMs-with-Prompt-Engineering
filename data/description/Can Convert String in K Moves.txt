@@ -5,3 +5,7 @@ During theith(1 <= i <= k)move you can:
 Shifting a character means replacing it by the next letter in the alphabet(wrapping around so that'z'becomes'a'). Shifting a character byimeans applying the shift operationsitimes.
 Remember that any indexjcan be picked at most once.
 Returntrueif it's possible to convertsintotin no more thankmoves, otherwise returnfalse.
+Constraints:
+	1 <= s.length, t.length <= 10^5
+	0 <= k <= 10^9
+	s, t containonly lowercase English letters.

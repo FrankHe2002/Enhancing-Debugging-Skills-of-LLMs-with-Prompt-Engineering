@@ -9,3 +9,9 @@ Return the maximum Euclidean distance that the robot ever gets from the origin s
 	East means +X direction.
 	South means -Y direction.
 	West means -X direction.
+Constraints:
+	1 <= commands.length <= 104
+	commands[i] is either -2, -1, or an integer in the range [1, 9].
+	0 <= obstacles.length <= 104
+	-3 * 104 <= xi, yi <= 3 * 104
+	The answer is guaranteed to be less than 231.

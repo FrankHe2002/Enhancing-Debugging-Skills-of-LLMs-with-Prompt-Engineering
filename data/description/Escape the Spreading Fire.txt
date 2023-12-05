@@ -6,3 +6,10 @@ You are situated in the top-left cell, (0, 0), and you want to travel to the saf
 Return the maximum number of minutes that you can stay in your initial position before moving while still safely reaching the safehouse. If this is impossible, return -1. If you can always reach the safehouse regardless of the minutes stayed, return 109.
 Note that even if the fire spreads to the safehouse immediately after you have reached it, it will be counted as safely reaching the safehouse.
 A cell is adjacent to another cell if the former is directly north, east, south, or west of the latter (i.e., their sides are touching).
+Constraints:
+	m == grid.length
+	n == grid[i].length
+	2 <= m, n <= 300
+	4 <= m * n <= 2 * 104
+	grid[i][j] is either 0, 1, or 2.
+	grid[0][0] == grid[m - 1][n - 1] == 0

@@ -5,3 +5,6 @@ For example, if nums = [6,1,7,4,1]:
 	Choosing to remove index 4 results in nums = [6,1,7,4].
 An array is fair if the sum of the odd-indexed values equals the sum of the even-indexed values.
 Return the number of indices that you could choose such that after the removal, nums is fair.
+Constraints:
+	1 <= nums.length <= 105
+	1 <= nums[i] <= 104

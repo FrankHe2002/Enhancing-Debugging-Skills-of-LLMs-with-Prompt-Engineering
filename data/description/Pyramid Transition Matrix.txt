@@ -3,3 +3,9 @@ To make the pyramid aesthetically pleasing, there are only specific triangular p
 	For example, "ABC" represents a triangular pattern with a 'C' block stacked on top of an 'A' (left) and 'B' (right) block. Note that this is different from "BAC" where 'B' is on the left bottom and 'A' is on the right bottom.
 You start with a bottom row of blocks bottom, given as a single string, that you must use as the base of the pyramid.
 Given bottom and allowed, return true if you can build the pyramid all the way to the top such that every triangular pattern in the pyramid is in allowed, or false otherwise.
+Constraints:
+	2 <= bottom.length <= 6
+	0 <= allowed.length <= 216
+	allowed[i].length == 3
+	The letters in all input strings are from the set {'A', 'B', 'C', 'D', 'E', 'F'}.
+	All the values of allowed are unique.

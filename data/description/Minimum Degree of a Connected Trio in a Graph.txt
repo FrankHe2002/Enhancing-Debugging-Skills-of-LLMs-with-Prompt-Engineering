@@ -2,3 +2,10 @@ You are given an undirected graph. You are given an integer n which is the numbe
 A connected trio is a set of three nodes where there is an edge between every pair of them.
 The degree of a connected trio is the number of edges where one endpoint is in the trio, and the other is not.
 Return the minimum degree of a connected trio in the graph, or -1 if the graph has no connected trios.
+Constraints:
+	2 <= n <= 400
+	edges[i].length == 2
+	1 <= edges.length <= n * (n-1) / 2
+	1 <= ui, vi <= n
+	ui != vi
+	There are no repeated edges.

@@ -8,3 +8,6 @@ Return an array ans where:
 	ans[i] is the lake you choose to dry in the ith day if rains[i] == 0.
 If there are multiple valid answers return any of them. If it is impossible to avoid flood return an empty array.
 Notice that if you chose to dry a full lake, it becomes empty, but if you chose to dry an empty lake, nothing changes.
+Constraints:
+	1 <= rains.length <= 105
+	0 <= rains[i] <= 109

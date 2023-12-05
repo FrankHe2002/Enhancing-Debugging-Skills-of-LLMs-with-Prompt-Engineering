@@ -3,3 +3,12 @@ The robot needs to go to its home. It can move one cell in four directions: left
 	If the robot moves up or down into a cell whose row is r, then this move costs rowCosts[r].
 	If the robot moves left or right into a cell whose column is c, then this move costs colCosts[c].
 Return the minimum total cost for this robot to return home.
+Constraints:
+	m == rowCosts.length
+	n == colCosts.length
+	1 <= m, n <= 105
+	0 <= rowCosts[r], colCosts[c] <= 104
+	startPos.length == 2
+	homePos.length == 2
+	0 <= startrow, homerow < m
+	0 <= startcol, homecol < n

@@ -3,3 +3,9 @@ For example, if words = ["abc", "xyz"]and the stream added the four characters (
 Implement the StreamChecker class:
 	StreamChecker(String[] words) Initializes the object with the strings array words.
 	boolean query(char letter) Accepts a new character from the stream and returns true if any non-empty suffix from the stream forms a word that is in words.
+Constraints:
+	1 <= words.length <= 2000
+	1 <= words[i].length <= 200
+	words[i] consists of lowercase English letters.
+	letter is a lowercase English letter.
+	At most 4 * 104 calls will be made to query.

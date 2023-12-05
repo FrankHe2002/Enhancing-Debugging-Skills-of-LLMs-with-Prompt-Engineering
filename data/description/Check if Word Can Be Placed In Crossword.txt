@@ -5,3 +5,10 @@ A word can be placed horizontally (left to right or right to left) or vertically
 	There must not be any empty cells ' ' or other lowercase letters directly left or right of the word if the word was placed horizontally.
 	There must not be any empty cells ' ' or other lowercase letters directly above or below the word if the word was placed vertically.
 Given a string word, return true if word can be placed in board, or false otherwise.
+Constraints:
+	m == board.length
+	n == board[i].length
+	1 <= m * n <= 2 * 105
+	board[i][j] will be ' ', '#', or a lowercase English letter.
+	1 <= word.length <= max(m, n)
+	word will contain only lowercase English letters.

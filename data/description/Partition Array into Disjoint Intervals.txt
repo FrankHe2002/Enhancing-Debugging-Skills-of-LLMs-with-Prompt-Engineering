@@ -4,3 +4,7 @@ Given an integer array nums, partition it into two (contiguous) subarrays left a
 	left has the smallest possible size.
 Return the length of left after such a partitioning.
 Test cases are generated such that partitioning exists.
+Constraints:
+	2 <= nums.length <= 105
+	0 <= nums[i] <= 106
+	There is at least one valid answer for the given input.

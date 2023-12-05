@@ -5,3 +5,7 @@ Implement the Fancy class:
 	void addAll(inc) Increments all existing values in the sequence by an integer inc.
 	void multAll(m) Multiplies all existing values in the sequence by an integer m.
 	int getIndex(idx) Gets the current value at index idx (0-indexed) of the sequence modulo 109 + 7. If the index is greater or equal than the length of the sequence, return -1.
+Constraints:
+	1 <= val, inc, m <= 100
+	0 <= idx <= 105
+	At most 105 calls total will be made to append, addAll, multAll, and getIndex.

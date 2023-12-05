@@ -2,3 +2,13 @@ There is a country of n cities numbered from 0 to n - 1 where all the cities are
 Each time you pass through a city, you must pay a passing fee. This is represented as a 0-indexed integer array passingFees of length n where passingFees[j] is the amount of dollars you must pay when you pass through city j.
 In the beginning, you are at city 0 and want to reach city n - 1 in maxTime minutes or less. The cost of your journey is the summation of passing fees for each city that you passed through at some moment of your journey (including the source and destination cities).
 Given maxTime, edges, and passingFees, return the minimum cost to complete your journey, or -1 if you cannot complete it within maxTime minutes.
+Constraints:
+	1 <= maxTime <= 1000
+	n == passingFees.length
+	2 <= n <= 1000
+	n - 1 <= edges.length <= 1000
+	0 <= xi, yi <= n - 1
+	1 <= timei <= 1000
+	1 <= passingFees[j] <= 1000
+	The graph may contain multiple edges between two nodes.
+	The graph does not contain self loops.

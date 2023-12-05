@@ -9,3 +9,8 @@ The boxes need to be delivered in the order they are given. The ship will follow
 	The ship then makes a return trip to storage to take more boxes from the queue.
 The ship must end at storage after all the boxes have been delivered.
 Return the minimum number of trips the ship needs to make to deliver all boxes to their respective ports.
+Constraints:
+	1 <= boxes.length <= 105
+	1 <= portsCount, maxBoxes, maxWeight <= 105
+	1 <= ports​​i <= portsCount
+	1 <= weightsi <= maxWeight

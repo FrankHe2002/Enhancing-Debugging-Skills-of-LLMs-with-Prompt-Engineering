@@ -4,3 +4,6 @@ In one operation, you will create a new array arr, and for each i:
 	If i % 2 == 1, then arr[i] = perm[n / 2 + (i - 1) / 2].
 You will then assign arr​​​​ to perm.
 Return the minimum non-zero number of operations you need to perform on perm to return the permutation to its initial value.
+Constraints:
+	2 <= n <= 1000
+	n​​​​​​ is even.

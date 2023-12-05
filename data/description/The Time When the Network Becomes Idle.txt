@@ -6,3 +6,14 @@ At the beginning of second 0, each data server sends its message to be processed
 	Otherwise, no more resending will occur from this server.
 The network becomes idle when there are no messages passing between servers or arriving at servers.
 Return the earliest second starting from which the network becomes idle.
+Constraints:
+	n == patience.length
+	2 <= n <= 105
+	patience[0] == 0
+	1 <= patience[i] <= 105 for 1 <= i < n
+	1 <= edges.length <= min(105, n * (n - 1) / 2)
+	edges[i].length == 2
+	0 <= ui, vi < n
+	ui != vi
+	There are no duplicate edges.
+	Each server can directly or indirectly reach another server.

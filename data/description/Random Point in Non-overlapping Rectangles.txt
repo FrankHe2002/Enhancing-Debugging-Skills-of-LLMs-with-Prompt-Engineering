@@ -4,3 +4,12 @@ Note that an integer point is a point that has integer coordinates.
 Implement the Solution class:
 	Solution(int[][] rects) Initializes the object with the given rectangles rects.
 	int[] pick() Returns a random integer point [u, v] inside the space covered by one of the given rectangles.
+Constraints:
+	1 <= rects.length <= 100
+	rects[i].length == 4
+	-109 <= ai < xi <= 109
+	-109 <= bi < yi <= 109
+	xi - ai <= 2000
+	yi - bi <= 2000
+	All the rectangles do not overlap.
+	At most 104 calls will be made to pick.

@@ -4,3 +4,8 @@ Implement the PeekingIterator class:
 	int next() Returns the next element in the array and moves the pointer to the next element.
 	boolean hasNext() Returns true if there are still elements in the array.
 	int peek() Returns the next element in the array without moving the pointer.
+Constraints:
+	1 <= nums.length <= 1000
+	1 <= nums[i] <= 1000
+	All the calls to next and peek are valid.
+	At most 1000 calls will be made to next, hasNext, and peek.

@@ -5,3 +5,8 @@ You need to check if the equation is solvable under the following rules:
 	Each words[i] and result are decoded as one number without leading zeros.
 	Sum of numbers on the left side (words) will equal to the number on the right side (result).
 Return true if the equation is solvable, otherwise return false.
+Constraints:
+	2 <= words.length <= 5
+	1 <= words[i].length, result.length <= 7
+	words[i], result contain only uppercase English letters.
+	The number of different characters used in the expression is at most 10.
