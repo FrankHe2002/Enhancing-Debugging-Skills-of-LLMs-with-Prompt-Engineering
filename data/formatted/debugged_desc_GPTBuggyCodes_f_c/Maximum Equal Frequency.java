@@ -1,0 +1,2 @@
+The given code seems to be missing a main class or method for input/output operations. 
+To fix this, The main function needs to be defined in the class Solution and accept input and output operations for it to work properly.

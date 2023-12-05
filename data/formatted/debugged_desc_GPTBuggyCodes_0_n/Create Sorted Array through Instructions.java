@@ -1,0 +1,56 @@
+```java
+class Fenwick {
+    public int[] tree;
+
+    public Fenwick(int length) {
+        tree = new int[length + 1]; // Fixed the length
+    }
+
+    public int sum(int i) {
+        int sum = 0;
+        while (i > 0) {
+            sum += tree[i];
+            i -= i & -i; // Fixed decrement operator
+        }
+        return sum;
+    }
+
+    public int sumRange(int start, int end) {
+        return sum(end) - sum(start - 1);
+    }
+
+    public int update(int i, int k) {
+        while (i < tree.length) {
+            tree[i] += k;
+            i += i & -i; // Fixed increment operator
+        }
+    }
+}
+
+class Solution {
+    public int createSortedArray(int[] instructions) {
+        if (instructions.length == 0) {
+            return 0;
+        }
+        int max = 0;
+        for (int value : instructions) {
+            if (value > max) {
+                max = value;
+            }
+        }
+        Fenwick tree = new Fenwick(max);
+        int cost = 0;
+
+        for (int i = 0; i < instructions.length; i++) {
+            int current_value = instructions[i];
+            int strictly_less = tree.sumRange(0, current_value - 1);
+            int strictly_greater = tree.sumRange(current_value + 1, max);
+            cost += Math.min(strictly_less, strictly_greater);
+            cost = cost % ((int) 1e9 + 7);
+            tree.update(current_value, 1);
+        }
+
+        return cost;
+    }
+}
+```
