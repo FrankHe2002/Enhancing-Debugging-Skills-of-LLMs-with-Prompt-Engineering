@@ -174,7 +174,7 @@ def evaluate_folders(folder_correct, folder_bug, folder_debugged, output_path):
     df = pd.DataFrame(columns=['problem_name', 'bug_path', 'correct_path', 'debugged_path', 'bug_type',
                                'codebleu_bug', 'codebleu_debugged', 'codebleu_diff',
                                'coderouge_bug', 'coderouge_debugged', 'coderouge_diff',
-                               'codef1_bug', 'codef1_debugged', 'codef1_diff'])
+                               'codef1_bug', 'codef1_debugged', 'codef1_diff', 'truncated', 'pad_bug', 'pad_correct', 'pad_debugged'])
     rows = []
 
     for filename in tqdm(os.listdir(folder_debugged)):
@@ -204,16 +204,46 @@ def evaluate_folders(folder_correct, folder_bug, folder_debugged, output_path):
             rdp = [line for line in rdp if (line.strip() != "" and not 'import java.' in line)]
 
             # Find last occurrence of string ```java in rdp and remove everything before that
+            found_start = False
             for i in range(len(rdp)):
                 if "```java" in rdp[i]:
                     rdp = rdp[i+1:]
+                    found_start = True
                     break
             # Find last occurrence of string ``` in rdp and remove everything after that
-            for i in range(len(rdp)):
-                if "```" in rdp[i]:
-                    rdp = rdp[:i]
-                    break
+            row['truncated'] = found_start
+            if found_start:
+                for i in range(len(rdp)):
+                    if "```" in rdp[i]:
+                        rdp = rdp[:i]
+                        row['truncated'] = False
+                        break
+
+            if row['truncated']:
+                print("[ERR] Code may have been truncated. No ``` found.")
+                print(row['debugged_path'][0])
+                print(rdp)
+                row['truncated'] = True
             
+            row['pad_correct'] = False
+            row['pad_debugged'] = False
+            row['pad_bug'] = False
+
+            if len(rcp) < len(rdp):
+                rcp += [''] * (len(rdp) - len(rcp))
+                row['pad_correct'] = True
+            if len(rcp) > len(rdp):
+                rdp += [''] * (len(rcp) - len(rdp))
+                row['pad_debugged'] = True
+            
+            if len(rcp) < len(rbp):
+                rcp += [''] * (len(rbp) - len(rcp))
+                row['pad_correct'] = True
+            if len(rcp) > len(rbp):
+                rbp += [''] * (len(rcp) - len(rbp))
+                row['pad_bug'] = True
+            
+
             row['codebleu_debugged'] = [score_codebleu(rcp, rdp)[1]]
             row['codebleu_bug'] = [score_codebleu(rcp, rbp)[1]]
             row['codebleu_diff'] = row['codebleu_debugged'][0] - row['codebleu_bug'][0]
@@ -235,8 +265,15 @@ def evaluate_folders(folder_correct, folder_bug, folder_debugged, output_path):
 
 # Read files
 def main():
-    df = evaluate_folders('../data/formatted/correct_codes', '../data/formatted/buggy_codes_GPT', '../data/formatted/debugged_GPTBuggyCodes_0_n', 'codef1_evals_gpt_0_n.csv')
+    df = evaluate_folders('../data/formatted/correct_codes', '../data/formatted/buggy_codes', '../data/formatted/debugged_desc_codes_0_n', 'codef1_evals_desc_0_n.csv')
     print(df)
+    df = evaluate_folders('../data/formatted/correct_codes', '../data/formatted/buggy_codes', '../data/formatted/debugged_desc_codes_0_c', 'codef1_evals_desc_0_c.csv')
+    print(df)
+    df = evaluate_folders('../data/formatted/correct_codes', '../data/formatted/buggy_codes', '../data/formatted/debugged_desc_codes_f_n', 'codef1_evals_desc_f_n.csv')
+    print(df)
+    df = evaluate_folders('../data/formatted/correct_codes', '../data/formatted/buggy_codes', '../data/formatted/debugged_desc_codes_f_c', 'codef1_evals_desc_f_c.csv')
+    print(df)
+    print("Done.")
 
     
 if __name__ == '__main__':
