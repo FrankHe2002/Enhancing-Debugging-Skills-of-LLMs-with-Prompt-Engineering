@@ -1,4 +1,4 @@
-# CSCI499FinalProject
+# Enhancing Debugging Skills of LLMs with Prompt Engineering (CSCI499FinalProject)
 
 To call bug_gen from CLI:
 `python bug_gen.py -i <Input File Path> -o <Output File Path> -n <# of bugs to introduce, default 5>`
